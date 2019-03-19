@@ -30,6 +30,7 @@
         ,$placeholder_img
         ,$res[0]->post_title
     );
+    
     $return_practice_area .= '</section>';
 
     get_header();
