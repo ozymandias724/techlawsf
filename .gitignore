@@ -13,6 +13,12 @@ wp-content/plugins/*
 # !wp-content/plugins/my-single-file-plugin.php
 # !wp-content/plugins/my-directory-plugin/
 
+!wp-content/plugins/advanced-custom-fields-pro-master/
+!wp-content/plugins/acf-flexible-layouts-manager/
+!wp-content/plugins/disable-gutenberg/
+!wp-content/plugins/duplicate-post/
+!wp-content/plugins/wp-migrate-db/
+
 # Ignore everything in the themes directory, except...
 wp-content/themes/*
 !wp-content/themes/_tabula_rasa/
