@@ -1,0 +1,44 @@
+@media only screen {
+
+
+    section.fc_box {
+        margin: 0 auto;
+        width: 90%;
+        display: inline-block;
+        text-align: center;
+        padding: 60px 0;
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column wrap;
+        box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px 0;
+
+        &:nth-of-type(2n) {
+            border-radius: 0 10px;
+        }
+
+        >h2 {
+            @include font-display-sm;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            padding: 5px 0;
+            border-bottom: 2px solid $colors-green;
+        }
+
+        >h3 {
+            @include font-heading-sm;
+            margin-bottom: 20px;
+        }
+
+        >h2:last-child,
+        >h3:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    
+    
+    
+}

@@ -1,0 +1,639 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Medium Italic"), local("CormorantGaramond-MediumItalic"), url("../../library/fonts/CormorantGaramond-MediumItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Black Italic"), local("Lato-BlackItalic"), url("../../library/fonts/Lato-BlackItalic.woff2") format("woff2"), url("../../library/fonts/Lato-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato-LightItalic"), url("../../library/fonts/Lato-LightItalic.woff2") format("woff2"), url("../../library/fonts/Lato-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold"), local("Lato-Bold"), url("../../library/fonts/Lato-Bold.woff2") format("woff2"), url("../../library/fonts/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Black"), local("Lato-Black"), url("../../library/fonts/Lato-Black.woff2") format("woff2"), url("../../library/fonts/Lato-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Regular"), local("Lato-Regular"), url("../../library/fonts/Lato-Regular.woff2") format("woff2"), url("../../library/fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato-Light"), url("../../library/fonts/Lato-Light.woff2") format("woff2"), url("../../library/fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond SemiBold Italic"), local("CormorantGaramond-SemiBoldItalic"), url("../../library/fonts/CormorantGaramond-SemiBoldItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Light"), local("CormorantGaramond-Light"), url("../../library/fonts/CormorantGaramond-Light.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Bold"), local("CormorantGaramond-Bold"), url("../../library/fonts/CormorantGaramond-Bold.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Medium"), local("CormorantGaramond-Medium"), url("../../library/fonts/CormorantGaramond-Medium.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Regular"), local("CormorantGaramond-Regular"), url("../../library/fonts/CormorantGaramond-Regular.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Bold Italic"), local("CormorantGaramond-BoldItalic"), url("../../library/fonts/CormorantGaramond-BoldItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond SemiBold"), local("CormorantGaramond-SemiBold"), url("../../library/fonts/CormorantGaramond-SemiBold.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Italic"), local("Lato-Italic"), url("../../library/fonts/Lato-Italic.woff2") format("woff2"), url("../../library/fonts/Lato-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Light Italic"), local("CormorantGaramond-LightItalic"), url("../../library/fonts/CormorantGaramond-LightItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url("../../library/fonts/Lato-BoldItalic.woff2") format("woff2"), url("../../library/fonts/Lato-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato Hairline";
+  src: local("Lato-Hairline"), url("../../library/fonts/Lato-Hairline.woff2") format("woff2"), url("../../library/fonts/Lato-Hairline.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato Hairline";
+  src: local("Lato-HairlineItalic"), url("../../library/fonts/Lato-HairlineItalic.woff2") format("woff2"), url("../../library/fonts/Lato-HairlineItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: local("Cormorant Garamond Italic"), local("CormorantGaramond-Italic"), url("../../library/fonts/CormorantGaramond-Italic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+@media only screen {
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    background-color: #f6f5f3;
+    color: #3d3d3f;
+  }
+
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "EB Garamond", serif;
+    font-weight: 300;
+  }
+
+  body {
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .bgimg {
+    position: relative;
+    overflow: hidden;
+  }
+  .bgimg .bgimg-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 101%;
+    height: 101%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #7dce94;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  a:hover, a:active, a:focus {
+    border-bottom: 1px solid #7dce94;
+  }
+}
+@media only screen {
+  header {
+    padding: 0 30px;
+    background-color: black;
+    color: white;
+    height: 72px;
+  }
+  header ul {
+    list-style-type: none;
+  }
+  header a.logo,
+header div.menu-header-container {
+    height: 100%;
+    float: right;
+  }
+  header a.logo:after,
+header div.menu-header-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  header a.logo {
+    float: left;
+    max-width: 180px;
+    padding: 5px 10px;
+    border: none;
+  }
+  header a.logo:hover, header a.logo:focus, header a.logo:active {
+    border: none;
+  }
+  header a.logo .logo-image {
+    width: 180px;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header div.menu-header-container > .menu {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+  }
+  header div.menu-header-container > .menu > .menu-item {
+    margin: auto;
+    margin-right: 15px;
+  }
+  header div.menu-header-container > .menu > .menu-item:last-of-type {
+    margin-right: 0;
+  }
+  header div.menu-header-container > .menu > .menu-item > ul.sub-menu {
+    display: none;
+  }
+  header div.menu-header-container > .menu > .menu-item > a {
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+  }
+  header div.menu-header-container > .menu > .menu-item > a:hover, header div.menu-header-container > .menu > .menu-item > a:active, header div.menu-header-container > .menu > .menu-item > a:focus {
+    color: white;
+  }
+}
+@media only screen {
+  footer {
+    background-color: black;
+    color: white;
+  }
+}
+@media only screen {
+  section.hero {
+    position: relative;
+    width: 100%;
+    height: 640px;
+    background: black;
+  }
+  section.hero.banner {
+    height: 320px;
+  }
+  section.hero > div:not(.hero-image) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: calc(100% - 30px);
+    color: white;
+  }
+  section.hero > div:not(.hero-image) > h1 {
+    font-size: 9.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  section.hero > div:not(.hero-image) > h3 {
+    font-size: 3.8rem;
+  }
+  section.hero > div.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+  }
+}
+@media only screen {
+  section.image_grid > h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  section.image_grid div.clients {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  section.image_grid div.clients div.clients-client {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: calc(20vw - 20px);
+    width: calc(20vw - 20px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  section.image_grid div.clients div.clients-client:last-of-type {
+    margin-right: 0;
+  }
+}
+@media only screen {
+  section.fc_box {
+    margin: 0 auto;
+    width: 90%;
+    display: inline-block;
+    text-align: center;
+    padding: 60px 0;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px 0;
+  }
+  section.fc_box:nth-of-type(2n) {
+    border-radius: 0 10px;
+  }
+  section.fc_box > h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    padding: 5px 0;
+    border-bottom: 2px solid #7dce94;
+  }
+  section.fc_box > h3 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  section.fc_box > h2:last-child,
+section.fc_box > h3:last-child {
+    margin-bottom: 0;
+  }
+}
+@media only screen {
+  body.page-template.home section:nth-of-type(2) {
+    padding: 60px 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  body.page-template.home section:nth-of-type(2) > h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin: 20px auto;
+    padding: 5px 0;
+    border-bottom: 2px solid #7dce94;
+  }
+}
+@media only screen {
+  section.practice_area {
+    padding-top: 60px;
+  }
+  section.practice_area > div {
+    width: 50vw;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  section.practice_area > div > p {
+    margin: 2vw 0;
+    font-size: 2rem;
+  }
+  section.practice_area > div .bgimg {
+    margin: 0 auto;
+    width: 13vw;
+    height: 13vw;
+  }
+  section.practice_area > div .bgimg > p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2vw;
+    font-size: 3.2rem;
+  }
+}
+@media only screen {
+  section.practiceareas {
+    text-align: center;
+    padding: 60px 30px;
+    width: 100%;
+  }
+  section.practiceareas > ul {
+    width: 80vw;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  section.practiceareas > ul > li {
+    width: 24.6666666667vw;
+    height: 24.6666666667vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
+  }
+  section.practiceareas > ul > li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  section.practiceareas > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  section.practiceareas > ul > li > a > p {
+    width: 100%;
+    padding: 2vw 1vw;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.66);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  section.practiceareas > ul > li > a:hover > p {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+}
+@media only screen {
+  section.ourteam {
+    text-align: center;
+    padding: 60px 30px;
+    width: 100%;
+  }
+  section.ourteam > ul {
+    width: 80vw;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  section.ourteam > ul > li {
+    width: 24.6666666667vw;
+    height: 24.6666666667vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
+  }
+  section.ourteam > ul > li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  section.ourteam > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  section.ourteam > ul > li > a > p {
+    width: 100%;
+    padding: 2vw 1vw;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.66);
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  section.ourteam > ul > li > a:hover > p {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+}
+@media only screen {
+  section.teammember {
+    padding-top: 60px;
+  }
+  section.teammember > div {
+    width: 50vw;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+  }
+  section.teammember > div > p {
+    margin: 2vw 0;
+    font-size: 2rem;
+  }
+  section.teammember > div .bgimg {
+    margin: 0 auto;
+    width: 48vw;
+    height: 48vw;
+  }
+  section.teammember > div .bgimg > p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2vw;
+    font-size: 3.2rem;
+  }
+}
+
+/*# sourceMappingURL=build.css.map */

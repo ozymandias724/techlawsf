@@ -1,0 +1,60 @@
+@media only screen {
+
+    body {
+        font-family: $fonts-base-body;
+        font-weight: 300;
+        background-color: $colors_grey-light;
+        color: $colors_grey-dark;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $fonts-base-headers;
+        font-weight: 300;
+    }
+    body {
+        font-size: 1.4rem;
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+    }
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .bgimg {
+        position: relative;
+        overflow: hidden;
+        .bgimg-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 101%;
+            height: 101%;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $colors_green;
+        border-bottom: 1px solid transparent;
+        transition: border-color 0.2s ease, color 0.2s ease;
+        &:hover, &:active, &:focus {
+            border-bottom: 1px solid $colors_green;
+        }
+    }
+}

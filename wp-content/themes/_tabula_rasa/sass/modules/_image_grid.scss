@@ -1,0 +1,46 @@
+@media only screen {
+
+
+
+
+
+    section.image_grid {
+
+
+        > h2 {
+            @include font-display-sm;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        div.clients {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            width: 80vw;
+            margin: 0 auto;
+            div.clients-client {
+                margin-right: 20px;
+                margin-bottom: 20px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                height: calc(20vw - 20px); 
+                width: calc(20vw - 20px);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            
+            
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+}

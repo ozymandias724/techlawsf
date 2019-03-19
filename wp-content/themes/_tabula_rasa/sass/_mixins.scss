@@ -1,0 +1,72 @@
+@mixin cover-background($img-uri:"", $background-top:"center", $background-left:"center", $background-attachment:"scroll") {
+  background: url($img-uri) no-repeat unquote($background-top) unquote($background-left) unquote($background-attachment); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;  
+}
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+// Font Mixins
+
+@mixin font-display-xlg {
+    font-size: 9.6rem;
+    font-weight: 300;
+}
+
+@mixin font-display-lg {
+    font-size: 7.2rem;
+    font-weight: 300;
+}
+@mixin font-display-md {
+    font-size: 5rem;
+    font-weight: 300;
+}
+@mixin font-display-sm {
+    font-size: 3.6rem;
+    font-weight: 300;
+}
+
+@mixin font-heading-lg {
+    font-size: 5rem;
+    font-weight: 400;
+}
+@mixin font-heading-md {
+    font-size: 3.6rem;
+    font-weight: 400;
+}
+@mixin font-heading-sm {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
