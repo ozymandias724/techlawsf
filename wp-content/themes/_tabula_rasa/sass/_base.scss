@@ -1,37 +1,29 @@
 @media only screen {
 
+    // globals
+    // 
     body {
         font-family: $fonts-base-body;
         font-weight: 300;
-        background-color: $colors_grey-light;
+        background-color: $colors_white;
         color: $colors_grey-dark;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: $fonts-base-headers;
-        font-weight: 300;
-    }
-    body {
         font-size: 1.4rem;
         display: flex;
         flex-direction: column;
     }
+    // stretch main to stick footer to bottom of screen
     main {
         flex: 1 0 auto;
     }
 
+    // object-fit all images
     img {
         object-fit: cover;
         width: 100%;
         height: auto;
-        max-width: 100%;
-        max-height: 100%;
     }
 
+    // zoomable bg images
     .bgimg {
         position: relative;
         overflow: hidden;
@@ -45,15 +37,38 @@
             background-repeat: no-repeat;
             width: 101%;
             height: 101%;
+            transition: transform 0.4s ease;
+        }
+        &.bgimg--doeszoom {
+            &:hover{
+                .bgimg-img {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+            }
         }
     }
+
+    // Elements
+    // 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $fonts-base-headers;
+        font-weight: 300;
+    }
+
 
     a {
         text-decoration: none;
         color: $colors_green;
         border-bottom: 1px solid transparent;
         transition: border-color 0.2s ease, color 0.2s ease;
-        &:hover, &:active, &:focus {
+        &:hover,
+        &:active,
+        &:focus {
             border-bottom: 1px solid $colors_green;
         }
     }

@@ -1,38 +1,39 @@
 <?php 
-
-
     // check if the flexible content field has rows of data
     if( have_rows('boxes') ):
-
-        $format_box = '
-            <section class="%s">
-                <h2>%s</h2>
-            </section>
-        ';
-        $format_img = '
-            <div class="clients-client" style="background-image: url(%s)"></div>
-        ';
-        $format_imggrid = '
-            <section class="%s">
-                <h2>%s</h2>
-                <div class="clients">
-                    %s
-                </div>
-            </section>
-        ';
+       
         // loop through the rows of data
         while ( have_rows('boxes') ) : the_row();
+
+            $fctype = get_row_layout();
+        
+            $content_box = '<section class="'.$fctype.'">';
+            // box
             if( get_row_layout() == 'box' ):        
-                $fctype = 'fc_box';
-                $content_box = sprintf(
+                $format_box = '
+                    <h2>%s</h2>
+                ';
+                $content_box .= sprintf(
                     $format_box
-                    ,$fctype
                     ,get_sub_field('text')
                 );
-                echo $content_box;
             endif;
+
+            // img grid
             if( get_row_layout() == 'image_grid' ):        
-                $fctype = 'image_grid';
+                
+                $format_img = '
+                    <div class="clients-client" style="background-image: url(%s)"></div>
+                ';
+
+                
+                $format_imggrid = '
+                    <h2>%s</h2>
+                    <p>%s</p>
+                    <div class="clients">
+                        %s
+                    </div>
+                ';
 
                 foreach( get_sub_field('clients') as $client ){
                     $content_imgs .= sprintf(
@@ -40,18 +41,40 @@
                         ,$client['image']['url']
                     );
                 }
-
-                $content_box = sprintf(
+                $content_box .= sprintf(
                     $format_imggrid
-                    ,$fctype
                     ,get_sub_field('heading')
+                    ,get_sub_field('excerpt')
                     ,$content_imgs
                 );
-
-                
-                
-                echo $content_box;
             endif;
+
+            // client list
+            if (get_row_layout() == 'client_list') :
+            
+                $format_client_list = '
+                    <li>
+                        Client Name: %s
+                    </li>
+                    <li>
+                        Company Name: %s
+                    </li>
+                ';
+                
+                $content_box .= '<h2>'.get_sub_field('heading').'</h2><p>'.get_sub_field('excerpt').'</p><ul>';
+                foreach (get_sub_field('clients') as $client) {
+                    $content_box .= sprintf(
+                        $format_client_list
+                        ,$client['client_name']
+                        ,$client['company_name']
+                    );
+                    
+                }
+                $content_box .= '</ul>';
+                
+            endif;
+            $content_box .= '</section>';
+            echo $content_box;
 
         endwhile;
 

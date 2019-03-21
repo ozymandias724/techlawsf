@@ -235,21 +235,8 @@ section {
   body {
     font-family: "Lato", sans-serif;
     font-weight: 300;
-    background-color: #f6f5f3;
+    background-color: #f9f8fd;
     color: #3d3d3f;
-  }
-
-  h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "EB Garamond", serif;
-    font-weight: 300;
-  }
-
-  body {
     font-size: 1.4rem;
     display: flex;
     flex-direction: column;
@@ -263,8 +250,6 @@ h6 {
     object-fit: cover;
     width: 100%;
     height: auto;
-    max-width: 100%;
-    max-height: 100%;
   }
 
   .bgimg {
@@ -281,6 +266,20 @@ h6 {
     background-repeat: no-repeat;
     width: 101%;
     height: 101%;
+    transition: transform 0.4s ease;
+  }
+  .bgimg.bgimg--doeszoom:hover .bgimg-img {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "EB Garamond", serif;
+    font-weight: 300;
   }
 
   a {
@@ -296,8 +295,8 @@ h6 {
 @media only screen {
   header {
     padding: 0 30px;
-    background-color: black;
-    color: white;
+    background-color: #f9f8fd;
+    color: #3d3d3f;
     height: 72px;
   }
   header ul {
@@ -347,11 +346,13 @@ header div.menu-header-container:after {
     display: none;
   }
   header div.menu-header-container > .menu > .menu-item > a {
-    color: rgba(255, 255, 255, 0.8);
+    color: #3d3d3f;
+    border-bottom: 2px solid transparent;
+    font-weight: 400;
     letter-spacing: 1px;
   }
   header div.menu-header-container > .menu > .menu-item > a:hover, header div.menu-header-container > .menu > .menu-item > a:active, header div.menu-header-container > .menu > .menu-item > a:focus {
-    color: white;
+    border-bottom: 2px solid #7dce94;
   }
 }
 @media only screen {
@@ -428,7 +429,7 @@ header div.menu-header-container:after {
   }
 }
 @media only screen {
-  section.fc_box {
+  section.box {
     margin: 0 auto;
     width: 90%;
     display: inline-block;
@@ -442,10 +443,10 @@ header div.menu-header-container:after {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px 0;
   }
-  section.fc_box:nth-of-type(2n) {
+  section.box:nth-of-type(2n) {
     border-radius: 0 10px;
   }
-  section.fc_box > h2 {
+  section.box > h2 {
     font-size: 3.6rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -453,13 +454,13 @@ header div.menu-header-container:after {
     padding: 5px 0;
     border-bottom: 2px solid #7dce94;
   }
-  section.fc_box > h3 {
+  section.box > h3 {
     font-size: 2.2rem;
     font-weight: 400;
     margin-bottom: 20px;
   }
-  section.fc_box > h2:last-child,
-section.fc_box > h3:last-child {
+  section.box > h2:last-child,
+section.box > h3:last-child {
     margin-bottom: 0;
   }
 }

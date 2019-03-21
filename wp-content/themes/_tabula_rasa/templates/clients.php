@@ -8,9 +8,7 @@
     <?php 
         include( get_template_directory().'/sections/section.hero.php');
         
-        
-        
-        include( get_template_directory().'/sections/section.boxes.php');    
+        include( get_template_directory().'/modules/boxes.php');    
      ?>
 </main>
 <?php 
