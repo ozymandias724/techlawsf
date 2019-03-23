@@ -8,12 +8,12 @@
         background-color: $colors_white;
         color: $colors_grey-dark;
         font-size: 1.4rem;
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
     }
     // stretch main to stick footer to bottom of screen
     main {
-        flex: 1 0 auto;
+        // flex: 1 0 auto;
     }
 
     // object-fit all images
@@ -62,13 +62,15 @@
 
 
     a {
+        display: inline-block;
         text-decoration: none;
-        color: $colors_green;
         border-bottom: 1px solid transparent;
         transition: border-color 0.2s ease, color 0.2s ease;
+        color: $colors_grey-light;
         &:hover,
         &:active,
         &:focus {
+            color: $colors_green;
             border-bottom: 1px solid $colors_green;
         }
     }
