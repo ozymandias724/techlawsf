@@ -10,15 +10,20 @@
     $res = get_posts($args);
 
     $format_team_members = '
-        <li style="background-image: url(%s) ">
+        <li>
             <a href="%s" target="" title="">
-                <p>%s</p>
+                <div class="bgimg"><div class="bgimg-img" style="background-image: url(%s)"></div></div>
+                <p><span>%s</span></p>
             </a>
         </li>
     ';
 
     
-    $return_team_members = '<section class="ourteam"><ul>';
+    $return_team_members = '
+        <section class="ourteam">
+            <div class="tr__image_grid">
+                <ul class="tr__image_grid_images">'
+    ;
     
     foreach( $res as $rec ){
         
@@ -26,13 +31,13 @@
         
         $return_team_members .= sprintf(
             $format_team_members
-            ,$fields['headshot']['url']
             ,get_permalink($rec->ID)
+            ,$fields['headshot']['url']
             ,$rec->post_title
         );
     }
 
-    $return_team_members .= '</ul></section>';
+    $return_team_members .= '</ul></div></section>';
     
     get_header();
 ?>

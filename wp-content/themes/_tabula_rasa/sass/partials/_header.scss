@@ -1,68 +1,54 @@
 @media only screen {
+    
     header {
-
-        padding: 0 30px;
+        height: 72px;
         background-color: $colors_white;
         color: $colors_grey-dark;
-        
+        text-align: center;
         ul {
             list-style-type: none;
         }
-
-        height: 72px;
-        a.logo,
-        div.menu-header-container {
-            @include clearfix;
+        a {
+            color: $colors_grey-dark;
+        }
+        > div {
+            width: $content_width;
+            margin: 0 auto;
             height: 100%;
-            float: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        
-        a.logo {
-            float: left;
-            max-width: 180px;
-            padding: 5px 10px;
-            border: none;
-            &:hover, &:focus, &:active{
-                border: none;
-            }
-            .logo-image {
-                width: 180px;
-                height: 100%;
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-        }
+    
+    }
+    header > div > a.sitelogo > span {
+        color: $colors_green;
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 400;
     }
 
-    header div.menu-header-container {
-        > .menu {
-            display: flex;
-            flex-flow: row nowrap;
-            height: 100%;
-        }
-        > .menu > .menu-item {
-            margin: auto;
-            margin-right: 15px;
-            &:last-of-type {
-                margin-right: 0;
-            }
-            > ul.sub-menu {
-                display: none;
-            }
+    header > div > div {
 
-            > a {
-                color: $colors_grey-dark;
-                border-bottom: 2px solid transparent;
-                font-weight: 400;
-                letter-spacing: 1px;
-                &:hover, &:active, &:focus {
-                    border-bottom: 2px solid $colors_green;
+        >ul#menu-header {
+
+            >li.menu-item {
+                display: inline;
+                margin-right: $gutter;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+
+                >a {
+                    letter-spacing: 1px;
+                    font-weight: 400;
+                    text-transform: uppercase;
                 }
             }
         }
     }
-    
+
     
     
 }

@@ -1,67 +1,61 @@
 @media only screen {
 
+    // general footer styling
     footer {
+        display: inline-block;
+        width: 100%;
         background-color: $colors_grey-dark;
         color: $colors_grey-light;
         text-align: center;
-    }
-
-    footer > section {
-        margin: 40px auto;
-        width: 80%;
-        display: inline-block;
         ul {
             list-style-type: none;
         }
+    }
 
-        &:first-of-type{
-            > h1, > h3, > p {
-                margin-bottom: $gutter;
+    // footer columns wrapper
+    $cols : 4;
+    footer > ul.footergrid {
+        margin: $gutter auto;
+        width: $content_width;
+        display: flex;
+        flex-flow: row nowrap;
+        > li {
+            display: inline-block;
+            margin: 0 auto;
+            margin-right: $gutter;
+            width: ($content_width / ($cols - 1)) - ($gutter * ($cols - 1) );
+            text-align: left;
+            &:last-of-type{
+                margin-right: 0;
             }
-            > h1 {
-                text-transform: uppercase;
-                font-size: 3.2rem;
-                font-weight: 300;
-            }
-        }
 
-        &:last-of-type {
-            > ul {
-                width: 100%;
-                display: flex;
-                justify-content: space-around;
-            }
             > ul > li {
-                display: inline-block;
-                margin: 0 auto $gutter;
-                text-align: left;
-                > ul > li:first-of-type {
-                    text-align: center;
+                
+                > h4 {
                     border-bottom: 1px solid $colors_grey-light;
-                    >h4 {
-                        padding: 10px;
-                        text-transform: uppercase;
-                    }
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-family: 'Lato';
+                    padding: ($gutter / 2) 0;
                 }
-                > ul > li {
-                    margin-bottom: $gutter;
-                    > a {
-                        letter-spacing: 1px;
-                        line-height: 1.6;
-                        > .fa {
-                            margin-right: 10px;
-                            font-size: 1.8rem;
-                        }
-                        > span, > .fa {
-                            display: inline-block;
-                            vertical-align: middle;
-                        }
+                > a {
+                    display: inline-block;
+                    line-height: 1.25;    
+                    margin-bottom: ($gutter / 2);
+                    > i.fa, > span {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    > i.fa {
+                        margin-right: ($gutter / 2);
                     }
                 }
             }
         }
     }
     
+
+    // copyright bar
     footer > div {
         display: block;
         background-color: darken($colors_grey-dark, 10);

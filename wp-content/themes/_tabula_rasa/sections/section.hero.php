@@ -2,7 +2,7 @@
 /**
  * Section Name: Hero Image
  */
-    $is_homepage = ( get_page_template_slug($post_id) == 'templates/template.homepage.php' ) ? true : false;
+    $is_homepage = ( get_page_template_slug($post_id) == 'templates/homepage.php' ) ? true : false;
 
     $hero_fields = get_fields($post_id);
     $hero_image = ( !empty($hero_fields['image']) ) ? '<div style="background-image:url('.$hero_fields['image']['url'].')" class="hero-image"></div>': '';

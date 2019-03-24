@@ -1,7 +1,17 @@
 @media only screen {
+    
+    section.fclayout {
+        text-align: center;
+        width: 80vw;
+        > h1 {
+            font-size: 4rem;
+        }
+        > h2 {
+            font-size: 3rem;
+        }
+    }
 
-
-    section.box {
+    section.fclayout__box {
         margin: 0 auto;
         width: 90%;
         display: inline-block;
@@ -36,6 +46,34 @@
         >h3:last-child {
             margin-bottom: 0;
         }
+    }
+
+    section.fclayout__client_list {
+
+        > ul.clients {
+            margin: $gutter auto;
+            display: inline-block;
+            list-style-type: none;
+            column-count: 2;
+            li {
+                text-align: left;
+            }
+        }
+    }
+
+    section.fclayout__image_grid {
+
+        .images {
+            display: flex;
+            padding: $gutter;
+            margin: $gutter auto;
+            > .bgimg {
+                width: 20vw;
+                height: 20vw;
+                margin-right: $gutter;
+            }
+        }
+        
     }
     
     

@@ -1,11 +1,50 @@
+/* 
+*   tr__image_grid
+*/
+
 @media only screen {
+    // $gutter, $content_width
+    $cols : 4;
+    $item_width : (($content_width - (($cols - 1) * $gutter)) / $cols);
 
+    div.tr__image_grid {
+        width: $content_width;
+        margin: 0 auto;
+        display: inline-block;
+        ul.tr__image_grid_images {
+            list-style-type: none;
+            display: flex;
+            flex-flow: row wrap;
+            > li {
+                position: relative;
+                width: $item_width;
+                height: $item_width;
+                margin-right: $gutter;
+                margin-bottom: $gutter;
+                &:nth-of-type(#{$cols}n){
+                    margin-right: 0;
+                }
+                > a, > a > .bgimg {
+                    width: 100%;
+                    height: 100%;
+                }
+                > a > p {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    text-align: center;
+                    width: 100%;
+                    background-color: $colors_grey-dark;
+                    > span {
+                        
+                    }   
+                }
+            }
+        }
+        
+    }
 
-
-
-
-    section.image_grid {
-
+    div.image_grid {
 
         > h2 {
             @include font-display-sm;
@@ -18,7 +57,7 @@
             flex-flow: row wrap;
             justify-content: center;
             align-items: center;
-            width: 80vw;
+            width: $content_width;
             margin: 0 auto;
             div.clients-client {
                 margin-right: 20px;

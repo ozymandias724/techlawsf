@@ -7,7 +7,8 @@
 
             $fctype = get_row_layout();
         
-            $content_box = '<section class="'.$fctype.'">';
+            $content_box = '<section class="fclayout fclayout__'.$fctype.'">';
+
             // box
             if( get_row_layout() == 'box' ):        
                 $format_box = '
@@ -23,14 +24,14 @@
             if( get_row_layout() == 'image_grid' ):        
                 
                 $format_img = '
-                    <div class="clients-client" style="background-image: url(%s)"></div>
+                    <div class="bgimg"><div class="bgimg-img" style="background-image: url(%s)"></div></div>
                 ';
 
                 
                 $format_imggrid = '
                     <h2>%s</h2>
-                    <p>%s</p>
-                    <div class="clients">
+                    %s
+                    <div class="images">
                         %s
                     </div>
                 ';
@@ -61,7 +62,7 @@
                     </li>
                 ';
                 
-                $content_box .= '<h2>'.get_sub_field('heading').'</h2><p>'.get_sub_field('excerpt').'</p><ul>';
+                $content_box .= '<h2>'.get_sub_field('heading').'</h2>'.get_sub_field('excerpt').'<ul class="clients">';
                 foreach (get_sub_field('clients') as $client) {
                     $content_box .= sprintf(
                         $format_client_list
