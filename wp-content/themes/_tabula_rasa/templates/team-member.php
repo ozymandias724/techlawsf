@@ -19,6 +19,9 @@
                 <p>%s</p>
             </div>
             <p>%s</p>
+            <div>
+                %s
+            </div>
         </div>
     ';
     
@@ -30,6 +33,7 @@
         ,$fields['headshot']['url']
         ,$res[0]->post_title
         ,$fields['position']
+        ,$fields['bio']
     );
     $return_team_member .= '</section>';
 
