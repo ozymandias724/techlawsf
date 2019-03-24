@@ -24,17 +24,19 @@
             if( get_row_layout() == 'image_grid' ):        
                 
                 $format_img = '
-                    <div class="bgimg"><div class="bgimg-img" style="background-image: url(%s)"></div></div>
+                    <li><div class="bgimg"><div class="bgimg-img" style="background-image: url(%s)"></div></div></li>
                 ';
 
                 
                 $format_imggrid = '
                     <h2>%s</h2>
                     %s
-                    <div class="images">
+                    <ul class="tr__image_grid_images">
                         %s
-                    </div>
+                    </ul>
                 ';
+
+                $content_box .= '<div class="tr__image_grid">';
 
                 foreach( get_sub_field('clients') as $client ){
                     $content_imgs .= sprintf(
