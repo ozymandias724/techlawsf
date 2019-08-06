@@ -1,92 +1,88 @@
-module.exports = function(grunt) {
+// get the grunt class
+const grunt = require('grunt');
+const sass = require("sass");
+const Fiber = require("fibers");
+sass.render({
+  file: "__pre/_sass/main.scss",
+  importer: function (url, prev, done) {
+    // ...
+  },
+  fiber: Fiber
+}, function (err, result) {
+  // ...
+});
 
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+// auto-load all the grunt tasks passed into the initConfig func
+require('load-grunt-tasks')(grunt);
+
+// pass settings into grunt
+grunt.initConfig({
+  sass: {
+    options: {
+      implementation: sass,
+      sourceMap: true,
+    },
+    main: {
+      files: {
+        '__build/_css/main.css': '__pre/_sass/main.scss',
+      },
+    }
+  },
+  watch: {
     sass: {
-      dist: {
-        files: {
-          'build/css/build.css' : 'sass/main.scss',
-        },
-      },
-    },
-    concat: {
+      files: ['__pre/_sass/**/*.scss'],
+      tasks: ['sass'],
       options: {
-        separator: ';',
-      },
-      dist: {
-        src: ['js_vendor/jquery-1.12.4.min.js', 'js/**/*.js'],
-        dest: 'build/js/build.js',
+        livereload: 35729
       },
     },
-    uglify : {
-      build : {
-        files: {
-          'build/js/build.js' : ['build/js/build.js']
-        }
-      }
-    },
-    cssmin : {
-      build: {
-        files: [{
-          expand: true,
-          cwd: 'build/css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'build/css',
-          ext: '.css'
-        }]
-      }
-    },
-    copy: {
-      main: {
-        files : [
-          {
-            expand: true,
-            src: 'node_modules/font-awesome/fonts/**',
-            dest: 'library/fonts',
-            filter: 'isFile',
-            flatten: true
-          }
-        ]
-      }
-    },
-    watch: {
-      sass: {
-        files: ['sass/**/*.scss'],
-        tasks: ['sass'],
-        options: {
-          livereload : 35729
-        },
+    js: {
+      files: ['__pre/_js/**/*.js'],
+      tasks: ['browserify'],
+      options: {
+        livereload: 35729
       },
-      js: {
-        files: ['js/**/*.js'],
-        tasks: ['concat'],
-        options: {
-          livereload : 35729
-        },
+    },
+    php: {
+      files: ['**/*.php'],
+      options: {
+        livereload: 35729
       },
-      php: {
-        files: ['**/*.php'],
-        options: {
-          livereload : 35729
-        },
+    },
+    options: {
+      style: 'expanded',
+      compass: true,
+    },
+  },
+  browserify: {
+    main: {
+      files: {
+        '__build/_js/main.js': ['__pre/_js/main.js']
       },
       options: {
-        style: 'expanded',
-        compass: true,
-      },
-    },
-  });
-
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-
-  grunt.registerTask('default', ['copy', 'sass', 'concat', 'watch']);
-  grunt.registerTask('slim', ['sass', 'concat', 'cssmin', 'uglify']);
-
-
-};
+        transform: [
+          [
+            "babelify", {
+              presets: ["@babel/env"]
+            }
+          ]
+        ],
+        browserifyOptions: {
+          // Embed source map for tests
+          debug: true
+        },
+        sourceMaps: true
+      }
+    }
+  },
+  exorcise: {
+    bundle: {
+      options: {},
+      files: {
+        '__build/_js/main.js.map': ['__build/_js/main.js'],
+      }
+    }
+  }
+});
+// register the default task
+grunt.registerTask('default', ['sass', 'browserify', 'exorcise', 'watch']);

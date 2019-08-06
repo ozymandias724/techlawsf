@@ -1,0 +1,41 @@
+// 
+// 
+// 
+
+
+.site__block {
+
+    $g : getVar($sizing, gutter, px, normal);
+
+    
+    
+    margin: 0 0 getVar($sizing, gutter, px, large) 0;
+    width: 100%;
+
+    > .container {
+        width: 100%;
+        // sizings
+        &.narrow {
+            width: getVar($sizing, content, narrow);
+        }
+        &.medium {
+            width: getVar($sizing, content, normal);
+        }
+        &.wide {
+            width: getVar($sizing, content, wide);
+        }
+        
+        > .block-heading,
+        > .block-subheading {
+            text-align: center;
+            margin: 0 0 $g 0;
+        }
+    }
+}
+
+
+// TO BE BUILT:
+
+// @import 'blocks/block_name';
+// @import 'blocks/block_name';
+// @import 'blocks/block_name';

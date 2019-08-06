@@ -10,11 +10,17 @@ class cpts
         $this->register_team_members();
     }
 
+    /**
+     * register 'department' as a taxonomy for the team members (post type)
+     *
+     * @return void
+     */
     function register_team_members(){
         register_taxonomy('department', 'team_members', array(
             'label' => 'Departments'
             ,'hierarchical' => true
         ));
+        // labels for department taxonomy
         $labels = array(
             'name' => __('Team Members', 'theme'), // Rename these to suit
             'singular_name' => __('Team Member', 'theme'),
@@ -29,6 +35,7 @@ class cpts
             'not_found' => __('No Team Members found', 'theme'),
             'not_found_in_trash' => __('No Team Members found in Trash', 'theme')
         );
+        // args for department taxonomy
         $args = array(
             'labels' => $labels,
             'public' => true,

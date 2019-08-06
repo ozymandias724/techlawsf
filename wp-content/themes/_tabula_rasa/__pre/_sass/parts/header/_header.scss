@@ -1,0 +1,27 @@
+header.header {
+    $g: getVar($sizing, gutter, px, normal);
+
+    position: fixed;
+    z-index: 99;
+    display: block;
+    width: 100%;
+
+    >.container {
+        margin: 0 auto;
+    }
+
+    .logo {
+        height: 100%;
+        padding: ($g / 2);
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .site__social-media {
+        margin: 0 ($g / 2) 0 0;
+    }
+
+    
+}

@@ -1,0 +1,38 @@
+// 
+// 
+// 
+// 
+// 
+
+.flexgrid {
+
+
+    @for $i from 0 to 6 {
+        $c : $i + 1;
+        &.cols-#{$c} {
+            @include flexboxGrid($cols : $c);
+        }
+    }
+    
+    
+}
+
+@media screen and (max-width: 640px){
+
+
+    .flexgrid {
+
+
+        @for $i from 0 to 6 {
+            $c: $i + 1;
+
+            &.cols-#{$c} {
+                @include flexboxGrid($cols : 1);
+            }
+        }
+
+
+    }
+    
+    
+}
