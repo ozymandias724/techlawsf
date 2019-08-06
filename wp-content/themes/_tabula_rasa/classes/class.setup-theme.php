@@ -13,10 +13,6 @@ class SetupTheme
         // 
         add_action(" init", "SetupTheme::init" );
         // 
-        add_action( 'login_enqueue_scripts', 'SetupTheme::enqueue_login_scripts' );
-        //
-        add_action( 'admin_enqueue_scripts', 'SetupTheme::enqueue_admin_scripts' );
-        // 
 		add_action( 'wp_enqueue_scripts', 'SetupTheme::wp_enqueue_scripts');
         // 
     }

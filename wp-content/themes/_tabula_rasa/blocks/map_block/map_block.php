@@ -6,7 +6,7 @@
     // css
     wp_enqueue_style('mapblock', get_template_directory_uri().'/blocks/map_block/map_block.css');
     // api script
-    // wp_enqueue_script('gmaps', 'https://maps.googleapis.com/maps/api/js?key='.get_option('acfext_google_api_key'), array(), '1.0.0', true);
+    wp_enqueue_script('gmaps', 'https://maps.googleapis.com/maps/api/js?key='.get_option('acfext_google_api_key'), array(), '1.0.0', true);
     // rendering js
     wp_enqueue_script('mapblock', get_template_directory_uri().'/blocks/map_block/map_block.js', array(),'1.0.0', true);
 
