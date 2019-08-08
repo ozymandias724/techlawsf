@@ -1,0 +1,22 @@
+footer {
+
+
+    .navlinks {
+
+
+        .menu {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .menu-item {
+            > a {
+                color: getVar($colors, white, light);
+            }
+        }
+        
+        
+    }
+    
+    
+}

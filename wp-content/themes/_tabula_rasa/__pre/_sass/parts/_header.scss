@@ -1,0 +1,47 @@
+header.header {
+    $g: getVar($sizing, gutter, px, normal);
+
+    position: fixed;
+    z-index: 99;
+    display: block;
+    width: 100%;
+    background-color: getVar($colors, white, full);
+
+    >.container {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // logo
+    // either as an image or as text
+    // denoted by class modifier .logo.logo--modifier
+    .logo {
+        
+
+        &.logo--image {
+            height: 100%;
+            padding: ($g / 2);
+            img {
+                height: 100%;
+            }
+        }
+
+        &.logo--text {
+
+            color: getVar($colors, primary);
+            letter-spacing: 4px;
+            border-bottom: 2px solid getVar($colors, primary);
+            @include fontS-18;
+            
+        }
+
+    }
+
+    .site__social-media {
+        margin: 0 ($g / 2) 0 0;
+    }
+
+    
+}

@@ -1,0 +1,29 @@
+// 
+// 
+// 
+
+section.hero {
+
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    color: rgba(getVar($colors, white, full), 0.8);
+    @include bgimage;
+    @include bg_gradient($h : 75%);
+
+    // 
+    // content must float above bg gradient
+    h2, p {
+        position: relative;
+        z-index: 1;
+    }
+    // 
+    h2 {
+        @include fontS-50;
+        font-weight: 100;
+        letter-spacing: 2px;
+    }
+}

@@ -24,6 +24,26 @@
     @return (($w - (($c - 1) * $g)) / $c);
 }
 
+// this allows a grdient to be added to elements (we need a way to pass values into this to allow for varying gradient directions, sizes, etc.)
+@mixin bg_gradient($w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.6)) {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: $w;
+        height: $h;
+        background: -moz-linear-gradient(#{$p}, $sC 0%, $eC 70%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(#{$p}, $sC 0%, $eC 70%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to #{$p}, $sC 0%, $eC 70%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+}
+
 
 // 
 // 

@@ -7,25 +7,28 @@ import $ from 'jquery';                         // latest jquery prereq
 // certain things should wait until the document is ready
 $(document).ready(function()
 {
-  
-    Theme.MainNav = {
 
-        _init : function(){
+    $('html').removeClass('no-js');
 
-            
-            if( $('header.header nav.navlinks').length ){
-                
-                // clicked link that is a parent (has children)
-                $('nav.navlinks li.parent > a').on('click', Theme.MainNav._didClickParentLink);
 
-            }
-            
-        },
-        _didClickParentLink : function(e){
-            $(this).parent('li').toggleClass('open');
-        },
+    
+    $('main').css('margin-top', $('header').innerHeight() );
+
+    
+    
+    if( $('header.header nav.navlinks').length ){
         
-    };
-    Theme.MainNav._init();
+        // clicked link that is a parent (has children)
+        $('nav.navlinks li.menu-item-has-children > a').on('click', function(e){
+
+            $(this).parent('li').toggleClass('open');
+        });
+
+    }
+
+
+
+
+    
 
 });

@@ -29,16 +29,17 @@ class Rational_Walker_Nav_Menu extends Walker_Nav_Menu
 		$classes[] = 'menu-item-' . $item->ID;
 
 		// Cleaner class array to replace default
-		$new_classes = array();
-		if (in_array('menu-item-has-children', $classes))
-			$new_classes[] = 'parent';
-		if (in_array('current-menu-item', $classes))
-			$new_classes[] = 'active';
-		if (in_array('current-menu-ancestor', $classes))
-			$new_classes[] = 'active-ancestor';
-		if (in_array('current-menu-parent', $classes))
-			$new_classes[] = 'active-parent';
-		$classes = $new_classes;
+		// $new_classes = array();
+		// if (in_array('menu-item-has-children', $classes))
+		// 	$new_classes[] = 'parent';
+		// if (in_array('current-menu-item', $classes))
+		// 	$new_classes[] = 'active';
+		// if (in_array('current-menu-ancestor', $classes))
+		// 	$new_classes[] = 'active-ancestor';
+		// if (in_array('current-menu-parent', $classes))
+		// 	$new_classes[] = 'active-parent';
+		// $classes = $new_classes;
+
 
 		/**
 		 * Filter the CSS class(es) applied to a menu item's list item element.

@@ -1,0 +1,29 @@
+// 
+// 
+// 
+// 
+
+
+.navlinks {
+
+    a {
+        text-decoration: none;
+        border: none;
+        &:hover, &:focus, &:active {
+            text-decoration: none;
+            border: none;
+        }
+    }
+
+    > .menu {
+
+        display: flex;
+        
+    }
+
+}
+
+
+
+@import "nav.header"; // header nav
+@import "nav.footer"; // footer nav

@@ -71,7 +71,7 @@ body {
 
     >main {
         flex: 1;
-        margin: 0 auto;
+        margin: 0;
 
         >section {
             display: block;
@@ -82,3 +82,25 @@ body {
         overflow: hidden;
     }
 }
+
+// header, section and footer containers
+header, main > section, footer {
+    > .container {
+        margin: 0 auto;
+        &.full {
+            width: getVar($sizing, content, full);
+        }
+        &.wide {
+            width: getVar($sizing, content, wide);
+        }
+        &.normal {
+            width: getVar($sizing, content, normal);
+        }
+        &.narrow {
+            width: getVar($sizing, content, narrow);
+        }
+
+    }
+}
+
+// basic cleanup for navlinks

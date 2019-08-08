@@ -18,10 +18,10 @@
 
 // parts
 @import "parts/hero";       // hero
-@import "parts/header/header"; // header nav
-@import "parts/header/nav"; // header nav
-@import "parts/footer/footer"; // footer nav
-@import "parts/footer/nav"; // footer nav
+@import "parts/header";
+@import "parts/footer";
+@import "parts/nav.footer";
+@import "parts/nav.header";
 
 //
 // blocks

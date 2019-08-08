@@ -3,7 +3,19 @@
  * Header Nav
 */
 
-    $return['header'] = '<header class="header">';
+    $return['header'] = '<header class="header"><div class="container normal">';
+
+
+    if( has_custom_logo( ) ){
+
+        $return['header'] .= 'Header Image Plz';
+
+    } else {
+
+        $return['header'] .= '<div class="logo logo--text">'.get_bloginfo('name').'</div>';
+        
+    }
+    
 
     // if we have a nav
     if (has_nav_menu('header')) {
@@ -22,7 +34,7 @@
     }
 
     // close header
-    $return['header'] .= '</header>';
+    $return['header'] .= '</div></header>';
 
     echo $return['header'];
 ?>

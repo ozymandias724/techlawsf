@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
+<html prefix="og: http://ogp.me/ns#" class="no-js">
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>" />
