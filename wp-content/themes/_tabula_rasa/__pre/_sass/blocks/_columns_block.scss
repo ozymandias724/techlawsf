@@ -1,0 +1,20 @@
+.site__block.block__columns {
+
+
+    >.container {
+
+
+        > .flexgrid {
+            > ul {
+                > li {
+                    > .site__block {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}

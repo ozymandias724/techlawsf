@@ -2,12 +2,33 @@
 /**
  *      Footer
 */
+
+    $settings = get_field('theme_settings', 'options');
+
+    
+    
 ?>
 <footer>
     <div class="container normal">
+        
+        
+        
+        <div>
+            <h4>Tech Law SF Group Inc</h4>
+        </div>
+    
+        
+        <div>
+            <h4>Contact Us</h4>
+        </div>
+    
+    
         <?php 
+
             include( get_template_directory() . '/parts/nav.footer.php');
         ?>
+
+        
     </div>
     <?php 
         if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {

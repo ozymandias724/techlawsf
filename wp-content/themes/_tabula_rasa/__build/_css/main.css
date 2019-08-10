@@ -88,13 +88,13 @@ h2 {
 }
 
 h3 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   line-height: 3.2rem;
 }
 
 h4 {
-  font-size: 2rem;
-  line-height: 3.2rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
 }
 
 h5 {
@@ -212,6 +212,36 @@ header.header .site__social-media {
 footer {
   background-color: #1c1c1c;
 }
+footer .container {
+  color: #d0d0d0;
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+footer .container > div, footer .container > nav,
+footer .container > nav > ul > li {
+  margin: 0 30px 0 0;
+}
+footer .container > div:last-child, footer .container > nav:last-child,
+footer .container > nav > ul > li:last-child {
+  margin: 0;
+}
+footer .container > div > h4 {
+  border-bottom: 2px solid #d0d0d0;
+}
+footer .navlinks > ul > li.heading.h4 > a {
+  display: block;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  font-weight: bold;
+  border-bottom: 2px solid #d0d0d0;
+}
+footer .navlinks > ul > li > a {
+  pointer-events: none;
+}
+
 footer .navlinks .menu {
   display: flex;
   flex-flow: row nowrap;
@@ -297,6 +327,14 @@ header.header .navlinks > ul > li.active > a {
 .site__block > .container > .block-subheading {
   text-align: center;
   margin: 0 0 30px 0;
+}
+
+.site__block.block__image > .container > img {
+  width: 100%;
+}
+
+.site__block.block__columns > .container > .flexgrid > ul > li > .site__block {
+  margin: 0;
 }
 
 .flexgrid.cols-1 > ul {

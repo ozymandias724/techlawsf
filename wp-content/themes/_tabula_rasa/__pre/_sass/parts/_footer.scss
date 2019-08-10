@@ -1,10 +1,52 @@
 footer {
     background-color: getVar($colors, black, dark);
 
-
-    .navlinks {
-
+    
+    .container {
+        $g : getVar($sizing, gutter, px, normal);
         
+        color: getVar($colors, white, light);
+        display: flex;
+        flex-flow: row nowrap;
+        text-align: center;
+        justify-content: space-between;
+        padding: $g 0;
+
+
+        > div, > nav,
+        > nav > ul > li
+        {
+            margin: 0 $g 0 0;
+            &:last-child {
+                margin: 0;
+            }
+        }
+        
+        > div > h4 {
+            border-bottom: 2px solid getVar($colors, white, light);
+        }
+    }
+    
+    
+    
+    .navlinks {
+        
+        > ul {
+            > li {
+                &.heading {
+                    
+                    &.h4 > a{
+                        display: block;
+                        @include fontS-18;
+                        font-weight: bold;
+                        border-bottom: 2px solid getVar($colors, white, light);
+                    }
+                }
+                > a {
+                    pointer-events: none;
+                }
+            }
+        }
         
     }
     
