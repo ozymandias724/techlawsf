@@ -1,6 +1,7 @@
 // 
 // NPM Libs
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'; // font awesome
+@import '../../node_modules/magnific-popup/dist/magnific-popup.css';
 
 // 
 // Site Libs
@@ -19,6 +20,7 @@
 // parts
 @import "parts/hero";       // hero
 @import "parts/header";
+@import "parts/popups";
 @import "parts/footer";
 @import "parts/nav.footer";
 @import "parts/nav.header";
@@ -27,3 +29,8 @@
 // blocks
 @import 'blocks';
 @import 'grid';
+
+
+// pages
+
+@import "pages/page.practice_areas";

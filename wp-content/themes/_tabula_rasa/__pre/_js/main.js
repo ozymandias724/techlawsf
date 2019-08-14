@@ -3,6 +3,8 @@
 */
 // get libraries
 import $ from 'jquery';                         // latest jquery prereq
+import magnific from 'magnific-popup';
+// import slick from 'slick-carousel-browserify';
 
 // certain things should wait until the document is ready
 $(document).ready(function()
@@ -25,6 +27,19 @@ $(document).ready(function()
         });
 
     }
+
+    if( $('.js__popup_bio').length ){
+
+        $('.js__popup_bio').magnificPopup({
+            type: "ajax",
+            closeMarkup: '<button title="Close lightbox (Esc)" aria-label="Close lightbox (Esc)" type="button" class="mfp-close">&#215;</button>',
+            closeOnContentClick: false,
+            closeOnBgClick: true,
+            mainClass: 'bio'
+        });
+    }
+
+
 
 
 

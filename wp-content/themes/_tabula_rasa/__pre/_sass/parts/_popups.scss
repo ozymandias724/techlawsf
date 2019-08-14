@@ -1,0 +1,11 @@
+.popup {
+
+
+    background-color: rgba(getVar($colors, white, full), 1);
+    padding: getVar($sizing, gutter, px, large) getVar($sizing, gutter, px, normal);
+    margin: 10vh auto;
+    width: getVar($sizing, content, narrow);
+    
+    
+    
+}

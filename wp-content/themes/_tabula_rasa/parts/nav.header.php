@@ -12,7 +12,7 @@
 
     } else {
 
-        $return['header'] .= '<div class="logo logo--text">'.get_bloginfo('name').'</div>';
+        $return['header'] .= '<a href="'.site_url().'"><div class="logo logo--text">'.get_bloginfo('name').'</div></a>';
         
     }
     

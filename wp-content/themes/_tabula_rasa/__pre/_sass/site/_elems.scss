@@ -1,0 +1,63 @@
+// 
+// 
+
+// background image wrapper (mimic figure elem)
+.bgimg {
+    
+}
+// background image
+.bgimg-img {
+    display: block;
+    transition: all 0.25s ease;
+    @include bgimage;
+}
+// background image wrapper (mimic figure elem)
+.bgimg {
+    position: relative;
+    .bgimg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    // img zooms on interaction
+    &.bgimg-zooms {
+        &:hover, &:active, &:focus {
+            // zoom img
+            .bgimg-img {
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+
+
+.card {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(getVar($colors, white, full), 1);
+    &:hover, &:active, &:focus {
+        @include boxshadow(2);
+    }
+    > div {
+        flex: 0 1 auto;
+        $g : getVar($sizing, gutter, px, normal);
+        &.content {
+            padding-left: getVar($sizing, gutter, px, normal);
+            width: calc(50% - #{$g});
+        }
+        &.bgimg {
+            margin-left: $g;
+            width: 50%;
+        }
+    }
+
+    .bgimg-img {
+        @include aspectRatio(16, 9);
+    }
+}

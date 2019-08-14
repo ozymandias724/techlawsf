@@ -1,0 +1,30 @@
+.flexgrid {
+    
+    .grid_item {
+        
+        .card {
+            @include boxshadow(2);
+            &:hover, &:focus, &:active {
+                @include boxshadow(4);
+            }
+        }
+
+        // 1 column of cards that alternate left/right
+        &:nth-of-type(even) .card {
+
+            > .content {
+                padding: 0;
+                padding-right: getVar($sizing, gutter, px, normal);
+
+                order: 2;
+            }
+            
+            // flip flexbox order
+            > .bgimg {
+                margin: 0;
+                margin-right: getVar($sizing, gutter, px, normal); // adjust margins for alternating cards
+            }
+        }
+    }
+    
+}

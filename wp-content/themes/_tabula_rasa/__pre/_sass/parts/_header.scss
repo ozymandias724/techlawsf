@@ -6,6 +6,7 @@ header.header {
     display: block;
     width: 100%;
     background-color: getVar($colors, white, full);
+    @include boxshadow(1);
 
     >.container {
         display: flex;

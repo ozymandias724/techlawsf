@@ -1,0 +1,42 @@
+.block__content_grid > .container {
+
+    // block heading
+    > h2 {
+
+    }
+    // block sub-heading
+    > div {
+
+    }
+    
+    // block content (grid)
+    > .flexgrid {
+        margin: getVar($sizing, gutter, px, normal) 0;
+
+        .grid_item {
+
+            // grid item is an actionable block
+            > a {
+                text-decoration: none;
+                color: getVar($colors, black, full);
+                border: none;
+                &:hover, &:focus, &:active {
+                    border: none;
+                }
+            }
+
+
+            .bgimg {
+                width: 100%;
+                .bgimg-img {
+                    @include aspectRatio();
+                }
+            }
+            
+        }
+        
+        
+    }
+
+    
+}

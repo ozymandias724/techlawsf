@@ -2,13 +2,14 @@
 /**
  * HERO
  */
+
     $return['hero'] = '';
     
     if( !empty( $fields['hero']['use_hero'] ) ){
 
 
         
-        $return['hero'] .= '<section class="hero" style="background-image: url('.$fields['hero']['image']['url'].')">';
+        $return['hero'] .= '<section class="hero" style="background-image: url('.$fields['hero']['image']['url']. ')"><div class="container normal">';
 
 
         $guide['hero'] = '
@@ -23,7 +24,7 @@
         );
         
         
-        $return['hero'] .= '</section>';
+        $return['hero'] .= '</div></section>';
     }
 
     echo $return['hero'];

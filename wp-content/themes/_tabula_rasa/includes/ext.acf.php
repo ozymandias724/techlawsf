@@ -18,7 +18,15 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
 }
-
+delete_option('acfext_google_api_key');
+if (empty(get_option('acfext_google_api_key'))) {
+    add_option('acfext_google_api_key', 'AIzaSyDLzmrhKKDpllBgGFu7YBuQQQsOFtYHtFw');
+}
+function my_acf_init()
+{
+    acf_update_setting('google_api_key', 'AIzaSyDLzmrhKKDpllBgGFu7YBuQQQsOFtYHtFw');
+}
+add_action('acf/init', 'my_acf_init');
 
 /**
  * Display the ACF address
