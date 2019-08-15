@@ -6,19 +6,38 @@
 
 .navlinks {
 
-    a {
-        text-decoration: none;
-        border: none;
-        &:hover, &:focus, &:active {
-            text-decoration: none;
-            border: none;
-        }
-    }
 
-    > .menu {
-
+    // any nav menu
+    >.menu {
         display: flex;
-        
+
+
+        // top level menu items
+        > .menu-item {
+
+            $g : getVar($sizing, gutter, px, normal);
+            margin: 0 $g 0 0;
+            &:last-child {
+                margin: 0 0 0 0;
+            }
+
+            // all nav links
+            a {
+                $g : getVar($sizing, gutter, px, tiny);
+                margin: 0 0 $g 0;
+                display: block;
+                text-decoration: none;
+                border: none;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    text-decoration: none;
+                    border: none;
+                }
+            }
+        }
+
     }
 
 }

@@ -3,7 +3,7 @@
  * Header Nav
 */
 
-    $return['header'] = '<header class="header"><div class="container normal">';
+    $return['header'] = '<header class="header"><div class="container wide">';
 
 
     if( has_custom_logo( ) ){

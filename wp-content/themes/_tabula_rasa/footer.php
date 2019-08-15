@@ -9,7 +9,7 @@
     
 ?>
 <footer>
-    <div class="container normal">
+    <div class="container wide">
         
         
         

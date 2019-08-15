@@ -35,36 +35,41 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    &.display {
+        font-weight: 300;
+    }
 }
 
 h1 {
     @include fontS-50;
 }
-
 h2 {
     @include fontS-34;
 }
-
 h3 {
-    @include fontS-20;
+    @include fontS-24;
 }
-
 h4 {
     @include fontS-18;
 }
-
 h5 {
     @include fontS-16;
 }
-
 h6 {
     @include fontS-14;
+}
+p {
+    @include fontS-16;
+    font-weight: 300;
 }
 
 body {
     font-family: "Lato", sans-serif;
     font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    font-weight: 300;
     // flex align the footer to the bottom
     display: flex;
     flex-flow: column nowrap;

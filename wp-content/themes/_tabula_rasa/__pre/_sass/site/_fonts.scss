@@ -1,4 +1,8 @@
-// style fonts
+@import "fonts/font_faces";
+
+// 
+// 
+// font size / line height rhythm
 @mixin fontS-12 {
     font-size: 1.2rem;
     line-height: 2.0rem;
@@ -13,7 +17,6 @@
     font-size: 1.6rem;
     line-height: 2.8rem;
 }
-
 @mixin fontS-18 {
     font-size: 1.8rem;
     line-height: 3rem;
@@ -21,12 +24,27 @@
 
 @mixin fontS-20 {
     font-size: 2rem;
-    line-height: 3.2rem;
+    line-height: 3rem;
+
+    @media only screen and (max-width: 960px) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
 }
 
 @mixin fontS-24 {
     font-size: 2.4rem;
-    line-height: 3.2rem;
+    line-height: 3.6rem;
+
+    @media only screen and (max-width: 1280px) {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+    }
+}
+
+@mixin fontS-30 {
+    font-size: 3rem;
+    line-height: 4rem;
 }
 
 @mixin fontS-34 {
@@ -34,17 +52,18 @@
     line-height: 4.8rem;
 }
 
-@mixin fontS-40 {
-    font-size: 4rem;
-    line-height: 5.4rem;
-}
-
 @mixin fontS-50 {
     font-size: 5rem;
-    line-height: 7.2rem;
+    line-height: 6rem;
+
+    // add media query sizing here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 }
 
 @mixin fontS-72 {
     font-size: 7.2rem;
-    line-height: 9.6rem;
+    line-height: 7.2rem;
+
+    // add media query sizing here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 }

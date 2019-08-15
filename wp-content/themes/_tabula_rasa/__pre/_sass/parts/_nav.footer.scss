@@ -7,16 +7,50 @@ footer {
         .menu {
             display: flex;
             flex-flow: row nowrap;
-        }
 
-        .menu-item {
-            > a {
-                color: getVar($colors, white, light);
+
+            >.menu-item {
+                text-align: left;
+
+                // set all link styles
+                a {
+                    color: getVar($colors, white, light);
+                }
+
+                // menu item is 'heading'
+                &.menu-item-has-children.heading {
+
+                    // link is heading style
+                    >a {
+                        $g: getVar($sizing, gutter, px, small);
+                        margin: 0 0 $g 0;
+                        pointer-events: none; // not a actual link (value should be #)
+                        border-bottom: 2px solid getVar($colors, white, light);
+                    }
+
+                    // style to match el
+                    &.h4>a {
+                        @include fontS-18;
+                    }
+
+
+                    // the actual menu within the custom heading wrapper menu item
+                    .sub-menu {
+                        >li {
+                            >a {
+                                display: inline-block;
+                                padding: 0 0 2px 0;
+                                border-bottom: 1px solid transparent;
+                                &:hover,
+                                &:focus,
+                                &:active {
+                                    border-bottom: 1px solid getVar($colors, white, light);
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-        
-        
     }
-    
-    
 }

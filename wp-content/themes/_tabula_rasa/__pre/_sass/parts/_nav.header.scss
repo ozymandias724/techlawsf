@@ -1,91 +1,114 @@
 // nav.navlinks container for main nav
 header.header {
+
+    height: 72px;
     .navlinks {
-    
+
         $g: getVar($sizing, gutter, px, normal);
-    
-        // create full height
-        >ul,
-        li,
-        a,
-        & {
-            height: 100%;
-        }
-    
-        .sub-menu {
-            // display: flex;
-            flex-flow: column nowrap;
-            display: none;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            z-index: 9;
-            min-width: 100%;
-    
-            >li {
-                background-color: rgba(getVar($colors, white, light), 1);
-    
-                >a {
-                    color: rgba(getVar($colors, black, dark), 1);
-                }
-            }
-        }
-    
+
         >ul {
             display: flex;
             flex-flow: row nowrap;
-    
+
             >li {
                 position: relative;
-    
+
+                margin: 0 ($g / 2) 0 0;
+
                 &:last-of-type {
                     margin: 0 0 0 0;
                 }
-    
-    
+
+
                 a {
                     display: block;
                     text-decoration: none;
+                    padding: 0 10px;
                     border: none;
                     color: rgba(getVar($colors, black, dark), 1);
-                    padding: ($g / 2);
                     white-space: nowrap;
-    
+                    line-height: 72px;
                     &:hover,
                     &:focus,
-                    &:active {
-                        background-color: rgba(getVar($colors, black, dark), 1);
-                        color: rgba(getVar($colors, white, light), 1);
-    
-                    }
+                    &:active {}
                 }
-    
+
                 &.menu-item-has-children {
+                    position: relative;
+                    padding: 0 ($g / 2) 0 0;
+                    &:after {
+                        content: "\f078";
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        display: block;
+                        position: absolute;
+                        font-size: 12px;
+                        top: 50%;
+                        right: 5px;
+                        transform: translate(0, -50%);
+                        padding: 2px 0 0 0;
+                    }
+
                     &:hover {
-                        >a {
-                            background-color: rgba(getVar($colors, black, dark), 1);
-                            color: rgba(getVar($colors, white, light), 1);
+                        background-color: rgba(getVar($colors, black, dark), 1);
+
+                        >a, &:after {
+                            color: rgba(getVar($colors, white, full), 1);
                         }
-    
+
                         .sub-menu {
                             display: flex;
                         }
                     }
                 }
-    
+
                 &.open {
                     .sub-menu {
                         display: flex;
                     }
                 }
-    
+
                 // the current page
                 &.active {
+                    background-color: rgba(getVar($colors, black, dark), 1);
+
                     >a {
-                        background-color: rgba(getVar($colors, black, dark), 1);
-                        color: rgba(getVar($colors, white, light), 1);
+                        color: rgba(getVar($colors, white, full), 1);
                     }
                 }
+
+
+                .sub-menu {
+                    display: none;
+                    // display: flex;
+                    flex-flow: column nowrap;
+                    position: absolute;
+                    top: 100%;
+                    right: 0;
+                    z-index: 9;
+                    min-width: 100%;
+
+                    // 
+                    >li {
+                        background-color: rgba(getVar($colors, black, dark), 1);
+
+                        >a {
+                            color: rgba(getVar($colors, white, full), 1);
+                        }
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            background-color: rgba(getVar($colors, white, light), 1);
+
+                            >a {
+                                color: rgba(getVar($colors, black, full), 1);
+                            }
+                        }
+                    }
+                }
+
+
             }
         }
     }
