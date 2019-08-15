@@ -27,7 +27,7 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
         }
          
         // we are going to loop. check the options
-        $return['content_grid'] .= '<div class="flexgrid cols-'.$cB['options']['column_count'].'"><ul class="'.$cB['content'][0]->post_type.'">';
+        $return['content_grid'] .= '<div class="flexgrid cols-'.$cB['options']['column_count'].'"><ul class="'.$cB['content'][0]->post_type.' '.$cB['options']['alignment'].'">';
 
         // loop thru the post results (items are post objects)
         foreach ($cB['content'] as $i => $post) {

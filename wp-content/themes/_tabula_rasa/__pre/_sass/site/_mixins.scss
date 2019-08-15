@@ -52,10 +52,10 @@
 }
 
 // this allows a grdient to be added to elements (we need a way to pass values into this to allow for varying gradient directions, sizes, etc.)
-@mixin bg_gradient($w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.6)) {
+@mixin bgGradient($w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.6)) {
     position: relative;
 
-    &:before {
+    &:after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -68,6 +68,7 @@
         /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to #{$p}, $sC 0%, $eC 70%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        transition: all 0.3s ease;
     }
 }
 
@@ -75,7 +76,7 @@
 // 
 // 
 // 
-@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $aspect: false, $grow : 0, $shrink: 1) {
+@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $aspect: false, $grow : 0, $shrink: 1) {
 
     // calculate flex basis (width) of a column
     $basis: calc((100% - (#{$cols} - 1) * #{$gutter}) / #{$cols});
@@ -84,6 +85,10 @@
         display: flex;
         flex-flow: row wrap;
         align-items: $align;
+        justify-content: $justify;
+        &.left { justify-content: flex-start; }
+        &.center { justify-content: center; }
+        &.right { justify-content: flex-end; }
 
         >li {
             // width: #{$basis};            // enable this to prevent a bug where the columns dont end up the correct width (child element has margin or something)

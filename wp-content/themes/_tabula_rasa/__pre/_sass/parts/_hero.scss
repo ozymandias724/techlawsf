@@ -5,7 +5,7 @@
 section.hero {
 
     @include bgimage;
-    @include bg_gradient($h : 75%);
+    @include bgGradient($h : 75%);
     padding: (getVar($sizing,gutter,px,large) * 2) 0;
     
     .container {

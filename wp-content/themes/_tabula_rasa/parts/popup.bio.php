@@ -15,10 +15,21 @@ $posts = get_posts($args);
 $rec = $posts[0];
 $fields = get_fields($rec->ID);
 
+$return['icon_links'] = '';
+
 
 $return['bio'] = '';
 $guide['bio'] = '
-    <h2>%s</h2>
+    <section>
+        <div class="bgimg"><div class="bgimg-img" style="background-image: url(%s)"></div></div>
+        <div>
+            <h2>%s</h2>
+            <h4>%s</h4>
+            %s
+            %s
+            %s    
+        </div>
+    </section>
     <div>
         %s
     </div>
@@ -26,7 +37,12 @@ $guide['bio'] = '
 
 $return['bio'] .= sprintf(
     $guide['bio']
+    ,$fields['picture']['url']
     ,$rec->post_title
+    ,$fields['position']
+    ,( !empty( $fields['contact_info']['email'] ) ? '<p><a href="'.$fields['contact_info']['email'].'" title="Email '.$post->post_title.'">'. $fields['contact_info']['email'] . '</a></p>' : '' )
+    ,( !empty( $fields['contact_info']['phone'] ) ? '<p><a href="'.$fields['contact_info']['phone']. '" title="Call ' . $post->post_title . '">'. $fields['contact_info']['phone'] . '</a></p>' : '' )
+    ,$return['icon_links']
     ,$fields['bio']
 );
 

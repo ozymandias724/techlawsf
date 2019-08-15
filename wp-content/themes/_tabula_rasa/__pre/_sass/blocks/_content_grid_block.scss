@@ -1,19 +1,33 @@
+// 
+// 
+// 
 .block__content_grid > .container {
+    $g : getVar($sizing, gutter, px, normal);
+    
+    // 
+    text-align: center;
 
+    
     // block heading
     > h2 {
-
+        margin: 0 0 ($g / 2) 0;
     }
     // block sub-heading
     > div {
-
+        margin: 0 0 ($g * 2) 0;
     }
     
     // block content (grid)
     > .flexgrid {
         margin: getVar($sizing, gutter, px, normal) 0;
 
+        > ul {
+            
+        }
+
         .grid_item {
+
+            text-align: left;
 
             // grid item is an actionable block
             > a {
@@ -30,7 +44,38 @@
                 width: 100%;
                 .bgimg-img {
                     @include aspectRatio();
+                    @include bgGradient();
                 }
+            }
+
+            &:hover, &:active, &:focus {
+                .bgimg {
+                    .bgimg-img {
+                        &:after {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+        
+
+        // content type is team members
+        ul.team_members {
+
+            .grid_item {
+
+
+                // team member is actionable block 
+                // this will open the popup
+                > a {
+
+                    
+                }
+                
+                
             }
             
         }
