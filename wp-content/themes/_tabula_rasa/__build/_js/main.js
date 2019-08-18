@@ -7,25 +7,31 @@ var _magnificPopup = _interopRequireDefault(require("magnific-popup"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-/**
-*  The Main JS File
-*/
-// get libraries
-// latest jquery prereq
-// import slick from 'slick-carousel-browserify';
-// certain things should wait until the document is ready
+// 
+// 
+// 
+// 
+// 
+// 
+// import libraries
+// 
+// 
+// when the script is loaded...
+// do something...
+// 
+// 
+// when the document is ready...
 (0, _jquery["default"])(document).ready(function () {
-  (0, _jquery["default"])('html').removeClass('no-js');
-  (0, _jquery["default"])('main').css('margin-top', (0, _jquery["default"])('header').innerHeight());
+  // 
+  // 
+  //  run these scripts when the DOM is fully loaded
+  // remove the no-js class from <html>
+  (0, _jquery["default"])('html').removeClass('no-js'); // offset <main> by <header> height
 
-  if ((0, _jquery["default"])('header.header nav.navlinks').length) {
-    // clicked link that is a parent (has children)
-    (0, _jquery["default"])('nav.navlinks li.menu-item-has-children > a').on('click', function (e) {
-      (0, _jquery["default"])(this).parent('li').toggleClass('open');
-    });
-  }
+  (0, _jquery["default"])('main').css('margin-top', (0, _jquery["default"])('header').innerHeight()); // if there are bio popups on the page
 
   if ((0, _jquery["default"])('.js__popup_bio').length) {
+    // open the bio popup on click
     (0, _jquery["default"])('.js__popup_bio').magnificPopup({
       type: "ajax",
       closeMarkup: '<button title="Close lightbox (Esc)" aria-label="Close lightbox (Esc)" type="button" class="mfp-close">&#215;</button>',
@@ -34,7 +40,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
       mainClass: 'bio'
     });
   }
-});
+}); // end $.ready
 
 },{"jquery":2,"magnific-popup":3}],2:[function(require,module,exports){
 /*!

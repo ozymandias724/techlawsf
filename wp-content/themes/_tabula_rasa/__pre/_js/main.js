@@ -1,35 +1,39 @@
-/**
-*  The Main JS File
-*/
-// get libraries
-import $ from 'jquery';                         // latest jquery prereq
+// 
+// 
+// 
+// 
+// 
+// 
+// import libraries
+import $ from 'jquery';
 import magnific from 'magnific-popup';
-// import slick from 'slick-carousel-browserify';
+// 
+// 
+// when the script is loaded...
 
-// certain things should wait until the document is ready
-$(document).ready(function()
-{
+// do something...
 
+// 
+// 
+// when the document is ready...
+$(document).ready(function(){
+    // 
+    // 
+    //  run these scripts when the DOM is fully loaded
+
+
+    // remove the no-js class from <html>
     $('html').removeClass('no-js');
-
-
     
+    // offset <main> by <header> height
     $('main').css('margin-top', $('header').innerHeight() );
+    
 
     
-    
-    if( $('header.header nav.navlinks').length ){
-        
-        // clicked link that is a parent (has children)
-        $('nav.navlinks li.menu-item-has-children > a').on('click', function(e){
-
-            $(this).parent('li').toggleClass('open');
-        });
-
-    }
-
+    // if there are bio popups on the page
     if( $('.js__popup_bio').length ){
 
+        // open the bio popup on click
         $('.js__popup_bio').magnificPopup({
             type: "ajax",
             closeMarkup: '<button title="Close lightbox (Esc)" aria-label="Close lightbox (Esc)" type="button" class="mfp-close">&#215;</button>',
@@ -40,10 +44,4 @@ $(document).ready(function()
     }
 
 
-
-
-
-
-    
-
-});
+}); // end $.ready

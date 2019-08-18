@@ -17,7 +17,7 @@ section.hero {
         justify-content: center;
         align-items: center;
         h2 {
-            @include fontS-50;
+            font-size: 5rem;
             font-weight: 300;
             letter-spacing: 2px;
         }

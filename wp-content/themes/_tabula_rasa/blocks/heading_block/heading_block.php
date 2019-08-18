@@ -9,7 +9,7 @@
     // guide string for the section
     $guide['heading_block'] = '
         <section class="site__block block__heading">
-            <div class="container '.$cB['width'].'">
+            <div class="container '.$cB['width'].'" style="text-align: '.$cB['alignment'].'">
                 %s
                 %s
             </div>

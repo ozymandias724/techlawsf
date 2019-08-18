@@ -41,29 +41,25 @@ h6 {
         font-weight: 300;
     }
 }
-
 h1 {
-    @include fontS-50;
+    font-size: 5rem;
 }
 h2 {
-    @include fontS-34;
+    font-size: 4rem;
 }
 h3 {
-    @include fontS-24;
+    font-size: 3rem;
 }
 h4 {
-    @include fontS-18;
+    font-size: 2rem;
 }
 h5 {
-    @include fontS-16;
+    font-size: 1.6rem;
 }
 h6 {
-    @include fontS-14;
+    font-size: 1.4rem;
 }
-p {
-    @include fontS-16;
-    font-weight: 300;
-}
+
 
 body {
     font-family: "Lato", sans-serif;

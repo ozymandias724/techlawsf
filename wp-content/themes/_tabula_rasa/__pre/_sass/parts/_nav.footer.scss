@@ -1,51 +1,66 @@
-footer {
+// 
+// 
+// 
+// 
+// 
+footer .navlinks {
+    // 
+    $g: getVar($sizing, gutter, px, normal);
+
+    >ul {
+        display: flex;
+        flex-flow: row nowrap;
 
 
-    .navlinks {
+        >li {
+            text-align: left;
+            margin: 0 $g $g 0;
 
+            &:last-of-type {
+                margin: 0 0 $g 0;
+            }
 
-        .menu {
-            display: flex;
-            flex-flow: row nowrap;
+            // set all link styles
+            a {
+                color: getVar($colors, white, light);
+            }
 
+            // menu item is 'heading'
+            &.parent.heading {
 
-            >.menu-item {
-                text-align: left;
-
-                // set all link styles
-                a {
-                    color: getVar($colors, white, light);
+                // link is heading style
+                >a {
+                    $g: getVar($sizing, gutter, px, small);
+                    margin: 0 0 $g 0;
+                    pointer-events: none; // not a actual link (value should be #)
+                    border-bottom: 2px solid getVar($colors, white, light);
                 }
 
-                // menu item is 'heading'
-                &.menu-item-has-children.heading {
-
-                    // link is heading style
-                    >a {
-                        $g: getVar($sizing, gutter, px, small);
-                        margin: 0 0 $g 0;
-                        pointer-events: none; // not a actual link (value should be #)
-                        border-bottom: 2px solid getVar($colors, white, light);
-                    }
-
-                    // style to match el
-                    &.h4>a {
-                        @include fontS-18;
-                    }
+                // style to match el
+                &.h4>a {
+                    display: inline-block;
+                    font-size: 2rem;
+                    font-weight: 400;
+                }
 
 
-                    // the actual menu within the custom heading wrapper menu item
-                    .sub-menu {
-                        >li {
-                            >a {
-                                display: inline-block;
-                                padding: 0 0 2px 0;
-                                border-bottom: 1px solid transparent;
-                                &:hover,
-                                &:focus,
-                                &:active {
-                                    border-bottom: 1px solid getVar($colors, white, light);
-                                }
+                // the actual menu within the custom heading wrapper menu item
+                .sub-menu {
+                    flex-flow: column nowrap;
+                    // menu items
+                    >li {
+
+                        // menu links
+                        >a {
+                            display: inline-block;
+                            padding: 0 0 2px 0;
+                            margin: 0 0 5px 0;
+                            border-bottom: 1px solid transparent;
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                border-bottom: 1px solid getVar($colors, white, light);
                             }
                         }
                     }

@@ -1,39 +1,54 @@
-// nav.navlinks container for main nav
-header.header {
+// 
+// 
+// 
+//  nav.navlinks, if found in the header
+header.header .navlinks {
 
-    height: 72px;
-    .navlinks {
+    $g: getVar($sizing, gutter, px, normal);
 
-        $g: getVar($sizing, gutter, px, normal);
+    > ul {
 
-        >ul {
-            display: flex;
-            flex-flow: row nowrap;
+        > li {
+    
+            // 
+            position: relative;
+            margin: 0 ($g / 2) 0 0;
+            
+            &:last-of-type {
+                margin: 0 0 0 0;
+            }
 
-            >li {
+
+            // nav item anchor tags 
+            > a {
+                line-height: 72px;
+                // nav item text
+                > span {
+                    
+                }
+                
+            }
+
+            a {
+                > span {
+                    border-bottom: 2px solid transparent;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    >span {
+                        border-bottom: 2px solid getVar($colors, primary);
+                    }
+                }
+            }
+            
+            // top level items w/ children
+            &.parent {
                 position: relative;
-
-                margin: 0 ($g / 2) 0 0;
-
-                &:last-of-type {
-                    margin: 0 0 0 0;
-                }
-
-
-                a {
-                    display: block;
-                    text-decoration: none;
-                    padding: 0 10px;
-                    border: none;
-                    color: rgba(getVar($colors, black, dark), 1);
-                    white-space: nowrap;
-                    line-height: 72px;
-                    &:hover,
-                    &:focus,
-                    &:active {}
-                }
-
-                &.menu-item-has-children {
+                
+                // down chevron
+                > a > span {
                     position: relative;
                     padding: 0 ($g / 2) 0 0;
                     &:after {
@@ -44,71 +59,45 @@ header.header {
                         position: absolute;
                         font-size: 12px;
                         top: 50%;
-                        right: 5px;
+                        right: 0;
                         transform: translate(0, -50%);
                         padding: 2px 0 0 0;
                     }
-
-                    &:hover {
-                        background-color: rgba(getVar($colors, black, dark), 1);
-
-                        >a, &:after {
-                            color: rgba(getVar($colors, white, full), 1);
-                        }
-
-                        .sub-menu {
-                            display: flex;
-                        }
-                    }
                 }
 
-                &.open {
+                // reveal sub-menu on hover (this element is also a link)
+                &:hover {
                     .sub-menu {
                         display: flex;
                     }
                 }
-
-                // the current page
-                &.active {
-                    background-color: rgba(getVar($colors, black, dark), 1);
-
-                    >a {
-                        color: rgba(getVar($colors, white, full), 1);
-                    }
-                }
+            }
 
 
-                .sub-menu {
-                    display: none;
-                    // display: flex;
-                    flex-flow: column nowrap;
-                    position: absolute;
-                    top: 100%;
-                    right: 0;
-                    z-index: 9;
-                    min-width: 100%;
-
-                    // 
-                    >li {
-                        background-color: rgba(getVar($colors, black, dark), 1);
-
-                        >a {
-                            color: rgba(getVar($colors, white, full), 1);
+            // <ul>
+            .sub-menu {
+                display: none;
+                // display: flex;
+                flex-flow: column nowrap;
+                position: absolute;
+                top: 90%;
+                right: 0;
+                z-index: 9;
+                min-width: 100%;
+                background-color: getVar($colors, white, full);
+                @include boxshadow(4);
+                border: 1px solid rgba(getVar($colors, black, dark), 0.33);
+                > li {
+                    > a {
+                        padding: ($g / 2);
+                        &:hover, &:focus, &:active {
+                            background-color: getVar($colors, white, light);
                         }
+                        > span {
 
-                        &:hover,
-                        &:focus,
-                        &:active {
-                            background-color: rgba(getVar($colors, white, light), 1);
-
-                            >a {
-                                color: rgba(getVar($colors, black, full), 1);
-                            }
                         }
                     }
                 }
-
-
             }
         }
     }

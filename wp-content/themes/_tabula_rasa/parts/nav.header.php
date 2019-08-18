@@ -27,6 +27,8 @@
             ,'echo' => false
             ,'container' => 'nav'
             ,'container_class' => 'navlinks'
+            ,'link_before' => '<span>'
+            ,'link_after' => '</span>'
         );
         // write nav
         $return['header'] .= wp_nav_menu($args);

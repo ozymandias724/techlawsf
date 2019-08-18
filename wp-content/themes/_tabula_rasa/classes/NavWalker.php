@@ -29,16 +29,20 @@ class Rational_Walker_Nav_Menu extends Walker_Nav_Menu
 		$classes[] = 'menu-item-' . $item->ID;
 
 		// Cleaner class array to replace default
-		// $new_classes = array();
-		// if (in_array('menu-item-has-children', $classes))
-		// 	$new_classes[] = 'parent';
-		// if (in_array('current-menu-item', $classes))
-		// 	$new_classes[] = 'active';
-		// if (in_array('current-menu-ancestor', $classes))
-		// 	$new_classes[] = 'active-ancestor';
-		// if (in_array('current-menu-parent', $classes))
-		// 	$new_classes[] = 'active-parent';
-		// $classes = $new_classes;
+		$new_classes = array();
+		if (in_array('menu-item-has-children', $classes))
+			$new_classes[] = 'parent';
+		if (in_array('current-menu-item', $classes))
+			$new_classes[] = 'active';
+		if (in_array('current-menu-ancestor', $classes))
+			$new_classes[] = 'active-ancestor';
+		if (in_array('current-menu-parent', $classes))
+			$new_classes[] = 'active-parent';
+		if (in_array('heading', $classes))
+			$new_classes[] = 'heading';
+		if (in_array('h4', $classes))
+			$new_classes[] = 'h4';
+		$classes = $new_classes;
 
 
 		/**

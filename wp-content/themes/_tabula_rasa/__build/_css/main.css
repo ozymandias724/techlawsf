@@ -401,44 +401,26 @@ h6.display {
 
 h1 {
   font-size: 5rem;
-  line-height: 6rem;
 }
 
 h2 {
-  font-size: 3.4rem;
-  line-height: 4.8rem;
+  font-size: 4rem;
 }
 
 h3 {
-  font-size: 2.4rem;
-  line-height: 3.6rem;
-}
-@media only screen and (max-width: 1280px) {
-  h3 {
-    font-size: 1.6rem;
-    line-height: 2.8rem;
-  }
+  font-size: 3rem;
 }
 
 h4 {
-  font-size: 1.8rem;
-  line-height: 3rem;
+  font-size: 2rem;
 }
 
 h5 {
   font-size: 1.6rem;
-  line-height: 2.8rem;
 }
 
 h6 {
   font-size: 1.4rem;
-  line-height: 2.4rem;
-}
-
-p {
-  font-size: 1.6rem;
-  line-height: 2.8rem;
-  font-weight: 300;
 }
 
 body {
@@ -510,19 +492,19 @@ section.hero .container {
 }
 section.hero .container h2 {
   font-size: 5rem;
-  line-height: 6rem;
   font-weight: 300;
   letter-spacing: 2px;
 }
 
 header.header {
+  display: block;
   position: fixed;
   z-index: 99;
-  display: block;
   width: 100%;
   background-color: #ffffff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: 72px;
 }
 header.header > .container {
   display: flex;
@@ -538,11 +520,15 @@ header.header .logo.logo--image img {
   height: 100%;
 }
 header.header .logo.logo--text {
-  color: #cb8568;
-  letter-spacing: 4px;
-  border-bottom: 2px solid #cb8568;
-  font-size: 1.8rem;
-  line-height: 3rem;
+  color: #FB9985;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  font-family: "EB Garamond", serif;
+}
+header.header .logo.logo--text:hover, header.header .logo.logo--text:focus, header.header .logo.logo--text:active {
+  border-bottom: 2px solid #FB9985;
 }
 header.header .site__social-media {
   margin: 0 15px 0 0;
@@ -593,10 +579,10 @@ header.header .site__social-media {
 }
 
 footer {
-  background-color: #1c1c1c;
+  background-color: #303030;
 }
 footer .container {
-  color: #d0d0d0;
+  color: #f1f1f1;
   display: flex;
   flex-flow: row nowrap;
   text-align: center;
@@ -604,36 +590,24 @@ footer .container {
   padding: 30px 0;
 }
 footer .container > div > h4 {
-  border-bottom: 2px solid #d0d0d0;
+  border-bottom: 2px solid #f1f1f1;
 }
 
-.navlinks > .menu {
+.navlinks ul {
   display: flex;
 }
-.navlinks > .menu > .menu-item {
-  margin: 0 30px 0 0;
-}
-.navlinks > .menu > .menu-item:last-child {
+.navlinks ul li {
   margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
-.navlinks > .menu > .menu-item a {
-  margin: 0 0 5px 0;
+.navlinks ul li a {
   display: block;
   text-decoration: none;
   border: none;
-}
-.navlinks > .menu > .menu-item a:hover, .navlinks > .menu > .menu-item a:focus, .navlinks > .menu > .menu-item a:active {
-  text-decoration: none;
-  border: none;
+  color: #303030;
+  white-space: nowrap;
 }
 
-header.header {
-  height: 72px;
-}
-header.header .navlinks > ul {
-  display: flex;
-  flex-flow: row nowrap;
-}
 header.header .navlinks > ul > li {
   position: relative;
   margin: 0 15px 0 0;
@@ -641,20 +615,23 @@ header.header .navlinks > ul > li {
 header.header .navlinks > ul > li:last-of-type {
   margin: 0 0 0 0;
 }
-header.header .navlinks > ul > li a {
-  display: block;
-  text-decoration: none;
-  padding: 0 10px;
-  border: none;
-  color: #1c1c1c;
-  white-space: nowrap;
+header.header .navlinks > ul > li > a {
   line-height: 72px;
 }
-header.header .navlinks > ul > li.menu-item-has-children {
+header.header .navlinks > ul > li a > span {
+  border-bottom: 2px solid transparent;
+}
+header.header .navlinks > ul > li a:hover > span, header.header .navlinks > ul > li a:focus > span, header.header .navlinks > ul > li a:active > span {
+  border-bottom: 2px solid #FB9985;
+}
+header.header .navlinks > ul > li.parent {
+  position: relative;
+}
+header.header .navlinks > ul > li.parent > a > span {
   position: relative;
   padding: 0 15px 0 0;
 }
-header.header .navlinks > ul > li.menu-item-has-children:after {
+header.header .navlinks > ul > li.parent > a > span:after {
   content: "";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
@@ -662,76 +639,67 @@ header.header .navlinks > ul > li.menu-item-has-children:after {
   position: absolute;
   font-size: 12px;
   top: 50%;
-  right: 5px;
+  right: 0;
   transform: translate(0, -50%);
   padding: 2px 0 0 0;
 }
-header.header .navlinks > ul > li.menu-item-has-children:hover {
-  background-color: #1c1c1c;
-}
-header.header .navlinks > ul > li.menu-item-has-children:hover > a, header.header .navlinks > ul > li.menu-item-has-children:hover:after {
-  color: white;
-}
-header.header .navlinks > ul > li.menu-item-has-children:hover .sub-menu {
+header.header .navlinks > ul > li.parent:hover .sub-menu {
   display: flex;
-}
-header.header .navlinks > ul > li.open .sub-menu {
-  display: flex;
-}
-header.header .navlinks > ul > li.active {
-  background-color: #1c1c1c;
-}
-header.header .navlinks > ul > li.active > a {
-  color: white;
 }
 header.header .navlinks > ul > li .sub-menu {
   display: none;
   flex-flow: column nowrap;
   position: absolute;
-  top: 100%;
+  top: 90%;
   right: 0;
   z-index: 9;
   min-width: 100%;
-}
-header.header .navlinks > ul > li .sub-menu > li {
-  background-color: #1c1c1c;
+  background-color: #ffffff;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 1px solid rgba(48, 48, 48, 0.33);
 }
 header.header .navlinks > ul > li .sub-menu > li > a {
-  color: white;
+  padding: 15px;
 }
-header.header .navlinks > ul > li .sub-menu > li:hover, header.header .navlinks > ul > li .sub-menu > li:focus, header.header .navlinks > ul > li .sub-menu > li:active {
-  background-color: #d0d0d0;
+header.header .navlinks > ul > li .sub-menu > li > a:hover, header.header .navlinks > ul > li .sub-menu > li > a:focus, header.header .navlinks > ul > li .sub-menu > li > a:active {
+  background-color: #f1f1f1;
 }
-header.header .navlinks > ul > li .sub-menu > li:hover > a, header.header .navlinks > ul > li .sub-menu > li:focus > a, header.header .navlinks > ul > li .sub-menu > li:active > a {
-  color: black;
-}
-
-footer .navlinks .menu {
+footer .navlinks > ul {
   display: flex;
   flex-flow: row nowrap;
 }
-footer .navlinks .menu > .menu-item {
+footer .navlinks > ul > li {
   text-align: left;
+  margin: 0 30px 30px 0;
 }
-footer .navlinks .menu > .menu-item a {
-  color: #d0d0d0;
+footer .navlinks > ul > li:last-of-type {
+  margin: 0 0 30px 0;
 }
-footer .navlinks .menu > .menu-item.menu-item-has-children.heading > a {
+footer .navlinks > ul > li a {
+  color: #f1f1f1;
+}
+footer .navlinks > ul > li.parent.heading > a {
   margin: 0 0 15px 0;
   pointer-events: none;
-  border-bottom: 2px solid #d0d0d0;
+  border-bottom: 2px solid #f1f1f1;
 }
-footer .navlinks .menu > .menu-item.menu-item-has-children.heading.h4 > a {
-  font-size: 1.8rem;
-  line-height: 3rem;
+footer .navlinks > ul > li.parent.heading.h4 > a {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 400;
 }
-footer .navlinks .menu > .menu-item.menu-item-has-children.heading .sub-menu > li > a {
+footer .navlinks > ul > li.parent.heading .sub-menu {
+  flex-flow: column nowrap;
+}
+footer .navlinks > ul > li.parent.heading .sub-menu > li > a {
   display: inline-block;
   padding: 0 0 2px 0;
+  margin: 0 0 5px 0;
   border-bottom: 1px solid transparent;
 }
-footer .navlinks .menu > .menu-item.menu-item-has-children.heading .sub-menu > li > a:hover, footer .navlinks .menu > .menu-item.menu-item-has-children.heading .sub-menu > li > a:focus, footer .navlinks .menu > .menu-item.menu-item-has-children.heading .sub-menu > li > a:active {
-  border-bottom: 1px solid #d0d0d0;
+footer .navlinks > ul > li.parent.heading .sub-menu > li > a:hover, footer .navlinks > ul > li.parent.heading .sub-menu > li > a:focus, footer .navlinks > ul > li.parent.heading .sub-menu > li > a:active {
+  border-bottom: 1px solid #f1f1f1;
 }
 
 .card {
@@ -1223,11 +1191,7 @@ footer .navlinks .menu > .menu-item.menu-item-has-children.heading .sub-menu > l
   }
 }
 .flexgrid ul.practice_areas .grid_item:nth-child(n+1), .flexgrid ul.practice_areas .grid_item:nth-child(1n) {
-  margin: 0 0 60px 0;
-}
-.flexgrid ul.practice_areas .grid_item .card {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0 0 90px 0;
 }
 .flexgrid ul.practice_areas .grid_item .card:hover, .flexgrid ul.practice_areas .grid_item .card:focus, .flexgrid ul.practice_areas .grid_item .card:active {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);

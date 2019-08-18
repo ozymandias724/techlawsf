@@ -1,48 +1,31 @@
 // 
 // 
+//  wp_nav_menu returns nav.navlinks > ul.menu > li.menu-item
+//  using a custom walker to clean nav item classes
 // 
 // 
-
-
+// 
 .navlinks {
 
+    
 
-    // any nav menu
-    >.menu {
+    // reset <ul>
+    ul {
         display: flex;
-
-
-        // top level menu items
-        > .menu-item {
-
-            $g : getVar($sizing, gutter, px, normal);
-            margin: 0 $g 0 0;
-            &:last-child {
-                margin: 0 0 0 0;
-            }
-
-            // all nav links
+        // reset <li>
+        li {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            // reset <a>
             a {
-                $g : getVar($sizing, gutter, px, tiny);
-                margin: 0 0 $g 0;
                 display: block;
                 text-decoration: none;
                 border: none;
-
-                &:hover,
-                &:focus,
-                &:active {
-                    text-decoration: none;
-                    border: none;
-                }
+                color: rgba(getVar($colors, black, dark), 1);
+                white-space: nowrap;
             }
         }
-
     }
-
 }
-
-
-
 @import "nav.header"; // header nav
 @import "nav.footer"; // footer nav

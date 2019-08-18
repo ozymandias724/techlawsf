@@ -1,13 +1,25 @@
+// 
+// 
+// 
+// 
+// 
 header.header {
-    $g: getVar($sizing, gutter, px, normal);
 
+    // 
+    $g: getVar($sizing, gutter, px, normal);
+    
+    // 
+    display: block;
     position: fixed;
     z-index: 99;
-    display: block;
     width: 100%;
     background-color: getVar($colors, white, full);
     @include boxshadow(1);
-
+    
+    // 
+    height: 72px;
+    
+    // 
     >.container {
         display: flex;
         flex-flow: row nowrap;
@@ -19,8 +31,6 @@ header.header {
     // either as an image or as text
     // denoted by class modifier .logo.logo--modifier
     .logo {
-        
-
         &.logo--image {
             height: 100%;
             padding: ($g / 2);
@@ -28,21 +38,19 @@ header.header {
                 height: 100%;
             }
         }
-
         &.logo--text {
-
             color: getVar($colors, primary);
-            letter-spacing: 4px;
-            border-bottom: 2px solid getVar($colors, primary);
-            @include fontS-18;
-            
+            letter-spacing: 2px;
+            font-size: 2rem;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            font-family: 'EB Garamond', serif;
+            &:hover, &:focus, &:active {
+                border-bottom: 2px solid getVar($colors, primary);
+            }
         }
-
     }
-
     .site__social-media {
         margin: 0 ($g / 2) 0 0;
     }
-
-    
 }
