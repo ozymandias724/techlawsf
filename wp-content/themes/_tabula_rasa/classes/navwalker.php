@@ -43,6 +43,7 @@ class Rational_Walker_Nav_Menu extends Walker_Nav_Menu
 		if (in_array('h4', $classes))
 			$new_classes[] = 'h4';
 		$classes = $new_classes;
+		
 
 
 		/**
