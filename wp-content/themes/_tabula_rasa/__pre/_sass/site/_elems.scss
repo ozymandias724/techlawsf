@@ -33,3 +33,20 @@
         }
     }
 }
+
+ul.iconlinks {
+
+    .iconlinks-icon {
+
+        &:before {
+            content: "";
+            display: inline-block;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}

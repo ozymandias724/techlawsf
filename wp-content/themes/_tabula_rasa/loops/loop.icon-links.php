@@ -14,14 +14,13 @@ if (empty($tS['icon_links'])) {
 
 
 
-    $guide['icon_links'] = '<li>%s</li>';
+    $guide['icon_links'] = '<li class="iconlinks-icon %s">%s</li>';
 
-    $return['icon_links'] = '<ul>';
+    $return['icon_links'] = '<ul class="iconlinks">';
     foreach( $tS['icon_links'] as $iL ){
-
         $return['icon_links'] .= sprintf(
             $guide['icon_links']
-            ,'X'
+            ,$iL['icon']['class']
         );
         
     }
