@@ -3,9 +3,14 @@
  *      Footer
 */
 
-    $settings = get_field('theme_settings', 'options');
-
+    // get theme settings
+    $tS = get_field('theme_settings', 'options');
     
+    // addr
+    if( !empty($tS['address']) ){
+        $address = get_the_address($tS['address']);
+    }
+
     
 ?>
 <footer>
@@ -15,11 +20,18 @@
         
         <div>
             <h4>Tech Law SF Group Inc</h4>
+            <?php echo $address; ?>
         </div>
     
         
         <div>
             <h4>Contact Us</h4>
+            <?php 
+                echo $tS['phone_number'];
+                echo $tS['email_address'];
+                include( get_template_directory() . '/loops/loop.icon-links.php' );
+
+            ?>
         </div>
     
     

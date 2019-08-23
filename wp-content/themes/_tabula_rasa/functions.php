@@ -12,4 +12,16 @@ function do_custom_rewrite_rules(){
 
 add_action('init', 'do_custom_rewrite_rules');
 
+
+
+function my_acf_google_map_api($api)
+{
+
+    $api['key'] = 'AIzaSyBBX0KJ6MEzWrMPeH84FNUftS9KcAA9-g4';
+
+    return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 ?>

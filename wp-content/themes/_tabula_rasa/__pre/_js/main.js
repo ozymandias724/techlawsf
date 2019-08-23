@@ -29,6 +29,20 @@ $(document).ready(function(){
     $('main').css('margin-top', $('header').innerHeight() );
     
 
+
+    // if there are clients on the page
+    if ($('.js__clients-client').length ){
+
+        $('section.clients').on('click', '.js__clients-client', function(e){
+
+            $(this).toggleClass('active');
+            $(this).children('div:not(:first-child)').slideToggle(250);
+
+        });
+
+    }
+    
+    
     
     // if there are bio popups on the page
     if( $('.js__popup_bio').length ){

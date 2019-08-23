@@ -1,0 +1,81 @@
+// 
+// 
+// 
+// 
+body.page-template-template-clients {
+
+    section.clients {
+
+        .flexgrid {
+
+            >ul {
+                align-items: center;
+
+                >li.client {
+                    $g: getVar($sizing, gutter, px, small);
+                    cursor: pointer;
+
+                    >div:first-child {
+                        display: flex;
+                        flex-flow: row wrap;
+
+                        >.bgimg {
+                            width: (100% / 3);
+
+                            .bgimg-img {
+                                @include aspectRatio(4, 3);
+                            }
+                        }
+
+                        >div:not(.bgimg) {
+                            width: (200% / 3);
+                            padding: $g;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    >div:not(:first-child) {
+                        display: none;
+                        padding: $g;
+                    }
+                    
+                    &.active {
+                        @include boxshadow(1);
+                        >div:not(:first-child) {
+                        }
+                    }
+
+                    @include boxshadow(0);
+
+                    &:hover {
+                        @include boxshadow(1);
+
+                        >div:first-child {
+                            .bgimg-img {
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+
+                    &:nth-child(even) {
+                        >div:first-child>.bgimg {
+                            order: 2;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        >div:first-child>div:not(.bgimg) {}
+                    }
+
+                }
+
+
+            }
+
+        }
+
+    }
+}

@@ -11,22 +11,15 @@ $return['columns_block'] = '';
 // return string
 $return['columns'] = '';
 
-/**
- *  if we have columns
- */ 
-// get column count
-$cols = count($cB['columns']);
-
 // open section and container
-$return['columns_block'] .= '<section class="site__block block__columns"><div class="container ' . $cB['width'] . '">';
-
-
-// heading + sub heading please
-$return['columns_block'] .= '<h2 class="block-heading">'.$cB['heading'].'</h2>';
-$return['columns_block'] .= '<p class="block-subheading">'.$cB['sub_heading'].'</p>';
-
+$return['columns_block'] .= '
+    <section class="site__block block__columns">
+        <div class="container ' . $cB['width'] . '">
+        '. (!empty($cB['heading']) ? '<h2 class="block-heading">' . $cB['heading'] . '</h2>' : '') . '
+        '. (!empty($cB['sub_heading']) ? '<p class="block-subheading">' . $cB['sub_heading'] . '</p>' : '') . '
+';
 // open columns <ul>
-$return['columns'] .= '<div class="flexgrid cols-'.$cols.'"><ul>';
+$return['columns'] .= '<div class="flexgrid cols-'. count($cB['columns']) .'"><ul>';
 
 // loop thru each column
 foreach ($cB['columns'] as $i => $column) {

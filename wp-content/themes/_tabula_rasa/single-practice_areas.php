@@ -1,6 +1,8 @@
 <?php
 /**
  *  Practice Areas Single Post Template
+ *      needs to be moved to a template file for cleanliness ?
+ * 
  * 
  */
 

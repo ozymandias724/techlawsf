@@ -3,7 +3,8 @@
 
 // background image wrapper (mimic figure elem)
 .bgimg {
-    
+    position: relative;
+    overflow: hidden;
 }
 // background image
 .bgimg-img {
@@ -13,7 +14,6 @@
 }
 // background image wrapper (mimic figure elem)
 .bgimg {
-    position: relative;
     .bgimg-img {
         position: absolute;
         top: 0;
