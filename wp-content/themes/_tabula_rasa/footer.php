@@ -10,7 +10,6 @@
     if( !empty($tS['address']) ){
         $address = get_the_address($tS['address']);
     }
-
     
 ?>
 <footer>
@@ -27,8 +26,8 @@
         <div>
             <h4>Contact Us</h4>
             <?php 
-                echo $tS['phone_number'];
-                echo $tS['email_address'];
+                echo '<p><a href="'.$tS['phone_number']. '">' . $tS['phone_number'] . '</a></p>';
+                echo '<p><a href="'. $tS['email_address'] . '">' . $tS['email_address'] . '</a></p>';
                 include( get_template_directory() . '/loops/loop.icon-links.php' );
 
             ?>

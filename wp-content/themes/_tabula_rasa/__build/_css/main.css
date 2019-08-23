@@ -352,7 +352,21 @@ body {
   transform: scale(1.25);
 }
 
-ul.iconlinks .iconlinks-icon:before {
+ul.iconlinks {
+  display: flex;
+  flex-flow: row wrap;
+}
+ul.iconlinks li.iconlinks-icon {
+  margin: 0 15px 15px 0;
+}
+ul.iconlinks li.iconlinks-icon:last-of-type {
+  margin: 0 0 15px 0;
+}
+ul.iconlinks li.iconlinks-icon i {
+  font-size: 24px;
+  transform: scale(1);
+}
+ul.iconlinks li.iconlinks-icon i:before {
   content: "";
   display: inline-block;
   font-family: "Font Awesome 5 Free";
@@ -361,6 +375,9 @@ ul.iconlinks .iconlinks-icon:before {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+ul.iconlinks li.iconlinks-icon > a {
+  display: block;
 }
 
 a {
@@ -593,6 +610,10 @@ header.header .site__social-media {
 
 footer {
   background-color: #303030;
+  color: #ffffff;
+}
+footer a {
+  color: #ffffff;
 }
 footer .container {
   color: #f1f1f1;

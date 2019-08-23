@@ -4,15 +4,17 @@
  *      
  *  Returns an unordered list of clients using the flexgrid
 */
-    if( empty($fields['clients']) ){
+    if( empty($fields['client_list']['client_list']) ){
         $fields = get_fields( get_the_ID() );
     }
-    if( empty($fields['clients']) ){
+    if( empty($fields['client_list']['client_list']) ){
         // something went wrong; theres no clients!
     } else {
 
         
-        $guide['clients'] = '
+        $cL = $fields['client_list']['client_list'];
+        
+        $guide['client_list'] = '
             <li class="client js__clients-client">
                 <div>
                     %s
@@ -26,25 +28,27 @@
         ';
 
         
-        $return['clients'] = '
-            <section class="clients">
-                <div class="container normal">
-                    <div class="flexgrid cols-2"><ul>
+        $return['client_list'] = '
+            <section class="site__block clients">
+                <div class="container ' . $cL['width'] . '">
+                '. (!empty($cL['heading']) ? '<h2 class="block-heading">' . $cL['heading'] . '</h2>' : '') . '
+                '. (!empty($cL['sub_heading']) ? '<p class="block-subheading">' . $cL['sub_heading'] . '</p>' : '') . '
+                <div class="flexgrid cols-2"><ul>
         ';
         
-        foreach( $fields['clients'] as $client ){
-            $return['clients'] .= sprintf(
-                $guide['clients']
+        foreach( $cL['clients'] as $client ){
+            $return['client_list'] .= sprintf(
+                $guide['client_list']
                 ,( !empty($client['image']) ? '<div class="bgimg"><div class="bgimg-img" style="background-image: url('.$client['image']['url'].')"></div></div>' : '' )
                 ,( !empty($client['name']) ? '<h4>'.$client['name'].'</h4>' : '' )
                 ,( !empty($client['funding']) ? '<h5>'.$client['funding'].'</h5>' : '' )
                 ,( !empty($client['details']) ? '<div>'.$client['details'].'</div>' : '' )
             );
         }
-        $return['clients'] .= '</ul></div></div></section>';
+        $return['client_list'] .= '</ul></div></div></section>';
     
     
     
-        echo $return['clients'];
+        echo $return['client_list'];
     }
 ?>

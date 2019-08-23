@@ -1,5 +1,9 @@
 footer {
     background-color: getVar($colors, black, dark);
+    color: getVar($colors, white, full);
+    a {
+        color: getVar($colors, white, full);
+    }
 
     
     .container {

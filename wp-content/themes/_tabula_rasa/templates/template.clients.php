@@ -4,7 +4,7 @@
  * 
  */
 
-$fields = get_fields(get_the_ID());
+    $fields = get_fields(get_the_ID());
 
 get_header();
 ?>
@@ -13,8 +13,8 @@ get_header();
     // get hero
     include(get_template_directory() . '/parts/part.hero.php');
 
-
-
+    
+    
     include( get_template_directory().'/loops/loop.clients.php');
 
     /**
@@ -22,9 +22,9 @@ get_header();
      *  include template parts by name if they are available
      */
     if (!empty($fields['content_blocks'])) {
-        foreach ($fields['content_blocks'] as $cB) {
+        foreach ($fields['content_blocks'] as $fields) {
 
-            $path = get_template_directory() . '/blocks/' . $cB['acf_fc_layout'] . '/' . '' . $cB['acf_fc_layout'] . '.php';
+            $path = get_template_directory() . '/blocks/' . $fields['acf_fc_layout'] . '/' . '' . $fields['acf_fc_layout'] . '.php';
             // include the block
             if (file_exists($path)) {
                 include($path);

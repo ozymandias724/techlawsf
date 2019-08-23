@@ -6,12 +6,14 @@
     position: relative;
     overflow: hidden;
 }
+
 // background image
 .bgimg-img {
     display: block;
     transition: all 0.25s ease;
     @include bgimage;
 }
+
 // background image wrapper (mimic figure elem)
 .bgimg {
     .bgimg-img {
@@ -25,7 +27,11 @@
 
     // img zooms on interaction
     &.bgimg-zooms {
-        &:hover, &:active, &:focus {
+
+        &:hover,
+        &:active,
+        &:focus {
+
             // zoom img
             .bgimg-img {
                 transform: scale(1.25);
@@ -35,18 +41,38 @@
 }
 
 ul.iconlinks {
+    
+    $g: getVar($sizing, gutter, px, small);
+    display: flex;
+    flex-flow: row wrap;
 
-    .iconlinks-icon {
+    li.iconlinks-icon {
+        margin: 0 $g $g 0;
 
-        &:before {
-            content: "";
-            display: inline-block;
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
+        &:last-of-type {
+            margin: 0 0 $g 0;
         }
+
+        // icon
+        i {
+            font-size: 24px;
+            transform: scale(1);
+            &:before {
+                content: "";
+                display: inline-block;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                font-style: normal;
+                font-variant: normal;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+            }
+        }
+
+        // if this is a link
+        >a {
+            display: block;
+        }
+
     }
 }
