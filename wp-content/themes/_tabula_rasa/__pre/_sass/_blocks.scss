@@ -28,7 +28,7 @@
         > .block-heading,
         > .block-subheading {
             text-align: center;
-            margin: 0 0 $g 0;
+            margin: 0 0 getVar($sizing, gutter, px, large) 0;
         }
     }
 }

@@ -2,6 +2,9 @@
 // NPM Libs
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'; // font awesome
 @import '../../node_modules/magnific-popup/dist/magnific-popup.css';
+@import 'site/animations';
+// @import '../../node_modules/slick-carousel-browserify/slick/slick.css';
+// @import '../../node_modules/slick-carousel-browserify/slick/slick-theme.css';
 
 // 
 // Site Libs
@@ -38,3 +41,4 @@
 
 @import "pages/page.practice_areas";
 @import "pages/page.clients";
+@import "pages/page.testimonials";

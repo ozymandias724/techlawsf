@@ -40,11 +40,11 @@ header.header {
         }
         &.logo--text {
             color: getVar($colors, primary);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             font-size: 2rem;
-            font-weight: bold;
             border-bottom: 2px solid transparent;
-            font-family: 'EB Garamond', serif;
+            font-weight: 400;
+            font-family: 'Montserrat', serif;
             &:hover, &:focus, &:active {
                 border-bottom: 2px solid getVar($colors, primary);
             }

@@ -1,6 +1,31 @@
 @charset "UTF-8";
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '../../node_modules/magnific-popup/dist/magnific-popup.css';
+.anim__fade {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: translateY(0);
+}
+
+.anim__fade-in,
+.anim__fade-up,
+.anim__fade-left,
+.anim__fade-right {
+  opacity: 0;
+}
+
+.anim__fade-left {
+  transform: translateX(-200px);
+}
+
+.anim__fade-right {
+  transform: translateX(100px);
+}
+
+.anim__fade-up {
+  transform: translateY(100px);
+}
+
 @font-face {
   font-family: "Montserrat";
   src: url("../../library/fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-ExtraBoldItalic.woff") format("woff");
@@ -403,8 +428,15 @@ blockquote {
 
 hr,
 br {
+  width: 100%;
   line-height: 0;
   font-size: 0;
+  margin: 0 0 30px 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid rgba(179, 227, 181, 0.66);
 }
 
 ul {
@@ -434,11 +466,11 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.4rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.8rem;
 }
 
 h4 {
@@ -450,7 +482,7 @@ h5 {
 }
 
 h6 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 body {
@@ -467,7 +499,7 @@ body > main {
 }
 body > main > section {
   display: block;
-  margin: 0 0 60px 0;
+  margin: 0 0 90px 0;
 }
 body.js__noscroll {
   overflow: hidden;
@@ -494,7 +526,6 @@ section.hero {
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  padding: 120px 0;
 }
 section.hero:after {
   content: "";
@@ -515,6 +546,7 @@ section.hero .container {
   position: relative;
   z-index: 1;
   color: rgba(255, 255, 255, 0.8);
+  min-height: 40vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -551,11 +583,11 @@ header.header .logo.logo--image img {
 }
 header.header .logo.logo--text {
   color: #FB9985;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 2rem;
-  font-weight: bold;
   border-bottom: 2px solid transparent;
-  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-family: "Montserrat", serif;
 }
 header.header .logo.logo--text:hover, header.header .logo.logo--text:focus, header.header .logo.logo--text:active {
   border-bottom: 2px solid #FB9985;
@@ -786,7 +818,7 @@ footer .navlinks > ul > li.parent.heading .sub-menu > li > a:hover, footer .navl
 .site__block > .container > .block-heading,
 .site__block > .container > .block-subheading {
   text-align: center;
-  margin: 0 0 30px 0;
+  margin: 0 0 60px 0;
 }
 
 .site__block.block__image > .container > img {
@@ -1303,6 +1335,53 @@ body.page-template-template-clients section.clients .flexgrid > ul > li.client:h
 }
 body.page-template-template-clients section.clients .flexgrid > ul > li.client:nth-child(even) > div:first-child > .bgimg {
   order: 2;
+}
+section.testimonials .block-heading {
+  border-bottom: 1px solid rgba(48, 48, 48, 0.5);
+  padding-bottom: 30px;
+}
+section.testimonials hr {
+  margin: 90px 0;
+}
+section.testimonials .testimonial {
+  padding: 30px 0 0 0;
+}
+section.testimonials .testimonial > div:first-child {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+section.testimonials .testimonial > div:first-child > span {
+  display: block;
+  font-size: 3rem;
+  margin: 0 15px 0 0;
+}
+section.testimonials .testimonial > div:first-child > blockquote {
+  padding: 5px 0 5px 15px;
+  border-left: 4px solid #fb9985;
+}
+section.testimonials .testimonial > div:first-child > span + blockquote {
+  width: 80%;
+}
+section.testimonials .testimonial > div:last-child {
+  text-align: right;
+}
+section.testimonials .testimonial > div:last-child > h4 {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+section.testimonials .testimonial > div:last-child > h6 {
+  font-style: italic;
+  font-weight: normal;
+}
+section.testimonials .testimonial:nth-of-type(2n) > div:first-child > span {
+  order: 2;
+}
+section.testimonials .testimonial:nth-of-type(2n) > div:first-child > blockquote {
+  border-right: 4px solid #fb9985;
+  border-left: none;
 }
 
 /*# sourceMappingURL=main.css.map */

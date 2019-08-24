@@ -1,0 +1,84 @@
+// 
+// 
+// 
+// 
+// 
+section.testimonials {
+
+    $g: getVar($sizing, gutter, px, normal);
+
+    .block-heading {
+        border-bottom: 1px solid rgba(getVar($colors, black, dark), 0.5);
+        padding-bottom: $g;
+    }
+
+    hr {
+        margin: (3 * $g) 0;
+    }
+
+    .testimonial {
+
+        padding: $g 0 0 0;
+
+        // top half
+        >div:first-child {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 0 ($g / 2) 0;
+
+            // funding only
+            >span {
+                display: block;
+                font-size: 3rem;
+                margin: 0 ($g / 2) 0 0;
+            }
+
+            // quote only
+            >blockquote {
+                padding: 5px 0 5px 15px;
+                border-left: 4px solid rgba(getVar($colors, primary), 1);
+            }
+
+            // funding + quote
+            >span+blockquote {
+                width: 80%;
+            }
+
+        }
+
+        >div:last-child {
+            text-align: right;
+
+            >h4 {
+                letter-spacing: 1px;
+                font-weight: 400;
+            }
+
+            >h6 {
+                font-style: italic;
+                font-weight: normal;
+            }
+        }
+
+
+        &:nth-of-type(2n) {
+            >div:first-child {
+                
+                >span {
+                    order: 2;
+                }
+                
+                >blockquote {
+                    border-right: 4px solid rgba(getVar($colors, primary), 1);
+                    border-left: none;
+                }
+            }
+
+            >div:last-child {}
+        }
+
+    }
+
+}

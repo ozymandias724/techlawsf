@@ -6,12 +6,11 @@ section.hero {
 
     @include bgimage;
     @include bgGradient($h : 75%);
-    padding: (getVar($sizing,gutter,px,large) * 2) 0;
-    
     .container {
         position: relative;
         z-index: 1;
         color: rgba(getVar($colors, white, full), 0.8);
+        min-height: 40vh;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
