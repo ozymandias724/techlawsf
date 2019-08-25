@@ -10,8 +10,10 @@ $return['team_member'] = '';
 $guide['team_member'] = '
     <a href="'.get_permalink($post->ID).'bio/" class="js__popup_bio">
         <div class="bgimg"><div class="bgimg-img" style="background-image: url(%s)"></div></div>
-        <h5>%s</h5>
-        <p>%s</p>
+        <div>
+            <p>%s</p>
+            <p>%s</p>
+        </div>
     </a>
 ';
 

@@ -20,6 +20,31 @@
 }
 
 
+@mixin accentUnderline($el : before) {
+
+    position: relative;
+    &:#{$el} {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        
+        transition: width 0.25s ease;
+
+        height: 0;
+        border-bottom: 2px solid getVar($colors, primary);
+    }
+    
+}
+
+
+
+
+
+
+
 @mixin boxshadow($depth:1) {
     @if $depth==0 {
         box-shadow: 0 0 0 rgba(0, 0, 0, 0), rgba(0, 0, 0, 0);
@@ -55,7 +80,11 @@
 }
 
 // this allows a grdient to be added to elements (we need a way to pass values into this to allow for varying gradient directions, sizes, etc.)
-@mixin bgGradient($w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.6)) {
+
+
+
+@mixin bgGradient($w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.66))
+{
     position: relative;
 
     &:after {

@@ -43,12 +43,14 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
                 // $return['content_grid'] .= ob_get_clean();
                 // break;
                 case 'team_members':
+                    
                     $return['content_grid'] .= '<li class="grid_item anim__fade anim__fade-up">';
                     ob_start();
                     include('parts/grid.team_member.php');
                     $return['content_grid'] .= ob_get_clean();
                     $return['content_grid'] .= '</li>';
                     break;
+
                     case 'practice_areas':
                     $return['content_grid'] .= '<li class="grid_item">';
                     ob_start();

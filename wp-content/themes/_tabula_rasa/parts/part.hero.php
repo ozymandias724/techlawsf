@@ -18,8 +18,8 @@
         ';        
         $return['hero'] .= sprintf(
             $guide['hero']
-            ,( !empty($post->post_title) ? '<h2>'.$post->post_title.'</h2>' : '' )
-            ,( !empty($fields['excerpt']) ? '<p>'.$fields['excerpt'].'</p>' : '' )
+            ,( !empty($post->post_title) ? '<h1 class="anim__fade anim__fade-left">'.$post->post_title.'</h1>' : '' )
+            ,( !empty($fields['excerpt']) ? '<div class="anim__fade anim__fade-left">'.$fields['excerpt'].'</div>' : '' )
         );
         
     }
@@ -34,8 +34,8 @@
         ';        
         $return['hero'] .= sprintf(
             $guide['hero']
-            ,( !empty($fields['hero']['heading']) ? '<h2>'.$fields['hero']['heading'].'</h2>' : '' )
-            ,( !empty($fields['hero']['sub_heading']) ? '<p>'.$fields['hero']['sub_heading'].'</p>' : '' )
+            ,( !empty($fields['hero']['heading']) ? '<h1 class="anim__fade anim__fade-left">'.$fields['hero']['heading'].'</h1>' : '' )
+            ,( !empty($fields['hero']['sub_heading']) ? '<div class="anim__fade anim__fade-right">'.$fields['hero']['sub_heading'].'</div>' : '' )
         );
     }
 

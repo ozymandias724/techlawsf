@@ -36,7 +36,8 @@ $(document).ready(function () {
         
         for (let i = 0; i < elements.length; i++) {
             const element = elements[i];
-            if ($(window).scrollTop() + $(window).height() > ($(element).offset().top + ($(element).innerHeight() / 2))) {                
+            // if ($(window).scrollTop() + $(window).height() > ($(element).offset().top + ($(element).innerHeight() / 2))) {                
+            if ($(window).scrollTop() + $(window).height() > ($(element).offset().top + 100)) {                
                 $(element).removeClass('anim__fade-up anim__fade-in anim__fade-left anim__fade-right');
             }
         }

@@ -18,27 +18,26 @@ header.header .navlinks {
                 margin: 0 0 0 0;
             }
 
-
-            // nav item anchor tags 
             > a {
                 line-height: 72px;
-                // nav item text
-                > span {
-                    
-                }
-                
             }
 
+            // interaction 
             a {
                 > span {
-                    border-bottom: 2px solid transparent;
+                    font-size: 1.6rem;
+                    line-height: 2.8rem;
+                    display: inline-block;
+                    padding: 0 0 2px 0;    
+                    @include accentUnderline();
                 }
-
                 &:hover,
                 &:focus,
                 &:active {
                     >span {
-                        border-bottom: 2px solid getVar($colors, primary);
+                        &:before {
+                            width: 100%;
+                        }
                     }
                 }
             }

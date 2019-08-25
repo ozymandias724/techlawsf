@@ -1,25 +1,44 @@
 // 
 // 
 // 
-
+// 
+// 
 section.hero {
+    $g: getVar($sizing, gutter, px, normal);
 
     @include bgimage;
-    @include bgGradient($h : 75%);
+    @include bgGradient();
+
+    // 
+    // 
     .container {
+        // 
         position: relative;
         z-index: 1;
-        color: rgba(getVar($colors, white, full), 0.8);
-        min-height: 40vh;
+        // 
+        min-height: calc(50vh - 72px);
+        // 
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        align-items: center;
-        h2 {
-            font-size: 5rem;
+        // 
+        color: rgba(getVar($colors, white, full), 1);
+
+        >h1 {
             font-weight: 300;
-            letter-spacing: 2px;
+            letter-spacing: 5px;
+            font-size: 4.2vw;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            margin: 0 0 $g 0;
+        }
+
+        >div {
+            >p {
+                font-size: 2rem;
+                line-height: 2.4rem;
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            }
         }
     }
-    
+
 }

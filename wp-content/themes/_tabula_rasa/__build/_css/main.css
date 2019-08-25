@@ -485,6 +485,10 @@ h6 {
   font-size: 1.2rem;
 }
 
+p:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 1.6rem;
@@ -534,29 +538,35 @@ section.hero:after {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 75%;
-  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  height: 100%;
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   transition: background 0.3s ease;
 }
 section.hero .container {
   position: relative;
   z-index: 1;
-  color: rgba(255, 255, 255, 0.8);
-  min-height: 40vh;
+  min-height: calc(50vh - 72px);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
+  color: white;
 }
-section.hero .container h2 {
-  font-size: 5rem;
+section.hero .container > h1 {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
+  font-size: 4.2vw;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 0 30px 0;
+}
+section.hero .container > div > p {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 header.header {
@@ -632,11 +642,11 @@ header.header .site__social-media {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   transition: background 0.3s ease;
 }
@@ -686,10 +696,25 @@ header.header .navlinks > ul > li > a {
   line-height: 72px;
 }
 header.header .navlinks > ul > li a > span {
-  border-bottom: 2px solid transparent;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  display: inline-block;
+  padding: 0 0 2px 0;
+  position: relative;
 }
-header.header .navlinks > ul > li a:hover > span, header.header .navlinks > ul > li a:focus > span, header.header .navlinks > ul > li a:active > span {
+header.header .navlinks > ul > li a > span:before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: width 0.25s ease;
+  height: 0;
   border-bottom: 2px solid #FB9985;
+}
+header.header .navlinks > ul > li a:hover > span:before, header.header .navlinks > ul > li a:focus > span:before, header.header .navlinks > ul > li a:active > span:before {
+  width: 100%;
 }
 header.header .navlinks > ul > li.parent {
   position: relative;
@@ -868,11 +893,11 @@ footer .navlinks > ul > li.parent.heading .sub-menu > li > a:hover, footer .navl
   left: 0;
   width: 100%;
   height: 100%;
-  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 70%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 70%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   transition: background 0.3s ease;
 }
@@ -1344,6 +1369,9 @@ body.page-template-template-clients section.clients .flexgrid > ul > li.client:h
 body.page-template-template-clients section.clients .flexgrid > ul > li.client:hover > div:first-child .bgimg-img {
   transform: scale(1.2);
 }
+body.page-template-template-clients section.clients .flexgrid > ul > li.client:nth-child(even) {
+  margin-top: 120px;
+}
 body.page-template-template-clients section.clients .flexgrid > ul > li.client:nth-child(even) > div:first-child > .bgimg {
   order: 2;
 }
@@ -1393,6 +1421,46 @@ section.testimonials .testimonial:nth-of-type(2n) > div:first-child > span {
 section.testimonials .testimonial:nth-of-type(2n) > div:first-child > blockquote {
   border-right: 4px solid #fb9985;
   border-left: none;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item {
+  padding: 15px;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a .bgimg {
+  margin: 0 0 15px 0;
+  border-radius: 5px;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type {
+  display: inline-block;
+  padding: 0 30px 5px 0;
+  font-size: 2rem;
+  font-weight: 400;
+  position: relative;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type:before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  transition: width 0.25s ease;
+  height: 0;
+  border-bottom: 2px solid #FB9985;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type:before {
+  width: 30px;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:last-of-type {
+  font-size: 1.6rem;
+  font-style: italic;
+}
+body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a:hover > div:not(.bgimg) p:first-of-type:before {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

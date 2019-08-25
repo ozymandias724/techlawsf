@@ -65,7 +65,9 @@ h5 {
 h6 {
     font-size: 1.2rem;
 }
-
+p:not(:last-child) {
+    margin-bottom: getVar($sizing, gutter, px, tiny);
+}
 
 body {
     font-family: "Lato", sans-serif;

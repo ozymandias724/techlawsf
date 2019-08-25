@@ -31,8 +31,8 @@
         $return['client_list'] = '
             <section class="site__block clients">
                 <div class="container ' . $cL['width'] . '">
-                '. (!empty($cL['heading']) ? '<h2 class="block-heading">' . $cL['heading'] . '</h2>' : '') . '
-                '. (!empty($cL['sub_heading']) ? '<p class="block-subheading">' . $cL['sub_heading'] . '</p>' : '') . '
+                '. (!empty($cL['heading']) ? '<h2 class="block-heading anim__fade anim__fade-up">' . $cL['heading'] . '</h2>' : '') . '
+                '. (!empty($cL['sub_heading']) ? '<p class="block-subheading anim__fade anim__fade-up">' . $cL['sub_heading'] . '</p>' : '') . '
                 <div class="flexgrid cols-2"><ul>
         ';
         
