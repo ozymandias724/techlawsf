@@ -33,32 +33,35 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
         foreach ($cB['content'] as $i => $post) {
 
             
-            $return['content_grid'] .= '<li class="grid_item">';
-
+            // $return['content_grid'] .= '<li class="grid_item">';
+            
             // check which post type this item is
             switch ($post->post_type) {
                 // case '__EXAMPLE__':
-                    // ob_start();
-                    // include('parts/__EXAMPLE__.php');
-                    // $return['content_grid'] .= ob_get_clean();
-                    // break;
+                // ob_start();
+                // include('parts/__EXAMPLE__.php');
+                // $return['content_grid'] .= ob_get_clean();
+                // break;
                 case 'team_members':
+                    $return['content_grid'] .= '<li class="grid_item anim__fade anim__fade-up">';
                     ob_start();
                     include('parts/grid.team_member.php');
                     $return['content_grid'] .= ob_get_clean();
+                    $return['content_grid'] .= '</li>';
                     break;
-                case 'practice_areas':
+                    case 'practice_areas':
+                    $return['content_grid'] .= '<li class="grid_item">';
                     ob_start();
                     include('parts/grid.practice_area.php');
                     $return['content_grid'] .= ob_get_clean();
+                    $return['content_grid'] .= '</li>';
                     break;
-                default:
-                    # code...
-                    $return['content_grid'] .= '<h2>'.$post->post_title.'</h2>';
+                    default:
+                    $return['content_grid'] .= '<li class="grid_item"><h2>'.$post->post_title.'</h2></li>';
                     break;
                 }
                 
-            $return['content_grid'] .= '</li>';
+            // $return['content_grid'] .= '</li>';
         
         }
 

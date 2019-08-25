@@ -12,6 +12,7 @@ body.page-template-template-clients {
                 align-items: center;
 
                 >li.client {
+                    position: relative;
                     $g: getVar($sizing, gutter, px, small);
                     cursor: pointer;
 
@@ -41,17 +42,28 @@ body.page-template-template-clients {
                         display: none;
                         padding: $g;
                     }
+
+                    // have to box shadow on pseudo el to avoid clash w/ anims
+                    &:after {
+                        display: block;
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        @include boxshadow(0);
+                    }
                     
-                    &.active {
+                    &.active:after {
                         @include boxshadow(1);
-                        >div:not(:first-child) {
-                        }
                     }
 
-                    @include boxshadow(0);
 
                     &:hover {
-                        @include boxshadow(1);
+                        &:after {
+                            @include boxshadow(1);
+                        }
 
                         >div:first-child {
                             .bgimg-img {

@@ -75,6 +75,7 @@ body {
     // flex align the footer to the bottom
     display: flex;
     flex-flow: column nowrap;
+    overflow-x: hidden;
 
     >main {
         flex: 1;

@@ -15,7 +15,7 @@
         $cL = $fields['client_list']['client_list'];
         
         $guide['client_list'] = '
-            <li class="client js__clients-client">
+            <li class="client js__clients-client anim__fade %s">
                 <div>
                     %s
                     <div>
@@ -36,9 +36,11 @@
                 <div class="flexgrid cols-2"><ul>
         ';
         
-        foreach( $cL['clients'] as $client ){
+        foreach( $cL['clients'] as $i => $client ){
+
             $return['client_list'] .= sprintf(
                 $guide['client_list']
+                ,( !($i % 2) ) ? 'anim__fade-left' : 'anim__fade-right'
                 ,( !empty($client['image']) ? '<div class="bgimg"><div class="bgimg-img" style="background-image: url('.$client['image']['url'].')"></div></div>' : '' )
                 ,( !empty($client['name']) ? '<h4>'.$client['name'].'</h4>' : '' )
                 ,( !empty($client['funding']) ? '<h5>'.$client['funding'].'</h5>' : '' )
