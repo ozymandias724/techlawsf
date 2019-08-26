@@ -18,12 +18,12 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
 
         // check for the heading,
         if( !empty( $cB['heading'] ) ){
-            $return['content_grid'] .= '<h2 class="">'.$cB['heading'].'</h2>';
+            $return['content_grid'] .= '<h2 class="anim__fade anim__fade-up">'.$cB['heading'].'</h2>';
         }
         
         // check for the sub heading
         if( !empty( $cB['sub_heading'] ) ){
-            $return['content_grid'] .= '<div class="">'.$cB['sub_heading'].'</div>';
+            $return['content_grid'] .= '<div class="anim__fade anim__fade-up">'.$cB['sub_heading'].'</div>';
         }
          
         // we are going to loop. check the options
@@ -52,7 +52,7 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
                     break;
 
                     case 'practice_areas':
-                    $return['content_grid'] .= '<li class="grid_item">';
+                    $return['content_grid'] .= '<li class="grid_item anim__fade anim__fade-up">';
                     ob_start();
                     include('parts/grid.practice_area.php');
                     $return['content_grid'] .= ob_get_clean();

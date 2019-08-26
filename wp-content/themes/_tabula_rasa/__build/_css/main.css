@@ -1372,9 +1372,6 @@ body.page-template-template-clients section.clients .flexgrid > ul > li.client:h
 body.page-template-template-clients section.clients .flexgrid > ul > li.client:nth-child(even) {
   margin-top: 120px;
 }
-body.page-template-template-clients section.clients .flexgrid > ul > li.client:nth-child(even) > div:first-child > .bgimg {
-  order: 2;
-}
 section.testimonials .block-heading {
   border-bottom: 1px solid rgba(48, 48, 48, 0.5);
   padding-bottom: 30px;

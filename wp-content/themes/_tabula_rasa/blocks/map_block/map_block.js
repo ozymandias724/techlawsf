@@ -20,9 +20,15 @@
 
         // vars
         var args = {
-            zoom: 16,
+            zoom: 15,
             center: new google.maps.LatLng(0, 0),
             mapTypeId: google.maps.MapTypeId.ROADMAP
+            ,mapTypeControl : false
+            ,zoomControl : false
+            ,streetViewControl : false
+            ,fullscreenControl : false
+            ,draggable : false
+
         };
 
         // create map	        	

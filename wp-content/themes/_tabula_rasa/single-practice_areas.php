@@ -10,7 +10,7 @@ $fields = get_fields( get_the_ID() );
 
 $guide['practice_area_content'] = '
     <section class="practice_area">
-        <div class="container normal">
+        <div class="container normal anim__fade anim__fade-up">
             %s
         </div>
     <section>

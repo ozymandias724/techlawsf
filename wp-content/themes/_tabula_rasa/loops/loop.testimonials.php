@@ -33,8 +33,8 @@
         $return['testimonials'] = '
             <section class="site__block testimonials">
                 <div class="container ' . $pageFields['width'] . '">
-                '. (!empty($pageFields['heading']) ? '<h2 class="block-heading">' . $pageFields['heading'] . '</h2>' : '') . '
-                '. (!empty($pageFields['sub_heading']) ? '<p class="block-subheading">' . $pageFields['sub_heading'] . '</p>' : '') . '
+                '. (!empty($pageFields['heading']) ? '<h2 class="block-heading anim__fade anim__fade-up">' . $pageFields['heading'] . '</h2>' : '') . '
+                '. (!empty($pageFields['sub_heading']) ? '<p class="block-subheading anim__fade anim__fade-up">' . $pageFields['sub_heading'] . '</p>' : '') . '
                 <div class="flexgrid cols-1"><ul>
         ';
         

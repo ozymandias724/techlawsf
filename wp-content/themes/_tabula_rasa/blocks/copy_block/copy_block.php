@@ -11,7 +11,7 @@
     // guide string for the section
     $guide['copy_block'] = '
         <section class="site__block block__copy">
-            <div class="container %s">
+            <div class="anim__fade anim__fade-up container %s">
                 %s
             </div>
         </section>
