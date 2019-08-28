@@ -22,12 +22,12 @@ section.hero {
         flex-flow: column nowrap;
         justify-content: center;
         // 
-        color: rgba(getVar($colors, white, full), 1);
+        color: rgba(getVar($material, shades, light), 1);
 
         >h1 {
             font-weight: 300;
             letter-spacing: 5px;
-            font-size: 4.2vw;
+            font-size: 9.6rem;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
             margin: 0 0 $g 0;
         }

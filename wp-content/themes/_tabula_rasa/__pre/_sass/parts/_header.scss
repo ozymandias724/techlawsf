@@ -13,7 +13,8 @@ header.header {
     position: fixed;
     z-index: 99;
     width: 100%;
-    background-color: getVar($colors, white, full);
+    background-color: getVar($material, shades, light);
+    
     @include boxshadow(1);
     
     // 
@@ -39,14 +40,14 @@ header.header {
             }
         }
         &.logo--text {
-            color: getVar($colors, primary);
+            color: getVar($material, accent, light);
             letter-spacing: 1px;
             font-size: 2rem;
             border-bottom: 2px solid transparent;
             font-weight: 400;
             font-family: 'Montserrat', serif;
             &:hover, &:focus, &:active {
-                border-bottom: 2px solid getVar($colors, primary);
+                border-bottom: 2px solid getVar($material, accent, light);
             }
         }
     }

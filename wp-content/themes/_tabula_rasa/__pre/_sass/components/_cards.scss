@@ -3,7 +3,7 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    background-color: rgba(getVar($colors, white, full), 1);
+    background-color: rgba(getVar($material, shades, light), 1);
 
     &:hover,
     &:active,

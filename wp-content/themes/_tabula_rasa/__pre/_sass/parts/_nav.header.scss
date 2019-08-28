@@ -83,17 +83,14 @@ header.header .navlinks {
                 right: 0;
                 z-index: 9;
                 min-width: 100%;
-                background-color: getVar($colors, white, full);
+                background-color: getVar($material, shades, light);
                 @include boxshadow(4);
-                border: 1px solid rgba(getVar($colors, black, dark), 0.33);
+                // border: 1px solid rgba(getVar($colors, black, dark), 0.33);
                 > li {
                     > a {
                         padding: ($g / 2);
                         &:hover, &:focus, &:active {
                             background-color: getVar($colors, white, light);
-                        }
-                        > span {
-
                         }
                     }
                 }

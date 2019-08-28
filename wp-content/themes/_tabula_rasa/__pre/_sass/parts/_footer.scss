@@ -1,27 +1,95 @@
+// 
+// 
+// 
+// 
+// 
+
+// 
 footer {
-    background-color: getVar($colors, black, dark);
-    color: getVar($colors, white, full);
-    a {
-        color: getVar($colors, white, full);
-    }
-
-    
+    // standard gutter
+    $g : getVar($sizing, gutter, px, normal);
+    // 
+    // dark background
+    background-color: getVar($material, shades, dark);
+    // light color
+    color: getVar($material, shades, light);
+    // lots of vertical space plz
+    padding: $g 0;
     .container {
-        $g : getVar($sizing, gutter, px, normal);
-        
-        color: getVar($colors, white, light);
+        // 
         display: flex;
-        flex-flow: row nowrap;
-        text-align: center;
-        justify-content: space-between;
+        flex-flow: row wrap;
+        justify-content: center;
         padding: $g 0;
-
-        > div > h4 {
-            border-bottom: 2px solid getVar($colors, white, light);
+        // 
+        // all section default light on dark styling
+        > section {
+            margin: 0 ($g * 2) $g 0;
+            &:last-of-type{ margin: 0 0 $g 0;}
+            a {
+                // light
+                color: getVar($material, shades, light);
+                // underline links
+                padding: 0 0 2px 0;
+                border-bottom: 1px solid transparent;
+                &:hover, &:focus, &:active {
+                    border-bottom: 1px solid getVar($material, accent, light);
+                }
+            }
         }
     }
-    
-    
-  
-    
+        
+    .address {
+        > div {
+            margin: 5px 0;
+        }
+    }
+
+    .footer-contactus{
+
+        p {
+            margin: 0 0 ($g / 2) 0;
+        }
+
+        .iconlinks {
+            padding: ($g / 2) 0;
+        }
+        .fab {
+            font-size: 2.4rem;
+        }
+    }
+
+    // footer section headings
+    h4 {
+        border-bottom: 1px solid getVar($material, shades, light);
+        margin: 0 0 getVar($sizing, gutter, px, normal) 0;
+        padding: 0 0 2px 0;
+        text-align: center;
+    }
+
+    // footer logo styling
+    .logo {
+        &.logo--image {
+            height: 100%;
+            padding: (getVar($sizing, gutter, px, normal) / 2);
+            img {
+                height: 100%;
+            }
+        }
+        &.logo--text {
+            text-align: center;
+            color: getVar($material, shades, light);
+            letter-spacing: 1px;
+            font-size: 2rem;
+            border-bottom: 1px solid transparent;
+            font-weight: 400;
+            font-family: 'Montserrat', serif;
+            margin: 0 0 getVar($sizing, gutter, px, normal) 0;
+            padding: 0 0 2px 0;
+            border-bottom: 1px solid getVar($material, shades, light);
+            &:hover, &:focus, &:active {
+                color: getVar($material, accent, light);
+            }
+        }
+    }
 }

@@ -22,14 +22,17 @@ body.page-template-template-clients {
 
                         >.bgimg {
                             width: (100% / 3);
+                            width: 50%;
 
                             .bgimg-img {
-                                @include aspectRatio(4, 3);
+                                // @include aspectRatio(4, 3);
+                                @include aspectRatio();
                             }
                         }
 
                         >div:not(.bgimg) {
-                            width: (200% / 3);
+                            // width: (200% / 3);
+                            width: 50%;
                             padding: $g;
                             display: flex;
                             flex-flow: column nowrap;
@@ -62,7 +65,7 @@ body.page-template-template-clients {
 
                     &:hover {
                         &:after {
-                            @include boxshadow(1);
+                            // @include boxshadow(1);
                         }
 
                         >div:first-child {

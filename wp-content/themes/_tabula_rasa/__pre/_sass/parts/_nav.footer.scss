@@ -13,16 +13,14 @@ footer .navlinks {
 
 
         >li {
-            text-align: left;
-            margin: 0 $g $g 0;
-
+            margin: 0 ($g * 2) $g 0;
             &:last-of-type {
                 margin: 0 0 $g 0;
             }
 
             // set all link styles
             a {
-                color: getVar($colors, white, light);
+                color: getVar($material, shades, light);
             }
 
             // menu item is 'heading'
@@ -30,17 +28,18 @@ footer .navlinks {
 
                 // link is heading style
                 >a {
-                    $g: getVar($sizing, gutter, px, small);
-                    margin: 0 0 $g 0;
                     pointer-events: none; // not a actual link (value should be #)
-                    border-bottom: 2px solid getVar($colors, white, light);
+                    margin: 0 0 $g 0;
+                    color: getVar($material, shades, light);
+                    border-bottom: 1px solid getVar($material, shades, light);
                 }
 
                 // style to match el
                 &.h4>a {
-                    display: inline-block;
+                    display: block;
                     font-size: 2rem;
                     font-weight: 400;
+                    padding: 0 0 2px 0;
                 }
 
 
@@ -60,7 +59,7 @@ footer .navlinks {
                             &:hover,
                             &:focus,
                             &:active {
-                                border-bottom: 1px solid getVar($colors, white, light);
+                                border-bottom: 1px solid getVar($material, accent, light);
                             }
                         }
                     }

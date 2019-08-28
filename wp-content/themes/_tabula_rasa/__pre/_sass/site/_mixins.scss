@@ -34,7 +34,8 @@
         transition: width 0.25s ease;
 
         height: 0;
-        border-bottom: 2px solid getVar($colors, primary);
+        // border-bottom: 2px solid getVar($colors, primary);
+        border-bottom: 2px solid getVar($material, accent, light);
     }
     
 }

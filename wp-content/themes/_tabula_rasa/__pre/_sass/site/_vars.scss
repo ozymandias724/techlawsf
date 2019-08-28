@@ -35,13 +35,34 @@ $sizing : (
 $colors : (
     white : (
         full : #ffffff,
-        light : #f1f1f1,
+        light : #E8EAE3,
     ),
     black : (
         full : #000000,
-        dark : #303030,
+        dark : #373833,
     ),
-    // primary : #cb8568,
-    primary : #FB9985,
-    secondary : #B3E3B5
+    primary : #B4442E,
+    secondary : #8ecdca,
+    accent : #c38d9e
+);
+
+$material : (
+    shades : (
+        light : #F9F8F7
+        ,dark : #383A45
+    )
+    ,accent : (
+        light : #C76D64
+        ,dark : #745868
+    )
+    ,brand : (
+        // 
+    )
+    ,ui : (
+        primary : #798793
+        ,info : #383a45
+        ,success : #5aa364
+        ,warning : #d7932c
+        ,danger : #f44336
+    )
 );

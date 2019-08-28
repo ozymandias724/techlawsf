@@ -8,8 +8,8 @@ section.testimonials {
     $g: getVar($sizing, gutter, px, normal);
 
     .block-heading {
-        border-bottom: 1px solid rgba(getVar($colors, black, dark), 0.5);
-        padding-bottom: $g;
+        // border-bottom: 1px solid rgba(getVar($colors, black, dark), 0.5);
+        // padding-bottom: $g;
     }
 
     hr {
@@ -38,7 +38,7 @@ section.testimonials {
             // quote only
             >blockquote {
                 padding: 5px 0 5px 15px;
-                border-left: 4px solid rgba(getVar($colors, primary), 1);
+                border-left: 4px solid rgba(getVar($colors, secondary), 1);
             }
 
             // funding + quote
@@ -56,29 +56,10 @@ section.testimonials {
                 font-weight: 400;
             }
 
-        >h6 {
+            >h6 {
                 font-style: italic;
                 font-weight: normal;
             }
         }
-
-
-        &:nth-of-type(2n) {
-            >div:first-child {
-                
-                >span {
-                    order: 2;
-                }
-                
-                >blockquote {
-                    border-right: 4px solid rgba(getVar($colors, primary), 1);
-                    border-left: none;
-                }
-            }
-
-            >div:last-child {}
-        }
-
     }
-
 }

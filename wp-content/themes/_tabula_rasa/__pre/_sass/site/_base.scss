@@ -28,13 +28,14 @@ br {
 }
 hr {
     border: none;
-    border-bottom: 1px solid rgba(getVar($colors, secondary), 0.66);
+    border-bottom: 2px solid rgba(getVar($colors, black,dark), 0.1);
 }
 
 ul {
     list-style-type: none;
 }
 
+// heading fonts
 h1,
 h2,
 h3,
@@ -47,6 +48,8 @@ h6 {
         font-weight: 300;
     }
 }
+
+// size headings
 h1 {
     font-size: 5rem;
 }
@@ -69,7 +72,11 @@ p:not(:last-child) {
     margin-bottom: getVar($sizing, gutter, px, tiny);
 }
 
+// 
+// 
+// 
 body {
+    // basic styling for fonts
     font-family: "Lato", sans-serif;
     font-size: 1.6rem;
     letter-spacing: 0.5px;
@@ -77,7 +84,10 @@ body {
     // flex align the footer to the bottom
     display: flex;
     flex-flow: column nowrap;
+    // hide overflow
     overflow-x: hidden;
+    // bgc
+    background-color: getVar($material, shades, light);
 
     >main {
         flex: 1;
@@ -93,7 +103,9 @@ body {
     }
 }
 
-// header, section and footer containers
+// 
+// 
+// header, section and footer width containers
 header, main > section, footer {
     > .container {
         margin: 0 auto;
@@ -112,5 +124,3 @@ header, main > section, footer {
 
     }
 }
-
-// basic cleanup for navlinks
