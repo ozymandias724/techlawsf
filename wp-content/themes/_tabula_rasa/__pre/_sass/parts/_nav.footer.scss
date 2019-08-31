@@ -4,67 +4,37 @@
 // 
 // 
 footer .navlinks {
-    // 
-    $g: getVar($sizing, gutter, px, normal);
 
-    >ul {
-        display: flex;
-        flex-flow: row nowrap;
-
-
-        >li {
-            margin: 0 ($g * 2) $g 0;
-            &:last-of-type {
-                margin: 0 0 $g 0;
+    
+    > ul {
+        > li {
+            > a {
+                > span {
+                    
+                }
             }
-
-            // set all link styles
             a {
+                border: none;
+                position: relative;
+                display: block;
                 color: getVar($material, shades, light);
-            }
-
-            // menu item is 'heading'
-            &.parent.heading {
-
-                // link is heading style
-                >a {
-                    pointer-events: none; // not a actual link (value should be #)
-                    margin: 0 0 $g 0;
-                    color: getVar($material, shades, light);
-                    border-bottom: 1px solid getVar($material, shades, light);
-                }
-
-                // style to match el
-                &.h4>a {
-                    display: block;
-                    font-size: 2rem;
-                    font-weight: 400;
-                    padding: 0 0 2px 0;
-                }
-
-
-                // the actual menu within the custom heading wrapper menu item
-                .sub-menu {
-                    flex-flow: column nowrap;
-                    // menu items
-                    >li {
-
-                        // menu links
-                        >a {
-                            display: inline-block;
-                            padding: 0 0 2px 0;
-                            margin: 0 0 5px 0;
-                            border-bottom: 1px solid transparent;
-
-                            &:hover,
-                            &:focus,
-                            &:active {
-                                border-bottom: 1px solid getVar($material, accent, light);
-                            }
-                        }
+                font-size: 1.6rem;
+                line-height: 2.8rem;
+                display: inline-block;
+                padding: 0 0 2px 0;
+                @include accentUnderline();
+                
+                &:hover,
+                &:focus,
+                &:active {
+                    border: none;
+                    &:before {
+                        width: 100%;
                     }
                 }
             }
         }
     }
+    
+    
 }

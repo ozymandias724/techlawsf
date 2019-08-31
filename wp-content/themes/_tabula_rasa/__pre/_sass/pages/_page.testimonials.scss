@@ -39,6 +39,7 @@ section.testimonials {
             >blockquote {
                 padding: 5px 0 5px 15px;
                 border-left: 4px solid rgba(getVar($colors, secondary), 1);
+                border-left: 4px solid rgba(getVar($material, accent, light), 1);
             }
 
             // funding + quote

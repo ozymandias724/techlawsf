@@ -1,7 +1,9 @@
 // 
 // 
-// 
-// 
+//   
+//  Header
+//  Note: Nav is in its own file
+
 // 
 header.header {
 
@@ -13,45 +15,18 @@ header.header {
     position: fixed;
     z-index: 99;
     width: 100%;
+    // 
     background-color: getVar($material, shades, light);
-    
+    // 
     @include boxshadow(1);
-    
     // 
     height: 72px;
-    
     // 
-    >.container {
+    >.container{
+        height: 100%;
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
         justify-content: space-between;
-    }
-
-    // logo
-    // either as an image or as text
-    // denoted by class modifier .logo.logo--modifier
-    .logo {
-        &.logo--image {
-            height: 100%;
-            padding: ($g / 2);
-            img {
-                height: 100%;
-            }
-        }
-        &.logo--text {
-            color: getVar($material, accent, light);
-            letter-spacing: 1px;
-            font-size: 2rem;
-            border-bottom: 2px solid transparent;
-            font-weight: 400;
-            font-family: 'Montserrat', serif;
-            &:hover, &:focus, &:active {
-                border-bottom: 2px solid getVar($material, accent, light);
-            }
-        }
-    }
-    .site__social-media {
-        margin: 0 ($g / 2) 0 0;
     }
 }

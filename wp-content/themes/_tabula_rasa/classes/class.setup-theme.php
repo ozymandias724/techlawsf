@@ -23,8 +23,9 @@ class SetupTheme
         add_theme_support( 'custom-logo' );
 
         register_nav_menus(array(
-            'header' => 'Header Nav'
-            ,'footer' => 'Footer Nav'
+            'header' => 'Header'
+            ,'footer_1' => 'Footer (1st column)'
+            ,'footer_2' => 'Footer (2nd column)'
         ));
 	}
 	// 

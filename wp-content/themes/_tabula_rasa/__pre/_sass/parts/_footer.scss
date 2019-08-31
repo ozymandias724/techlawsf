@@ -6,6 +6,7 @@
 
 // 
 footer {
+    margin: getVar($sizing, gutter, px, xlarge) 0 0 0;
     // standard gutter
     $g : getVar($sizing, gutter, px, normal);
     // 
@@ -19,21 +20,24 @@ footer {
         // 
         display: flex;
         flex-flow: row wrap;
-        justify-content: center;
+        justify-content: space-between;
         padding: $g 0;
         // 
         // all section default light on dark styling
         > section {
-            margin: 0 ($g * 2) $g 0;
-            &:last-of-type{ margin: 0 0 $g 0;}
+            // margin: 0 ($g * 2) $g 0;
+            // &:last-of-type{ margin: 0 0 $g 0;}
             a {
                 // light
                 color: getVar($material, shades, light);
                 // underline links
                 padding: 0 0 2px 0;
                 border-bottom: 1px solid transparent;
+                @include accentUnderline();
                 &:hover, &:focus, &:active {
-                    border-bottom: 1px solid getVar($material, accent, light);
+                    &:after {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -44,16 +48,9 @@ footer {
             margin: 5px 0;
         }
     }
-
-    .footer-contactus{
-
-        p {
-            margin: 0 0 ($g / 2) 0;
-        }
-
-        .iconlinks {
-            padding: ($g / 2) 0;
-        }
+    
+    .iconlinks {
+        padding: ($g / 2) 0;
         .fab {
             font-size: 2.4rem;
         }

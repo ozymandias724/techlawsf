@@ -18,19 +18,16 @@ if( function_exists('acf_add_options_page') ) {
     ));
 
 }
-delete_option('acfext_google_api_key');
-if (empty(get_option('acfext_google_api_key'))) {
-    add_option('acfext_google_api_key', 'AIzaSyDLzmrhKKDpllBgGFu7YBuQQQsOFtYHtFw');
-}
-function my_acf_init()
-{
-    acf_update_setting('google_api_key', 'AIzaSyDLzmrhKKDpllBgGFu7YBuQQQsOFtYHtFw');
-}
-add_action('acf/init', 'my_acf_init');
 
+/**
+ * Modified version of get_address(), found in the acf extension
+ * This version takes the address field directly as its only argument.
+ *
+ * @param array $field
+ * @return string
+ */
 function get_the_address($field)
 {
-
     $is_postal = $field['address_is_postal'];
     $street    = $field['address_street'];
     $street_2  = $field['address_street_2'];
@@ -38,52 +35,37 @@ function get_the_address($field)
     $state     = $field['address_state'];
     $postcode  = $field['address_postcode'];
     $country   = $field['address_country'];
-
     $postal = $is_postal ? ' itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"' : '';
-
     $output = '';
-
     // Bail if no fields have a value
     if (!($street || $street_2 || $city || $state || $postcode || $country)) {
         return $output;
     }
-
     $output .= '<div class="address">';
-
     if ($street) {
         $output .= '<span class="street-address">' . esc_html($street) . '</span>';
     }
-
     if ($street_2) {
         $output .= '<span class="street-address-2">, ' . esc_html($street_2) . '</span>';
     }
 
     if ($city || $state || $postcode) {
-
         $output .= '<div class="address-columns">';
-
         if ($city) {
             $output .= '<span class="locality"> ' . esc_html($city) . ',</span>';
         }
-
         if ($state) {
             $output .= '<span class="region">' . esc_html($state) . '</span>';
         }
-
         if ($postcode) {
             $output .= '<span class="postal-code">' . esc_html($postcode) . '</span>';
         }
-
-
         $output .= '</div>';
-
         if ($country) {
             $output .= '<span class="country-name">' . get_country($country) . '</span>';
         }
     }
-
     $output .= '</div>';
-
     return $output;
 }
 /**

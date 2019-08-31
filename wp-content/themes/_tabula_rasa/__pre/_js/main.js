@@ -26,8 +26,49 @@ $(document).ready(function () {
     // remove the no-js class from <html>
     $('html').removeClass('no-js');
 
+    $(window).on('resize scroll load', function(e){
+
+        if( e.type == 'resize' ){
+            if ($('header .container.mobilenav-opened').length ) {
+                $('header .container.mobilenav-opened').removeClass('mobilenav-opened');
+            }
+        }
+        else if (e.type == 'scroll') {
+
+        }
+        else if (e.type == 'load') {
+
+        }
+    });
+    
+    
     // offset <main> by <header> height
     $('main').css('margin-top', $('header').innerHeight());
+
+
+
+    // mobile nav
+    if( $('header .navicons').length ){
+
+
+        $('header').on('click', '.navicons', function(e){
+            $(this).parents('.container').toggleClass('mobilenav-opened')
+        });
+
+
+        $('header').on('click', '.navlinks', function(e){
+            // check the mobile nav is open
+            if ($('header .container.mobilenav-opened').length && $('header .navlinks').css('position') == 'fixed' ) {
+                if( !$(e.target).closest('.navlinks > ul').length ){
+                    $('header .container').removeClass('mobilenav-opened');
+                }
+            }
+        });
+
+        
+    }
+    
+    
 
     // trigger fade effects
     $(window).on('scroll load', function(e){

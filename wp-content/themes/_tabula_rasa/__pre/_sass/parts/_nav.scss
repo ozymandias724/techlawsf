@@ -5,27 +5,5 @@
 // 
 // 
 // 
-.navlinks {
-
-    
-
-    // reset <ul>
-    ul {
-        display: flex;
-        // reset <li>
-        li {
-            margin: 0 0 0 0;
-            padding: 0 0 0 0;
-            // reset <a>
-            a {
-                display: block;
-                text-decoration: none;
-                border: none;
-                color: rgba(getVar($colors, black, dark), 1);
-                white-space: nowrap;
-            }
-        }
-    }
-}
 @import "nav.header"; // header nav
 @import "nav.footer"; // footer nav

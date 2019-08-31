@@ -18,24 +18,38 @@
         $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><div class="logo logo--text">'.get_bloginfo('name').'</div></a>';
     }
 
-
-    if (has_nav_menu('footer')) {
+    // 
+    $return['footer_nav'] = '';
+    // 
+    if (has_nav_menu('footer_1')) {
+        
+        $return['footer_nav'] .= '<section><h4>'.get_nav_menu_name('footer_1').'</h4>';
+        
         $args = array(
-            'theme_location' => 'footer'
+            'theme_location' => 'footer_1'
             ,'walker' => new Rational_Walker_Nav_Menu
             ,'echo' => false
             ,'container' => 'nav'
             ,'container_class' => 'navlinks'
         );
-        $return['footer_nav'] = wp_nav_menu($args);
-    } else {
-        $return['footer_nav'] = '';
+        // write the nav
+        $return['footer_nav'] .= wp_nav_menu($args);
+        $return['footer_nav'] .= '</section>';
     }
     
-    ob_start();
-    include( get_template_directory() . '/loops/loop.icon-links.php' );
-    $return['footer_social'] = ob_get_clean();
-    
+    if (has_nav_menu('footer_2')) {
+        $return['footer_nav'] .= '<section><h4>'.get_nav_menu_name('footer_2').'</h4>';
+        $args = array(
+            'theme_location' => 'footer_2'
+            ,'walker' => new Rational_Walker_Nav_Menu
+            ,'echo' => false
+            ,'container' => 'nav'
+            ,'container_class' => 'navlinks'
+        );
+        // write the nav
+        $return['footer_nav'] .= wp_nav_menu($args);
+        $return['footer_nav'] .= '</section>';
+    }
     
     
     $return['footer'] = '';
@@ -51,9 +65,7 @@
                     %s
                     %s
                 </section>
-                <section>
-                    %s
-                </section>
+                %s
             </div>
     ';
     $return['footer'] = sprintf(
@@ -62,7 +74,7 @@
         ,$return['address']
         ,( !empty($tS['phone_number']) ? '<p><a href="'.$tS['phone_number'].'" title="Call '.$tS['phone_number'].'">'.$tS['phone_number'].'</a></p>' : '' ) // phone
         ,( !empty($tS['email_address']) ? '<p><a href="'.$tS['email_address'].'" title="Email '.$tS['email_address'].'">'.$tS['email_address'].'</a></p>' : '' ) // phone
-        ,$return['footer_social']
+        ,get_iconlinks($tS)
         ,$return['footer_nav'] // nav
     );
     

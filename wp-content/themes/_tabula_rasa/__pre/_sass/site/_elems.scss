@@ -40,6 +40,45 @@
     }
 }
 
+
+// logo
+// either as an image or as text
+// denoted by class modifier .logo.logo--modifier
+.logo {
+    $g : getVar($sizing, gutter, px, normal);
+    &.logo--image {
+        height: 100%;
+        padding: ($g / 2);
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &.logo--text {
+        color: getVar($material, accent, light);
+        color: getVar($material, brand, main);
+        letter-spacing: 1px;
+        font-size: 2rem;
+        border-bottom: 2px solid transparent;
+        font-weight: 400;
+        font-family: 'Montserrat', serif;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border-bottom: 2px solid getVar($material, accent, light);
+            border-bottom: 2px solid getVar($material, brand, main);
+        }
+    }
+}
+
+.site__social-media {
+    $g : getVar($sizing, gutter, px, normal);
+    margin: 0 ($g / 2) 0 0;
+}
+
+
 ul.iconlinks {
     
     $g: getVar($sizing, gutter, px, small);

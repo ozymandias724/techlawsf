@@ -31,8 +31,8 @@
             ,'link_after' => '</span>'
         );
         // write nav
+        $return['header'] .= '<div class="navicons"><i class="fas fa-bars"></i><i class="fas fa-times"></i></div>';
         $return['header'] .= wp_nav_menu($args);
-
     }
 
     // close header

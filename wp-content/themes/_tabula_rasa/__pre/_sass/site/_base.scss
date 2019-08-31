@@ -95,7 +95,8 @@ body {
 
         >section {
             display: block;
-            margin: 0 0 getVar($sizing, gutter, px, xlarge) 0;
+            margin: getVar($sizing, gutter, px, xlarge) 0 0 0;  // all sections push themselves down
+            &:first-of-type:not(:last-of-type){margin: 0 0 0 0;}   // no margin top on the first section (hero)
         }
     }
     &.js__noscroll {

@@ -35,7 +35,8 @@
 
         height: 0;
         // border-bottom: 2px solid getVar($colors, primary);
-        border-bottom: 2px solid getVar($material, accent, light);
+        // border-bottom: 2px solid getVar($material, accent, light);
+        border-bottom: 2px solid getVar($material, brand, main);
     }
     
 }
@@ -109,7 +110,7 @@
 // 
 // 
 // 
-@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $aspect: false, $grow : 0, $shrink: 1) {
+@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $aspect: false, $grow : 0, $shrink: 0) {
 
     // calculate flex basis (width) of a column
     $basis: calc((100% - (#{$cols} - 1) * #{$gutter}) / #{$cols});
@@ -124,7 +125,7 @@
         &.right { justify-content: flex-end; }
 
         >li {
-            // width: #{$basis};            // enable this to prevent a bug where the columns dont end up the correct width (child element has margin or something)
+            width: #{$basis};            // enable this to prevent a bug where the columns dont end up the correct width (child element has margin or something)
             flex: $grow $shrink #{$basis};
             margin: 0 $gutter $gutter 0;
             // overflow: hidden;

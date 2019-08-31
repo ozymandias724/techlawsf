@@ -15,9 +15,6 @@ $posts = get_posts($args);
 $rec = $posts[0];
 $fields = get_fields($rec->ID);
 
-$return['icon_links'] = '';
-
-
 $return['bio'] = '';
 $guide['bio'] = '
     <section>
@@ -42,7 +39,7 @@ $return['bio'] .= sprintf(
     ,$fields['position']
     ,( !empty( $fields['contact_info']['email'] ) ? '<p><a href="'.$fields['contact_info']['email'].'" title="Email '.$post->post_title.'">'. $fields['contact_info']['email'] . '</a></p>' : '' )
     ,( !empty( $fields['contact_info']['phone'] ) ? '<p><a href="'.$fields['contact_info']['phone']. '" title="Call ' . $post->post_title . '">'. $fields['contact_info']['phone'] . '</a></p>' : '' )
-    ,$return['icon_links']
+    ,get_iconlinks($fields['contact_info'])
     ,$fields['bio']
 );
 
