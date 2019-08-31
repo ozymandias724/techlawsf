@@ -31,6 +31,8 @@
             ,'echo' => false
             ,'container' => 'nav'
             ,'container_class' => 'navlinks'
+            ,'link_before' => '<span>'
+            ,'link_after' => '</span>'
         );
         // write the nav
         $return['footer_nav'] .= wp_nav_menu($args);
@@ -45,6 +47,8 @@
             ,'echo' => false
             ,'container' => 'nav'
             ,'container_class' => 'navlinks'
+            ,'link_before' => '<span>'
+            ,'link_after' => '</span>'
         );
         // write the nav
         $return['footer_nav'] .= wp_nav_menu($args);
@@ -72,8 +76,8 @@
         $guide['footer']
         ,$return['logo']
         ,$return['address']
-        ,( !empty($tS['phone_number']) ? '<p><a href="'.$tS['phone_number'].'" title="Call '.$tS['phone_number'].'">'.$tS['phone_number'].'</a></p>' : '' ) // phone
-        ,( !empty($tS['email_address']) ? '<p><a href="'.$tS['email_address'].'" title="Email '.$tS['email_address'].'">'.$tS['email_address'].'</a></p>' : '' ) // phone
+        ,( !empty($tS['phone_number']) ? '<p><a href="'.$tS['phone_number'].'" title="Call '.$tS['phone_number']. '"><i class="fas fa-phone"></i><span>'.$tS['phone_number']. '</span></a></p>' : '' ) // phone
+        ,( !empty($tS['email_address']) ? '<p><a href="'.$tS['email_address'].'" title="Email '.$tS['email_address']. '"><i class="far fa-envelope"></i><span>'.$tS['email_address']. '</span></a></p>' : '' ) // phone
         ,get_iconlinks($tS)
         ,$return['footer_nav'] // nav
     );

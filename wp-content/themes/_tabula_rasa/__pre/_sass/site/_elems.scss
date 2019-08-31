@@ -93,19 +93,9 @@ ul.iconlinks {
         }
 
         // icon
-        i {
+        .fab{
             font-size: 24px;
             transform: scale(1);
-            &:before {
-                content: "";
-                display: inline-block;
-                font-family: "Font Awesome 5 Free";
-                font-weight: 900;
-                font-style: normal;
-                font-variant: normal;
-                text-rendering: auto;
-                -webkit-font-smoothing: antialiased;
-            }
         }
 
         // if this is a link

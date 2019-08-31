@@ -19,12 +19,37 @@ footer {
         padding: $g 0;
         justify-content: space-between;
         >section {
+            flex: 1 0 calc(25% - #{$g});
             // 
+            a {
+                display: block; // using flexbox
+                white-space: nowrap; // no line wrapping allowed
+                color: getVar($material, shades, light); // dark on light
+
+                // link text (and chevron if a parent) accent underline effect
+                >span {
+                    display: inline-block;
+                    padding: 0 5px 2px 5px;
+                    font-size: 1.6rem;
+                    line-height: 2.8rem;
+                    // underline hidden
+                    @include accentUnderline();
+                }
+
+                // underline revealed
+                &:hover,
+                &:focus,
+                &:active {
+                    >span:before {
+                        width: 100%;
+                    }
+                }
+            }
             
-            flex: 0 1 auto;
+            // flex: 0 1 auto;
             margin: 0 $g $g 0;
-            &:last-of-type{ margin: 0 0 $g 0; }
             // 
+            &:last-of-type{ margin: 0 0 $g 0; }
 
             // footer section headings
             .logo.logo--text,
@@ -35,26 +60,70 @@ footer {
                 padding: 0 0 2px 0;
             }
 
-            &:first-of-type {}
 
-            &:last-of-type {}
+
         }
     }
-
+    
     .address {
         >div {
             margin: 5px 0;
         }
     }
 
-    .iconlinks {
-        padding: ($g / 2) 0;
-
+    .footer-contactus {
+        i, span {
+            display: inline-block;
+            vertical-align: middle;
+        }
         .fab {
-            font-size: 2.4rem;
+            font-size: 2rem;
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
         }
     }
+    
+    .iconlinks {
+        padding: ($g / 2) 0;
+        > li {
+            > a {
+                color: getVar($material, shades, light);
+                &:hover, &:focus, &:active {
+                    color: getVar($material, brand, main);
+                }
+                
+                .fab {
+                    font-size: 2.4rem;
+                    
+                }
+            }
+        }
+    }
+}
 
+@media only screen and (max-width: 1280px){
 
+    footer {
+        $g : getVar($sizing, gutter, px, normal);
+        .container {
+            > section {
+                flex: 1 0 calc(50% - #{$g});
+            }
+        }
+    }   
+}
+@media only screen and (max-width: 960px) {
 
+    footer {
+        $g: getVar($sizing, gutter, px, normal);
+
+        .container {
+            >section {
+                margin: 0 0 $g 0;
+                flex: 1 0 auto;
+                width: 100%;
+            }
+        }
+    }
 }

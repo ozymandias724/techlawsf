@@ -22,12 +22,16 @@ add_action('init', 'do_custom_rewrite_rules');
 
 function get_iconlinks($field){
     $guide['icon_links'] = '<li class="iconlinks-icon"><a href="%s" title="">%s</a></li>';
+    
+    
+
     $return['icon_links'] = '<ul class="iconlinks">';
     foreach( $field['icon_links'] as $iL ){
+        
         $return['icon_links'] .= sprintf(
             $guide['icon_links']
             ,'#'
-            ,'<span class="'.$iL['icon']->class.'"></span>'
+            ,'<i class="'.$iL['icon']->class.'"></i>'
         );        
     }
     $return['icon_links'] .= '</ul>';
