@@ -690,28 +690,22 @@ footer {
 footer .container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   padding: 30px 0;
+  justify-content: space-between;
 }
-footer .container > section a {
+footer .container > section {
+  flex: 0 1 auto;
+  margin: 0 30px 30px 0;
+}
+footer .container > section:last-of-type {
+  margin: 0 0 30px 0;
+}
+footer .container > section .logo.logo--text,
+footer .container > section h4 {
   color: #ECEBEA;
+  border-bottom: 1px solid #ECEBEA;
+  margin: 0 auto 15px auto;
   padding: 0 0 2px 0;
-  border-bottom: 1px solid transparent;
-  position: relative;
-}
-footer .container > section a:before {
-  display: block;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  transition: width 0.25s ease;
-  height: 0;
-  border-bottom: 2px solid #7E5B7F;
-}
-footer .container > section a:hover:after, footer .container > section a:focus:after, footer .container > section a:active:after {
-  width: 100%;
 }
 footer .address > div {
   margin: 5px 0;
@@ -721,34 +715,6 @@ footer .iconlinks {
 }
 footer .iconlinks .fab {
   font-size: 2.4rem;
-}
-footer h4 {
-  border-bottom: 1px solid #ECEBEA;
-  margin: 0 0 30px 0;
-  padding: 0 0 2px 0;
-  text-align: center;
-}
-footer .logo.logo--image {
-  height: 100%;
-  padding: 15px;
-}
-footer .logo.logo--image img {
-  height: 100%;
-}
-footer .logo.logo--text {
-  text-align: center;
-  color: #ECEBEA;
-  letter-spacing: 1px;
-  font-size: 2rem;
-  border-bottom: 1px solid transparent;
-  font-weight: 400;
-  font-family: "Montserrat", serif;
-  margin: 0 0 30px 0;
-  padding: 0 0 2px 0;
-  border-bottom: 1px solid #ECEBEA;
-}
-footer .logo.logo--text:hover, footer .logo.logo--text:focus, footer .logo.logo--text:active {
-  color: #C5707A;
 }
 
 header .navlinks > ul {
