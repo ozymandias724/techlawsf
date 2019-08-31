@@ -5,17 +5,20 @@
 .flexgrid {
 
     ul.practice_areas {
-        $g : getVar($sizing, gutter, px, normal);
+        $g : getVar($sizing, gutter, px, xlarge);
         
         .grid_item {
             &:nth-child(n+1),
             &:nth-child(1n)
             {
-                margin: 0 0 (3 * $g) 0;
+                margin: 0 0 (1 * $g) 0;
+                &:last-child {
+                    margin: 0 0 0 0;
+                }
             }
             
             .card {
-                // @include boxshadow(3);
+                @include boxshadow(1);
                 &:hover, &:focus, &:active {
                     @include boxshadow(4);
                 }
@@ -23,7 +26,7 @@
                 > .bgimg {
                     width: 50%;
                     .bgimg-img {
-                        @include aspectRatio(16, 9);
+                        @include aspectRatio(4,3);
                     }
                 }
             }

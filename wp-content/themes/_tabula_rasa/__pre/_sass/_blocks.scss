@@ -9,22 +9,29 @@
 
     
     
-    margin: getVar($sizing, gutter, px, large) 0 0 0;
+    margin: getVar($sizing, gutter, px, xlarge) 0 0 0;
     &:first-of-type:not(:last-of-type){margin: 0 0 0 0;}
     width: 100%;
 
     > .container {
-        width: 100%;
-        // sizings
-        &.narrow {
-            width: getVar($sizing, content, narrow);
+        margin: 0 auto;
+
+        &.full {
+            width: getVar($sizing, content, full);
         }
-        &.medium {
-            width: getVar($sizing, content, normal);
-        }
+
         &.wide {
             width: getVar($sizing, content, wide);
         }
+
+        &.normal {
+            width: getVar($sizing, content, normal);
+        }
+
+        &.narrow {
+            width: getVar($sizing, content, narrow);
+        }
+
         
         > .block-heading,
         > .block-subheading {
@@ -34,6 +41,50 @@
     }
 }
 
+@media only screen and (max-width: 1280px) {
+    .site__block {
+        padding: 0 15px;
+
+        >.container {
+            margin: 0 auto;
+
+            &.narrow {
+                width: getVar($sizing, content, normal);
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    .site__block {
+        padding: 0 15px;
+
+        >.container {
+            margin: 0 auto;
+
+            &.full {
+                width: getVar($sizing, content, full);
+            }
+
+            &.wide {
+                width: getVar($sizing, content, full);
+            }
+
+            &.normal {
+                width: getVar($sizing, content, full);
+            }
+
+            &.narrow {
+                width: getVar($sizing, content, full);
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {}
 
 // TO BE BUILT:
 

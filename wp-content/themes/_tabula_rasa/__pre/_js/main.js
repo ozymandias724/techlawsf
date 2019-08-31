@@ -13,7 +13,34 @@ import Magnific from 'magnific-popup';
 // when the script is loaded...
 
 // do something...
+$(window).on('load resize scroll', function (e) {
 
+
+    // window.scrollTop = px from top of document the top of the viewport is
+    // window.height = px the window is in height
+    // el.offset().top = px from the top of the document the element is 
+    // 
+
+    if (e.type == 'scroll' || e.type == 'load') {
+
+        let elements = $('.anim__fade');
+        for (let i = 0; i < elements.length; i++) {
+            const element = elements[i];
+            if ($(window).scrollTop() + $(window).height() > ($(element).offset().top + 100)) {
+                $(element).removeClass('anim__fade-up anim__fade-in anim__fade-left anim__fade-right');
+            }
+        }
+
+        
+
+    }
+
+    if (e.type == 'resize') {
+        if ($('header .container.mobilenav-opened').length) {
+            $('header .container.mobilenav-opened').removeClass('mobilenav-opened');
+        }
+    }
+});
 // 
 // 
 // when the document is ready...
@@ -26,65 +53,35 @@ $(document).ready(function () {
     // remove the no-js class from <html>
     $('html').removeClass('no-js');
 
-    $(window).on('resize scroll load', function(e){
 
-        if( e.type == 'resize' ){
-            if ($('header .container.mobilenav-opened').length ) {
-                $('header .container.mobilenav-opened').removeClass('mobilenav-opened');
-            }
-        }
-        else if (e.type == 'scroll') {
 
-        }
-        else if (e.type == 'load') {
 
-        }
-    });
-    
-    
     // offset <main> by <header> height
     $('main').css('margin-top', $('header').innerHeight());
 
 
 
     // mobile nav
-    if( $('header .navicons').length ){
+    if ($('header .navicons').length) {
 
 
-        $('header').on('click', '.navicons', function(e){
+        $('header').on('click', '.navicons', function (e) {
             $(this).parents('.container').toggleClass('mobilenav-opened')
         });
 
 
-        $('header').on('click', '.navlinks', function(e){
+        $('header').on('click', '.navlinks', function (e) {
             // check the mobile nav is open
-            if ($('header .container.mobilenav-opened').length && $('header .navlinks').css('position') == 'fixed' ) {
-                if( !$(e.target).closest('.navlinks > ul').length ){
+            if ($('header .container.mobilenav-opened').length && $('header .navlinks').css('position') == 'fixed') {
+                if (!$(e.target).closest('.navlinks > ul').length) {
                     $('header .container').removeClass('mobilenav-opened');
                 }
             }
         });
-
-        
     }
-    
-    
 
-    // trigger fade effects
-    $(window).on('scroll load', function(e){
 
-        let elements = $('.anim__fade');
-        
-        for (let i = 0; i < elements.length; i++) {
-            const element = elements[i];
-            // if ($(window).scrollTop() + $(window).height() > ($(element).offset().top + ($(element).innerHeight() / 2))) {                
-            if ($(window).scrollTop() + $(window).height() > ($(element).offset().top + 100)) {                
-                $(element).removeClass('anim__fade-up anim__fade-in anim__fade-left anim__fade-right');
-            }
-        }
 
-    });
-    
 
     // if there are clients on the page
     if ($('.js__clients-client').length) {

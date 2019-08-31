@@ -26,9 +26,10 @@ br {
     font-size: 0;
     margin: 0 0 getVar($sizing, gutter, px, normal) 0;
 }
+
 hr {
     border: none;
-    border-bottom: 2px solid rgba(getVar($colors, black,dark), 0.1);
+    border-bottom: 2px solid rgba(getVar($colors, black, dark), 0.1);
 }
 
 ul {
@@ -45,6 +46,7 @@ h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin-bottom: 1.5rem;
+
     &.display {
         font-weight: 300;
     }
@@ -54,21 +56,27 @@ h6 {
 h1 {
     font-size: 5rem;
 }
+
 h2 {
     font-size: 3.4rem;
 }
+
 h3 {
     font-size: 2.8rem;
 }
+
 h4 {
     font-size: 2rem;
 }
+
 h5 {
     font-size: 1.6rem;
 }
+
 h6 {
     font-size: 1.2rem;
 }
+
 p:not(:last-child) {
     margin-bottom: 1rem;
 }
@@ -96,10 +104,16 @@ body {
 
         >section {
             display: block;
-            margin: getVar($sizing, gutter, px, xlarge) 0 0 0;  // all sections push themselves down
-            &:first-of-type:not(:last-of-type){margin: 0 0 0 0;}   // no margin top on the first section (hero)
+            margin: getVar($sizing, gutter, px, xlarge) 0 0 0; // all sections push themselves down
+
+            &:first-of-type:not(:last-of-type) {
+                margin: 0 0 0 0;
+            }
+
+            // no margin top on the first section (hero)
         }
     }
+
     &.js__noscroll {
         overflow: hidden;
     }
@@ -108,18 +122,24 @@ body {
 // 
 // 
 // header, section and footer width containers
-header, main > section, footer {
-    > .container {
+header,
+section.hero,
+footer {
+    >.container {
         margin: 0 auto;
+
         &.full {
             width: getVar($sizing, content, full);
         }
+
         &.wide {
             width: getVar($sizing, content, wide);
         }
+
         &.normal {
             width: getVar($sizing, content, normal);
         }
+
         &.narrow {
             width: getVar($sizing, content, narrow);
         }
