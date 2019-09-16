@@ -40,7 +40,7 @@ get_header();
             }
         }
     }
-    // echo $return['practice_area_content'];
+    echo $return['practice_area_content'];
 
 
     ?>

@@ -17,6 +17,16 @@ if( function_exists('acf_add_options_page') ) {
         'position' 		=> 3,
     ));
 
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Header Settings',
+		'menu_title'	=> 'Header',
+		'parent_slug'	=> 'theme-settings',
+	));
+    acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-settings',
+	));
 }
 
 /**

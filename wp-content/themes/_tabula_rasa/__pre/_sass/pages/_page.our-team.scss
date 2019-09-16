@@ -10,16 +10,19 @@ body.page-our-team {
     div.flexgrid > ul.team_members {
     
         > li.grid_item {
-            // @include boxshadow(1);
+        // @include boxshadow(1);
             padding: $g;
             // blocks are anchors
             > a {
+                color: getVar($material, shades, dark);
                 width: 100%;
                 display: flex;
                 flex-flow: column nowrap;
                 .bgimg {
                     margin: 0 0 $g 0;
-                    border-radius: 5px;
+                    // border-radius: 5px;
+                    border-radius: 50%;
+                    @include aspectRatio();
                 }
                 > div:not(.bgimg){
                     p{
@@ -41,6 +44,9 @@ body.page-our-team {
                             font-size: 1.6rem;
                             font-style: italic;
                         }
+                        i.fas {
+                            margin-right: 5px;
+                        }
                     }
                 }
 
@@ -52,6 +58,9 @@ body.page-our-team {
                         &:before {
                             width: 100%;
                         }
+                    }
+                    p:last-of-type {
+                        color: getVar($material, brand, main);
                     }
                 }
             }

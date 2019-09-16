@@ -1,32 +1,25 @@
+// 
+// 
+// 
+// 
+// 
+
 .card {
     display: flex;
     flex-flow: row nowrap;
+    background-color: rgba(getVar($material, shades, light), 1);
     align-items: center;
     justify-content: center;
-    background-color: rgba(getVar($material, shades, light), 1);
-
-    &:hover,
-    &:active,
-    &:focus {
-        @include boxshadow(2);
-    }
-
     >div {
         flex: 0 1 auto;
         $g: getVar($sizing, gutter, px, normal);
-
         &.content {
             padding-left: getVar($sizing, gutter, px, normal);
             width: calc(50% - #{$g});
         }
-
         &.bgimg {
             margin-left: $g;
             width: 50%;
         }
-    }
-
-    .bgimg-img {
-        @include aspectRatio(16, 9);
     }
 }

@@ -3,6 +3,8 @@
 //      Header Nav
 // 
 header .navlinks {
+
+
     // set a reusable gutter value
     $g: getVar($sizing, gutter, px, normal);
 
@@ -11,10 +13,8 @@ header .navlinks {
         display: flex;
         flex-flow: row nowrap;
 
-        // all line items at all levels
-        // ( handler for active / parent )
+        //  any <li> at any $depth
         li {
-
             // active items are underlined
             &.active,
             &.active-ancestor,
@@ -23,12 +23,13 @@ header .navlinks {
                     width: 100%;
                 }
             }
-
-            // anchor tags at all levels (top and sub)
+            // basic styling and layout
             a {
                 display: block; // using flexbox
                 white-space: nowrap; // no line wrapping allowed
-                color: getVar($material, shades, dark); // dark on light
+
+                // color: getVar($material, shades, dark); // dark on light
+                color: getVar($material, shades, light); // light on dark
 
                 // link text (and chevron if a parent) accent underline effect
                 >span {
@@ -49,29 +50,15 @@ header .navlinks {
                     }
                 }
             }
-        }
-
-        // top level line items only
-        >li {
-            // 
-            position: relative;
-            margin: 0 ($g / 2) 0 0;
-
-            &:last-of-type {
-                margin: 0 0 0 0;
-            }
-
-            // top level nav items line-height = header height
-
-            // specifically, styles for top-level items that are parents
             &.parent {
                 position: relative;
-
-                // add down chevron to span 
+                .sub-menu {
+                    display: none;
+                }
+                // the down-chevron 
                 >a>span {
                     position: relative;
                     padding-right: 15px;
-
                     // note; :before is being used by the underline!
                     &:after {
                         content: "\f078";
@@ -86,8 +73,6 @@ header .navlinks {
                         transition: all 0.25s ease;
                     }
                 }
-
-                // on interactions
                 &:hover,
                 &:focus,
                 &:active {
@@ -100,50 +85,83 @@ header .navlinks {
                         }
                     }
 
-                    // reveal dropdown
-                    .sub-menu {
+                    // reveal dropdown menu ( but not grand-child sub-menus )
+                    >.sub-menu {
                         display: flex;
                     }
                 }
+
+                // 
+                &:last-child {
+                    margin: 0 0 0 0;
+                }
+            }
+        }
+        //  top level line items only
+        >li {
+            // top level nav items line-height = header height
+            margin: 0 ($g / 2) 0 0;
+            &:last-of-type {
+                margin: 0 0 0 0;
+            }
+        }
+
+
+        // only for the desktop nav; styles for the dropdowns
+        // this is here to prevent a lot of work cleaning up the sub-menu for use in the mobile version
+        @media screen and (min-width:961px) {
+
+            //  full height top level nav items
+            >a {
+                line-height: 72px;
             }
 
-            // only for the desktop nav; styles for the dropdowns
-            // this is here to prevent a lot of work cleaning up the sub-menu for use in the mobile version
-            @media screen and (min-width:961px) {
+            .sub-menu {
+                flex-flow: column nowrap;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                z-index: 9;
+                // 
+                border: 1px solid rgba(getVar($material, shades, dark), 0.5);
+                
+                // 
+                // background-color: rgba(getVar($material, shades, light), 0.95);
+                background-color: rgba(getVar($material, shades, dark), (200% / 3));
+                border: 1px solid rgba(getVar($material, shades, light), 0.5);
 
-                //  full height top level nav items
-                >a {
-                    line-height: 72px;
-                }
-
-                .sub-menu {
-                    display: none;
-                    flex-flow: column nowrap;
-                    position: absolute;
-                    top: 90%;
-                    right: 0;
-                    z-index: 9;
-                    background-color: getVar($material, shades, light);
-                    @include boxshadow(2);
-                    border: 1px solid rgba(getVar($material, shades, dark), 0.5);
-
-                    >li {
-                        margin: 15px 0 0 0;
-
-                        &:last-child {
-                            margin: 15px 0;
-                        }
-
-                        >a {
-                            padding: 0 15px;
-                        }
+                
+                @include boxshadow(2);
+                >li {
+                    padding: 7.5px 0;
+                    >a {
+                        padding: 0 15px;
                     }
                 }
+                .sub-menu {
+                    top: 0;
+                    right: 100%;    
+                }
+            }
 
+        }
+    }
+}
+
+// overrides!
+header.fixed.fadein .navlinks {
+    > ul {
+        > li {
+            > a {
+                color: getVar($colors, white, full);
             }
         }
     }
 }
+
+
+
+
 
 // hide the mobile nav icons container
 header .navicons {
@@ -206,16 +224,20 @@ header .navicons {
                         @include boxshadow(2);
                         border: 1px solid rgba(getVar($material, shades, dark), 0.5);
 
-                        > li {
+                        >li {
                             margin: 15px 0 0 0;
-                            &:last-child{ margin: 15px 0; }
+
+                            &:last-child {
+                                margin: 15px 0;
+                            }
                         }
-                        
+
                         .sub-menu {
                             display: flex;
                             flex-flow: column nowrap;
                             display: flex;
                             margin-left: getVar($sizing, gutter, px, normal);
+
                             >li {
                                 display: block;
                             }

@@ -84,18 +84,14 @@
     
 ?>
 <footer class="footer">
+    
 <?php 
 
     // footer content
     echo $return['footer'];
 
-
-
-    if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
-        echo '<script src="//localhost:35729/livereload.js"></script>';
-    }
-
     // wp footer scripts etc
+    if( in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1')) && !is_admin() ){ echo '<script src="http://localhost:35729/livereload.js"></script>'; }
     wp_footer();
 ?>
 </footer>

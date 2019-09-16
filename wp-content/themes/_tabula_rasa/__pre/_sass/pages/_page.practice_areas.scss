@@ -2,53 +2,84 @@
 // 
 // 
 
+
+
+
+section.practice_area {
+
+    > div.container {
+        &.normal {
+            width: getVar($sizing, content, normal);
+            margin: 0 auto;
+        }
+    }
+    
+    
+    
+}
+
+
+
 .flexgrid {
 
     ul.practice_areas {
-        $g : getVar($sizing, gutter, px, xlarge);
-        
-        .grid_item {
-            &:nth-child(n+1),
-            &:nth-child(1n)
-            {
-                margin: 0 0 (1 * $g) 0;
-                &:last-child {
-                    margin: 0 0 0 0;
-                }
-            }
-            
-            .card {
-                @include boxshadow(1);
-                &:hover, &:focus, &:active {
-                    @include boxshadow(4);
-                }
+        $g: getVar($sizing, gutter, px, xlarge);
 
-                > .bgimg {
-                    width: 50%;
-                    .bgimg-img {
-                        @include aspectRatio(4,3);
+        .grid_item {
+            +hr {
+                margin: 0 0 (1 * $g) 0;
+            }
+            > a {
+                color: getVar($material, shades, dark);
+            }
+            &:nth-child(n+1),
+            &:nth-child(1n) {
+                margin: 0 0 (1 * $g) 0;
+                &:last-of-type {
+                    margin: 0 0 0 0;
+                    +hr {
+                        display: none;
                     }
                 }
             }
-    
+
+            .card {
+                @include boxshadow(1);
+                .bgimg {
+                    width: 50%;
+                    @include aspectRatio(4, 3);
+                    .bgimg-img {
+                        @include bgGradient();
+                    }
+                }
+                &:hover,
+                &:focus,
+                &:active {
+                    @include boxshadow(4);
+                    .bgimg .bgimg-img {
+                        @include bgGradient($eC:rgba(getVar($colors, black, full), 0.33))
+                    }
+                }
+            }
+
             // 1 column of cards that alternate left/right
             &:nth-of-type(even) .card {
 
                 text-align: right;
-    
-                > .content {
+
+                >.content {
                     padding: 0;
                     padding-right: $g;
                     order: 2;
                 }
-                
+
                 // flip flexbox order
-                > .bgimg {
+                >.bgimg {
                     margin: 0;
                     margin-right: getVar($sizing, gutter, px, normal); // adjust margins for alternating cards
                 }
             }
         }
-        
+
     }
 }

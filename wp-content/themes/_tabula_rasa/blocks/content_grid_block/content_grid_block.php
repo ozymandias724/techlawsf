@@ -56,7 +56,7 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
                     ob_start();
                     include('parts/grid.practice_area.php');
                     $return['content_grid'] .= ob_get_clean();
-                    $return['content_grid'] .= '</li>';
+                    $return['content_grid'] .= '</li><hr>';
                     break;
                     default:
                     $return['content_grid'] .= '<li class="grid_item"><h2>'.$post->post_title.'</h2></li>';

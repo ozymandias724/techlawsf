@@ -104,10 +104,8 @@ body {
 
         >section {
             display: block;
-            margin: getVar($sizing, gutter, px, xlarge) 0 0 0; // all sections push themselves down
-
-            &:first-of-type:not(:last-of-type) {
-                margin: 0 0 0 0;
+            &:not(.hero):not(:last-of-type) {
+                margin: getVar($sizing, gutter, px, xlarge) 0 0 0; // all sections push themselves down
             }
 
             // no margin top on the first section (hero)
@@ -116,6 +114,11 @@ body {
 
     &.js__noscroll {
         overflow: hidden;
+    }
+    &:not(.header-fadein){
+        > main {
+            margin-top: 72px; // offset by header height
+        }
     }
 }
 

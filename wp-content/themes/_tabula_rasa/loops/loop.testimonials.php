@@ -65,7 +65,7 @@
             $return['testimonial_posts'] .= sprintf(
                 $guide['testimonial_posts']
                 ,( $count % 2 ) ? 'anim__fade-left' : 'anim__fade-right'
-                ,( !empty( $postFields['testimonial']['funding'] ) ? '<span>'.$postFields['testimonial']['funding'].'</span>' : '')
+                ,( !empty( $postFields['testimonial']['key_phrase'] ) ? '<span>'.$postFields['testimonial']['key_phrase'].'</span>' : '')
                 ,( !empty( $postFields['testimonial']['testimonial'] ) ? '<blockquote>'.$postFields['testimonial']['testimonial'].'</blockquote>' : '')
                 ,( !empty( $postFields['testimonial']['name'] ) ? '<h4>'.$postFields['testimonial']['name'].'</h4>' : '')
                 ,( !empty( $postFields['testimonial']['position'] ) ? '<h6>'.$postFields['testimonial']['position'].'</h6>' : '')

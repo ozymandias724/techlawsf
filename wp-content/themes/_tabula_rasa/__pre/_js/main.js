@@ -15,14 +15,9 @@ import Magnific from 'magnific-popup';
 // do something...
 $(window).on('load resize scroll', function (e) {
 
-
-    // window.scrollTop = px from top of document the top of the viewport is
-    // window.height = px the window is in height
-    // el.offset().top = px from the top of the document the element is 
-    // 
-
+    //  window scroll or load,
+    //  i.e., fade in animations
     if (e.type == 'scroll' || e.type == 'load') {
-
         let elements = $('.anim__fade');
         for (let i = 0; i < elements.length; i++) {
             const element = elements[i];
@@ -31,14 +26,26 @@ $(window).on('load resize scroll', function (e) {
             }
         }
 
-        
+        if ($('header.header.fadein').length) {
+            if ($(window).scrollTop() >= $('header.header').innerHeight()) {
+                $('header.header').addClass('bg__fade-in');
+            } else {
+                $('header.header').removeClass('bg__fade-in');
+            }
+        }
 
     }
 
+    // window resize
     if (e.type == 'resize') {
         if ($('header .container.mobilenav-opened').length) {
             $('header .container.mobilenav-opened').removeClass('mobilenav-opened');
         }
+    }
+    // handle 
+    if( e.type == 'scroll' ){
+
+        
     }
 });
 // 
@@ -57,7 +64,9 @@ $(document).ready(function () {
 
 
     // offset <main> by <header> height
-    $('main').css('margin-top', $('header').innerHeight());
+    if( $('body:not(.header-fadein)').length ){
+        $('body:not(.header-fadein) main').css('margin-top', $('header').innerHeight());
+    }
 
 
 

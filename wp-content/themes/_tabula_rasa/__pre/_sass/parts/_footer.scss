@@ -6,7 +6,7 @@
 
 // 
 footer {
-    margin: getVar($sizing, gutter, px, xlarge) 0 0 0;
+    margin: 0;
     // standard gutter
     $g: getVar($sizing, gutter, px, normal);
     background-color: getVar($material, shades, dark);

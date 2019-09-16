@@ -7,20 +7,21 @@ section.hero {
     $g: getVar($sizing, gutter, px, normal);
 
     @include bgimage;
-    @include bgGradient();
+    @include bgGradient($p: 'top');
 
     // 
     // 
-    .container {
+    > .container {
         // 
         position: relative;
         z-index: 1;
         // 
-        min-height: calc(50vh - 72px);
+        height: calc(50vh - 72px);
         // 
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
+        text-align: left;
         // 
         color: rgba(getVar($material, shades, light), 1);
 
@@ -34,11 +35,14 @@ section.hero {
 
         >div {
             >p {
-                font-size: 2rem;
-                line-height: 2.4rem;
+                font-size: 2.8rem;
+                line-height: 1.25;
                 text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
             }
         }
     }
 
+}
+body.home section.hero > .container  {
+    height: calc(90vh - 72px);
 }
