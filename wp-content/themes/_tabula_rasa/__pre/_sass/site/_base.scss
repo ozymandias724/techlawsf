@@ -126,7 +126,7 @@ body {
 // 
 // header, section and footer width containers
 header,
-section.hero,
+main > section,
 footer {
     >.container {
         margin: 0 auto;

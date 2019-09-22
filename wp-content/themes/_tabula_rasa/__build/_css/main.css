@@ -533,27 +533,27 @@ body:not(.header-fadein) > main {
 }
 
 header > .container,
-section.hero > .container,
+main > section > .container,
 footer > .container {
   margin: 0 auto;
 }
 header > .container.full,
-section.hero > .container.full,
+main > section > .container.full,
 footer > .container.full {
   width: 100%;
 }
 header > .container.wide,
-section.hero > .container.wide,
+main > section > .container.wide,
 footer > .container.wide {
   width: 80%;
 }
 header > .container.normal,
-section.hero > .container.normal,
+main > section > .container.normal,
 footer > .container.normal {
   width: 65%;
 }
 header > .container.narrow,
-section.hero > .container.narrow,
+main > section > .container.narrow,
 footer > .container.narrow {
   width: 50%;
 }
@@ -685,6 +685,13 @@ body.header-fadein header.header.fixed.fadein {
   padding-top: 100%;
 }
 
+section.prefooter > .container {
+  padding: 60px 0;
+}
+section.prefooter > .container > h4 {
+  text-align: center;
+}
+
 footer {
   margin: 0;
   background-color: #191919;
@@ -714,14 +721,14 @@ footer .container > section a > span {
   position: relative;
 }
 footer .container > section a > span:before {
-  display: block;
   content: "";
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
-  transition: width 0.25s ease;
   height: 0;
+  transition: width 0.25s ease;
   border-bottom: 2px solid #7E5B7F;
 }
 footer .container > section a:hover > span:before, footer .container > section a:focus > span:before, footer .container > section a:active > span:before {
@@ -795,14 +802,14 @@ header .navlinks > ul li a > span {
   position: relative;
 }
 header .navlinks > ul li a > span:before {
-  display: block;
   content: "";
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
-  transition: width 0.25s ease;
   height: 0;
+  transition: width 0.25s ease;
   border-bottom: 2px solid #7E5B7F;
 }
 header .navlinks > ul li a:hover > span:before, header .navlinks > ul li a:focus > span:before, header .navlinks > ul li a:active > span:before {
@@ -1787,14 +1794,14 @@ body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a > div:not(.
   position: relative;
 }
 body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type:before {
-  display: block;
   content: "";
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
-  transition: width 0.25s ease;
   height: 0;
+  transition: width 0.25s ease;
   border-bottom: 2px solid #7E5B7F;
 }
 body.page-our-team div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type:before {

@@ -20,23 +20,19 @@
 }
 
 
-@mixin accentUnderline($el : before) {
+@mixin accentUnderline($el : before, $h : 2px) {
 
     position: relative;
-    &:#{$el} {
-        display: block;
+    &:#{$el}{
         content: '';
+        display: block;
         position: absolute;
         bottom: 0;
         left: 0;
         width: 0;
-        
-        transition: width 0.25s ease;
-
         height: 0;
-        // border-bottom: 2px solid getVar($colors, primary);
-        // border-bottom: 2px solid getVar($material, accent, light);
-        border-bottom: 2px solid getVar($material, brand, main);
+        transition: width 0.25s ease;
+        border-bottom: $h solid getVar($material, brand, main);
     }
     
 }
