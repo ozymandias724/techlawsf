@@ -6,12 +6,36 @@ class cpts
         add_action('init', array($this, 'register_cpts'));
     }
     function register_cpts(){
-        $this->register_practice_areas();
-        $this->register_team_members();
-        $this->register_testimonials();
-    }
 
-    function register_testimonials(){
+        // 
+        // 
+         $labels = array(
+            'name' => __('Clients', 'theme'), // Rename these to suit
+            'singular_name' => __('Client', 'theme'),
+            'add_new' => __('Add New', 'theme'),
+            'add_new_item' => __('Add New Client', 'theme'),
+            'edit' => __('Edit', 'theme'),
+            'edit_item' => __('Edit Client', 'theme'),
+            'new_item' => __('New Client', 'theme'),
+            'view' => __('View Client', 'theme'),
+            'view_item' => __('View Client', 'theme'),
+            'search_items' => __('Search Clients', 'theme'),
+            'not_found' => __('No Clients found', 'theme'),
+            'not_found_in_trash' => __('No Clients found in Trash', 'theme')
+        );
+        $args = array(
+            'labels' => $labels,
+            'public' => true,
+            'hierarchical' => false,
+            'has_archive' => false,
+            'menu_position' => null,
+        );
+        register_post_type('clients', $args);
+        
+
+        // 
+        // 
+        // 
         $labels = array(
             'name' => __('Testimonials', 'theme'), // Rename these to suit
             'singular_name' => __('Testimonial', 'theme'),
@@ -34,8 +58,11 @@ class cpts
             'menu_position' => null,
         );
         register_post_type('testimonials', $args);
-    }
-    function register_team_members(){
+        
+        // 
+        // 
+        // 
+
         register_taxonomy('department', 'team_members', array(
             'label' => 'Departments'
             ,'hierarchical' => true
@@ -64,8 +91,11 @@ class cpts
             'menu_position' => null,
         );
         register_post_type('team_members', $args);
-    }
-    function register_practice_areas(){
+
+        // 
+        // 
+        // 
+
         $labels = array(
             'name' => __('Practice Areas', 'theme'), // Rename these to suit
             'singular_name' => __('Practice Area', 'theme'),
@@ -88,8 +118,10 @@ class cpts
             'menu_position' => null,
         );
         register_post_type('practice_areas', $args);
+        
+        // 
+
     }
 }
-
-$cpts = new cpts();
+new cpts();
 ?>

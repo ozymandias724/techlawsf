@@ -4,7 +4,7 @@
 // 
 // 
 
-body.page-our-team {
+// body.page-our-team {
     $g : getVar($sizing, gutter, px, small);
 
     div.flexgrid > ul.team_members {
@@ -82,4 +82,4 @@ body.page-our-team {
         }
         
     }
-}
+// }

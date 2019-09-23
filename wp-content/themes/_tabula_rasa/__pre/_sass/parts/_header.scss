@@ -32,13 +32,13 @@ header.header {
         position: fixed;
         z-index: 99;
         @include boxshadow(1);
-        background-color: rgba(getVar($material, shades, light), 0);
         transition: background-color 0.4s ease-in-out;
+        background-color: rgba(getVar($material, shades, dark), 1);
         
         &.fadein {
             &.bg__fade-in {
                 // background-color: rgba(getVar($material, shades, light), 0.95);
-                background-color: rgba(getVar($material, shades, dark), 0.9);
+                // background-color: rgba(getVar($material, shades, dark), 0.9);
                 .logo.logo--text,
                 .navlinks > ul > li > a {
                     // color: rgba(getVar($material, shades, dark), 1);

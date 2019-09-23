@@ -93,16 +93,16 @@ $(document).ready(function () {
 
 
     // if there are clients on the page
-    if ($('.js__clients-client').length) {
+    // if ($('.js__clients-client').length) {
 
-        $('section.clients').on('click', '.js__clients-client', function (e) {
+        // $('section.clients').on('click', '.js__clients-client', function (e) {
 
-            $(this).toggleClass('active');
-            $(this).children('div:not(:first-child)').slideToggle(250);
+            // $(this).toggleClass('active');
+            // $(this).children('div:not(:first-child)').slideToggle(250);
 
-        });
+        // });
 
-    }
+    // }
 
 
 

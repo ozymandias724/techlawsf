@@ -23,6 +23,7 @@
     "load-grunt-tasks": "^5.0.0",
     "magnific-popup": "^1.1.0",
     "node-sass": "^4.12.0",
+    "rfs": "^9.0.0",
     "sass": "^1.22.7",
     "slick-carousel-browserify": "^1.6.12"
   },

@@ -67,7 +67,7 @@
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
     }
 
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
 }
 
 
@@ -81,7 +81,7 @@
 
 
 
-@mixin bgGradient($el:after,$w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.66))
+@mixin bgGradient($el:after,$w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.75))
 {
     position: relative;
 
@@ -98,8 +98,7 @@
         /* Chrome10-25,Safari5.1-6 */
         background: linear-gradient(to #{$p}, $sC 0%, $eC 70%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        transition: background 0.3s ease;
-        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        transition: background 0.3s cubic-bezier(.25, .8, .25, 1);
     }
 }
 
@@ -107,7 +106,7 @@
 // 
 // 
 // 
-@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $aspect: false, $grow : 0, $shrink: 0) {
+@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $aspect: false, $grow : 1, $shrink: 0) {
 
     // calculate flex basis (width) of a column
     $basis: calc((100% - (#{$cols} - 1) * #{$gutter}) / #{$cols});
@@ -128,15 +127,15 @@
             margin: 0 $gutter $gutter 0;
             // overflow: hidden;
 
-            &:nth-child(n+1) {
+            &:nth-of-type(n+1) {
                 margin: 0 $gutter $gutter 0;
             }
 
-            &:nth-child(#{$cols}n) {
+            &:nth-of-type(#{$cols}n) {
                 margin-right: 0;
             }
 
-            &:last-child {
+            &:last-of-type {
                 margin-right: 0;
             }
 
@@ -145,7 +144,7 @@
                 flex: 1 0 100%;
                 margin: 0 0 $gutter 0;
 
-                &:last-child {
+                &:last-of-type {
                     margin: 0 0 0 0;
                 }
             }

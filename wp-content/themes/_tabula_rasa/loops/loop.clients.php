@@ -15,15 +15,18 @@
         $cL = $fields['client_list']['client_list'];
         
         $guide['client_list'] = '
-            <li class="client js__clients-client anim__fade %s">
-                <div>
+            <li class="ijs__clients-client anim__fade anim__fade-left">
+                %s
+                <div class="info">
                     %s
                     <div>
                         %s
                         %s
                     </div>
                 </div>
-                %s
+                <div class="details">
+                    %s
+                </div>
             </li>
         ';
 
@@ -33,19 +36,25 @@
                 <div class="container ' . $cL['width'] . '">
                 '. (!empty($cL['heading']) ? '<h2 class="block-heading anim__fade anim__fade-up">' . $cL['heading'] . '</h2>' : '') . '
                 '. (!empty($cL['sub_heading']) ? '<p class="block-subheading anim__fade anim__fade-up">' . $cL['sub_heading'] . '</p>' : '') . '
-                <div class="flexgrid cols-2"><ul>
+                <div class=""><ul>
         ';
         
         foreach( $cL['clients'] as $i => $client ){
 
+            
+
             $return['client_list'] .= sprintf(
                 $guide['client_list']
-                ,( !($i % 2) ) ? 'anim__fade-left' : 'anim__fade-right'
+                ,( !empty($client['category']) ? '<span class="category">'.$client['category'].'</span>' : '' )
                 ,( !empty($client['image']) ? '<div class="bgimg"><div class="bgimg-img" style="background-image: url('.$client['image']['url'].')"></div></div>' : '' )
-                ,( !empty($client['name']) ? '<h4>'.$client['name'].'</h4>' : '' )
-                ,( !empty($client['funding']) ? '<h5>'.$client['funding'].'</h5>' : '' )
-                ,( !empty($client['details']) ? '<div>'.$client['details'].'</div>' : '' )
+                ,( !empty($client['name']) ? '<p class="name">'.$client['name'].'</p>' : '' )
+                ,( !empty($client['funding']) ? '<p class="funding">'.$client['funding'].'</p>' : '' )
+                ,( !empty($client['details']) ? '<p>'.trim($client['details']).'</p>' : '' )
             );
+            
+            if( ($i + 1) % 3 == 0 ){
+                $return['client_list'] .= '<hr />';
+            }
         }
         $return['client_list'] .= '</ul></div></div></section>';
     

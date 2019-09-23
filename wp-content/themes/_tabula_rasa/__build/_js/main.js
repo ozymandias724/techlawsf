@@ -80,14 +80,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
       }
     });
   } // if there are clients on the page
-
-
-  if ((0, _jquery["default"])('.js__clients-client').length) {
-    (0, _jquery["default"])('section.clients').on('click', '.js__clients-client', function (e) {
-      (0, _jquery["default"])(this).toggleClass('active');
-      (0, _jquery["default"])(this).children('div:not(:first-child)').slideToggle(250);
-    });
-  } // if there are bio popups on the page
+  // if ($('.js__clients-client').length) {
+  // $('section.clients').on('click', '.js__clients-client', function (e) {
+  // $(this).toggleClass('active');
+  // $(this).children('div:not(:first-child)').slideToggle(250);
+  // });
+  // }
+  // if there are bio popups on the page
 
 
   if ((0, _jquery["default"])('.js__popup_bio').length) {

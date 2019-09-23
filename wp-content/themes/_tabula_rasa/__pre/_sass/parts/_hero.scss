@@ -7,7 +7,7 @@ section.hero {
     $g: getVar($sizing, gutter, px, normal);
 
     @include bgimage;
-    @include bgGradient($p: 'top');
+    @include bgGradient();
 
     // 
     // 
@@ -44,5 +44,5 @@ section.hero {
 
 }
 body.home section.hero > .container  {
-    height: calc(90vh - 72px);
+    height: calc(66vh - 72px);
 }

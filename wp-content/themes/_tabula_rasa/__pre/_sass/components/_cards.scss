@@ -4,15 +4,23 @@
 // 
 // 
 
+
+// element is a card
+// should 'fill' its container
 .card {
+    $g: getVar($sizing, gutter, px, normal);
+
+    margin: 0 0 0 0;
     display: flex;
     flex-flow: row nowrap;
-    background-color: rgba(getVar($material, shades, light), 1);
+    // background-color: rgba(getVar($material, shades, light), 1);
+    background-color: rgba(getVar($colors, white, full), 1);
+    @include boxshadow(2);
     align-items: center;
     justify-content: center;
+    padding: $g;
     >div {
         flex: 0 1 auto;
-        $g: getVar($sizing, gutter, px, normal);
         &.content {
             padding-left: getVar($sizing, gutter, px, normal);
             width: calc(50% - #{$g});

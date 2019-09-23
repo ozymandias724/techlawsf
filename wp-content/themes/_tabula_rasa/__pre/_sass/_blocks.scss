@@ -48,8 +48,8 @@
         >.container {
             margin: 0 auto;
 
-            &.narrow {
-                width: getVar($sizing, content, normal);
+            &.normal, &.narrow {
+                width: getVar($sizing, content, wide);
             }
 
         }

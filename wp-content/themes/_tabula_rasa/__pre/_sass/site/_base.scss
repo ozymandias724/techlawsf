@@ -138,14 +138,24 @@ footer {
         &.wide {
             width: getVar($sizing, content, wide);
         }
-
+        
         &.normal {
             width: getVar($sizing, content, normal);
         }
-
+        
         &.narrow {
             width: getVar($sizing, content, narrow);
         }
-
+        
+        @media screen and (max-width: 1280px) {
+            &.narrow {
+                width: getVar($sizing, content, normal);
+            }
+        }
+        @media screen and (max-width: 960px) {
+            &.normal, &.narrow {
+                width: getVar($sizing, content, wide);
+            }
+        }
     }
 }

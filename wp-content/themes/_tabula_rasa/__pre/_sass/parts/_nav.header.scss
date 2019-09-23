@@ -23,16 +23,16 @@ header .navlinks {
                     width: 100%;
                 }
             }
-            // basic styling and layout
+            // any/all links, any/all levels
             a {
                 display: block; // using flexbox
-                white-space: nowrap; // no line wrapping allowed
-
                 // color: getVar($material, shades, dark); // dark on light
-                color: getVar($material, shades, light); // light on dark
-
+                
                 // link text (and chevron if a parent) accent underline effect
                 >span {
+                    color: getVar($material, shades, light); // light on dark
+                    white-space: nowrap; // no line wrapping allowed
+                    letter-spacing: 1px;
                     display: inline-block;
                     padding: 0 5px 2px 5px;
                     font-size: 1.6rem;
@@ -50,6 +50,7 @@ header .navlinks {
                     }
                 }
             }
+            // any parent item at any level
             &.parent {
                 position: relative;
                 .sub-menu {
@@ -112,8 +113,11 @@ header .navlinks {
         @media screen and (min-width:961px) {
 
             //  full height top level nav items
-            >a {
-                line-height: 72px;
+            > li {
+                >a {
+                    line-height: 72px;
+                    white-space: nowrap;
+                }
             }
 
             .sub-menu {
@@ -127,7 +131,7 @@ header .navlinks {
                 
                 // 
                 // background-color: rgba(getVar($material, shades, light), 0.95);
-                background-color: rgba(getVar($material, shades, dark), (200% / 3));
+                background-color: rgba(getVar($material, shades, dark), 0.9);
                 border: 1px solid rgba(getVar($material, shades, light), 0.5);
 
                 
@@ -136,6 +140,11 @@ header .navlinks {
                     padding: 7.5px 0;
                     >a {
                         padding: 0 15px;
+                    }
+                    &:hover, &:focus, &:active {
+                        > a >span:before {
+                            width: 100%;
+                        }
                     }
                 }
                 .sub-menu {
@@ -149,14 +158,18 @@ header .navlinks {
 }
 
 // overrides!
-header.fixed.fadein .navlinks {
-    > ul {
-        > li {
-            > a {
-                color: getVar($colors, white, full);
-            }
-        }
-    }
+header.fixed.fadein {
+
+
+    .navlinks {
+       > ul {
+           > li {
+               > a {
+                   color: getVar($colors, white, full);
+               }
+           }
+       }
+   }
 }
 
 
