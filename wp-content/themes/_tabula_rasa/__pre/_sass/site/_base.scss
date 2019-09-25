@@ -96,7 +96,6 @@ body {
     // hide overflow
     overflow-x: hidden;
     // bgc
-    background-color: getVar($material, shades, light);
 
     >main {
         flex: 1;
@@ -104,9 +103,14 @@ body {
 
         >section {
             display: block;
-            &:not(.hero):not(:last-of-type) {
+            // all sections push themselves down; except the hero
+            &:not(.hero) {
                 margin: getVar($sizing, gutter, px, xlarge) 0 0 0; // all sections push themselves down
+                &:first-of-type {
+                    margin: 0 0 0 0;
+                }
             }
+            
 
             // no margin top on the first section (hero)
         }

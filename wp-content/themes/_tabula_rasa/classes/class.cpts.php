@@ -31,7 +31,10 @@ class cpts
             'menu_position' => null,
         );
         register_post_type('clients', $args);
-        
+        register_taxonomy('client_category', 'clients', array(
+            'label' => 'Client Category'
+            ,'hierarchical' => true
+        ));
 
         // 
         // 

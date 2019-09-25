@@ -24,10 +24,10 @@
             center: new google.maps.LatLng(0, 0),
             mapTypeId: google.maps.MapTypeId.ROADMAP
             ,mapTypeControl : false
-            ,zoomControl : false
-            ,streetViewControl : false
-            ,fullscreenControl : false
-            ,draggable : false
+            // ,fullscreenControl : false
+            // ,zoomControl : false
+            // ,streetViewControl : false
+            // ,draggable : false
 
         };
 
@@ -125,7 +125,7 @@
         if (map.markers.length == 1) {
             // set center of map
             map.setCenter(bounds.getCenter());
-            map.setZoom(16);
+            // map.setZoom(16);
         } else {
             // fit to bounds
             map.fitBounds(bounds);

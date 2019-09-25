@@ -6,6 +6,8 @@
 
 section.prefooter {
 
+    margin: 90px 0 0 0;
+    border-top: 1px solid rgba(getVar($material, shades, dark), 0.33);
     > .container {
 
         padding: 60px 0;

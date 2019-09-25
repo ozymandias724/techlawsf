@@ -16,6 +16,7 @@
 	$classes = [
 		'debug' // REMOVE IN PRODUCTION!!!
 		,( !empty($hS['fade_in']) ? 'header-fadein' : '' )
+		,( $hS['type'] ? $hS['type'] : '' )
 	];
  ?>
 <body <?php body_class($classes); ?>>

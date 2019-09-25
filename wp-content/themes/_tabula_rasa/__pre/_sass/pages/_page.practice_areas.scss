@@ -44,20 +44,28 @@ section.practice_area {
             }
 
             .card {
-                @include boxshadow(1);
+                @include boxshadow(0);
+                padding: 0;
+                text-align: left;
                 .bgimg {
-                    width: 50%;
-                    @include aspectRatio(4, 3);
+                    // width: 50%;
+                    @include aspectRatio(16, 9);
                     .bgimg-img {
-                        @include bgGradient();
+                        // @include bgGradient();
                     }
+                }
+                h3 > span{
+                    @include accentUnderline($d : right);
                 }
                 &:hover,
                 &:focus,
                 &:active {
-                    @include boxshadow(4);
+                    @include boxshadow(1);
                     .bgimg .bgimg-img {
-                        @include bgGradient($eC:rgba(getVar($colors, black, full), 0.33))
+                        // @include bgGradient($eC:rgba(getVar($colors, black, full), 0.33))
+                    }
+                    h3 > span:before {
+                        width: 100%;
                     }
                 }
             }
@@ -65,6 +73,16 @@ section.practice_area {
             // 1 column of cards that alternate left/right
             &:nth-of-type(even) .card {
 
+                 h3>span {
+                     @include accentUnderline($d : left);
+                 }
+                 &:hover,
+                 &:focus,
+                 &:active {
+                     h3>span:before {
+                         width: 100%;
+                     }
+                 }
                 text-align: right;
 
                 >.content {

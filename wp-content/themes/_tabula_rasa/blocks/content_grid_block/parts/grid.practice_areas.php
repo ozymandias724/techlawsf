@@ -27,7 +27,7 @@ $return['practice_area'] = sprintf(
     $guide['practice_area']
     ,get_permalink($post->ID)
     ,$post->post_title
-    ,'<h3>'.$post->post_title . '</h3>'
+    ,'<h3><span>'.$post->post_title . '</span></h3>'
     ,$the_fields['excerpt']
     ,$the_fields['image']['url']
 );

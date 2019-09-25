@@ -4,43 +4,45 @@
 // 
 body.page-clients {
 
+    section.block__content_grid,
     section.clients {
 
         .container > div {
-
-        
-            @include flexboxGrid($cols : 3);
-
+            
+            
+            // @include flexboxGrid($cols : 2, $grow: 0, $align : flex-start, $gutter: 60px);
+            
             >ul {
+                // 
+                $g : getVar($sizing, gutter, px, normal);
 
                 > hr {
-                    margin: 60px auto 90px auto;
+                    margin: 0px auto 30px auto;
                     position: relative;
                 }
 
                 > li {
-
-                    $g : getVar($sizing, gutter, px, normal);
-
-                    background-color:rgba(getVar($colors, white, full), 1);
+                    // 
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: center;
-                    @include boxshadow(1);
-                    transition:
-                        box-shadow 0.3s cubic-bezier(.25, .8, .25, 1),
-                        opacity 0.8s ease-in-out,
-                        transform 0.8s ease-in-out
-                    ;
-                    // 
+                    transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1), opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
                     padding: $g;
+                    text-align: left;
 
+                    &:nth-of-type(2n){
+                        // margin-top: 90px;
+                    }
+                    
+                    // Card Styles:
+                        // background-color:rgba(getVar($colors, white, full), 1);
+                        // @include boxshadow(1);
                     // 
                     > .info {
                         display: flex;
                         flex-flow: row wrap;
                         align-items: center;
-
+                        justify-content: space-between;
                         >div {
                             .name {
                                 font-size: 2.4rem;
@@ -51,10 +53,11 @@ body.page-clients {
                             }
                         }
                         >.bgimg {
-                            max-width: 140px;
-                            width: (100% / 3);
+                            // width: (100% / 3);
+                            // max-width: 140px;
+                            width: 140px;
                             @include aspectRatio(16, 9);
-                            margin: 0 $g 0 0;
+                            margin: 0 0 0 $g;
                         }
                     }
                     // 
@@ -63,22 +66,22 @@ body.page-clients {
                         
                     }
                     > .category {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        background-color: getVar($material, brand, main);
-                        color: white;
-                        padding: 10px 30px;
-                        text-transform: uppercase;
-                        letter-spacing: 2px;
-                        transform: translateY(-50%);
-                        font-weight: 400;
-                        @include boxshadow(1);
-                    }
+                        // position: absolute;
+                        // top: 0;
+                        // right: 0;
+                        // background-color: getVar($material, brand, accent);
+                        // color: white;
+                        // padding: 10px 30px;
+                        // font-weight: 400;
+                        // transform: translateY(-50%);
+                        // @include boxshadow(1);
 
-                    @for $i from 2 through 3 {
-                        &:nth-of-type(#{$i}n) {
-                            transition-delay: #{$i * 0.2}s;
+                        margin: 0 0 $g 0;
+                        > span {
+                            text-transform: uppercase;
+                            letter-spacing: 1ch;
+                            font-weight: bold;
+                            color: rgba(getVar($material, brand, main), 1);
                         }
                     }
                 }

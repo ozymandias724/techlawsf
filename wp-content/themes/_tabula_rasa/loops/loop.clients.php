@@ -15,14 +15,14 @@
         $cL = $fields['client_list']['client_list'];
         
         $guide['client_list'] = '
-            <li class="ijs__clients-client anim__fade anim__fade-left">
+            <li class="js__clients-client anim__fade anim__fade-left">
                 %s
                 <div class="info">
-                    %s
                     <div>
                         %s
                         %s
                     </div>
+                    %s
                 </div>
                 <div class="details">
                     %s
@@ -41,20 +41,19 @@
         
         foreach( $cL['clients'] as $i => $client ){
 
-            
 
             $return['client_list'] .= sprintf(
                 $guide['client_list']
-                ,( !empty($client['category']) ? '<span class="category">'.$client['category'].'</span>' : '' )
-                ,( !empty($client['image']) ? '<div class="bgimg"><div class="bgimg-img" style="background-image: url('.$client['image']['url'].')"></div></div>' : '' )
+                ,( !empty($client['taxonomy']->name) ? '<p class="category"><span>'.$client['taxonomy']->name.'</span></p>' : '' )
                 ,( !empty($client['name']) ? '<p class="name">'.$client['name'].'</p>' : '' )
                 ,( !empty($client['funding']) ? '<p class="funding">'.$client['funding'].'</p>' : '' )
+                ,( !empty($client['image']) ? '<div class="bgimg"><div class="bgimg-img" style="background-image: url('.$client['image']['url'].')"></div></div>' : '' )
                 ,( !empty($client['details']) ? '<p>'.trim($client['details']).'</p>' : '' )
             );
             
-            if( ($i + 1) % 3 == 0 ){
-                $return['client_list'] .= '<hr />';
-            }
+            // if( ($i + 1) % 2 == 0 ){
+                // $return['client_list'] .= '<hr />';
+            // }
         }
         $return['client_list'] .= '</ul></div></div></section>';
     

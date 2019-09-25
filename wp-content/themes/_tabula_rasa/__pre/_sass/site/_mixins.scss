@@ -20,7 +20,7 @@
 }
 
 
-@mixin accentUnderline($el : before, $h : 2px) {
+@mixin accentUnderline($el : before, $h : 2px, $d:right) {
 
     position: relative;
     &:#{$el}{
@@ -28,7 +28,13 @@
         display: block;
         position: absolute;
         bottom: 0;
-        left: 0;
+        @if $d == right {
+            left: 0;
+            right: auto;
+        } @else if $d == left {
+            right: 0;
+            left: auto;
+        }
         width: 0;
         height: 0;
         transition: width 0.25s ease;
