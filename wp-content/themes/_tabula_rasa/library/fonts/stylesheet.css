@@ -1,384 +1,1080 @@
 @font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-ExtraBoldItalic.woff2') format('woff2'),
-        url('Montserrat-ExtraBoldItalic.woff') format('woff');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-Light.woff2') format('woff2'),
-        url('JosefinSans-Light.woff') format('woff');
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-Light.woff2') format('woff2'),
+        url('../../library/fonts/Lato-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-ExtraLight.woff2') format('woff2'),
-        url('Montserrat-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-ThinItalic.woff2') format('woff2'),
-        url('Montserrat-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-SemiBold.woff2') format('woff2'),
-        url('EBGaramond-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-Italic.woff2') format('woff2'),
-        url('JosefinSans-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-BoldItalic.woff2') format('woff2'),
-        url('JosefinSans-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-Bold.woff2') format('woff2'),
-        url('EBGaramond-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('Lato-LightItalic.woff2') format('woff2'),
-        url('Lato-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-ExtraBold.woff2') format('woff2'),
-        url('Montserrat-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Lato';
-    src: url('Lato-Italic.woff2') format('woff2'),
-        url('Lato-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-BoldItalic.woff2') format('woff2'),
-        url('EBGaramond-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-MediumItalic.woff2') format('woff2'),
-        url('EBGaramond-MediumItalic.woff') format('woff');
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-MediumItalic.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-ExtraBoldItalic.woff2') format('woff2'),
-        url('EBGaramond-ExtraBoldItalic.woff') format('woff');
-    font-weight: 800;
+    font-family: 'Roboto Mono';
+    src: url('../../library/fonts/RobotoMono-Italic.woff2') format('woff2'),
+        url('../../library/fonts/RobotoMono-Italic.woff') format('woff');
+    font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-Black.woff2') format('woff2'),
-        url('Montserrat-Black.woff') format('woff');
+    font-family: 'Playfair Display';
+    src: url('../../library/fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+        url('../../library/fonts/PlayfairDisplay-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Lato-BlackItalic.woff2') format('woff2'),
-        url('Lato-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-Bold.woff2') format('woff2'),
-        url('Montserrat-Bold.woff') format('woff');
+    font-family: 'Oswald';
+    src: url('../../library/fonts/Oswald-Bold.woff2') format('woff2'),
+        url('../../library/fonts/Oswald-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-ThinItalic.woff2') format('woff2'),
-        url('JosefinSans-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-ExtraLightItalic.woff2') format('woff2'),
-        url('Montserrat-ExtraLightItalic.woff') format('woff');
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-Black.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-ExtraLightItalic.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-ExtraLightItalic.woff') format('woff');
     font-weight: 200;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-LightItalic.woff2') format('woff2'),
-        url('Montserrat-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
+    src: url('../../library/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Lato-Light.woff2') format('woff2'),
-        url('Lato-Light.woff') format('woff');
+    font-family: 'Lora';
+    src: url('../../library/fonts/Lora-Bold.woff2') format('woff2'),
+        url('../../library/fonts/Lora-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-Light.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Lato-BoldItalic.woff2') format('woff2'),
-        url('Lato-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-MediumItalic.woff2') format('woff2'),
-        url('Montserrat-MediumItalic.woff') format('woff');
+    font-family: 'Roboto Mono';
+    src: url('../../library/fonts/RobotoMono-MediumItalic.woff2') format('woff2'),
+        url('../../library/fonts/RobotoMono-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Lato-Regular.woff2') format('woff2'),
-        url('Lato-Regular.woff') format('woff');
+    font-family: 'Oswald';
+    src: url('../../library/fonts/Oswald-Regular.woff2') format('woff2'),
+        url('../../library/fonts/Oswald-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-SemiBoldItalic.woff2') format('woff2'),
-        url('EBGaramond-SemiBoldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-Bold.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-Thin.woff2') format('woff2'),
-        url('Montserrat-Thin.woff') format('woff');
+    src: url('../../library/fonts/Montserrat-Thin.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-SemiBold.woff2') format('woff2'),
-        url('JosefinSans-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-Light.woff2') format('woff2'),
-        url('Montserrat-Light.woff') format('woff');
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-Light.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-Medium.woff2') format('woff2'),
-        url('Montserrat-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Josefin Sans';
-    src: url('JosefinSans-Regular.woff2') format('woff2'),
-        url('JosefinSans-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-Italic.woff2') format('woff2'),
-        url('Montserrat-Italic.woff') format('woff');
-    font-weight: normal;
+    src: url('../../library/fonts/JosefinSans-SemiBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-Regular.woff2') format('woff2'),
-        url('EBGaramond-Regular.woff') format('woff');
+    font-family: 'Lora';
+    src: url('../../library/fonts/Lora-Regular.woff2') format('woff2'),
+        url('../../library/fonts/Lora-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Lato-Black.woff2') format('woff2'),
-        url('Lato-Black.woff') format('woff');
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-Black.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-BlackItalic.woff2') format('woff2'),
-        url('Montserrat-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-LightItalic.woff2') format('woff2'),
-        url('JosefinSans-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-Italic.woff2') format('woff2'),
-        url('EBGaramond-Italic.woff') format('woff');
+    font-family: 'Playfair Display';
+    src: url('../../library/fonts/PlayfairDisplay-Italic.woff2') format('woff2'),
+        url('../../library/fonts/PlayfairDisplay-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Lato';
-    src: url('Lato-Bold.woff2') format('woff2'),
-        url('Lato-Bold.woff') format('woff');
-    font-weight: bold;
+    font-family: 'Oswald';
+    src: url('../../library/fonts/Oswald-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/Oswald-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-ExtraLight.woff2') format('woff2'),
+        url('../../library/fonts/Muli-ExtraLight.woff') format('woff');
+    font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('Montserrat-Regular.woff2') format('woff2'),
-        url('Montserrat-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-Thin.woff2') format('woff2'),
-        url('JosefinSans-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-Bold.woff2') format('woff2'),
-        url('JosefinSans-Bold.woff') format('woff');
-    font-weight: bold;
+    src: url('../../library/fonts/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-ExtraLight.woff') format('woff');
+    font-weight: 200;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Lato Hairline';
-    src: url('Lato-HairlineItalic.woff2') format('woff2'),
-        url('Lato-HairlineItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Lato Hairline';
-    src: url('Lato-Hairline.woff2') format('woff2'),
-        url('Lato-Hairline.woff') format('woff');
+    src: url('../../library/fonts/Lato-Hairline.woff2') format('woff2'),
+        url('../../library/fonts/Lato-Hairline.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Josefin Sans';
-    src: url('JosefinSans-SemiBoldItalic.woff2') format('woff2'),
-        url('JosefinSans-SemiBoldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-Medium.woff2') format('woff2'),
-        url('EBGaramond-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-BoldItalic.woff2') format('woff2'),
-        url('Montserrat-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-SemiBold.woff2') format('woff2'),
-        url('Montserrat-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('Montserrat-SemiBoldItalic.woff2') format('woff2'),
-        url('Montserrat-SemiBoldItalic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'EB Garamond';
-    src: url('EBGaramond-ExtraBold.woff2') format('woff2'),
-        url('EBGaramond-ExtraBold.woff') format('woff');
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-ExtraBold.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-ExtraBold.woff') format('woff');
     font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-ExtraBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-Light.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../../library/fonts/EBGaramond-ExtraBold.woff2') format('woff2'),
+        url('../../library/fonts/EBGaramond-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-BlackItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-SemiBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../library/fonts/Oswald-Light.woff2') format('woff2'),
+        url('../../library/fonts/Oswald-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-BlackItalic.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-Medium.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../../library/fonts/EBGaramond-Bold.woff2') format('woff2'),
+        url('../../library/fonts/EBGaramond-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-Italic.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-ExtraLightItalic.woff2') format('woff2'),
+        url('../../library/fonts/Muli-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato Hairline';
+    src: url('../../library/fonts/Lato-HairlineItalic.woff2') format('woff2'),
+        url('../../library/fonts/Lato-HairlineItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Lato-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-Light.woff2') format('woff2'),
+        url('../../library/fonts/Muli-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../../library/fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
+        url('../../library/fonts/PlayfairDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-Regular.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-ExtraBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Muli-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../../library/fonts/OpenSansCondensed-Light.woff2') format('woff2'),
+        url('../../library/fonts/OpenSansCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-Regular.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-Italic.woff2') format('woff2'),
+        url('../../library/fonts/Muli-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-ExtraLight.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-MediumItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-SemiBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-Regular.woff2') format('woff2'),
+        url('../../library/fonts/Muli-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-Italic.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/Muli-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-SemiBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-Bold.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../library/fonts/Oswald-Medium.woff2') format('woff2'),
+        url('../../library/fonts/Oswald-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-Regular.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-Black.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-SemiBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Muli-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../../library/fonts/PlayfairDisplay-BlackItalic.woff2') format('woff2'),
+        url('../../library/fonts/PlayfairDisplay-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-Italic.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../../library/fonts/EBGaramond-ExtraBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/EBGaramond-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-Thin.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-ThinItalic.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-ThinItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-ExtraBold.woff2') format('woff2'),
+        url('../../library/fonts/Muli-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../../library/fonts/RobotoMono-Regular.woff2') format('woff2'),
+        url('../../library/fonts/RobotoMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-Bold.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-SemiBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-Medium.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-ThinItalic.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/Lato-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-BlackItalic.woff2') format('woff2'),
+        url('../../library/fonts/Lato-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-Black.woff2') format('woff2'),
+        url('../../library/fonts/Lato-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-Light.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-MediumItalic.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../library/fonts/Oswald-ExtraLight.woff2') format('woff2'),
+        url('../../library/fonts/Oswald-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-ExtraBold.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-Bold.woff2') format('woff2'),
+        url('../../library/fonts/Muli-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-SemiBold.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-Bold.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-BlackItalic.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../../library/fonts/PlayfairDisplay-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/PlayfairDisplay-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-Italic.woff2') format('woff2'),
+        url('../../library/fonts/Lato-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-SemiBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-Light.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Muli-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/Muli-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-Italic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-ExtraLightItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../library/fonts/Lora-Italic.woff2') format('woff2'),
+        url('../../library/fonts/Lora-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../../library/fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../../library/fonts/PlayfairDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../../library/fonts/RobotoMono-Bold.woff2') format('woff2'),
+        url('../../library/fonts/RobotoMono-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-Bold.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../../library/fonts/Lora-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Lora-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../../library/fonts/RobotoMono-Medium.woff2') format('woff2'),
+        url('../../library/fonts/RobotoMono-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-BlackItalic.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../../library/fonts/OpenSansCondensed-Bold.woff2') format('woff2'),
+        url('../../library/fonts/OpenSansCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-BlackItalic.woff2') format('woff2'),
+        url('../../library/fonts/Muli-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-Bold.woff2') format('woff2'),
+        url('../../library/fonts/Lato-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-ExtraBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-Black.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-MediumItalic.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../../library/fonts/Raleway-Medium.woff2') format('woff2'),
+        url('../../library/fonts/Raleway-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-Thin.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../../library/fonts/OpenSansCondensed-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/OpenSansCondensed-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../../library/fonts/JosefinSans-Regular.woff2') format('woff2'),
+        url('../../library/fonts/JosefinSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../../library/fonts/RobotoMono-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/RobotoMono-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../../library/fonts/CormorantGaramond-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/CormorantGaramond-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../library/fonts/Roboto-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/Roboto-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../library/fonts/Lato-Regular.woff2') format('woff2'),
+        url('../../library/fonts/Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-ExtraBoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-LightItalic.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-Italic.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../../library/fonts/SourceSansPro-Italic.woff2') format('woff2'),
+        url('../../library/fonts/SourceSansPro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('../../library/fonts/Muli-Black.woff2') format('woff2'),
+        url('../../library/fonts/Muli-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('../../library/fonts/EBGaramond-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/EBGaramond-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../library/fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+        url('../../library/fonts/Montserrat-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../../library/fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../../library/fonts/OpenSans-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
 }
 

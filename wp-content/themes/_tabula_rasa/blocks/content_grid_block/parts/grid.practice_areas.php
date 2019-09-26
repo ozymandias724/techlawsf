@@ -11,17 +11,19 @@ $the_fields = get_fields($post->ID);
 $return['practice_area'] = '';
 
 $guide['practice_area'] = '
-    <a href="%s" title="View more about %s">
-        <div class="card vert mixed">
-            <div class="content">
-                %s
-                %s
+    <li>
+        <a href="%s" title="View more about %s">
+            <div class="card vert mixed">
+                <div class="content">
+                    %s
+                    %s
+                </div>
+                <div class="bgimg bgimg-zooms">
+                    <div class="bgimg-img" style="background-image: url(%s)"></div>
+                </div>
             </div>
-            <div class="bgimg bgimg-zooms">
-                <div class="bgimg-img" style="background-image: url(%s)"></div>
-            </div>
-        </div>
-    </a>
+        </a>
+    </li>
 ';
 $return['practice_area'] = sprintf(
     $guide['practice_area']

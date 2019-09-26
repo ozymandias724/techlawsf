@@ -30,16 +30,23 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
         if( !empty( $cB['sub_heading'] ) ){
             $return['content_grid'] .= '<div class="anim__fade anim__fade-up">'.$cB['sub_heading'].'</div>';
         }
+
+        // check for filtering
+        if( !empty($cB['options']['enable_filter']) ){
+            $return['content_grid'] .= '<div class="filters">';
+            ob_start();
+            include('parts/filters.client_category.php');
+            $return['content_grid'] .= ob_get_clean().'</div>';
+        }
          
         // we are going to loop. check the options
         $return['content_grid'] .= '<div class="flexgrid cols-'.$cB['options']['column_count'].'"><ul class="'.$cB['content'][0]->post_type.' '.$cB['options']['alignment'].'">';
 
         // loop thru the post results (items are post objects)
         foreach ($cB['content'] as $i => $post) {
-            $return['content_grid'] .= '<li class="grid_item anim__fade anim__fade-up">';
             ob_start();
             include('parts/grid.'.$post->post_type.'.php');
-            $return['content_grid'] .= ob_get_clean().'</li>';
+            $return['content_grid'] .= ob_get_clean();
         }
 
         $return['content_grid'] .= '</ul>';

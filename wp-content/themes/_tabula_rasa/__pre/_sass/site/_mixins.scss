@@ -127,6 +127,7 @@
         &.right { justify-content: flex-end; }
 
         >li {
+            position: relative;
             display: inline-block;
             width: #{$basis};            // enable this to prevent a bug where the columns dont end up the correct width (child element has margin or something)
             flex: $grow $shrink #{$basis};

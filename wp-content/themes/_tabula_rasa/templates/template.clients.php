@@ -13,11 +13,6 @@ get_header();
     // get hero
     include(get_template_directory() . '/parts/part.hero.php');
 
-    
-
-
-    // include( get_template_directory().'/loops/loop.clients.php');
-
     /**
      *  Loop thru the 'content blocks' flexible content field
      *  include template parts by name if they are available

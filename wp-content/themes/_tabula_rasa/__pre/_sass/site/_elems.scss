@@ -1,6 +1,35 @@
 // 
 // 
 
+
+
+
+
+a.button {
+    $g : getVar($sizing, gutter, px, normal);
+    border: 2px solid rgba(getVar($material, brand, main), 1);
+    background-color: rgba(getVar($material, brand, main), 1);
+    color: rgba(getVar($colors, white, full), 1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: normal;
+    white-space: nowrap;
+    display: inline-block;
+    padding: 7.5px 15px;
+    margin: 0 $g $g 0;
+    &:last-of-type {
+        margin: 0 0 $g 0;
+    }
+}
+
+
+
+
+
+
+
+
+
 // background image wrapper (mimic figure elem)
 .bgimg {
     position: relative;
@@ -39,7 +68,6 @@
         }
     }
 }
-
 
 // logo
 // either as an image or as text
