@@ -6,6 +6,9 @@
 * Each repeater row will represent a column on the page.
 * Each flexible content layout will be a row within that column.
 */
+
+ wp_enqueue_style('columnsblock', get_template_directory_uri().'/blocks/columns_block/columns_block.css', 'main');
+
 // return string
 $return['columns_block'] = '';
 // return string

@@ -4,6 +4,7 @@
 * 
 * 
 */
+    wp_enqueue_style('headingblock', get_template_directory_uri().'/blocks/heading_block/heading_block.css', 'main');
     $return['heading_block'] = '';
     
     // guide string for the section

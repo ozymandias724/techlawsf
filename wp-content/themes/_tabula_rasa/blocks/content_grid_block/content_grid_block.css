@@ -1,0 +1,12 @@
+.block__content_grid > .container {
+  text-align: center;
+}
+.block__content_grid > .container > h2 {
+  margin: 0 0 15px 0;
+}
+.block__content_grid > .container > div {
+  margin: 0 0 60px 0;
+}
+.block__content_grid > .container > .flexgrid {
+  margin: 30px 0;
+}

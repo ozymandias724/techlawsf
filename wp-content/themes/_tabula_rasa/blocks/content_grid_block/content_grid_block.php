@@ -4,6 +4,8 @@
  * 
  *   Content Grid 
  */
+wp_enqueue_style('contentgrid', get_template_directory_uri().'/blocks/content_grid_block/content_grid_block.css', 'main');
+
 if( !empty($cB) ){
     
 }
