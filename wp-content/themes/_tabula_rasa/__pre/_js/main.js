@@ -93,22 +93,41 @@ $(document).ready(function () {
 
 
     // if there are clients on the page
-    if ($('.js__clients-filter-item').length) {
+    if ($('.block__content_grid ul.clients').length) {
 
+
+        var allClients;
         $('div.filters').on('click', '.js__clients-filter-item', function (e) {
 
-            var toShow = $(this).attr('href').replace('#', '');
+            e.preventDefault();
+
+            // get the ul wrapper element for our clients grid
+            var clientsEl = $('.block__content_grid ul.clients');
+
+            // if we have cached clients
+            if( allClients ){
+                clientsEl.children('li.grid_item').remove()
+            }
+            // no clients cached
+            else {
+                // cache all clients
+                allClients = clientsEl.children('li.grid_item').detach();
+            }
             
+            // filter down to clients with chosen term
+            var termClients = allClients.filter('[data-term="' + $(this).attr('data-term') + '"]')
 
-            $('ul.clients > li.grid_item:not([data-term="'+toShow+'"])').hide();
-            $('ul.clients > li.grid_item').css('order', '2');
-            $('ul.clients > li.grid_item').each(function(i, el){
-                $(el).css('order', 1);
-            });
-            $('ul.clients > li.grid_item[data-term="'+toShow+'"]').show();
+            if( $(this).attr('data-term') == 'all' ){
+                allClients.appendTo(clientsEl);
+            } else {
+                // append the filtered object to the ul
+                termClients.appendTo(clientsEl);
+            }
 
-
-
+            $(this).siblings('.active').removeClass('active');
+            $(this).addClass('active');
+            
+            return;
         });
 
     }

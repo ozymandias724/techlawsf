@@ -25,7 +25,7 @@
             padding-left: getVar($sizing, gutter, px, normal);
             width: calc(50% - #{$g});
         }
-        &.bgimg {
+        &.bgimage {
             margin-left: $g;
             width: 50%;
         }

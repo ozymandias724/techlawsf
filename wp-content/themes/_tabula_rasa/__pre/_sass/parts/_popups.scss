@@ -24,8 +24,8 @@
             }
         }
         
-        .bgimg {
-            .bgimg-img {
+        .bgimage {
+            .bgimage-img {
                 @include aspectRatio();
                 // @include bgGradient();
             }

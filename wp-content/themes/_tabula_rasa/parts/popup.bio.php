@@ -18,7 +18,7 @@ $fields = get_fields($rec->ID);
 $return['bio'] = '';
 $guide['bio'] = '
     <section>
-        <div class="bgimg"><div class="bgimg-img" style="background-image: url(%s)"></div></div>
+        <div class="bgimage"><div class="bgimage-img" style="background-image: url(%s)"></div></div>
         <div>
             <h2>%s</h2>
             <h4>%s</h4>

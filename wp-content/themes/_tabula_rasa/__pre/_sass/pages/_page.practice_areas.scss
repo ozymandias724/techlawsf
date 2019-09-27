@@ -47,10 +47,10 @@ section.practice_area {
                 @include boxshadow(0);
                 padding: 0;
                 text-align: left;
-                .bgimg {
+                .bgimage {
                     // width: 50%;
                     @include aspectRatio(16, 9);
-                    .bgimg-img {
+                    .bgimage-img {
                         // @include bgGradient();
                     }
                 }
@@ -61,7 +61,7 @@ section.practice_area {
                 &:focus,
                 &:active {
                     @include boxshadow(1);
-                    .bgimg .bgimg-img {
+                    .bgimage .bgimage-img {
                         // @include bgGradient($eC:rgba(getVar($colors, black, full), 0.33))
                     }
                     h3 > span:before {
@@ -92,7 +92,7 @@ section.practice_area {
                 }
 
                 // flip flexbox order
-                >.bgimg {
+                >.bgimage {
                     margin: 0;
                     margin-right: getVar($sizing, gutter, px, normal); // adjust margins for alternating cards
                 }

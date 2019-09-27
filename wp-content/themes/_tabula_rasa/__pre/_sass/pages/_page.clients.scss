@@ -6,24 +6,41 @@ body.page-clients {
 
 
 
+    // 
+    //      Client Category Filters
+    // 
     div.filters {
+        $g : getVar($sizing, gutter, px, small);
         display: flex;
         flex-flow: row wrap;
-        > a {
-            // margin: 15px;
+        justify-content: space-evenly;
+        position: relative;
+        padding: $g 0 0 0;
+        > a.button {
+            flex: 0 1 26%;
+            margin: 0 0 $g 0;
+            &.ghost {
+                @include ghostStyle($bgC:getVar($material, brand,accent));
+                &.active {
+                    @include solidStyle($bgC:getVar($material, brand,accent));
+                }
+            }
+
+            &[data-term="all"]{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -100%);
+            }
         }
     }
     
     
     
 
-    section.block__content_grid,
-    section.clients {
+    section.block__content_grid{
 
         .container > div {
-            
-            
-            // @include flexboxGrid($cols : 2, $grow: 0, $align : flex-start, $gutter: 60px);
             
             >ul {
                 // 
@@ -65,12 +82,15 @@ body.page-clients {
 
                             }
                         }
-                        >.bgimg {
+                        >.bgimage {
                             // width: (100% / 3);
                             // max-width: 140px;
                             width: 140px;
                             @include aspectRatio(16, 9);
                             margin: 0 0 0 $g;
+                            >.bgimage-img {
+                                background-size: contain;
+                            }
                         }
                     }
                     // 
@@ -82,7 +102,7 @@ body.page-clients {
                         position: absolute;
                         top: 0;
                         right: 0;
-                        background-color: getVar($material, brand, accent);
+                        background-color: rgba(getVar($material, brand, accent),1);
                         color: white;
                         padding: 10px 30px;
                         font-weight: 400;

@@ -875,27 +875,64 @@ body {
   }
 }
 a.button {
+  display: inline-block;
+  padding: 7.5px 30px;
+  margin: 0 30px 30px 0;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+a.button:not(.ghost) {
   border: 2px solid #fd5e0f;
   background-color: #fd5e0f;
   color: white;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-weight: normal;
-  white-space: nowrap;
-  display: inline-block;
-  padding: 7.5px 15px;
-  margin: 0 30px 30px 0;
+}
+a.button:not(.ghost):hover:not(.ghost), a.button:not(.ghost):active:not(.ghost), a.button:not(.ghost):focus:not(.ghost) {
+  border: 2px solid #fd5e0f;
+  background-color: rgba(253, 94, 15, 0);
+  color: #fd5e0f;
+}
+a.button:not(.ghost).active {
+  border: 2px solid #fd5e0f;
+  background-color: rgba(253, 94, 15, 0);
+  color: #fd5e0f;
+}
+a.button:not(.ghost).active:hover, a.button:not(.ghost).active:active, a.button:not(.ghost).active:focus {
+  border: 2px solid #fd5e0f;
+  background-color: #fd5e0f;
+  color: white;
+}
+a.button.ghost {
+  border: 2px solid #fd5e0f;
+  background-color: rgba(253, 94, 15, 0);
+  color: #fd5e0f;
+}
+a.button.ghost:hover, a.button.ghost:active, a.button.ghost:focus {
+  border: 2px solid #fd5e0f;
+  background-color: #fd5e0f;
+  color: white;
+}
+a.button.ghost.active {
+  border: 2px solid #fd5e0f;
+  background-color: #fd5e0f;
+  color: white;
+}
+a.button.ghost.active:hover:not(.ghost), a.button.ghost.active:active:not(.ghost), a.button.ghost.active:focus:not(.ghost) {
+  border: 2px solid #fd5e0f;
+  background-color: rgba(253, 94, 15, 0);
+  color: #fd5e0f;
 }
 a.button:last-of-type {
   margin: 0 0 30px 0;
 }
 
-.bgimg {
+.bgimage {
   position: relative;
   overflow: hidden;
 }
 
-.bgimg-img {
+.bgimage-img {
   display: block;
   transition: all 0.25s ease;
   background-size: cover;
@@ -903,7 +940,7 @@ a.button:last-of-type {
   background-repeat: no-repeat;
 }
 
-.bgimg .bgimg-img {
+.bgimage .bgimage-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -912,7 +949,7 @@ a.button:last-of-type {
   height: 100%;
   transition: all 0.25s ease;
 }
-.bgimg.bgimg-zooms:hover .bgimg-img, .bgimg.bgimg-zooms:active .bgimg-img, .bgimg.bgimg-zooms:focus .bgimg-img {
+.bgimage.bgimagezooms:hover .bgimage-img, .bgimage.bgimagezooms:active .bgimage-img, .bgimage.bgimagezooms:focus .bgimage-img {
   transform: scale(1.25);
 }
 
@@ -1764,10 +1801,10 @@ body.header-fadein header.header.fixed.fadein {
 .popup > .container > section > div:last-child {
   margin-left: 30px;
 }
-.popup > .container .bgimg .bgimg-img {
+.popup > .container .bgimage .bgimage-img {
   position: relative;
 }
-.popup > .container .bgimg .bgimg-img:before {
+.popup > .container .bgimage .bgimage-img:before {
   content: "";
   display: block;
   padding-top: 100%;
@@ -2065,7 +2102,7 @@ header .navicons {
   padding-left: 30px;
   width: calc(50% - 30px);
 }
-.card > div.bgimg {
+.card > div.bgimage {
   margin-left: 30px;
   width: 50%;
 }
@@ -2096,10 +2133,10 @@ section.practice_area > div.container.normal {
   padding: 0;
   text-align: left;
 }
-.flexgrid ul.practice_areas .grid_item .card .bgimg {
+.flexgrid ul.practice_areas .grid_item .card .bgimage {
   position: relative;
 }
-.flexgrid ul.practice_areas .grid_item .card .bgimg:before {
+.flexgrid ul.practice_areas .grid_item .card .bgimage:before {
   content: "";
   display: block;
   padding-top: 56.25%;
@@ -2152,7 +2189,7 @@ section.practice_area > div.container.normal {
   padding-right: 90px;
   order: 2;
 }
-.flexgrid ul.practice_areas .grid_item:nth-of-type(even) .card > .bgimg {
+.flexgrid ul.practice_areas .grid_item:nth-of-type(even) .card > .bgimage {
   margin: 0;
   margin-right: 30px;
 }
@@ -2160,14 +2197,45 @@ section.practice_area > div.container.normal {
 body.page-clients div.filters {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 15px 0 0 0;
 }
-body.page-clients section.block__content_grid .container > div > ul > hr,
-body.page-clients section.clients .container > div > ul > hr {
+body.page-clients div.filters > a.button {
+  flex: 0 1 26%;
+  margin: 0 0 15px 0;
+}
+body.page-clients div.filters > a.button.ghost {
+  border: 2px solid #55b9be;
+  background-color: rgba(85, 185, 190, 0);
+  color: #55b9be;
+}
+body.page-clients div.filters > a.button.ghost:hover, body.page-clients div.filters > a.button.ghost:active, body.page-clients div.filters > a.button.ghost:focus {
+  border: 2px solid #55b9be;
+  background-color: #55b9be;
+  color: white;
+}
+body.page-clients div.filters > a.button.ghost.active {
+  border: 2px solid #55b9be;
+  background-color: #55b9be;
+  color: white;
+}
+body.page-clients div.filters > a.button.ghost.active:hover:not(.ghost), body.page-clients div.filters > a.button.ghost.active:active:not(.ghost), body.page-clients div.filters > a.button.ghost.active:focus:not(.ghost) {
+  border: 2px solid #55b9be;
+  background-color: rgba(85, 185, 190, 0);
+  color: #55b9be;
+}
+body.page-clients div.filters > a.button[data-term=all] {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+body.page-clients section.block__content_grid .container > div > ul > hr {
   margin: 0px auto 30px auto;
   position: relative;
 }
-body.page-clients section.block__content_grid .container > div > ul > li,
-body.page-clients section.clients .container > div > ul > li {
+body.page-clients section.block__content_grid .container > div > ul > li {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -2177,36 +2245,33 @@ body.page-clients section.clients .container > div > ul > li {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-body.page-clients section.block__content_grid .container > div > ul > li > .info,
-body.page-clients section.clients .container > div > ul > li > .info {
+body.page-clients section.block__content_grid .container > div > ul > li > .info {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
 }
-body.page-clients section.block__content_grid .container > div > ul > li > .info > div .name,
-body.page-clients section.clients .container > div > ul > li > .info > div .name {
+body.page-clients section.block__content_grid .container > div > ul > li > .info > div .name {
   font-size: 2.4rem;
   font-weight: 400;
 }
-body.page-clients section.block__content_grid .container > div > ul > li > .info > .bgimg,
-body.page-clients section.clients .container > div > ul > li > .info > .bgimg {
+body.page-clients section.block__content_grid .container > div > ul > li > .info > .bgimage {
   width: 140px;
   position: relative;
   margin: 0 0 0 30px;
 }
-body.page-clients section.block__content_grid .container > div > ul > li > .info > .bgimg:before,
-body.page-clients section.clients .container > div > ul > li > .info > .bgimg:before {
+body.page-clients section.block__content_grid .container > div > ul > li > .info > .bgimage:before {
   content: "";
   display: block;
   padding-top: 56.25%;
 }
-body.page-clients section.block__content_grid .container > div > ul > li > .details,
-body.page-clients section.clients .container > div > ul > li > .details {
+body.page-clients section.block__content_grid .container > div > ul > li > .info > .bgimage > .bgimage-img {
+  background-size: contain;
+}
+body.page-clients section.block__content_grid .container > div > ul > li > .details {
   margin: 30px 0 0 0;
 }
-body.page-clients section.block__content_grid .container > div > ul > li > .category,
-body.page-clients section.clients .container > div > ul > li > .category {
+body.page-clients section.block__content_grid .container > div > ul > li > .category {
   position: absolute;
   top: 0;
   right: 0;
@@ -2219,8 +2284,7 @@ body.page-clients section.clients .container > div > ul > li > .category {
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   margin: 0 0 30px 0;
 }
-body.page-clients section.block__content_grid .container > div > ul > li > .category > span,
-body.page-clients section.clients .container > div > ul > li > .category > span {
+body.page-clients section.block__content_grid .container > div > ul > li > .category > span {
   text-transform: uppercase;
   letter-spacing: 1ch;
   font-weight: bold;
@@ -2273,24 +2337,24 @@ div.flexgrid > ul.team_members > li.grid_item > a {
   display: flex;
   flex-flow: column nowrap;
 }
-div.flexgrid > ul.team_members > li.grid_item > a .bgimg {
+div.flexgrid > ul.team_members > li.grid_item > a .bgimage {
   margin: 0 0 15px 0;
   border-radius: 50%;
   position: relative;
 }
-div.flexgrid > ul.team_members > li.grid_item > a .bgimg:before {
+div.flexgrid > ul.team_members > li.grid_item > a .bgimage:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type {
+div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimage) p:first-of-type {
   display: inline-block;
   padding: 0 30px 5px 0;
   font-size: 2rem;
   font-weight: 400;
   position: relative;
 }
-div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type:before {
+div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimage) p:first-of-type:before {
   content: "";
   display: block;
   position: absolute;
@@ -2302,17 +2366,17 @@ div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-t
   transition: width 0.25s ease;
   border-bottom: 2px solid #FD5E0F;
 }
-div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:first-of-type:before {
+div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimage) p:first-of-type:before {
   width: 30px;
 }
-div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p:last-of-type {
+div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimage) p:last-of-type {
   font-size: 1.6rem;
   font-style: italic;
 }
-div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimg) p i.fas {
+div.flexgrid > ul.team_members > li.grid_item > a > div:not(.bgimage) p i.fas {
   margin-right: 5px;
 }
-div.flexgrid > ul.team_members > li.grid_item > a:hover > div:not(.bgimg) p:first-of-type:before {
+div.flexgrid > ul.team_members > li.grid_item > a:hover > div:not(.bgimage) p:first-of-type:before {
   width: 100%;
 }
 div.flexgrid > ul.team_members > li.grid_item > a:hover p:last-of-type {

@@ -18,13 +18,13 @@
                 width: 100%;
                 display: flex;
                 flex-flow: column nowrap;
-                .bgimg {
+                .bgimage {
                     margin: 0 0 $g 0;
                     // border-radius: 5px;
                     border-radius: 50%;
                     @include aspectRatio();
                 }
-                > div:not(.bgimg){
+                > div:not(.bgimage){
                     p{
                         // name
                         &:first-of-type{
@@ -53,7 +53,7 @@
                 // hover over block anchor
                 &:hover {
                     // slide out underline
-                    > div:not(.bgimg) p:first-of-type {
+                    > div:not(.bgimage) p:first-of-type {
                         // 
                         &:before {
                             width: 100%;
@@ -71,7 +71,7 @@
             // 
             &:nth-of-type(2n){
                 > a {
-                    .bgimg {
+                    .bgimage {
                     }
                 }
             }

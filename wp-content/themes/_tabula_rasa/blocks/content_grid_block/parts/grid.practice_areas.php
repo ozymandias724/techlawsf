@@ -18,8 +18,8 @@ $guide['practice_area'] = '
                     %s
                     %s
                 </div>
-                <div class="bgimg bgimg-zooms">
-                    <div class="bgimg-img" style="background-image: url(%s)"></div>
+                <div class="bgimage bgimagezooms">
+                    <div class="bgimage-img" style="background-image: url(%s)"></div>
                 </div>
             </div>
         </a>

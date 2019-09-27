@@ -4,13 +4,14 @@
  */
 
     
-    $return['filters'] = '';
+$return['filters'] = '';
+$return['filters'] = '<a class="button ghost active js__clients-filter-item" data-term="all" href="" title="View all our clients">All</a>';
 
     // 
     $allTerms = get_terms('client_category');
     // 
     foreach( $allTerms as $i => $term ){
-        $return['filters'] .= '<a class="button js__clients-filter-item" href="#'.$term->slug.'" title="View only our '.$term->name.' clients">'.$term->name.'</a>';
+        $return['filters'] .= '<a class="button ghost js__clients-filter-item" href="#'.$term->slug.'" data-term="'.$term->slug.'"  title="View only our '.$term->name.' clients">'.$term->name.'</a>';
     }
     
     // 

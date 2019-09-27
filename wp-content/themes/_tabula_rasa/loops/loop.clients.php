@@ -47,7 +47,7 @@
                 ,( !empty($client['taxonomy']->name) ? '<p class="category"><span>'.$client['taxonomy']->name.'</span></p>' : '' )
                 ,( !empty($client['name']) ? '<p class="name">'.$client['name'].'</p>' : '' )
                 ,( !empty($client['funding']) ? '<p class="funding">'.$client['funding'].'</p>' : '' )
-                ,( !empty($client['image']) ? '<div class="bgimg"><div class="bgimg-img" style="background-image: url('.$client['image']['url'].')"></div></div>' : '' )
+                ,( !empty($client['image']) ? '<div class="bgimage"><div class="bgimage-img" style="background-image: url('.$client['image']['url'].')"></div></div>' : '' )
                 ,( !empty($client['details']) ? '<p>'.trim($client['details']).'</p>' : '' )
             );
             

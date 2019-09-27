@@ -23,24 +23,29 @@
 @mixin accentUnderline($el : before, $h : 2px, $d:right) {
 
     position: relative;
-    &:#{$el}{
+
+    &:#{$el} {
         content: '';
         display: block;
         position: absolute;
         bottom: 0;
-        @if $d == right {
+
+        @if $d==right {
             left: 0;
             right: auto;
-        } @else if $d == left {
+        }
+
+        @else if $d==left {
             right: 0;
             left: auto;
         }
+
         width: 0;
         height: 0;
         transition: width 0.25s ease;
         border-bottom: $h solid getVar($material, brand, main);
     }
-    
+
 }
 
 
@@ -53,6 +58,7 @@
     @if $depth==0 {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.0), 0 1px 2px rgba(0, 0, 0, 0.0);
     }
+
     @if $depth==1 {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     }
@@ -87,8 +93,7 @@
 
 
 
-@mixin bgGradient($el:after,$w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.75))
-{
+@mixin bgGradient($el:after, $w:100%, $h:100%, $p:'bottom', $sC:rgba(getVar($colors, black, full), 0.0), $eC:rgba(getVar($colors, black, full), 0.75)) {
     position: relative;
 
     &:#{$el} {
@@ -108,6 +113,38 @@
     }
 }
 
+@mixin ghostStyle($bgC : getVar($material, brand, main), $tC : getVar($colors, white, full)) {
+    border: 2px solid rgba($bgC, 1);
+    background-color: rgba($bgC, 0);
+    color: rgba($bgC, 1);
+
+    &:hover,
+    &:active,
+    &:focus {
+        border: 2px solid rgba($bgC, 1);
+        background-color: rgba($bgC, 1);
+        color: rgba($tC, 1);
+    }
+}
+@mixin solidStyle($bgC : getVar($material, brand, main), $tC : getVar($colors, white, full)) {
+    border: 2px solid rgba($bgC, 1);
+    background-color: rgba($bgC, 1);
+    color: rgba($tC, 1);
+
+    &:hover,
+    &:active,
+    &:focus {
+
+        // this looks pretty bad on ghosts,
+        // when you hover over an active ghost you see it as an inactive ghost...
+        // really bad when you click and it gets focus...
+        &:not(.ghost){
+            border: 2px solid rgba($bgC, 1);
+            background-color: rgba($bgC, 0);
+            color: rgba($bgC, 1);
+        }
+    }
+}
 
 // 
 // 
@@ -122,14 +159,23 @@
         flex-flow: row wrap;
         align-items: $align;
         justify-content: $justify;
-        &.left { justify-content: flex-start; }
-        &.center { justify-content: center; }
-        &.right { justify-content: flex-end; }
+
+        &.left {
+            justify-content: flex-start;
+        }
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.right {
+            justify-content: flex-end;
+        }
 
         >li {
             position: relative;
             display: inline-block;
-            width: #{$basis};            // enable this to prevent a bug where the columns dont end up the correct width (child element has margin or something)
+            width: #{$basis}; // enable this to prevent a bug where the columns dont end up the correct width (child element has margin or something)
             flex: $grow $shrink #{$basis};
             margin: 0 $gutter $gutter 0;
             // overflow: hidden;

@@ -32,7 +32,7 @@ $return['client_list'] .= sprintf(
     ,( !empty($terms) ? '<p class="category"><span>'.$terms[0]->name.'</span></p>' : '' )
     ,( !empty($post->post_title) ? '<p class="name">'.$post->post_title.'</p>' : '' )
     ,( !empty($the_fields['funding']) ? '<p class="funding">'.$the_fields['funding'].'</p>' : '' )
-    ,( !empty($the_fields['image']) ? '<div class="bgimg"><div class="bgimg-img" style="background-image: url('.$the_fields['image']['url'].')"></div></div>' : '' )
+    ,( !empty($the_fields['image']) ? '<div class="bgimage"><div class="bgimage-img" style="background-image: url('.$the_fields['image']['url'].')"></div></div>' : '' )
     ,( !empty($the_fields['details']) ? '<p>'.trim($the_fields['details']).'</p>' : '' )
 );
 
