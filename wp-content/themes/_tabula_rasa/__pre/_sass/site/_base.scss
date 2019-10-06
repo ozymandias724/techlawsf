@@ -46,8 +46,8 @@ h5,
 h6 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    margin-bottom: 1.5rem;
-
+    margin: 1.5rem 0 0 0;
+    &:first-child { margin: 0; }
     &.display {
         font-weight: 300;
     }
@@ -78,8 +78,11 @@ h6 {
     font-size: 1.2rem;
 }
 
-p:not(:last-child) {
-    margin-bottom: 1rem;
+p {
+    margin: getVar($sizing, gutter, px, normal) 0 0 0;
+    &:first-child {
+        margin: 0;
+    }
 }
 
 // 

@@ -28,7 +28,7 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
         
         // check for the sub heading
         if( !empty( $cB['sub_heading'] ) ){
-            $return['content_grid'] .= '<div class="anim__fade anim__fade-up">'.$cB['sub_heading'].'</div>';
+            $return['content_grid'] .= '<p class="anim__fade anim__fade-up">'.$cB['sub_heading'].'</p>';
         }
 
         // check for filtering

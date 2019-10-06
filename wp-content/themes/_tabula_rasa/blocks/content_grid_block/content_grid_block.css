@@ -1,16 +1,13 @@
-.block__content_grid > .container {
-  text-align: center;
-}
-.block__content_grid > .container > h2 {
-  margin: 0 0 15px 0;
-}
-.block__content_grid > .container > div {
-  margin: 0 0 60px 0;
-}
 .block__content_grid > .container > .flexgrid {
-  margin: 30px 0;
+  margin: 60px 0 -30px 0;
+}
+.block__content_grid > .container > .flexgrid > a.button {
+  margin: 30px auto 0 auto;
 }
 
+.site__block.block__content_grid .container .flexgrid {
+  text-align: center;
+}
 .site__block.block__content_grid .container .flexgrid > ul.testimonials {
   align-items: flex-end;
 }

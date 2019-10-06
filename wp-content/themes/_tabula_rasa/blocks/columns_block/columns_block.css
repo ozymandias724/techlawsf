@@ -1,9 +1,12 @@
 .site__block.block__columns > .container > .flexgrid {
-  margin: 30px 0 0 0;
+  margin: 60px 0 -30px 0;
 }
 .site__block.block__columns > .container > .flexgrid > ul > li > .site__block {
   margin: 30px 0 0 0;
 }
 .site__block.block__columns > .container > .flexgrid > ul > li > .site__block:first-of-type {
   margin: 0 0 0 0;
+}
+.site__block.block__columns > .container > .flexgrid > ul > li > .site__block .flexgrid {
+  margin: 0;
 }

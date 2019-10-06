@@ -12,7 +12,7 @@ section.site__block.block__buttons {
         $g: getVar($sizing, gutter, px, small);
 
         >.flexgrid {
-
+            margin: (4 * $g) 0 -30px 0;
             >ul {
                 justify-content: center;
 

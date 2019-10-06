@@ -1034,10 +1034,6 @@ a.button:last-of-type {
   margin: 0 0 30px 0;
 }
 
-.block-heading {
-  text-align: center;
-}
-
 .bgimage {
   position: relative;
   overflow: hidden;
@@ -1154,7 +1150,15 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0 0 0;
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin: 0;
 }
 h1.display,
 h2.display,
@@ -1189,8 +1193,11 @@ h6 {
   font-size: 1.2rem;
 }
 
-p:not(:last-child) {
-  margin-bottom: 1rem;
+p {
+  margin: 30px 0 0 0;
+}
+p:first-child {
+  margin: 0;
 }
 
 body {
@@ -2564,17 +2571,6 @@ body.home main > .block__columns .block__card .block__image .container:before {
   display: block;
   padding-top: 100%;
 }
-body.home main > .block__heading:nth-of-type(2) h2 {
-  color: #55b9be;
-  text-transform: uppercase;
-}
-body.home main > .block__heading:nth-of-type(4) {
-  background-color: rgba(85, 185, 190, 0.3333333333);
-}
-body.home main > .block__heading:nth-of-type(4) > .container {
-  padding: 60px 0;
-}
-
 body.single-practice_areas section.practice_area .container .heading,
 body.single-practice_areas section.practice_area .container .subheading {
   text-align: center;

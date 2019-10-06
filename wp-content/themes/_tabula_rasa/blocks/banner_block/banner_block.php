@@ -6,7 +6,12 @@
 *
 */
 
- wp_enqueue_style('bannerblock', get_template_directory_uri().'/blocks/banner_block/banner_block.css', 'main');
+wp_enqueue_style('slick', get_template_directory_uri().'/blocks/__lib/slick/slick.css', 'main');
+wp_enqueue_style('slick-theme', get_template_directory_uri().'/blocks/__lib/slick/slick-theme.css', 'main');
+wp_enqueue_script( 'slick', get_template_directory_uri().'/blocks/__lib/slick/slick.min.js', 'main', '1.8.1', true);
+// 
+wp_enqueue_style('bannerblock', get_template_directory_uri().'/blocks/banner_block/banner_block.css', 'main');
+wp_enqueue_script( 'bannerblock', get_template_directory_uri().'/blocks/banner_block/banner_block.js', 'main', '1.0.0', true );
 
 // return string
 $return['banner_block'] = '';
@@ -17,6 +22,8 @@ $return['banner'] = '';
 $return['banner_block'] .= '
     <section class="site__block block__banner">
         <div class="container ' . $cB['width'] . '">
+        '. (!empty($cB['heading']) ? '<h2 class="block-heading">' . $cB['heading'] . '</h2>' : '') . '
+        '. (!empty($cB['sub_heading']) ? '<p class="block-subheading">' . $cB['sub_heading'] . '</p>' : '') . '
 ';
 
 // determine if we are supposed to use a set # of cols or a fluid #

@@ -2,24 +2,27 @@ section.site__block.block__banner {
   background-color: rgba(85, 185, 190, 0.3333333333);
 }
 section.site__block.block__banner > .container {
-  padding: 60px 0 30px 0;
+  padding: 60px 0;
 }
-section.site__block.block__banner > .container > .flexgrid > ul {
+section.site__block.block__banner > .container > .flexgrid {
+  margin: 30px auto 0;
+}
+section.site__block.block__banner > .container > .flexgrid > ul, section.site__block.block__banner > .container > .flexgrid .slick-track {
   flex-flow: row nowrap;
   align-items: center;
   overflow: hidden;
 }
-section.site__block.block__banner > .container > .flexgrid > ul > li img {
+section.site__block.block__banner > .container > .flexgrid > ul > li img, section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide img, section.site__block.block__banner > .container > .flexgrid .slick-track > li img, section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide img {
   filter: grayscale(1);
   height: 72px;
   object-fit: contain;
   opacity: 0.6666666667;
   transition: opacity 0.25s ease, filter 0.25s ease;
 }
-section.site__block.block__banner > .container > .flexgrid > ul > li img:hover, section.site__block.block__banner > .container > .flexgrid > ul > li img:focus, section.site__block.block__banner > .container > .flexgrid > ul > li img:active, section.site__block.block__banner > .container > .flexgrid > ul > li img.active {
+section.site__block.block__banner > .container > .flexgrid > ul > li img:hover, section.site__block.block__banner > .container > .flexgrid > ul > li img:focus, section.site__block.block__banner > .container > .flexgrid > ul > li img:active, section.site__block.block__banner > .container > .flexgrid > ul > li img.active, section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide img:hover, section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide img:focus, section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide img:active, section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide img.active, section.site__block.block__banner > .container > .flexgrid .slick-track > li img:hover, section.site__block.block__banner > .container > .flexgrid .slick-track > li img:focus, section.site__block.block__banner > .container > .flexgrid .slick-track > li img:active, section.site__block.block__banner > .container > .flexgrid .slick-track > li img.active, section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide img:hover, section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide img:focus, section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide img:active, section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide img.active {
   filter: grayscale(0);
   opacity: 1;
 }
-section.site__block.block__banner > .container > .flexgrid > ul > li:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid > ul > li:nth-of-type(5n) {
-  margin: 0 30px 30px 0;
+section.site__block.block__banner > .container > .flexgrid > ul > li:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid > ul > li:nth-of-type(5n), section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide:nth-of-type(5n), section.site__block.block__banner > .container > .flexgrid .slick-track > li:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid .slick-track > li:nth-of-type(5n), section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide:nth-of-type(5n) {
+  margin: 0 60px 0 0;
 }

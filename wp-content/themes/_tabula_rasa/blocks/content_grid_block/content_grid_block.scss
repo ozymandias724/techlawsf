@@ -7,22 +7,15 @@
 .block__content_grid > .container {
     $g : getVar($sizing, gutter, px, normal);
     
-    // 
-    text-align: center;
-
-    
-    // block heading
-    > h2 {
-        margin: 0 0 ($g / 2) 0;
-    }
-    // block sub-heading
-    > div {
-        margin: 0 0 ($g * 2) 0;
-    }
-    
     // block content (grid)
     > .flexgrid {
-        margin: getVar($sizing, gutter, px, normal) 0;
+        margin: getVar($sizing, gutter, px, large) 0 -30px 0;
+        > ul{
+        }
+
+        > a.button {
+            margin: $g auto 0 auto;
+        }
     }
     
 }

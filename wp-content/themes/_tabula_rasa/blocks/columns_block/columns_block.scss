@@ -9,13 +9,16 @@
         $g : getVar($sizing, gutter, px, normal);
 
         > .flexgrid {
-            margin: $g 0 0 0;
+            margin: (2 * $g) 0 -#{$g} 0;
             > ul {
                 > li {
                     > .site__block {
                         margin: $g 0 0 0;
                         &:first-of-type {
                             margin: 0 0 0 0;
+                        }
+                        .flexgrid {
+                            margin: 0;
                         }
                     }
                 }

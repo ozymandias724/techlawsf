@@ -17,6 +17,8 @@ $return['buttons'] = '';
 $return['buttons_block'] .= '
     <section class="site__block block__buttons">
         <div class="container ' . $cB['width'] . '">
+        '. (!empty($cB['heading']) ? '<h2 class="block-heading">' . $cB['heading'] . '</h2>' : '') . '
+        '. (!empty($cB['sub_heading']) ? '<p class="block-subheading">' . $cB['sub_heading'] . '</p>' : '') . '
 ';
 
 // determine if we are supposed to use a set # of cols or a fluid #

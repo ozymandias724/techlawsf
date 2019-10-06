@@ -23,20 +23,20 @@ body.home {
             }
         }
         
-        > .block__heading:nth-of-type(2){
-            h2 {
-                color: rgba(getVar($material, brand, accent), 1);
-                text-transform: uppercase;
-            }   
-        }
+        // > .block__heading:nth-of-type(2){
+        //     h2 {
+        //         color: rgba(getVar($material, brand, accent), 1);
+        //         text-transform: uppercase;
+        //     }   
+        // }
     
-        > .block__heading:nth-of-type(4){
-            $g : getVar($sizing, gutter, px, large);
-            background-color: rgba(getVar($material, brand, accent), (1 / 3));
-            > .container {
-                padding: $g 0;
-            }
-        }
+        // > .block__heading:nth-of-type(4){
+        //     $g : getVar($sizing, gutter, px, large);
+        //     background-color: rgba(getVar($material, brand, accent), (1 / 3));
+        //     > .container {
+        //         padding: $g 0;
+        //     }
+        // }
     }
 
     

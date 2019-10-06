@@ -1,3 +1,6 @@
+section.site__block.block__buttons > .container > .flexgrid {
+  margin: 60px 0 -30px 0;
+}
 section.site__block.block__buttons > .container > .flexgrid > ul {
   justify-content: center;
 }
