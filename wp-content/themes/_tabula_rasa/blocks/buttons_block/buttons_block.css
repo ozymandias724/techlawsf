@@ -2,7 +2,6 @@ section.site__block.block__buttons > .container > .flexgrid > ul {
   justify-content: center;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li {
-  text-align: center;
   flex-grow: 0;
   flex-shrink: 1;
 }
@@ -38,6 +37,7 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.b
   display: block;
   margin: 0;
   padding: 15px;
+  text-align: center;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):hover i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):focus i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):active i {
   color: #fd5e0f;

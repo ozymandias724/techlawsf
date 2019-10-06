@@ -12,10 +12,9 @@ section.site__block.block__card {
         >.flexgrid {
 
             >ul {
-                >li {
-                    &:nth-of-type(n+1),
-                    & {
-                        margin: 0;
+                align-items: center;
+                > li {
+                    img {
                     }
                 }
             }

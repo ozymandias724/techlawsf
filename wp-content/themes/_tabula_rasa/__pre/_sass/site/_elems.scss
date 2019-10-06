@@ -26,7 +26,15 @@
     
 }
 
+.wpforms-submit-container {
+    display: flex !important;
+    > button[type="submit"] {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+}
 
+.wpforms-submit-container > button.wpforms-submit[type="submit"],
 a.button {
     
     // 

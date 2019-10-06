@@ -4,8 +4,40 @@
 
 body.home {
 
+    $g: getVar($sizing, gutter, px, normal);
+    
+    main {
 
+        > .block__columns {
+            .block__card {
+                .block__image {
+                    .container {
+                        border-radius: 50%;
+                        overflow: hidden;
+                        @include aspectRatio();
+                        display: flex;
+                        img {
+                        }
+                    }
+                }
+            }
+        }
+        
+        > .block__heading:nth-of-type(2){
+            h2 {
+                color: rgba(getVar($material, brand, accent), 1);
+                text-transform: uppercase;
+            }   
+        }
     
-    
+        > .block__heading:nth-of-type(4){
+            $g : getVar($sizing, gutter, px, large);
+            background-color: rgba(getVar($material, brand, accent), (1 / 3));
+            > .container {
+                padding: $g 0;
+            }
+        }
+    }
+
     
 }

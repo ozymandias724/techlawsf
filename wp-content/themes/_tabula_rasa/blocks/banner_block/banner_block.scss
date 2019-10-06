@@ -4,7 +4,7 @@
 @import  '../../__pre/_sass/site/vars';
 @import  '../../__pre/_sass/site/mixins';
 section.site__block.block__banner {
-    background-color: rgba(getVar($material, brand, accent), (100% / 3));
+    background-color: rgba(getVar($material, brand, accent), (1 / 3));
 
     > .container {
 
@@ -21,7 +21,7 @@ section.site__block.block__banner {
                 > li {
                     img {
                         filter: grayscale(1);
-                        height: 60px;
+                        height: 72px;
                         object-fit: contain;
                         opacity: (2 / 3);
                         transition: opacity 0.25s ease, filter 0.25s ease;

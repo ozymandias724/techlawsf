@@ -13,7 +13,9 @@ section.prefooter {
         padding: 60px 0;
 
         > h4 {
-
+            color: rgba(getVar($material, brand, accent), 1);
+            text-transform: uppercase;
+            font-weight: bold;
             text-align: center;
             
         }
