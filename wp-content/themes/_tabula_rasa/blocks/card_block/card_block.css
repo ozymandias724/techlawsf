@@ -1,0 +1,3 @@
+section.site__block.block__card > .container > .flexgrid > ul > li:nth-of-type(n+1), section.site__block.block__card > .container > .flexgrid > ul > li {
+  margin: 0;
+}

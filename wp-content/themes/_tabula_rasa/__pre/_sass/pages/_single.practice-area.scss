@@ -23,11 +23,11 @@ body.single-practice_areas {
         
         .blurbs {
 
-            @include flexboxGrid();
+            // @include flexboxGrid();
             > ul {
                 > li {
                     blockquote {
-                        border-left: 2px solid rgba(getVar($material, brand, accent), 1);
+                        // border-left: 2px solid rgba(getVar($material, brand, accent), 1);
                     }
                 }
             }

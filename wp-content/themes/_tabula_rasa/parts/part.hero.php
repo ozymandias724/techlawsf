@@ -3,15 +3,14 @@
  * HERO
 */
 
+    //
     $fields = get_fields(get_the_ID());
 
-    // if on a post
+    // if this is a post handle the hero space
     if( is_singular( ['practice_areas'] ) ){
-        
 
         // open hero section
         $return['hero'] = '<section class="hero" style="background-image: url('.$fields['image']['url']. ')"><div class="container normal">';
-        
          $guide['hero'] = '
             %s
             %s
@@ -21,9 +20,8 @@
             ,( !empty($post->post_title) ? '<h1 class="anim__fade anim__fade-left">'.$post->post_title.'</h1>' : '' )
             ,( !empty($fields['excerpt']) ? '<div class="anim__fade anim__fade-left">'.$fields['excerpt'].'</div>' : '' )
         );
-        
     }
-    // else, presumably, on a page
+    // else, presumably, on a page; use the hero field
     else if( !empty( $fields['hero']['use_hero'] ) ){
         // open hero section
         $return['hero'] = '<section class="hero" style="background-image: url('.$fields['hero']['image']['url']. ')"><div class="container normal">';

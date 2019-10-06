@@ -10,7 +10,7 @@
     // guide string for the section
     $guide['heading_block'] = '
         <section class="site__block block__heading">
-            <div class="anim__fade anim__fade-up container '.$cB['width'].'" style="text-align: '.$cB['alignment'].'">
+            <div class="container '.$cB['width'].'" style="text-align: '.$cB['alignment'].'">
                 %s
                 %s
             </div>
@@ -19,8 +19,8 @@
     // return string for the section
     $return['heading_block'] .= sprintf(
         $guide['heading_block']
-        ,'<'.$cB['level'].'>'.$cB['heading'] . '</'.$cB['level'].'>' // heading content w/ level and alignment
-        ,'<p>'.$cB['sub_heading'].'</p>'
+        ,'<'.$cB['level'].' class="anim__fade anim__fade-up">'.$cB['heading'] . '</'.$cB['level'].'>' // heading content w/ level and alignment
+        ,'<p class="anim__fade anim__fade-up">'.$cB['sub_heading'].'</p>'
     );
 
     // echo return string

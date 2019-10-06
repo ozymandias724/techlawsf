@@ -53,7 +53,7 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
 
         // check for the view all button
         if( !empty( $cB['button'] ) ){
-            $return['content_grid'] .= '<a class="site__button" href="'.$cB['button']['url'].'">'.$cB['button']['title'].'</a>';
+            $return['content_grid'] .= '<a class="button ghost anim__fade anim__fade-up" href="'.$cB['button']['url'].'">'.$cB['button']['title'].'</a>';
         }
         
         // close the content grid 

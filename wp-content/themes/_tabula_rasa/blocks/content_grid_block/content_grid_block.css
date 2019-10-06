@@ -10,3 +10,46 @@
 .block__content_grid > .container > .flexgrid {
   margin: 30px 0;
 }
+
+.site__block.block__content_grid .container .flexgrid > ul.testimonials {
+  align-items: flex-end;
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li {
+  text-align: center;
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li > div {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #ecebea;
+  border: 2px solid #55b9be;
+  position: relative;
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li > div:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li > div > div {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(1) {
+  align-self: flex-start;
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(1) > div {
+  width: 66.6666666667%;
+  align-self: flex-start;
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(2) > div {
+  width: 80%;
+}
+.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(3) > div {
+  align-self: flex-start;
+  width: 100%;
+}

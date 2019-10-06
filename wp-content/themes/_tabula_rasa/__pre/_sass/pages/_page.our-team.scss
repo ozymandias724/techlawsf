@@ -9,7 +9,7 @@
 
     div.flexgrid > ul.team_members {
     
-        > li.grid_item {
+        > li {
         // @include boxshadow(1);
             padding: $g;
             // blocks are anchors

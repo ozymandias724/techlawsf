@@ -6,6 +6,7 @@
 
 $fields = get_fields(get_the_ID());
 
+
 get_header();
 ?>
 <main>
@@ -20,7 +21,7 @@ get_header();
      */
     if (!empty($fields['content_blocks'])) {
         foreach ($fields['content_blocks'] as $cB) {
-            
+
             $path = get_template_directory() . '/blocks/' . $cB['acf_fc_layout'] . '/' . '' . $cB['acf_fc_layout'] . '.php';
             // include the block
             if (file_exists($path)) {

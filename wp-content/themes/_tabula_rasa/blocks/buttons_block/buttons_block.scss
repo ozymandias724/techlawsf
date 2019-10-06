@@ -1,0 +1,81 @@
+// 
+// 
+// 
+@import '../../__pre/_sass/site/vars';
+@import '../../__pre/_sass/site/mixins';
+
+section.site__block.block__buttons {
+
+
+    >.container {
+
+        $g: getVar($sizing, gutter, px, small);
+
+        >.flexgrid {
+
+            >ul {
+                justify-content: center;
+
+                >li {
+                    text-align: center;
+                    flex-grow: 0;
+                    flex-shrink: 1;
+                    &:last-of-type:first-of-type {
+                        margin: 0;
+                    }
+
+                    // 
+                    i {
+                        font-size: 6rem;
+                        color: rgba(getVar($material, brand, accent), 1);
+                        margin: 0 0 $g 0;
+                        transition: color 0.25s ease;
+                    }
+
+                    p {
+                        > span {
+                            display: inline-block;
+                            text-transform: uppercase;
+                            font-weight: normal;
+                            @include accentUnderline();
+                        }
+                    }
+
+                    > a.button {
+                        
+                    }
+
+                    // the whole block is the button (icon + title)
+                    >a:not(.button) {
+                        color: rgba(getVar($material, shades, dark), 1);
+                        display: block;
+                        margin: 0;
+                        padding: $g;
+
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            i {
+                                color: rgba(getVar($material, brand, main), 1);
+                            }
+                            p > span {
+                                &:before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .button {
+                &:last-of-type:first-of-type {
+                    margin: 0;
+                }
+            }
+
+        }
+
+    }
+}

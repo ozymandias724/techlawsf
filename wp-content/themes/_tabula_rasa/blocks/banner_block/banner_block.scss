@@ -1,0 +1,50 @@
+// 
+// 
+// 
+@import  '../../__pre/_sass/site/vars';
+@import  '../../__pre/_sass/site/mixins';
+section.site__block.block__banner {
+    background-color: rgba(getVar($material, brand, accent), (100% / 3));
+
+    > .container {
+
+        $g : getVar($sizing, gutter, px, normal);
+
+        padding: ($g * 2) 0 $g 0;
+
+        > .flexgrid {
+
+            > ul {
+                flex-flow: row nowrap;
+                align-items: center;
+                overflow: hidden;
+                > li {
+                    img {
+                        filter: grayscale(1);
+                        height: 60px;
+                        object-fit: contain;
+                        opacity: (2 / 3);
+                        transition: opacity 0.25s ease, filter 0.25s ease;
+                        &:hover, &:focus, &:active, &.active {
+                            filter: grayscale(0);
+                            opacity: 1;
+                        }
+                    }
+                    &:nth-of-type(n+1),
+                    &:nth-of-type(5n){
+                        margin: 0 $g $g 0;
+                    }
+                    
+                }
+            }
+
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+}

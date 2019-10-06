@@ -17,10 +17,8 @@ $guide['client_list'] = '
                 %s
             </div>
             %s
-        </div>
-        <div class="details">
-            %s
-        </div>
+        </div>    
+        %s
     </li>
 ';
 
@@ -33,7 +31,7 @@ $return['client_list'] .= sprintf(
     ,( !empty($post->post_title) ? '<p class="name">'.$post->post_title.'</p>' : '' )
     ,( !empty($the_fields['funding']) ? '<p class="funding">'.$the_fields['funding'].'</p>' : '' )
     ,( !empty($the_fields['image']) ? '<div class="bgimage"><div class="bgimage-img" style="background-image: url('.$the_fields['image']['url'].')"></div></div>' : '' )
-    ,( !empty($the_fields['details']) ? '<p>'.trim($the_fields['details']).'</p>' : '' )
+    ,( !empty($the_fields['details']) ? '<div class="details">'.trim($the_fields['details']).'</div>' : '' )
 );
 
 // 

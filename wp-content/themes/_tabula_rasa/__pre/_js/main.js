@@ -114,7 +114,7 @@ $(document).ready(function () {
                 allClients = clientsEl.children('li.grid_item').detach();
             }
             
-            // filter down to clients with chosen term
+            // filter down to clients with chosen term 
             var termClients = allClients.filter('[data-term="' + $(this).attr('data-term') + '"]')
 
             if( $(this).attr('data-term') == 'all' ){

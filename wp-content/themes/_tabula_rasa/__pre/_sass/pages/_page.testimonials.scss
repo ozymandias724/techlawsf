@@ -10,6 +10,7 @@ section.testimonials {
     .block-heading {
         // border-bottom: 1px solid rgba(getVar($colors, black, dark), 0.5);
         // padding-bottom: $g;
+        text-align: center;
     }
 
     hr {
@@ -38,7 +39,7 @@ section.testimonials {
             // quote only
             >blockquote {
                 padding: 5px 0 5px 15px;
-                border-left: 4px solid rgba(getVar($material, brand, accent), 1);
+                border-left: 4px solid rgba(getVar($material, brand, accent), 0.8);
             }
 
             // funding + quote
@@ -62,4 +63,29 @@ section.testimonials {
             }
         }
     }
+}
+@media screen and (max-width: 640px){
+    $g: getVar($sizing, gutter, px, normal);
+
+    section.testimonials {
+
+        .flexgrid {
+            > ul {
+                hr {
+                    margin: $g 0;  
+                }
+            }
+        }
+
+        .testimonial>div:first-child {
+            flex-flow: column nowrap;
+            > blockquote {
+                border-left: none 0;
+                padding: 15px 5px;
+                margin: 15px 0  0 0;
+                border-top: 4px solid rgba(getVar($material, brand, accent), 0.8);
+            }
+        }
+    }
+
 }

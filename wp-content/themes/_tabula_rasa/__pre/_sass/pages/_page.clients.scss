@@ -10,23 +10,35 @@ body.page-clients {
     //      Client Category Filters
     // 
     div.filters {
-        $g : getVar($sizing, gutter, px, small);
+        $g: getVar($sizing, gutter, px, small);
         display: flex;
         flex-flow: row wrap;
         justify-content: space-evenly;
         position: relative;
         padding: $g 0 0 0;
-        > a.button {
+
+        >a.button {
             flex: 0 1 26%;
             margin: 0 0 $g 0;
+            border-radius: 12px 0;
+            transition: border-radius 0.3s ease;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                border-radius: 0 12px;
+            }
+
             &.ghost {
-                @include ghostStyle($bgC:getVar($material, brand,accent));
+                @include ghostStyle($bgC:getVar($material, brand, accent));
+
                 &.active {
-                    @include solidStyle($bgC:getVar($material, brand,accent));
+                    @include solidStyle($bgC:getVar($material, brand, accent));
                 }
             }
 
-            &[data-term="all"]{
+            &[data-term="all"] {
                 position: absolute;
                 top: 0;
                 left: 50%;
@@ -34,24 +46,34 @@ body.page-clients {
             }
         }
     }
-    
-    
-    
 
-    section.block__content_grid{
 
-        .container > div {
-            
+
+
+    section.block__content_grid {
+
+        .container>div {
+
+            // override the defaults for the flexgrid
+            &.flexgrid.cols-2{
+                @include flexboxGrid($cols: 2, $gutter: 90px, $align: flex-start, $justify: flex-start, $grow : 1, $shrink: 0);
+                @media screen and (max-width: 960px){}
+                @media screen and (max-width: 640px){
+                    @include flexboxGrid($cols: 1, $gutter: 90px, $align: flex-start, $justify: flex-start, $grow : 1, $shrink: 0);
+                }
+            }
+
+
             >ul {
                 // 
-                $g : getVar($sizing, gutter, px, normal);
+                $g: getVar($sizing, gutter, px, normal);
 
-                > hr {
+                >hr {
                     margin: 0px auto 30px auto;
                     position: relative;
                 }
 
-                > li {
+                >li {
                     // 
                     display: flex;
                     flex-flow: column nowrap;
@@ -60,49 +82,75 @@ body.page-clients {
                     padding: $g;
                     text-align: left;
 
-                    &:nth-of-type(2n){
-                        // margin-top: 90px;
-                    }
-                    
+
                     // Card Styles:
-                        // background-color:rgba(getVar($colors, white, full), 1);
-                        @include boxshadow(1);
+                    // background-color:rgba(getVar($colors, white, full), 1);
+                    @include boxshadow(1);
+
                     // 
-                    > .info {
+                    >.info {
                         display: flex;
-                        flex-flow: row wrap;
+                        flex-flow: row nowrap;
                         align-items: center;
                         justify-content: space-between;
+
                         >div {
+                            flex: 0 1 40%;
+
                             .name {
                                 font-size: 2.4rem;
                                 font-weight: 400;
                             }
-                            .funding {
 
-                            }
+                            .funding {}
                         }
+
                         >.bgimage {
-                            // width: (100% / 3);
-                            // max-width: 140px;
-                            width: 140px;
+                            // min-width: 120px;
                             @include aspectRatio(16, 9);
                             margin: 0 0 0 $g;
+
                             >.bgimage-img {
+                                background-color: transparent;
                                 background-size: contain;
                             }
                         }
+
+                        // 
+                        // !!!
+                        @media screen and (max-width: 960px) {
+                            // !!!
+                            // 
+                            flex-flow: column nowrap;
+                            align-items: center;
+
+                            >div {
+                                $g : getVar($sizing, gutter, px, small);
+                                &.bgimage{
+                                    flex: 0 1 auto;
+                                    margin: $g 0 0 0;
+                                    width: (100% / 3);
+                                }
+                                &:not(.bgimage){
+                                    margin: $g 0 0 0;
+                                    flex: 0 1 auto;
+                                    text-align: center;
+                                }
+                            }
+                        }
                     }
+
                     // 
-                    > .details {
+                    >.details {
                         margin: $g 0 0 0;
-                        
+
                     }
-                    > .category {
+
+                    >.category {
                         position: absolute;
                         top: 0;
                         right: 0;
-                        background-color: rgba(getVar($material, brand, accent),1);
+                        background-color: rgba(getVar($material, brand, accent), 1);
                         color: white;
                         padding: 10px 30px;
                         font-weight: 400;
@@ -110,10 +158,9 @@ body.page-clients {
                         @include boxshadow(1);
 
                         margin: 0 0 $g 0;
-                        > span {
+
+                        >span {
                             text-transform: uppercase;
-                            letter-spacing: 1ch;
-                            font-weight: bold;
                             color: white;
                         }
                     }

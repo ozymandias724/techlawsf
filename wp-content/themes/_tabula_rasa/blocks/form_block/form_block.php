@@ -24,7 +24,7 @@
     $return['form_block'] .= sprintf(
         $guide['form_block']
         ,( !empty( $cB['width'] ) ? $cB['width'] : '' )                                                         // container width
-        ,( !empty($cB['heading']) ? '<h3>'.$cB['heading'].'</h3>' : '' )
+        ,( !empty($cB['heading']) ? '<h3 class="block-heading">'.$cB['heading'].'</h3>' : '' )
         ,( !empty($cB['sub_heading']) ? '<div>'.$cB['sub_heading'].'</div>' : '' )
     );
 

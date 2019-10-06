@@ -1,6 +1,32 @@
 // 
 // 
 
+
+
+.blurbs {
+
+    @include flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $grow : 1, $shrink: 0);
+    @media screen and (max-width: 640px){
+        @include flexboxGrid($cols: 1, $gutter: 30px, $align: stretch, $justify: flex-start, $grow : 1, $shrink: 0);
+    }
+    > ul {
+        > li {
+            blockquote {
+                border-left: 4px solid rgba(getVar($material, brand, accent), 0.7);
+
+                @media screen and (max-width:640px){
+                    border-left: none 0;
+                    padding: 0 0 15px 0;
+                    margin: 0 0 0 0;
+                    border-bottom: 4px solid rgba(getVar($material, brand, accent), 0.7);
+                }
+            }
+        }
+    }
+    
+}
+
+
 a.button {
     
     // 
@@ -36,7 +62,9 @@ a.button {
     }
 }
 
-
+.block-heading {
+    text-align: center;
+}
 
 
 // background image wrapper (mimic figure elem)

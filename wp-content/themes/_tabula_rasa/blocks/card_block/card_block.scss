@@ -1,0 +1,32 @@
+// 
+// 
+// 
+@import '../../__pre/_sass/site/vars';
+@import '../../__pre/_sass/site/mixins';
+
+section.site__block.block__card {
+
+    >.container {
+
+        $g: getVar($sizing, gutter, px, normal);
+        >.flexgrid {
+
+            >ul {
+                >li {
+                    &:nth-of-type(n+1),
+                    & {
+                        margin: 0;
+                    }
+                }
+            }
+
+        }
+
+
+
+    }
+
+
+
+
+}

@@ -9,25 +9,56 @@
 // should 'fill' its container
 .card {
     $g: getVar($sizing, gutter, px, normal);
-
-    margin: 0 0 0 0;
     display: flex;
     flex-flow: row nowrap;
-    // background-color: rgba(getVar($material, shades, light), 1);
+    align-items: stretch;
+    justify-content: center;
+    // 
+    margin: 0 0 0 0;
+    // 
     background-color: rgba(getVar($colors, white, full), 1);
     @include boxshadow(2);
-    align-items: center;
-    justify-content: center;
-    padding: $g;
+    // 
     >div {
+        //
         flex: 0 1 auto;
+        //
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        //
         &.content {
+            padding: $g;
+            margin: $g 0;
             padding-left: getVar($sizing, gutter, px, normal);
             width: calc(50% - #{$g});
         }
         &.bgimage {
-            margin-left: $g;
+            margin: 0 0 0 $g;
             width: 50%;
+            @include aspectRatio(16,9);
+        }
+    }
+}
+// breaking to horz on a tweak point for no specific reason
+@media screen and (max-width: 720px){
+
+    .card {
+        // 
+        $g: getVar($sizing, gutter, px, normal);
+        // 
+        flex-flow: column nowrap;
+        > div {
+
+            &.content {
+                width: 100%;
+                margin: $g 0;
+            }
+            &.bgimage {
+                width: 100%;
+                margin: 0;
+            }
         }
     }
 }

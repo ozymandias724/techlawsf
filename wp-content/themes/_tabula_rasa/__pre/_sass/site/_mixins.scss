@@ -6,6 +6,7 @@
 }
 
 @mixin bgimage {
+    background-color: black; // solid black fallback placeholder
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -28,8 +29,9 @@
         content: '';
         display: block;
         position: absolute;
-        bottom: 0;
 
+        bottom: -#{$h};
+        
         @if $d==right {
             left: 0;
             right: auto;
@@ -149,8 +151,9 @@
 // 
 // 
 // 
-@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $aspect: false, $grow : 1, $shrink: 0) {
+@mixin flexboxGrid($cols: 3, $gutter: 30px, $align: center, $justify: flex-start, $grow : 1, $shrink: 0, $sq:0) {
 
+    
     // calculate flex basis (width) of a column
     $basis: calc((100% - (#{$cols} - 1) * #{$gutter}) / #{$cols});
 
@@ -175,23 +178,24 @@
         >li {
             position: relative;
             display: inline-block;
-            width: #{$basis}; // enable this to prevent a bug where the columns dont end up the correct width (child element has margin or something)
             flex: $grow $shrink #{$basis};
             margin: 0 $gutter $gutter 0;
+            width: #{$basis};
             // overflow: hidden;
-
             &:nth-of-type(n+1) {
                 margin: 0 $gutter $gutter 0;
+                @if #{$cols}=='2' {
+                    @media screen and (min-width: 641px){
+                        margin: 0 $gutter 0 0; // no need for margin bot in 2 col until we drop to 1 col
+                    }
+                }
             }
-
             &:nth-of-type(#{$cols}n) {
                 margin-right: 0;
             }
-
             &:last-of-type {
                 margin-right: 0;
             }
-
             // if 1 col is passed (for mobile)
             @if #{$cols}=='1' {
                 flex: 1 0 100%;
@@ -202,7 +206,7 @@
                 }
             }
 
-            @if $align==true {
+            @if $sq == 1 {
                 @include aspectRatio(1, 1);
             }
         }
