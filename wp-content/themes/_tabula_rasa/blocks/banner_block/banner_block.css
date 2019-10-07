@@ -26,3 +26,7 @@ section.site__block.block__banner > .container > .flexgrid > ul > li img:hover, 
 section.site__block.block__banner > .container > .flexgrid > ul > li:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid > ul > li:nth-of-type(5n), section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide:nth-of-type(5n), section.site__block.block__banner > .container > .flexgrid .slick-track > li:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid .slick-track > li:nth-of-type(5n), section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide:nth-of-type(n+1), section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide:nth-of-type(5n) {
   margin: 0 60px 0 0;
 }
+section.site__block.block__banner > .container > .flexgrid > ul > li.slick-center img, section.site__block.block__banner > .container > .flexgrid > ul > .slick-slide.slick-center img, section.site__block.block__banner > .container > .flexgrid .slick-track > li.slick-center img, section.site__block.block__banner > .container > .flexgrid .slick-track > .slick-slide.slick-center img {
+  filter: grayscale(0);
+  opacity: 1;
+}

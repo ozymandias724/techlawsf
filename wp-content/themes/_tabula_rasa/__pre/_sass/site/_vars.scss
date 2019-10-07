@@ -17,17 +17,17 @@ $sizing : (
     )
     ,gutter : (
         px : (
-            tiny : 5px
-            ,small : 15px
+            small : 15px
             ,normal : 30px
             ,large : 60px
             ,xlarge : 90px
+            ,vxlarge : 120px
         )
         ,vw : (
-            normal : 2vw
-            ,small : 1vw
-            ,tiny : 0.5vw
-            ,large : 4vw
+            small : 1vw
+            ,normal : 2vw
+            ,large : 5vw
+            ,xlarge : 10vw
         )
     )
 );

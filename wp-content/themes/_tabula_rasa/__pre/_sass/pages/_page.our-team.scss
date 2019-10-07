@@ -25,6 +25,7 @@
                     @include aspectRatio();
                 }
                 > div:not(.bgimage){
+                    text-align: left;
                     p{
                         // name
                         &:first-of-type{

@@ -1211,22 +1211,19 @@ body {
 }
 body > main {
   flex: 1;
-  margin: 0;
-}
-body > main > section {
-  display: block;
-}
-body > main > section:not(.hero) {
-  margin: 90px 0 0 0;
-}
-body > main > section:not(.hero):first-of-type {
-  margin: 0 0 0 0;
 }
 body.js__noscroll {
   overflow: hidden;
 }
 body:not(.header-fadein) > main {
   margin-top: 72px;
+}
+
+.site__block {
+  margin: 10vw 0 0 0;
+}
+.site__block:first-child {
+  margin: 0 0 0 0;
 }
 
 header > .container,
@@ -1271,6 +1268,12 @@ footer > .container.narrow {
   }
 }
 
+.flexgrid {
+  margin: 0 0 -30px 0;
+}
+.flexgrid:not(:last-child) {
+  margin: 60px 0 -30px 0;
+}
 .flexgrid.cols-1 > ul {
   display: flex;
   flex-flow: row wrap;
@@ -2524,6 +2527,9 @@ div.flexgrid > ul.team_members > li > a .bgimage:before {
   content: "";
   display: block;
   padding-top: 100%;
+}
+div.flexgrid > ul.team_members > li > a > div:not(.bgimage) {
+  text-align: left;
 }
 div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type {
   display: inline-block;

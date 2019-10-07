@@ -6,6 +6,11 @@
 
 .flexgrid {
 
+    
+    margin: 0 0 -30px 0;
+    &:not(:last-child){
+        margin: getVar($sizing, gutter, px, large) 0 -30px 0;
+    }
 
     @for $i from 0 to 6 {
         $c: $i + 1;

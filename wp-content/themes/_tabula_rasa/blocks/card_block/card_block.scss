@@ -14,7 +14,19 @@ section.site__block.block__card {
             >ul {
                 align-items: center;
                 > li {
-                    img {
+                    .site__block.block__image {
+                        > .container {
+                            margin: 0 auto;
+                            max-width: 180px;
+                            position: relative;
+                            > img {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                min-height: 100%;
+                            }
+                        }
                     }
                 }
             }

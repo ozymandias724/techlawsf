@@ -7,7 +7,7 @@
         .flexgrid {
             text-align: center;
             >ul.testimonials {
-                align-items: flex-end;
+                align-items: flex-start;
                 >li{
                     text-align: center;
 
@@ -35,26 +35,25 @@
                         align-items: center;
                         justify-content: center;
                         @include aspectRatio();
-                        max-width: 360px;
-                        min-width: 200px;
+                        max-width: 320px;
+                        min-width: 180px;
                     }
 
                     &:nth-of-type(1){
-                        align-self: flex-start;
                         > div{
                             width: (200% / 3);
-                            align-self: flex-start;
                         }
                     }
                     &:nth-of-type(2){
+                        align-self: flex-end;
+                        margin-top: getVar($sizing, gutter, vw, normal);
                         >div {
-                            width: 80%;
+                            width: 100%;
                         }
                     }
                     &:nth-of-type(3){
                         >div {
-                            align-self: flex-start;
-                            width: 100%;
+                            width: 80%;
                         }
                     }
                 } 
