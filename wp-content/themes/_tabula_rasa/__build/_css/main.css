@@ -892,9 +892,9 @@ body {
 .blurbs > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (3 - 1) * 30px) / 3);
   flex: 1 0 calc((100% - (3 - 1) * 30px) / 3);
   margin: 0 30px 30px 0;
-  width: calc((100% - (3 - 1) * 30px) / 3);
 }
 .blurbs > ul > li:nth-of-type(n+1) {
   margin: 0 30px 30px 0;
@@ -924,9 +924,9 @@ body {
   .blurbs > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
     margin: 0 30px 30px 0;
-    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 100%;
     margin: 0 0 30px 0;
   }
@@ -1269,10 +1269,10 @@ footer > .container.narrow {
 }
 
 .flexgrid {
-  margin: 0 0 -30px 0;
+  margin: 60px 0 0 0;
 }
-.flexgrid:not(:last-child) {
-  margin: 60px 0 -30px 0;
+.flexgrid:first-child:last-child {
+  margin: 0 0 0 0;
 }
 .flexgrid.cols-1 > ul {
   display: flex;
@@ -1292,9 +1292,9 @@ footer > .container.narrow {
 .flexgrid.cols-1 > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (1 - 1) * 30px) / 1);
   flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
   margin: 0 30px 30px 0;
-  width: calc((100% - (1 - 1) * 30px) / 1);
   flex: 1 0 100%;
   margin: 0 0 30px 0;
 }
@@ -1328,9 +1328,9 @@ footer > .container.narrow {
 .flexgrid.cols-2 > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (2 - 1) * 30px) / 2);
   flex: 1 0 calc((100% - (2 - 1) * 30px) / 2);
   margin: 0 30px 30px 0;
-  width: calc((100% - (2 - 1) * 30px) / 2);
 }
 .flexgrid.cols-2 > ul > li:nth-of-type(n+1) {
   margin: 0 30px 30px 0;
@@ -1359,9 +1359,9 @@ footer > .container.narrow {
 .flexgrid.cols-3 > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (3 - 1) * 30px) / 3);
   flex: 1 0 calc((100% - (3 - 1) * 30px) / 3);
   margin: 0 30px 30px 0;
-  width: calc((100% - (3 - 1) * 30px) / 3);
 }
 .flexgrid.cols-3 > ul > li:nth-of-type(n+1) {
   margin: 0 30px 30px 0;
@@ -1390,9 +1390,9 @@ footer > .container.narrow {
 .flexgrid.cols-4 > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (4 - 1) * 30px) / 4);
   flex: 1 0 calc((100% - (4 - 1) * 30px) / 4);
   margin: 0 30px 30px 0;
-  width: calc((100% - (4 - 1) * 30px) / 4);
 }
 .flexgrid.cols-4 > ul > li:nth-of-type(n+1) {
   margin: 0 30px 30px 0;
@@ -1421,9 +1421,9 @@ footer > .container.narrow {
 .flexgrid.cols-5 > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (5 - 1) * 30px) / 5);
   flex: 1 0 calc((100% - (5 - 1) * 30px) / 5);
   margin: 0 30px 30px 0;
-  width: calc((100% - (5 - 1) * 30px) / 5);
 }
 .flexgrid.cols-5 > ul > li:nth-of-type(n+1) {
   margin: 0 30px 30px 0;
@@ -1452,9 +1452,9 @@ footer > .container.narrow {
 .flexgrid.cols-6 > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (6 - 1) * 30px) / 6);
   flex: 1 0 calc((100% - (6 - 1) * 30px) / 6);
   margin: 0 30px 30px 0;
-  width: calc((100% - (6 - 1) * 30px) / 6);
 }
 .flexgrid.cols-6 > ul > li:nth-of-type(n+1) {
   margin: 0 30px 30px 0;
@@ -1466,7 +1466,133 @@ footer > .container.narrow {
   margin-right: 0;
 }
 
+@media screen and (max-width: 1280px) {
+  .flexgrid.cols-4 > ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-4 > ul.left {
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-4 > ul.center {
+    justify-content: center;
+  }
+  .flexgrid.cols-4 > ul.right {
+    justify-content: flex-end;
+  }
+  .flexgrid.cols-4 > ul > li {
+    position: relative;
+    display: inline-block;
+    width: calc((100% - (3 - 1) * 30px) / 3);
+    flex: 1 0 calc((100% - (3 - 1) * 30px) / 3);
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-4 > ul > li:nth-of-type(n+1) {
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-4 > ul > li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  .flexgrid.cols-4 > ul > li:last-of-type {
+    margin-right: 0;
+  }
+  .flexgrid.cols-5 > ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-5 > ul.left {
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-5 > ul.center {
+    justify-content: center;
+  }
+  .flexgrid.cols-5 > ul.right {
+    justify-content: flex-end;
+  }
+  .flexgrid.cols-5 > ul > li {
+    position: relative;
+    display: inline-block;
+    width: calc((100% - (3 - 1) * 30px) / 3);
+    flex: 1 0 calc((100% - (3 - 1) * 30px) / 3);
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-5 > ul > li:nth-of-type(n+1) {
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-5 > ul > li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  .flexgrid.cols-5 > ul > li:last-of-type {
+    margin-right: 0;
+  }
+  .flexgrid.cols-6 > ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-6 > ul.left {
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-6 > ul.center {
+    justify-content: center;
+  }
+  .flexgrid.cols-6 > ul.right {
+    justify-content: flex-end;
+  }
+  .flexgrid.cols-6 > ul > li {
+    position: relative;
+    display: inline-block;
+    width: calc((100% - (3 - 1) * 30px) / 3);
+    flex: 1 0 calc((100% - (3 - 1) * 30px) / 3);
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-6 > ul > li:nth-of-type(n+1) {
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-6 > ul > li:nth-of-type(3n) {
+    margin-right: 0;
+  }
+  .flexgrid.cols-6 > ul > li:last-of-type {
+    margin-right: 0;
+  }
+}
 @media screen and (max-width: 960px) {
+  .flexgrid.cols-2 > ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-2 > ul.left {
+    justify-content: flex-start;
+  }
+  .flexgrid.cols-2 > ul.center {
+    justify-content: center;
+  }
+  .flexgrid.cols-2 > ul.right {
+    justify-content: flex-end;
+  }
+  .flexgrid.cols-2 > ul > li {
+    position: relative;
+    display: inline-block;
+    width: calc((100% - (2 - 1) * 30px) / 2);
+    flex: 1 0 calc((100% - (2 - 1) * 30px) / 2);
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-2 > ul > li:nth-of-type(n+1) {
+    margin: 0 30px 30px 0;
+  }
+  .flexgrid.cols-2 > ul > li:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .flexgrid.cols-2 > ul > li:last-of-type {
+    margin-right: 0;
+  }
   .flexgrid.cols-3 > ul {
     display: flex;
     flex-flow: row wrap;
@@ -1485,9 +1611,9 @@ footer > .container.narrow {
   .flexgrid.cols-3 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (2 - 1) * 30px) / 2);
     flex: 1 0 calc((100% - (2 - 1) * 30px) / 2);
     margin: 0 30px 30px 0;
-    width: calc((100% - (2 - 1) * 30px) / 2);
   }
   .flexgrid.cols-3 > ul > li:nth-of-type(n+1) {
     margin: 0 30px 30px 0;
@@ -1516,9 +1642,9 @@ footer > .container.narrow {
   .flexgrid.cols-4 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (2 - 1) * 30px) / 2);
     flex: 1 0 calc((100% - (2 - 1) * 30px) / 2);
     margin: 0 30px 30px 0;
-    width: calc((100% - (2 - 1) * 30px) / 2);
   }
   .flexgrid.cols-4 > ul > li:nth-of-type(n+1) {
     margin: 0 30px 30px 0;
@@ -1547,9 +1673,9 @@ footer > .container.narrow {
   .flexgrid.cols-5 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (2 - 1) * 30px) / 2);
     flex: 1 0 calc((100% - (2 - 1) * 30px) / 2);
     margin: 0 30px 30px 0;
-    width: calc((100% - (2 - 1) * 30px) / 2);
   }
   .flexgrid.cols-5 > ul > li:nth-of-type(n+1) {
     margin: 0 30px 30px 0;
@@ -1578,9 +1704,9 @@ footer > .container.narrow {
   .flexgrid.cols-6 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (2 - 1) * 30px) / 2);
     flex: 1 0 calc((100% - (2 - 1) * 30px) / 2);
     margin: 0 30px 30px 0;
-    width: calc((100% - (2 - 1) * 30px) / 2);
   }
   .flexgrid.cols-6 > ul > li:nth-of-type(n+1) {
     margin: 0 30px 30px 0;
@@ -1611,9 +1737,9 @@ footer > .container.narrow {
   .flexgrid.cols-1 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
     margin: 0 30px 30px 0;
-    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 100%;
     margin: 0 0 30px 0;
   }
@@ -1647,9 +1773,9 @@ footer > .container.narrow {
   .flexgrid.cols-2 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
     margin: 0 30px 30px 0;
-    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 100%;
     margin: 0 0 30px 0;
   }
@@ -1683,9 +1809,9 @@ footer > .container.narrow {
   .flexgrid.cols-3 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
     margin: 0 30px 30px 0;
-    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 100%;
     margin: 0 0 30px 0;
   }
@@ -1719,9 +1845,9 @@ footer > .container.narrow {
   .flexgrid.cols-4 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
     margin: 0 30px 30px 0;
-    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 100%;
     margin: 0 0 30px 0;
   }
@@ -1755,9 +1881,9 @@ footer > .container.narrow {
   .flexgrid.cols-5 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
     margin: 0 30px 30px 0;
-    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 100%;
     margin: 0 0 30px 0;
   }
@@ -1791,9 +1917,9 @@ footer > .container.narrow {
   .flexgrid.cols-6 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
     margin: 0 30px 30px 0;
-    width: calc((100% - (1 - 1) * 30px) / 1);
     flex: 1 0 100%;
     margin: 0 0 30px 0;
   }
@@ -1975,6 +2101,7 @@ footer .container > section a > span {
   font-size: 1.6rem;
   line-height: 2.8rem;
   position: relative;
+  padding-bottom: 2px;
 }
 footer .container > section a > span:before {
   content: "";
@@ -2058,6 +2185,7 @@ header .navlinks > ul li a > span {
   font-size: 1.6rem;
   line-height: 2.8rem;
   position: relative;
+  padding-bottom: 2px;
 }
 header .navlinks > ul li a > span:before {
   content: "";
@@ -2327,9 +2455,9 @@ body.page-clients section.block__content_grid .container > div.flexgrid.cols-2 >
 body.page-clients section.block__content_grid .container > div.flexgrid.cols-2 > ul > li {
   position: relative;
   display: inline-block;
+  width: calc((100% - (2 - 1) * 90px) / 2);
   flex: 1 0 calc((100% - (2 - 1) * 90px) / 2);
   margin: 0 90px 90px 0;
-  width: calc((100% - (2 - 1) * 90px) / 2);
 }
 body.page-clients section.block__content_grid .container > div.flexgrid.cols-2 > ul > li:nth-of-type(n+1) {
   margin: 0 90px 90px 0;
@@ -2359,9 +2487,9 @@ body.page-clients section.block__content_grid .container > div.flexgrid.cols-2 >
   body.page-clients section.block__content_grid .container > div.flexgrid.cols-2 > ul > li {
     position: relative;
     display: inline-block;
+    width: calc((100% - (1 - 1) * 90px) / 1);
     flex: 1 0 calc((100% - (1 - 1) * 90px) / 1);
     margin: 0 90px 90px 0;
-    width: calc((100% - (1 - 1) * 90px) / 1);
     flex: 1 0 100%;
     margin: 0 0 90px 0;
   }
@@ -2509,36 +2637,38 @@ section.testimonials .testimonial > div:last-child > h6 {
     border-top: 4px solid rgba(85, 185, 190, 0.8);
   }
 }
-div.flexgrid > ul.team_members > li {
+body.page-our-team div.flexgrid > ul.team_members > li {
+  flex-grow: 0;
   padding: 15px;
 }
-div.flexgrid > ul.team_members > li > a {
+body.page-our-team div.flexgrid > ul.team_members > li > a {
   color: #191919;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
 }
-div.flexgrid > ul.team_members > li > a .bgimage {
+body.page-our-team div.flexgrid > ul.team_members > li > a .bgimage {
   margin: 0 0 15px 0;
   border-radius: 50%;
   position: relative;
 }
-div.flexgrid > ul.team_members > li > a .bgimage:before {
+body.page-our-team div.flexgrid > ul.team_members > li > a .bgimage:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-div.flexgrid > ul.team_members > li > a > div:not(.bgimage) {
+body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) {
   text-align: left;
 }
-div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type {
+body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type {
   display: inline-block;
   padding: 0 30px 5px 0;
   font-size: 2rem;
   font-weight: 400;
   position: relative;
+  padding-bottom: 2px;
 }
-div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type:before {
+body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type:before {
   content: "";
   display: block;
   position: absolute;
@@ -2550,20 +2680,20 @@ div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type:befo
   transition: width 0.25s ease;
   border-bottom: 2px solid #FD5E0F;
 }
-div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type:before {
+body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type:before {
   width: 30px;
 }
-div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:last-of-type {
+body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:last-of-type {
   font-size: 1.6rem;
   font-style: italic;
 }
-div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p i.fas {
+body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p i.fas {
   margin-right: 5px;
 }
-div.flexgrid > ul.team_members > li > a:hover > div:not(.bgimage) p:first-of-type:before {
+body.page-our-team div.flexgrid > ul.team_members > li > a:hover > div:not(.bgimage) p:first-of-type:before {
   width: 100%;
 }
-div.flexgrid > ul.team_members > li > a:hover p:last-of-type {
+body.page-our-team div.flexgrid > ul.team_members > li > a:hover p:last-of-type {
   color: #FD5E0F;
 }
 body.home main > .block__columns .block__card .block__image .container {

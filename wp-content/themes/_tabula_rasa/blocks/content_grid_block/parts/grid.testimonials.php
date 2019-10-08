@@ -27,7 +27,8 @@ $terms = get_the_terms( $post, 'client_category' );
 $return['short_testimonial'] .= sprintf(
     $guide['short_testimonial']
     ,( !empty($the_fields['key_phrase']) ? '<p class="keyphrase">'.$the_fields['key_phrase'].'</p>' : '' )
-    ,( !empty($the_fields['name']) ? '<div class="name">'.trim($the_fields['name']).'</div>' : '' )
+    ,'' // we dont know if we can use their naaaaame
+    // ,( !empty($the_fields['name']) ? '<div class="name">'.trim($the_fields['name']).'</div>' : '' )
 );
 
 // 

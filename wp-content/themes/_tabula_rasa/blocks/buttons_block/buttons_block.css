@@ -1,5 +1,5 @@
 section.site__block.block__buttons > .container > .flexgrid {
-  margin: 30px 0 -30px 0;
+  margin: 60px 0 -30px 0;
 }
 section.site__block.block__buttons > .container > .flexgrid:first-child:last-child {
   margin: 0 0 -30px 0;
@@ -17,7 +17,7 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li:last-of-ty
 section.site__block.block__buttons > .container > .flexgrid > ul > li i {
   font-size: 8rem;
   color: #55b9be;
-  margin: 0 0 15px 0;
+  margin: 15px 0;
   transition: color 0.25s ease;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li p {
@@ -28,6 +28,7 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li p > span {
   text-transform: uppercase;
   font-weight: normal;
   position: relative;
+  padding-bottom: 2px;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li p > span:before {
   content: "";
@@ -45,7 +46,6 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.b
   color: #191919;
   display: block;
   margin: 0;
-  padding: 15px 0;
   text-align: center;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):hover i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):focus i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):active i {

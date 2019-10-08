@@ -24,7 +24,7 @@
 @mixin accentUnderline($el : before, $h : 2px, $d:right) {
 
     position: relative;
-
+    padding-bottom: #{$h};
     &:#{$el} {
         content: '';
         display: block;
@@ -178,9 +178,15 @@
         >li {
             position: relative;
             display: inline-block;
-            flex: $grow $shrink #{$basis};
-            margin: 0 $gutter $gutter 0;
+
+            // note~
+            // the 'desired width' is set both as the flex basis and the width
+            // this is giving me the best results but there is a lot of wiggle room in how to slam the grid down
             width: #{$basis};
+            flex: $grow $shrink #{$basis};
+            // ~note
+            
+            margin: 0 $gutter $gutter 0;
             // overflow: hidden;
             &:nth-of-type(n+1) {
                 margin: 0 $gutter $gutter 0;
@@ -192,7 +198,7 @@
                 margin-right: 0;
             }
             // if 1 col is passed (for mobile)
-            @if #{$cols}=='1' {
+            @if $cols == 1 {
                 flex: 1 0 100%;
                 margin: 0 0 $gutter 0;
 

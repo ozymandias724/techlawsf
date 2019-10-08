@@ -38,10 +38,7 @@ class Rational_Walker_Nav_Menu extends Walker_Nav_Menu
 			$new_classes[] = 'active-ancestor';
 		if (in_array('current-menu-parent', $classes))
 			$new_classes[] = 'active-parent';
-		if (in_array('heading', $classes))
-			$new_classes[] = 'heading';
-		if (in_array('h4', $classes))
-			$new_classes[] = 'h4';
+		// (kyle, you forgot to note in the nav front end what custom post type (and maybe other stuff) the nav is a thing of)
 		$classes = $new_classes;
 		
 

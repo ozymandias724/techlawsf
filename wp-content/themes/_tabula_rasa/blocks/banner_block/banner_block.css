@@ -5,7 +5,7 @@ section.site__block.block__banner > .container {
   padding: 60px 0;
 }
 section.site__block.block__banner > .container > .flexgrid {
-  margin: 30px auto 0;
+  margin-bottom: 0;
 }
 section.site__block.block__banner > .container > .flexgrid > ul, section.site__block.block__banner > .container > .flexgrid .slick-track {
   flex-flow: row nowrap;

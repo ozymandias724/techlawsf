@@ -4,83 +4,87 @@
 // 
 // 
 
-// body.page-our-team {
+body.page-our-team {
     $g : getVar($sizing, gutter, px, small);
 
-    div.flexgrid > ul.team_members {
-    
-        > li {
-        // @include boxshadow(1);
-            padding: $g;
-            // blocks are anchors
-            > a {
-                color: getVar($material, shades, dark);
-                width: 100%;
-                display: flex;
-                flex-flow: column nowrap;
-                .bgimage {
-                    margin: 0 0 $g 0;
-                    // border-radius: 5px;
-                    border-radius: 50%;
-                    @include aspectRatio();
-                }
-                > div:not(.bgimage){
-                    text-align: left;
-                    p{
-                        // name
-                        &:first-of-type{
-                            display: inline-block;
-                            padding: 0 30px 5px 0;
-                            font-size: 2rem;
-                            font-weight: 400;
-                            // accent underline
-                            @include accentUnderline();
-                            &:before{
-                                width: 30px;
-                            }
-                            // border-bottom: 2px solid rgba(getVar($colors, primary), 0.66);
-                        }
-                        // position
-                        &:last-of-type{
-                            font-size: 1.6rem;
-                            font-style: italic;
-                        }
-                        i.fas {
-                            margin-right: 5px;
-                        }
-                    }
-                }
+    div.flexgrid {     
+        
 
-                // hover over block anchor
-                &:hover {
-                    // slide out underline
-                    > div:not(.bgimage) p:first-of-type {
-                        // 
-                        &:before {
-                            width: 100%;
-                        }
-                    }
-                    p:last-of-type {
-                        color: getVar($material, brand, main);
-                    }
-                }
-            }
-            
-
-            
-            
-            // 
-            &:nth-of-type(2n){
+        > ul.team_members {
+            // justify-content: flex-start;
+            > li {
+                flex-grow: 0;
+                padding: $g;
+                // blocks are anchors
                 > a {
+                    color: getVar($material, shades, dark);
+                    width: 100%;
+                    display: flex;
+                    flex-flow: column nowrap;
                     .bgimage {
+                        margin: 0 0 $g 0;
+                        // border-radius: 5px;
+                        border-radius: 50%;
+                        @include aspectRatio();
+                    }
+                    > div:not(.bgimage){
+                        text-align: left;
+                        p{
+                            // name
+                            &:first-of-type{
+                                display: inline-block;
+                                padding: 0 30px 5px 0;
+                                font-size: 2rem;
+                                font-weight: 400;
+                                // accent underline
+                                @include accentUnderline();
+                                &:before{
+                                    width: 30px;
+                                }
+                                // border-bottom: 2px solid rgba(getVar($colors, primary), 0.66);
+                            }
+                            // position
+                            &:last-of-type{
+                                font-size: 1.6rem;
+                                font-style: italic;
+                            }
+                            i.fas {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+    
+                    // hover over block anchor
+                    &:hover {
+                        // slide out underline
+                        > div:not(.bgimage) p:first-of-type {
+                            // 
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                        p:last-of-type {
+                            color: getVar($material, brand, main);
+                        }
                     }
                 }
+                
+    
+                
+                
+                // 
+                &:nth-of-type(2n){
+                    > a {
+                        .bgimage {
+                        }
+                    }
+                }
+    
+    
+                
+                
             }
-
-
-            
             
         }
-        
     }
-// }
+}

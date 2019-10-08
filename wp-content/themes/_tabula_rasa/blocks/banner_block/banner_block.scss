@@ -16,9 +16,7 @@ section.site__block.block__banner {
         padding: (2 * $g) 0;
 
         > .flexgrid {
-
-            margin: $g auto 0;
-
+            margin-bottom: 0;
             > ul, .slick-track {
                 flex-flow: row nowrap;
                 align-items: center;
