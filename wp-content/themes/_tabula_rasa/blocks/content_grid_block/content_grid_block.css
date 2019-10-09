@@ -1,4 +1,7 @@
-.block__content_grid > .container > .flexgrid > a.button {
+.block__content_grid > .container > .viewall {
+  text-align: center;
+}
+.block__content_grid > .container > .viewall > a.button {
   margin: 30px auto 0 auto;
 }
 

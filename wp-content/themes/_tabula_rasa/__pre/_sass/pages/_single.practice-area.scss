@@ -18,7 +18,7 @@ body.single-practice_areas {
         }
         
         > div {
-            margin: ($g * 2) auto 0;
+            margin: getVar($sizing, gutter, vw, xlarge) 0 0 0;
         }
         
         .blurbs {

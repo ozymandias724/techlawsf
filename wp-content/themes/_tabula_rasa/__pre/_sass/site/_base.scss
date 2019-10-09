@@ -114,44 +114,38 @@ body {
     }
 }
 
-.site__block {
+
+// vertical layout
+
+.footer,
+.prefooter,
+main > .site__block {
     margin: getVar($sizing, gutter, vw, xlarge) 0 0 0;
-    &:first-child{
-        margin: 0 0 0 0;
-    }
 }
 
-// 
-// 
-// header, section and footer width containers
+// horizontal layout
+// ( width containers for all blocks, a pattern that is ~everywhere~ )
 header,
 main > section,
-// .site__block,
+main > .site__block,
 footer {
     >.container {
+        // 
         margin: 0 auto;
-
-        &.full {
-            width: getVar($sizing, content, full);
-        }
-
-        &.wide {
-            width: getVar($sizing, content, wide);
-        }
+        // 
+        &.full { width: getVar($sizing, content, full); }
+        &.wide { width: getVar($sizing, content, wide); }
+        &.normal { width: getVar($sizing, content, normal); }
+        &.narrow { width: getVar($sizing, content, narrow); }
+        // 
         
-        &.normal {
-            width: getVar($sizing, content, normal);
-        }
-        
-        &.narrow {
-            width: getVar($sizing, content, narrow);
-        }
-        
+        // adjust widths
         @media screen and (max-width: 1280px) {
             &.narrow {
                 width: getVar($sizing, content, normal);
             }
         }
+        // adjust widths
         @media screen and (max-width: 960px) {
             &.normal, &.narrow {
                 width: getVar($sizing, content, wide);

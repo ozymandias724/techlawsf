@@ -1033,6 +1033,10 @@ a.button.ghost.active:focus:not(.ghost) {
 a.button:last-of-type {
   margin: 0 0 30px 0;
 }
+.wpforms-submit-container > button.wpforms-submit[type=submit]:last-of-type:first-of-type,
+a.button:last-of-type:first-of-type {
+  margin: 0 0 0 0;
+}
 
 .bgimage {
   position: relative;
@@ -1219,41 +1223,46 @@ body:not(.header-fadein) > main {
   margin-top: 72px;
 }
 
-.site__block {
+.footer,
+.prefooter,
+main > .site__block {
   margin: 10vw 0 0 0;
-}
-.site__block:first-child {
-  margin: 0 0 0 0;
 }
 
 header > .container,
 main > section > .container,
+main > .site__block > .container,
 footer > .container {
   margin: 0 auto;
 }
 header > .container.full,
 main > section > .container.full,
+main > .site__block > .container.full,
 footer > .container.full {
   width: 100%;
 }
 header > .container.wide,
 main > section > .container.wide,
+main > .site__block > .container.wide,
 footer > .container.wide {
   width: 80%;
 }
 header > .container.normal,
 main > section > .container.normal,
+main > .site__block > .container.normal,
 footer > .container.normal {
   width: 65%;
 }
 header > .container.narrow,
 main > section > .container.narrow,
+main > .site__block > .container.narrow,
 footer > .container.narrow {
   width: 50%;
 }
 @media screen and (max-width: 1280px) {
   header > .container.narrow,
 main > section > .container.narrow,
+main > .site__block > .container.narrow,
 footer > .container.narrow {
     width: 65%;
   }
@@ -1262,6 +1271,8 @@ footer > .container.narrow {
   header > .container.normal, header > .container.narrow,
 main > section > .container.normal,
 main > section > .container.narrow,
+main > .site__block > .container.normal,
+main > .site__block > .container.narrow,
 footer > .container.normal,
 footer > .container.narrow {
     width: 80%;
@@ -1269,7 +1280,7 @@ footer > .container.narrow {
 }
 
 .flexgrid {
-  margin: 60px 0 0 0;
+  margin: 60px 0 -30px 0;
 }
 .flexgrid:first-child:last-child {
   margin: 0 0 0 0;
@@ -2061,11 +2072,10 @@ body.header-fadein header.header.fixed.fadein {
 }
 
 section.prefooter {
-  margin: 90px 0 0 0;
-  border-top: 1px solid rgba(25, 25, 25, 0.33);
+  border-top: 1px solid #ecebea;
 }
 section.prefooter > .container {
-  padding: 60px 0;
+  margin: 10vw auto 0 auto;
 }
 section.prefooter > .container > h4 {
   color: #55b9be;
@@ -2073,9 +2083,11 @@ section.prefooter > .container > h4 {
   font-weight: bold;
   text-align: center;
 }
+section.prefooter > .container > div > .wpforms-container {
+  margin: 0;
+}
 
 footer {
-  margin: 0;
   background-color: #191919;
   color: #ECEBEA;
   padding: 30px 0;
@@ -2271,13 +2283,13 @@ header .navlinks > ul > li:last-of-type {
     right: 100%;
   }
 }
+header .navicons {
+  display: none;
+  cursor: pointer;
+}
 
 header.fixed.fadein .navlinks > ul > li > a {
   color: #ffffff;
-}
-
-header .navicons {
-  display: none;
 }
 
 @media only screen and (max-width: 960px) {
@@ -2287,6 +2299,7 @@ header .navicons {
   header > .container .navicons {
     display: block;
     padding: 5px;
+    color: #ECEBEA;
   }
   header > .container .navicons > i.fas.fa-times {
     display: none;
@@ -2313,7 +2326,8 @@ header .navicons {
     background-color: rgba(25, 25, 25, 0.5);
   }
   header > .container.mobilenav-opened .navlinks > ul.menu {
-    background-color: #ecebea;
+    border: 1px solid rgba(236, 235, 234, 0.5);
+    background-color: #191919;
     display: flex;
     flex-flow: column nowrap;
     width: 80%;
@@ -2321,7 +2335,6 @@ header .navicons {
     padding: 15px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    border: 1px solid rgba(25, 25, 25, 0.5);
   }
   header > .container.mobilenav-opened .navlinks > ul.menu > li {
     margin: 15px 0 0 0;
@@ -2713,7 +2726,7 @@ body.single-practice_areas section.practice_area .container .subheading {
   margin: 0 0 30px 0;
 }
 body.single-practice_areas section.practice_area .container > div {
-  margin: 60px auto 0;
+  margin: 10vw 0 0 0;
 }
 body.single-practice_areas section.practice_area .container .features > ul {
   margin: 30px 0 0 0;

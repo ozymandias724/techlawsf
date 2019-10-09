@@ -49,15 +49,15 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
             $return['content_grid'] .= ob_get_clean();
         }
 
-        $return['content_grid'] .= '</ul>';
+        $return['content_grid'] .= '</ul></div>';
 
         // check for the view all button
         if( !empty( $cB['button'] ) ){
-            $return['content_grid'] .= '<a class="button ghost anim__fade anim__fade-up" href="'.$cB['button']['url'].'">'.$cB['button']['title'].'</a>';
+            $return['content_grid'] .= '<div class="viewall"><a class="button ghost anim__fade anim__fade-up" href="'.$cB['button']['url'].'">'.$cB['button']['title'].'</a></div>';
         }
         
         // close the content grid 
-        $return['content_grid'] .= '</div></div></section>';
+        $return['content_grid'] .= '</div></section>';
 
         echo $return['content_grid'];
 	}

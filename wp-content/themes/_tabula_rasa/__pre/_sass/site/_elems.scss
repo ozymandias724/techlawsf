@@ -80,6 +80,9 @@ a.button {
     &:last-of-type {
         margin: 0 0 $g 0;
     }
+    &:last-of-type:first-of-type {
+        margin: 0 0 0 0;
+    }
 }
 
 
