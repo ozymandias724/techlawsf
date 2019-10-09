@@ -9,11 +9,10 @@ section.site__block.block__banner {
     
 
     $g : getVar($sizing, gutter, px, normal);
-    
+
     > .container {
 
-
-        padding: (2 * $g) 0;
+        padding: getVar($sizing, gutter, vw, large) 0;
 
         > .flexgrid {
             margin-bottom: 0;

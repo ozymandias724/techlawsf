@@ -2153,6 +2153,9 @@ footer .footer-contactus .fab {
   display: inline-block;
   vertical-align: middle;
 }
+footer .footer-contactus > p {
+  margin: 0;
+}
 footer .iconlinks {
   padding: 15px 0;
 }
