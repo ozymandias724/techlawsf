@@ -27,7 +27,7 @@
         // get nav
         $args = array(
             'theme_location' => 'header'
-            ,'walker' => new Rational_Walker_Nav_Menu
+            ,'walker' => new Tabula_Rasa_Nav_Menu
             ,'echo' => false
             ,'container' => 'nav'
             ,'container_class' => 'navlinks'

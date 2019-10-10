@@ -172,9 +172,21 @@ header
 
 // overrides!
 header.fixed.fadein {
-    .navlinks > ul > li > a {
+    .navlinks > ul > li >a>span {
         color: getVar($colors, white, full);
-   }
+    }
+}
+header.static {
+    .logo.logo--text,
+    .navlinks>ul>li>a>span{
+        color: getVar($material, shades, dark);
+    }
+    .header .navlinks>ul .sub-menu{
+        background-color: rgba(getVar($material, shades, light), 1);
+        > li > a > span {
+            color: getVar($material, shades, dark);
+        }
+    }
 }
 
 @media only screen and (max-width: 960px) {

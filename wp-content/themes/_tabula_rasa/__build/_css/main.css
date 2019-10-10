@@ -1211,15 +1211,20 @@ body {
   font-weight: 300;
   display: flex;
   flex-flow: column nowrap;
-  overflow-x: hidden;
+}
+body > header {
+  flex: 0 0 auto;
 }
 body > main {
-  flex: 1;
+  flex: 1 0 auto;
+}
+body > footer {
+  flex: 0 0 auto;
 }
 body.js__noscroll {
   overflow: hidden;
 }
-body:not(.header-fadein) > main {
+body.fixed main {
   margin-top: 72px;
 }
 
@@ -2291,8 +2296,19 @@ header .navicons {
   cursor: pointer;
 }
 
-header.fixed.fadein .navlinks > ul > li > a {
+header.fixed.fadein .navlinks > ul > li > a > span {
   color: #ffffff;
+}
+
+header.static .logo.logo--text,
+header.static .navlinks > ul > li > a > span {
+  color: #191919;
+}
+header.static .header .navlinks > ul .sub-menu {
+  background-color: #ecebea;
+}
+header.static .header .navlinks > ul .sub-menu > li > a > span {
+  color: #191919;
 }
 
 @media only screen and (max-width: 960px) {

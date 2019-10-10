@@ -1,18 +1,13 @@
-// 
-// 
-// 
-// 
-// 
-// 
-// import libraries
-import $ from 'jquery';
-import Magnific from 'magnific-popup';
-// import Slick from 'slick-carousel-browserify/';
-// 
-// 
-// when the script is loaded...
+/**
+ * 
+ * 
+ * 
+*/
+import $ from 'jquery'; // get jquery from npm see package.json for version
+import Magnific from 'magnific-popup'; // remove this and integrate into the relevant block
 
-// do something...
+// fire immediately when the script is loaded... see $.ready below
+
 $(window).on('load resize scroll', function (e) {
 
     //  window scroll or load,
@@ -51,7 +46,7 @@ $(window).on('load resize scroll', function (e) {
 // 
 // 
 // when the document is ready...
-$(document).ready(function () {
+$(function() {
     // 
     // 
     //  run these scripts when the DOM is fully loaded
@@ -64,9 +59,9 @@ $(document).ready(function () {
 
 
     // offset <main> by <header> height
-    if( $('body:not(.header-fadein)').length ){
-        $('body:not(.header-fadein) main').css('margin-top', $('header').innerHeight());
-    }
+    // if( $('body:not(.header-fadein)').length ){
+    //     $('body:not(.header-fadein) main').css('margin-top', $('header').innerHeight());
+    // }
 
 
 

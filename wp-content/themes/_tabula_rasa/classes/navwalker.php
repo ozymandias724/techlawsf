@@ -6,7 +6,7 @@
  * @since 1.0
  * @uses Walker_Nav_Menu
  */
-class Rational_Walker_Nav_Menu extends Walker_Nav_Menu
+class Tabula_Rasa_Nav_Menu extends Walker_Nav_Menu
 {
 	/**
 	 * Start the element output.
@@ -115,6 +115,6 @@ class Rational_Walker_Nav_Menu extends Walker_Nav_Menu
 		 */
 		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
 	}
-} // Rational_Walker_Nav_Menu
+} // Tabula_Rasa_Nav_Menu
 
 ?>

@@ -97,19 +97,23 @@ body {
     // flex align the footer to the bottom
     display: flex;
     flex-flow: column nowrap;
-    // hide overflow
-    overflow-x: hidden;
     // bgc
+    > header {
+        flex: 0 0 auto;
+    }
     >main {
-        flex: 1;
+        flex: 1 0 auto;
+    }
+    > footer {
+        flex: 0 0 auto;
     }
 
     &.js__noscroll {
         overflow: hidden;
     }
-    &:not(.header-fadein){
-        > main {
-            margin-top: 72px; // offset by header height
+    &.fixed {
+        main {
+            margin-top: 72px;
         }
     }
 }

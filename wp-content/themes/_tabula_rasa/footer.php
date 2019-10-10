@@ -27,7 +27,7 @@
         
         $args = array(
             'theme_location' => 'footer_1'
-            ,'walker' => new Rational_Walker_Nav_Menu
+            ,'walker' => new Tabula_Rasa_Nav_Menu
             ,'echo' => false
             ,'container' => 'nav'
             ,'container_class' => 'navlinks'
@@ -43,7 +43,7 @@
         $return['footer_nav'] .= '<section><h4>'.get_nav_menu_name('footer_2').'</h4>';
         $args = array(
             'theme_location' => 'footer_2'
-            ,'walker' => new Rational_Walker_Nav_Menu
+            ,'walker' => new Tabula_Rasa_Nav_Menu
             ,'echo' => false
             ,'container' => 'nav'
             ,'container_class' => 'navlinks'

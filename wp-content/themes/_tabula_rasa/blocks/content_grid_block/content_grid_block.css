@@ -5,25 +5,65 @@
   margin: 30px auto 0 auto;
 }
 
-.site__block.block__content_grid .container .flexgrid {
+body.page-template-testimonials section.block__content_grid .testimonials .block-heading {
   text-align: center;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials {
-  align-items: flex-start;
+body.page-template-testimonials section.block__content_grid .testimonials hr {
+  margin: 90px 0;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li {
-  text-align: center;
-  font-weight: normal;
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial {
+  padding: 30px 0 0 0;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li .keyphrase {
-  font-size: 2.4rem;
-  text-transform: uppercase;
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial > div:first-child {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 15px 0;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li .name {
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial > div:first-child > span {
+  display: block;
+  font-size: 3rem;
+  margin: 0 15px 0 0;
+}
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial > div:first-child > blockquote {
+  padding: 5px 0 5px 15px;
+  border-left: 4px solid rgba(85, 185, 190, 0.8);
+}
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial > div:first-child > span + blockquote {
+  width: 80%;
+}
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial > div:last-child {
+  text-align: right;
+}
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial > div:last-child > h4 {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+body.page-template-testimonials section.block__content_grid .testimonials .testimonial > div:last-child > h6 {
   font-style: italic;
   font-weight: normal;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li > div {
+
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid {
+  text-align: center;
+}
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials {
+  align-items: flex-start;
+}
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li {
+  text-align: center;
+  font-weight: normal;
+}
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li .keyphrase {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li .name {
+  font-style: italic;
+  font-weight: normal;
+}
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li > div {
   display: inline-block;
   width: 100%;
   margin: 0 auto;
@@ -38,21 +78,21 @@
   max-width: 320px;
   min-width: 180px;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li > div:before {
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li > div:before {
   content: "";
   display: block;
   padding-top: 100%;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(1) > div {
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(1) > div {
   width: 66.6666666667%;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(2) {
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(2) {
   align-self: flex-end;
   margin-top: 2vw;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(2) > div {
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(2) > div {
   width: 100%;
 }
-.site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(3) > div {
+body:not(.page-template-testimonials) .site__block.block__content_grid .container .flexgrid > ul.testimonials > li:nth-of-type(3) > div {
   width: 80%;
 }
