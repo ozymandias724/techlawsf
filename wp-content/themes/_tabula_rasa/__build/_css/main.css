@@ -3,7 +3,7 @@
 @import '../../node_modules/magnific-popup/dist/magnific-popup.css';
 .anim__fade {
   opacity: 1;
-  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
   transform: translateY(0);
 }
 
@@ -1049,13 +1049,15 @@ img {
 }
 
 blockquote {
+  padding: 0 0 0 15px;
+  border: none 0;
   border-left: 4px solid #55b9be;
 }
 @media screen and (max-width: 640px) {
   blockquote {
-    border-left: none 0;
     padding: 0 0 15px 0;
     margin: 0 0 0 0;
+    border: none 0;
     border-bottom: 4px solid #55b9be;
   }
 }
@@ -2504,60 +2506,6 @@ body.page-clients section.block__content_grid .container > div > ul > li > .cate
   color: white;
 }
 
-section.testimonials .block-heading {
-  text-align: center;
-}
-section.testimonials hr {
-  margin: 90px 0;
-}
-section.testimonials .testimonial {
-  padding: 30px 0 0 0;
-}
-section.testimonials .testimonial > div:first-child {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 0 15px 0;
-}
-section.testimonials .testimonial > div:first-child > span {
-  display: block;
-  font-size: 3rem;
-  margin: 0 15px 0 0;
-}
-section.testimonials .testimonial > div:first-child > blockquote {
-  padding: 5px 0 5px 15px;
-  border-left: 4px solid rgba(85, 185, 190, 0.8);
-}
-section.testimonials .testimonial > div:first-child > span + blockquote {
-  width: 80%;
-}
-section.testimonials .testimonial > div:last-child {
-  text-align: right;
-}
-section.testimonials .testimonial > div:last-child > h4 {
-  letter-spacing: 1px;
-  font-weight: 400;
-}
-section.testimonials .testimonial > div:last-child > h6 {
-  font-style: italic;
-  font-weight: normal;
-}
-
-@media screen and (max-width: 640px) {
-  section.testimonials .flexgrid > ul hr {
-    margin: 30px 0;
-  }
-  section.testimonials .testimonial > div:first-child {
-    flex-flow: column nowrap;
-  }
-  section.testimonials .testimonial > div:first-child > blockquote {
-    border-left: none 0;
-    padding: 15px 5px;
-    margin: 15px 0 0 0;
-    border-top: 4px solid rgba(85, 185, 190, 0.8);
-  }
-}
 body.page-our-team div.flexgrid > ul.team_members > li {
   flex-grow: 0;
   padding: 15px;
@@ -2628,6 +2576,34 @@ body.home main > .block__columns .block__card .block__image .container:before {
   content: "";
   display: block;
   padding-top: 100%;
+}
+#cookie-law-info-again {
+  border: 1px solid #ecebea;
+  border-bottom: none 0;
+  border-radius: 6px 6px 0 0;
+}
+
+#cookie-law-info-bar {
+  position: relative;
+  border-radius: 50%;
+  padding: 0 !important;
+  max-width: 400px;
+  border: 1px solid #ecebea;
+}
+#cookie-law-info-bar:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#cookie-law-info-bar > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+#cookie-law-info-bar > span > a {
+  margin-top: 15px !important;
 }
 
 /*# sourceMappingURL=main.css.map */

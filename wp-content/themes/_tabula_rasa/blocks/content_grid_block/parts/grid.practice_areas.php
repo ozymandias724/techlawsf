@@ -11,7 +11,7 @@ $the_fields = get_fields($post->ID);
 $return['practice_area'] = '';
 
 $guide['practice_area'] = '
-    <li>
+    <li class="anim__fade anim__fade-up">
         <a href="%s" title="View more about %s">
             <div class="card vert mixed">
                 <div class="content">

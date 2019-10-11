@@ -2,54 +2,57 @@
 // 
 // 
 
-body.page-template-testimonials {
-    section.block__content_grid .testimonials {
+body.page-testimonials {
+    section.block__content_grid .flexgrid {
+
+        @include flexboxGrid($cols : 1);
 
         $g: getVar($sizing, gutter, px, normal);
 
-        .block-heading {
-            // border-bottom: 1px solid rgba(getVar($colors, black, dark), 0.5);
-            // padding-bottom: $g;
-            text-align: center;
-        }
-
         hr {
-            margin: (3 * $g) 0;
+            margin: getVar($sizing, gutter, px, large) 0;
         }
 
         .testimonial {
-
-            padding: $g 0 0 0;
+            
+            > div {
+                margin: $g 0;
+            }
 
             // top half
             >div:first-child {
                 display: flex;
                 flex-flow: row nowrap;
-                justify-content: space-around;
+                justify-content: space-between;
                 align-items: center;
-                margin: 0 0 ($g / 2) 0;
+                
+                
 
                 // funding only
                 >span {
+                    margin: 0 auto;
                     display: block;
                     font-size: 3rem;
-                    margin: 0 ($g / 2) 0 0;
+                    +blockquote {
+                        text-align: right;
+                        max-width: (200% / 3);
+                    }
                 }
-
-                // quote only
-                >blockquote {
-                    padding: 5px 0 5px 15px;
-                    border-left: 4px solid rgba(getVar($material, brand, accent), 0.8);
+                @media screen and (max-width: 640px) {
+                    flex-flow: column nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    > span {
+                        +blockquote {
+                            margin-top: $g;
+                            max-width: 100%;
+                        }
+                    }
                 }
-
-                // funding + quote
-                >span+blockquote {
-                    width: 80%;
-                }
-
             }
-
+            
             >div:last-child {
+                margin-bottom: 0;
                 text-align: right;
 
                 >h4 {
@@ -66,34 +69,37 @@ body.page-template-testimonials {
     }
 }
 
-body:not(.page-template-testimonials)
-.site__block.block__content_grid {
+body:not(.page-testimonials) .site__block.block__content_grid {
 
     .container {
         .flexgrid {
             text-align: center;
+
             >ul.testimonials {
                 align-items: flex-start;
-                >li{
+
+                >li {
                     text-align: center;
 
 
                     font-weight: normal;
+
                     .keyphrase {
                         font-size: 2.4rem;
                         text-transform: uppercase;
                     }
+
                     .name {
                         font-style: italic;
                         font-weight: normal;
                     }
 
 
-                    > div {
+                    >div {
                         display: inline-block;
                         width: 100%;
                         margin: 0 auto;
-                        border: 4px solid rgba(getVar($material, brand, accent),1);
+                        border: 4px solid rgba(getVar($material, brand, accent), 1);
                         border-radius: 50%;
                         overflow: hidden;
                         display: flex;
@@ -105,24 +111,27 @@ body:not(.page-template-testimonials)
                         min-width: 180px;
                     }
 
-                    &:nth-of-type(1){
-                        > div{
+                    &:nth-of-type(1) {
+                        >div {
                             width: (200% / 3);
                         }
                     }
-                    &:nth-of-type(2){
+
+                    &:nth-of-type(2) {
                         align-self: flex-end;
                         margin-top: getVar($sizing, gutter, vw, normal);
+
                         >div {
                             width: 100%;
                         }
                     }
-                    &:nth-of-type(3){
+
+                    &:nth-of-type(3) {
                         >div {
                             width: 80%;
                         }
                     }
-                } 
+                }
             }
         }
 

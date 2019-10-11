@@ -23,7 +23,7 @@
     // 
     if (has_nav_menu('footer_1')) {
         
-        $return['footer_nav'] .= '<section><h4>'.get_nav_menu_name('footer_1').'</h4>';
+        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4>'.get_nav_menu_name('footer_1').'</h4>';
         
         $args = array(
             'theme_location' => 'footer_1'
@@ -40,7 +40,7 @@
     }
     
     if (has_nav_menu('footer_2')) {
-        $return['footer_nav'] .= '<section><h4>'.get_nav_menu_name('footer_2').'</h4>';
+        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4>'.get_nav_menu_name('footer_2').'</h4>';
         $args = array(
             'theme_location' => 'footer_2'
             ,'walker' => new Tabula_Rasa_Nav_Menu
@@ -59,11 +59,11 @@
     $return['footer'] = '';
     $guide['footer'] = '
             <div class="container wide">
-                <section>
+                <section class="anim__fade anim__fade-up">
                     %s
                     %s
                 </section>                
-                <section class="footer-contactus">
+                <section class="anim__fade anim__fade-up footer-contactus">
                     <h4>Contact Us</h4>
                     %s
                     %s

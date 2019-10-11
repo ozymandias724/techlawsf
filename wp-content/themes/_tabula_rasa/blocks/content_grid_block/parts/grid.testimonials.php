@@ -7,7 +7,7 @@
 
 $the_fields = get_fields($post->ID);
 
-if( is_page_template( 'templates/testimonials.php' ) ){
+if( is_page( 'testimonials' ) ){
 
     $return['long_testimonial'] = '';
     // get the fields for the testimonial
@@ -45,7 +45,7 @@ else {
     $return['short_testimonial'] = '';
 
     $guide['short_testimonial'] = '
-        <li class="anim__fade anim__fade-up grid_item">
+        <li class="anim__fade anim__fade-up ">
             <div>
                 <div>
                     %s

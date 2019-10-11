@@ -30,7 +30,7 @@
     }
 
 ?>
-<div class="grid_blog_post grid_item site__fade site__fade-up">
+<div class="grid_blog_post anim__fade anim__fade-up">
 <?php
     echo $return['content'];
 ?>

@@ -10,7 +10,7 @@ $the_fields = get_fields($post->ID);
 $return['team_member'] = '';
 
 $guide['team_member'] = '
-    <li>
+    <li class="anim__fade anim__fade-up">
         <a href="'.get_permalink($post->ID).'bio/" class="js__popup_bio" title="Read about '.$post->post_title.'">
             <div class="bgimage"><div class="bgimage-img" style="background-image: url(%s)"></div></div>
             <div>

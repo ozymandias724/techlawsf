@@ -18,7 +18,7 @@
 // lets do this ourselves
 .anim__fade {
     opacity: 1;
-    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
     transform: translateY(0);
 }
 

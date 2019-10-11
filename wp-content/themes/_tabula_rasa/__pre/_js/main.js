@@ -101,12 +101,12 @@ $(function() {
 
             // if we have cached clients
             if( allClients ){
-                clientsEl.children('li.grid_item').remove()
+                clientsEl.children('li').remove()
             }
             // no clients cached
             else {
                 // cache all clients
-                allClients = clientsEl.children('li.grid_item').detach();
+                allClients = clientsEl.children('li').detach();
             }
             
             // filter down to clients with chosen term 
