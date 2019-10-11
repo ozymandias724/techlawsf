@@ -8,28 +8,11 @@ body.home {
     
     main {
 
-        // try some full color stuff
-        // 
-
-
-        //
-        >.site__block {
-
-            // @for $i from 2 to 6 {
-                
-            //     // 
-            //     // 
-            //     &:nth-of-type(#{$i}){
-            //         margin: 0;
-            //         padding: getVar($sizing, gutter, px, large) 0;
-            //     }
-            // }
-        }
-        
-
         > .block__columns {
             .block__card {
                 .block__image {
+
+                    // meet patricia card
                     .container {
                         border-radius: 50%;
                         overflow: hidden;
@@ -41,22 +24,5 @@ body.home {
                 }
             }
         }
-        
-        // > .block__heading:nth-of-type(2){
-        //     h2 {
-        //         color: rgba(getVar($material, brand, accent), 1);
-        //         text-transform: uppercase;
-        //     }   
-        // }
-    
-        // > .block__heading:nth-of-type(4){
-        //     $g : getVar($sizing, gutter, px, large);
-        //     background-color: rgba(getVar($material, brand, accent), (1 / 3));
-        //     > .container {
-        //         padding: $g 0;
-        //     }
-        // }
     }
-
-    
 }

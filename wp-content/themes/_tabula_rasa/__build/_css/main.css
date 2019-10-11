@@ -874,85 +874,77 @@ body {
     box-sizing: inherit;
   }
 }
-.blurbs > ul {
+/* 
+
+
+*/
+.bgimage {
+  position: relative;
+  overflow: hidden;
+}
+
+.bgimage-img {
+  display: block;
+  transition: all 0.25s ease;
+  background-color: black;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.bgimage .bgimage-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 0.25s ease;
+}
+.bgimage.bgimagezooms:hover .bgimage-img, .bgimage.bgimagezooms:active .bgimage-img, .bgimage.bgimagezooms:focus .bgimage-img {
+  transform: scale(1.25);
+}
+
+.logo.logo--image {
+  height: 100%;
+  padding: 15px;
+}
+.logo.logo--image img {
+  height: 100%;
+}
+.logo.logo--text {
+  color: #ECEBEA;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  border-bottom: 2px solid transparent;
+  font-weight: 400;
+  font-family: "Montserrat", serif;
+}
+.logo.logo--text:hover, .logo.logo--text:focus, .logo.logo--text:active {
+  border-bottom: 2px solid #C5707A;
+  border-bottom: 2px solid #FD5E0F;
+}
+
+.site__social-media {
+  margin: 0 15px 0 0;
+}
+
+ul.iconlinks {
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: flex-start;
 }
-.blurbs > ul.left {
-  justify-content: flex-start;
+ul.iconlinks li.iconlinks-icon {
+  margin: 0 15px 15px 0;
 }
-.blurbs > ul.center {
-  justify-content: center;
+ul.iconlinks li.iconlinks-icon:last-of-type {
+  margin: 0 0 15px 0;
 }
-.blurbs > ul.right {
-  justify-content: flex-end;
+ul.iconlinks li.iconlinks-icon .fab {
+  font-size: 24px;
+  transform: scale(1);
 }
-.blurbs > ul > li {
-  position: relative;
-  display: inline-block;
-  width: calc((100% - (3 - 1) * 30px) / 3);
-  flex: 1 0 calc((100% - (3 - 1) * 30px) / 3);
-  margin: 0 30px 30px 0;
-}
-.blurbs > ul > li:nth-of-type(n+1) {
-  margin: 0 30px 30px 0;
-}
-.blurbs > ul > li:nth-of-type(3n) {
-  margin-right: 0;
-}
-.blurbs > ul > li:last-of-type {
-  margin-right: 0;
-}
-@media screen and (max-width: 640px) {
-  .blurbs > ul {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-    justify-content: flex-start;
-  }
-  .blurbs > ul.left {
-    justify-content: flex-start;
-  }
-  .blurbs > ul.center {
-    justify-content: center;
-  }
-  .blurbs > ul.right {
-    justify-content: flex-end;
-  }
-  .blurbs > ul > li {
-    position: relative;
-    display: inline-block;
-    width: calc((100% - (1 - 1) * 30px) / 1);
-    flex: 1 0 calc((100% - (1 - 1) * 30px) / 1);
-    margin: 0 30px 30px 0;
-    flex: 1 0 100%;
-    margin: 0 0 30px 0;
-  }
-  .blurbs > ul > li:nth-of-type(n+1) {
-    margin: 0 30px 30px 0;
-  }
-  .blurbs > ul > li:nth-of-type(1n) {
-    margin-right: 0;
-  }
-  .blurbs > ul > li:last-of-type {
-    margin-right: 0;
-  }
-  .blurbs > ul > li:last-of-type {
-    margin: 0 0 0 0;
-  }
-}
-.blurbs > ul > li blockquote {
-  border-left: 4px solid rgba(85, 185, 190, 0.7);
-}
-@media screen and (max-width: 640px) {
-  .blurbs > ul > li blockquote {
-    border-left: none 0;
-    padding: 0 0 15px 0;
-    margin: 0 0 0 0;
-    border-bottom: 4px solid rgba(85, 185, 190, 0.7);
-  }
+ul.iconlinks li.iconlinks-icon > a {
+  display: block;
 }
 
 .wpforms-submit-container {
@@ -1038,77 +1030,10 @@ a.button:last-of-type:first-of-type {
   margin: 0 0 0 0;
 }
 
-.bgimage {
-  position: relative;
-  overflow: hidden;
-}
-
-.bgimage-img {
-  display: block;
-  transition: all 0.25s ease;
-  background-color: black;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
-.bgimage .bgimage-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: all 0.25s ease;
-}
-.bgimage.bgimagezooms:hover .bgimage-img, .bgimage.bgimagezooms:active .bgimage-img, .bgimage.bgimagezooms:focus .bgimage-img {
-  transform: scale(1.25);
-}
-
-.logo.logo--image {
-  height: 100%;
-  padding: 15px;
-}
-.logo.logo--image img {
-  height: 100%;
-}
-.logo.logo--text {
-  color: #ECEBEA;
-  letter-spacing: 1px;
-  font-size: 2rem;
-  border-bottom: 2px solid transparent;
-  font-weight: 400;
-  font-family: "Montserrat", serif;
-}
-.logo.logo--text:hover, .logo.logo--text:focus, .logo.logo--text:active {
-  border-bottom: 2px solid #C5707A;
-  border-bottom: 2px solid #FD5E0F;
-}
-
-.site__social-media {
-  margin: 0 15px 0 0;
-}
-
-ul.iconlinks {
-  display: flex;
-  flex-flow: row wrap;
-}
-ul.iconlinks li.iconlinks-icon {
-  margin: 0 15px 15px 0;
-}
-ul.iconlinks li.iconlinks-icon:last-of-type {
-  margin: 0 0 15px 0;
-}
-ul.iconlinks li.iconlinks-icon .fab {
-  font-size: 24px;
-  transform: scale(1);
-}
-ul.iconlinks li.iconlinks-icon > a {
-  display: block;
-}
-
 a {
   text-decoration: none;
+  color: #191919;
+  border: none 0;
 }
 
 figure {
@@ -1124,9 +1049,15 @@ img {
 }
 
 blockquote {
-  border-left: 1px solid #000;
-  padding-left: 15px;
-  text-align: left;
+  border-left: 4px solid #55b9be;
+}
+@media screen and (max-width: 640px) {
+  blockquote {
+    border-left: none 0;
+    padding: 0 0 15px 0;
+    margin: 0 0 0 0;
+    border-bottom: 4px solid #55b9be;
+  }
 }
 
 hr,
@@ -2427,48 +2358,6 @@ body.page-practice-areas ul.practice_areas > li > a {
   }
 }
 
-body.page-clients div.filters {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  position: relative;
-  padding: 15px 0 0 0;
-}
-body.page-clients div.filters > a.button {
-  flex: 0 1 26%;
-  margin: 0 0 15px 0;
-  border-radius: 12px 0;
-  transition: border-radius 0.3s ease;
-}
-body.page-clients div.filters > a.button:hover, body.page-clients div.filters > a.button:focus, body.page-clients div.filters > a.button:active, body.page-clients div.filters > a.button.active {
-  border-radius: 0 12px;
-}
-body.page-clients div.filters > a.button.ghost {
-  border: 2px solid #55b9be;
-  background-color: rgba(85, 185, 190, 0);
-  color: #55b9be;
-}
-body.page-clients div.filters > a.button.ghost:hover, body.page-clients div.filters > a.button.ghost:active, body.page-clients div.filters > a.button.ghost:focus {
-  border: 2px solid #55b9be;
-  background-color: #55b9be;
-  color: white;
-}
-body.page-clients div.filters > a.button.ghost.active {
-  border: 2px solid #55b9be;
-  background-color: #55b9be;
-  color: white;
-}
-body.page-clients div.filters > a.button.ghost.active:hover:not(.ghost), body.page-clients div.filters > a.button.ghost.active:active:not(.ghost), body.page-clients div.filters > a.button.ghost.active:focus:not(.ghost) {
-  border: 2px solid #55b9be;
-  background-color: rgba(85, 185, 190, 0);
-  color: #55b9be;
-}
-body.page-clients div.filters > a.button[data-term=all] {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -100%);
-}
 body.page-clients section.block__content_grid .container > div.flexgrid.cols-2 > ul {
   display: flex;
   flex-flow: row wrap;
@@ -2728,6 +2617,7 @@ body.page-our-team div.flexgrid > ul.team_members > li > a:hover > div:not(.bgim
 body.page-our-team div.flexgrid > ul.team_members > li > a:hover p:last-of-type {
   color: #FD5E0F;
 }
+
 body.home main > .block__columns .block__card .block__image .container {
   border-radius: 50%;
   overflow: hidden;
@@ -2738,34 +2628,6 @@ body.home main > .block__columns .block__card .block__image .container:before {
   content: "";
   display: block;
   padding-top: 100%;
-}
-body.single-practice_areas section.practice_area .container .heading,
-body.single-practice_areas section.practice_area .container .subheading {
-  text-align: center;
-  margin: 0 0 30px 0;
-}
-body.single-practice_areas section.practice_area .container > div {
-  margin: 10vw 0 0 0;
-}
-body.single-practice_areas section.practice_area .container .features > ul {
-  margin: 30px 0 0 0;
-  padding: 0 0 0 30px;
-}
-body.single-practice_areas section.practice_area .container .features > ul > li {
-  display: block;
-  margin: 0 0 15px 0;
-  display: flex;
-  flex-flow: row nowrap;
-}
-body.single-practice_areas section.practice_area .container .features > ul > li > i {
-  font-size: 1rem;
-  color: #55b9be;
-  margin: 1rem 0 0 0;
-}
-body.single-practice_areas section.practice_area .container .features > ul > li > span {
-  font-size: 1.8rem;
-  margin: 0 0 0 15px;
-  padding-bottom: 2px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,15 +1,7 @@
 // 
-// 
-// 
-// 
-// 
-
 body.page-our-team {
     $g : getVar($sizing, gutter, px, small);
-
     div.flexgrid {     
-        
-
         > ul.team_members {
             // justify-content: flex-start;
             > li {
@@ -68,23 +60,7 @@ body.page-our-team {
                         }
                     }
                 }
-                
-    
-                
-                
-                // 
-                &:nth-of-type(2n){
-                    > a {
-                        .bgimage {
-                        }
-                    }
-                }
-    
-    
-                
-                
             }
-            
         }
     }
 }

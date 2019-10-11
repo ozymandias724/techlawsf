@@ -1,3 +1,45 @@
+.block__content_grid div.filters {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  position: relative;
+  padding: 15px 0 0 0;
+}
+.block__content_grid div.filters > a.button {
+  flex: 0 1 26%;
+  margin: 0 0 15px 0;
+  border-radius: 12px 0;
+  transition: border-radius 0.3s ease;
+}
+.block__content_grid div.filters > a.button:hover, .block__content_grid div.filters > a.button:focus, .block__content_grid div.filters > a.button:active, .block__content_grid div.filters > a.button.active {
+  border-radius: 0 12px;
+}
+.block__content_grid div.filters > a.button.ghost {
+  border: 2px solid #55b9be;
+  background-color: rgba(85, 185, 190, 0);
+  color: #55b9be;
+}
+.block__content_grid div.filters > a.button.ghost:hover, .block__content_grid div.filters > a.button.ghost:active, .block__content_grid div.filters > a.button.ghost:focus {
+  border: 2px solid #55b9be;
+  background-color: #55b9be;
+  color: white;
+}
+.block__content_grid div.filters > a.button.ghost.active {
+  border: 2px solid #55b9be;
+  background-color: #55b9be;
+  color: white;
+}
+.block__content_grid div.filters > a.button.ghost.active:hover:not(.ghost), .block__content_grid div.filters > a.button.ghost.active:active:not(.ghost), .block__content_grid div.filters > a.button.ghost.active:focus:not(.ghost) {
+  border: 2px solid #55b9be;
+  background-color: rgba(85, 185, 190, 0);
+  color: #55b9be;
+}
+.block__content_grid div.filters > a.button[data-term=all] {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
 .block__content_grid > .container > .viewall {
   text-align: center;
 }

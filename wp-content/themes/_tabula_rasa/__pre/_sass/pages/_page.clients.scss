@@ -4,52 +4,6 @@
 // 
 body.page-clients {
 
-
-
-    // 
-    //      Client Category Filters
-    // 
-    div.filters {
-        $g: getVar($sizing, gutter, px, small);
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        position: relative;
-        padding: $g 0 0 0;
-
-        >a.button {
-            flex: 0 1 26%;
-            margin: 0 0 $g 0;
-            border-radius: 12px 0;
-            transition: border-radius 0.3s ease;
-
-            &:hover,
-            &:focus,
-            &:active,
-            &.active {
-                border-radius: 0 12px;
-            }
-
-            &.ghost {
-                @include ghostStyle($bgC:getVar($material, brand, accent));
-
-                &.active {
-                    @include solidStyle($bgC:getVar($material, brand, accent));
-                }
-            }
-
-            &[data-term="all"] {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                transform: translate(-50%, -100%);
-            }
-        }
-    }
-
-
-
-
     section.block__content_grid {
 
         .container>div {

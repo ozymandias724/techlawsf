@@ -1,89 +1,8 @@
-// 
-// 
+/* 
 
 
+*/
 
-
-.block-heading {
-    // text-align: center;
-    // margin: 0 0 getVar($sizing, gutter, px, normal) 0;
-}
-.block-subheading {
-    // text-align: center;
-    // margin: 0 0 getVar($sizing, gutter, px, normal) 0;
-}
-
-
-
-.blurbs {
-
-    @include flexboxGrid($cols: 3, $gutter: 30px, $align: stretch, $justify: flex-start, $grow : 1, $shrink: 0);
-    @media screen and (max-width: 640px){
-        @include flexboxGrid($cols: 1, $gutter: 30px, $align: stretch, $justify: flex-start, $grow : 1, $shrink: 0);
-    }
-    > ul {
-        > li {
-            blockquote {
-                border-left: 4px solid rgba(getVar($material, brand, accent), 0.7);
-
-                @media screen and (max-width:640px){
-                    border-left: none 0;
-                    padding: 0 0 15px 0;
-                    margin: 0 0 0 0;
-                    border-bottom: 4px solid rgba(getVar($material, brand, accent), 0.7);
-                }
-            }
-        }
-    }
-    
-}
-
-.wpforms-submit-container {
-    display: flex !important;
-    > button[type="submit"] {
-        flex: 1 1 100%;
-        margin: 0;
-    }
-}
-
-.wpforms-submit-container > button.wpforms-submit[type="submit"],
-a.button {
-    
-    // 
-    $g: getVar($sizing, gutter, px, normal);
-    // 
-    display: inline-block;
-    padding: 7.5px 30px;
-    margin: 0 $g $g 0;
-    // 
-    white-space: nowrap;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 600;
-    // 
-    //  globals above
-    //  specifics below
-    // 
-    &:not(.ghost){
-        @include solidStyle();
-        &.active {
-            @include ghostStyle();
-        }
-    }
-    &.ghost {
-        @include ghostStyle();
-        &.active {
-            @include solidStyle();
-        }
-    }
-    // 
-    &:last-of-type {
-        margin: 0 0 $g 0;
-    }
-    &:last-of-type:first-of-type {
-        margin: 0 0 0 0;
-    }
-}
 
 
 
@@ -195,5 +114,61 @@ ul.iconlinks {
             display: block;
         }
 
+    }
+}
+
+
+
+.wpforms-submit-container {
+    display: flex !important;
+
+    >button[type="submit"] {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+}
+
+.wpforms-submit-container>button.wpforms-submit[type="submit"],
+a.button {
+
+    // 
+    $g: getVar($sizing, gutter, px, normal);
+    // 
+    display: inline-block;
+    padding: 7.5px 30px;
+    margin: 0 $g $g 0;
+    // 
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    // 
+    //  globals above
+    //  specifics below
+    // 
+    &:not(.ghost) {
+        @include solidStyle();
+
+        &.active {
+            @include ghostStyle();
+        }
+    }
+
+    &.ghost {
+        @include ghostStyle();
+
+        &.active {
+            @include solidStyle();
+        }
+    }
+
+    // 
+    &:last-of-type {
+        margin: 0 0 $g 0;
+    }
+
+    &:last-of-type:first-of-type {
+        margin: 0 0 0 0;
     }
 }

@@ -1,5 +1,7 @@
 a {
     text-decoration: none;
+    color: rgba(getVar($material, shades, dark), 1);
+    border: none 0;
 }
 
 figure {
@@ -13,11 +15,15 @@ img {
     max-width: 100%;
     margin: 0 auto;
 }
-
 blockquote {
-    border-left: 1px solid #000;
-    padding-left: getVar($sizing, gutter, px, small);
-    text-align: left;
+    border-left: 4px solid rgba(getVar($material, brand, accent), 1);
+
+    @media screen and (max-width:640px) {
+        border-left: none 0;
+        padding: 0 0 15px 0;
+        margin: 0 0 0 0;
+        border-bottom: 4px solid rgba(getVar($material, brand, accent), 1);
+    }
 }
 
 hr,
