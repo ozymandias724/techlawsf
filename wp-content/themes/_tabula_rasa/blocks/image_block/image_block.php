@@ -28,3 +28,5 @@
 
     // echo return string
     echo $return['image_block'];
+    
+?>

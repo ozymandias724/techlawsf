@@ -4,7 +4,7 @@
 */
 
 include('classes/class.setup-theme.php');
-include('classes/class.cpts.php');
+include('classes/class.custom-posts.php');
 include('includes/ext.acf.php');
 include(get_template_directory() . '/classes/navwalker.php');
 
@@ -67,25 +67,23 @@ function add_slug_body_class( $classes ) {
 add_filter( 'body_class', 'add_slug_body_class' );
 
 
-/**
- *  Set ACF map API key (examples below)
-*/
-// 
-// acf free uses this:
-// add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
-// function my_acf_google_map_api($api)
-// {
-//     $api['key'] = 'xxx';
-//     return $api;
-// }
-// 
-// 
-// acf pro uses this
-// add_action('acf/init', 'set_maps_api_key');
-// function set_maps_api_key() {
-//     acf_update_setting('google_api_key', 'AIzaSyBBX0KJ6MEzWrMPeH84FNUftS9KcAA9-g4');
-// }
-// 
+//   Set ACF map API key (examples below)
+//       
+//   acf free uses this:
+//       add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+//       function my_acf_google_map_api($api)
+//       {
+//           $api['key'] = 'xxx';
+//           return $api;
+//       }
+//       
+//       
+//   acf pro uses this
+//       add_action('acf/init', 'set_maps_api_key');
+//       function set_maps_api_key() {
+//           acf_update_setting('google_api_key', 'AIzaSyBBX0KJ6MEzWrMPeH84FNUftS9KcAA9-g4');
+//       }
+//       
 add_action('acf/init', 'set_maps_api_key');
 function set_maps_api_key() {
     acf_update_setting('google_api_key', 'AIzaSyBBX0KJ6MEzWrMPeH84FNUftS9KcAA9-g4');
