@@ -26,7 +26,7 @@ get_header();
             // include the block
             if (file_exists($path)) {
                 include($path);
-            }
+            }            
         }
     }
     include( get_template_directory().'/parts/part.signup-form.php');

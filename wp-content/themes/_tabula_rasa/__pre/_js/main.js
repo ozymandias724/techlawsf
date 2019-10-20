@@ -39,8 +39,6 @@ $(window).on('load resize scroll', function (e) {
     }
     // handle 
     if( e.type == 'scroll' ){
-
-        
     }
 });
 // 

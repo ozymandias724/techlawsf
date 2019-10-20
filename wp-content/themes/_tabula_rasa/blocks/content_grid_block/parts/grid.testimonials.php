@@ -7,7 +7,7 @@
 
 $the_fields = get_fields($post->ID);
 
-if( is_page( 'testimonials' ) ){
+// if( is_page( 'testimonials' ) ){
 
     $return['long_testimonial'] = '';
     // get the fields for the testimonial
@@ -24,44 +24,43 @@ if( is_page( 'testimonials' ) ){
                 %s
             </div>
         </li>
-        <hr>
     ';
 
     // write the testimonial content (inside <li>)
     $return['long_testimonial'] .= sprintf(
         $guide['long_testimonial']
         ,( $i % 2 ) ? 'anim__fade-left' : 'anim__fade-right'
-        ,( !empty( $the_fields['testimonial']['key_phrase'] ) ? '<span>'.$the_fields['testimonial']['key_phrase'].'</span>' : '')
-        ,( !empty( $the_fields['testimonial']['testimonial'] ) ? '<blockquote>'.$the_fields['testimonial']['testimonial'].'</blockquote>' : '')
-        ,( !empty( $the_fields['testimonial']['name'] ) ? '<h4>'.$the_fields['testimonial']['name'].'</h4>' : '')
-        ,( !empty( $the_fields['testimonial']['position'] ) ? '<h6>'.$the_fields['testimonial']['position'].'</h6>' : '')
+        ,( !empty( $the_fields['testimonial']['key_phrase'] ) ? '<h3 class="keyphrase">'.$the_fields['testimonial']['key_phrase'].'</h3>' : '')
+        ,( !empty( $the_fields['testimonial']['testimonial'] ) ? '<div>'.$the_fields['testimonial']['testimonial'].'</div>' : '')
+        ,( !empty( $the_fields['testimonial']['name'] ) ? '<span class="name">'.$the_fields['testimonial']['name'].'</span>' : '')
+        ,( !empty( $the_fields['testimonial']['position'] ) ? '<span class="position">'.$the_fields['testimonial']['position'].'</span>' : '')
     );
 
     echo $return['long_testimonial'];
 
-}
-else {
+// }
+// else {
 
-    $return['short_testimonial'] = '';
+    // $return['short_testimonial'] = '';
 
-    $guide['short_testimonial'] = '
-        <li class="anim__fade anim__fade-up ">
-            <div>
-                <div>
-                    %s
-                </div>
-            </div>
-        </li>
-    ';
+    // $guide['short_testimonial'] = '
+    //     <li class="anim__fade anim__fade-up ">
+    //         <div>
+    //             <div>
+    //                 %s
+    //             </div>
+    //         </div>
+    //     </li>
+    // ';
     
-    $return['short_testimonial'] .= sprintf(
-        $guide['short_testimonial']
-        ,( !empty($the_fields['testimonial']['key_phrase']) ? '<p class="keyphrase">'.$the_fields['testimonial']['key_phrase'].'</p>' : '' )
-    );
+    // $return['short_testimonial'] .= sprintf(
+    //     $guide['short_testimonial']
+    //     ,( !empty($the_fields['testimonial']['key_phrase']) ? '<p class="keyphrase">'.$the_fields['testimonial']['key_phrase'].'</p>' : '' )
+    // );
     
-    echo $return['short_testimonial'];
+    // echo $return['short_testimonial'];
     
-}
+// }
 
 
 ?>

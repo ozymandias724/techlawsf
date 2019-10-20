@@ -4,6 +4,18 @@
  * 
  *   Content Grid 
  */
+    // start extras experimental ***
+    //  
+
+    if( !empty($cB['block_extras']) ){
+        $bgColor = ( !empty($cB['block_extras']['background_color']) ? 'style="background-color: '.$cB['block_extras']['background_color'].';"' : '' );
+        $hasBg = ( !empty($cB['block_extras']['background_color']) ? 'block__has-bg' : '' );
+        $lightText = ( !empty($cB['block_extras']['text_color']) ? 'block__light-text' : '' );
+    }
+    
+    //  
+    // end extras experimental ***
+
 wp_enqueue_style('contentgrid', get_template_directory_uri().'/blocks/content_grid_block/content_grid_block.css', 'main');
 
 if( !empty($cB) ){
@@ -19,7 +31,7 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
 
         // open up a section,
         // open up container inside section
-        $return['content_grid'] .= '<section class="site__block block__content_grid"><div class="container '.$cB['options']['width'].'">';
+        $return['content_grid'] .= '<section class="site__block block__content_grid '.$lightText.' '.$hasBg.'" '.$bgColor.'><div class="container '.$cB['options']['width'].'">';
 
         // check for the heading,
         if( !empty( $cB['heading'] ) ){
@@ -62,5 +74,7 @@ if( !empty($cB) && $cB['acf_fc_layout'] == 'content_grid_block' ){
         echo $return['content_grid'];
 	}
 }
+
+unset($bgColor, $hasBg, $lightText);
 
 ?>

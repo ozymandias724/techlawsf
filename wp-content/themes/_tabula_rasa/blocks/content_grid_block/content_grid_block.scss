@@ -53,7 +53,7 @@
         > .viewall {
             text-align: center;
             > a.button {
-                margin: $g auto 0 auto;
+                margin: (2 * $g) auto 0 auto;
             }
         }
         

@@ -6,12 +6,11 @@
 section.hero {
     $g: getVar($sizing, gutter, px, normal);
 
-    @include bgimage;
-    @include bgGradient();
+
 
     // 
     // 
-    > .container {
+    >.container {
         // 
         position: relative;
         z-index: 1;
@@ -23,26 +22,44 @@ section.hero {
         justify-content: center;
         text-align: left;
         // 
-        color: rgba(getVar($material, shades, light), 1);
+        color: rgba(getVar($colors, white, full), 1);
+
+        &.hero__dark-text {
+            color: rgba(getVar($colors, black, full), 1);
+        }
 
         >h1 {
-            font-weight: 300;
             letter-spacing: 5px;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-            margin: 0 0 $g 0;
-            @include fontS-80;
+            margin: 0 0 0 0;
+            font-size: 12.4rem;
+            line-height: 1.3;
         }
 
         >div {
+            padding: 0 0 0 1rem;
             >p {
-                font-size: 2.8rem;
-                line-height: 1.25;
-                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+                font-size: 3.4rem;
+                line-height: 1.3;
+            }
+        }
+        
+        
+        
+    }
+    
+    &.hero__hasimage {
+        @include bgimage;
+        @include bgGradient();
+        
+        > .container {
+            > h1, > div > p {
+                text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.66);
             }
         }
     }
 
 }
-body.home section.hero > .container  {
+
+body.home section.hero>.container {
     height: calc(66vh - 72px);
 }

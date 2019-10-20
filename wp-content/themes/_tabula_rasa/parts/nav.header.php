@@ -17,7 +17,7 @@
     }
     // if there is no custom logo, use the site title
     else {
-        $return['header'] .= '<a href="'.site_url().'"><div class="logo logo--text">'.get_bloginfo('name').'</div></a>';
+        $return['header'] .= '<a href="'.site_url().'"><div class="logo logo--text">TLSF</div></a>';
     }
     
 

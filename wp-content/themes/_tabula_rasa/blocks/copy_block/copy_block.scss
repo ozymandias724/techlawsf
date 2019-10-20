@@ -1,3 +1,7 @@
+// 
+@import '../../__pre/_sass/site/vars';
+@import '../../__pre/_sass/site/mixins';
+//
 section.block__copy {
     ul {
             display: block;
@@ -15,5 +19,11 @@ section.block__copy {
     }
     ul ul ul {
         list-style-type: square;
+    }
+
+    .container {
+        > div {
+            margin-top: getVar($sizing, gutter, px, large);
+        }
     }
 }

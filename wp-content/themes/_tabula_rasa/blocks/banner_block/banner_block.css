@@ -1,9 +1,3 @@
-section.site__block.block__banner {
-  background-color: rgba(85, 185, 190, 0.3333333333);
-}
-section.site__block.block__banner > .container {
-  padding: 5vw 0;
-}
 section.site__block.block__banner > .container > .flexgrid {
   margin-bottom: 0;
 }

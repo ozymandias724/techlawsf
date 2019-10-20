@@ -54,7 +54,7 @@ class SetupTheme
 	    wp_register_script( 'main'
 	    	, get_template_directory_uri() . '/__build/_js/main.js'
 	    	, array()
-            , filemtime(get_template_directory() . '/__build/_js/main.js')
+            , filemtime(get_template_directory('jquery') . '/__build/_js/main.js')
             , true
     	);
     }

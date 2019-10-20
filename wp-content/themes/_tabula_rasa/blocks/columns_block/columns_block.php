@@ -7,6 +7,19 @@
 * Each flexible content layout will be a row within that column.
 */
 
+    // start extras experimental ***
+    //  
+
+    if( !empty($cB['block_extras']) ){
+        $bgColor = ( !empty($cB['block_extras']['background_color']) ? 'style="background-color: '.$cB['block_extras']['background_color'].';"' : '' );
+        $hasBg = ( !empty($cB['block_extras']['background_color']) ? 'block__has-bg' : '' );
+        $lightText = ( !empty($cB['block_extras']['text_color']) ? 'block__light-text' : '' );
+    }
+    
+    //  
+    // end extras experimental ***
+
+
  wp_enqueue_style('columnsblock', get_template_directory_uri().'/blocks/columns_block/columns_block.css', 'main');
 
 // return string
@@ -16,7 +29,7 @@ $return['columns'] = '';
 
 // open section and container
 $return['columns_block'] .= '
-    <section class="site__block block__columns">
+    <section class="site__block block__columns '.$lightText.' '.$hasBg.'" '.$bgColor.'>
         <div class="container ' . $cB['width'] . '">
         '. (!empty($cB['heading']) ? '<h2 class="block-heading anim__fade anim__fade-up">' . $cB['heading'] . '</h2>' : '') . '
         '. (!empty($cB['sub_heading']) ? '<p class="block-subheading anim__fade anim__fade-up">' . $cB['sub_heading'] . '</p>' : '') . '
@@ -61,4 +74,5 @@ $return['columns_block'] .= $return['columns'];
 // close and echo the section
 echo $return['columns_block'] . '</div></section>';
 
+unset($bgColor, $hasBg, $lightText);
 ?>

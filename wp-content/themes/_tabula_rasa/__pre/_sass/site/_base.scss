@@ -1,6 +1,6 @@
 a {
     text-decoration: none;
-    color: rgba(getVar($material, shades, dark), 1);
+    color: rgba(getVar($colors, black, full), 1);
     border: none 0;
 }
 
@@ -52,30 +52,28 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.1ch;
     margin: 1.5rem 0 0 0;
     &:first-child { margin: 0; }
-    &.display {
-        font-weight: 300;
-    }
 }
 
 // size headings
 h1 {
-    font-size: 5rem;
+    font-size: 6.4rem;
 }
 
 h2 {
-    font-size: 3.4rem;
+    font-size: 4.8rem;
 }
 
 h3 {
-    font-size: 2.8rem;
+    font-size: 3.4rem;
 }
 
 h4 {
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 
 h5 {
@@ -83,7 +81,7 @@ h5 {
 }
 
 h6 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 p {
@@ -100,8 +98,8 @@ body {
     // basic styling for fonts
     font-family: "Lato", sans-serif;
     font-size: 1.6rem;
-    letter-spacing: 0.5px;
     font-weight: 300;
+    letter-spacing: 0.5px;
     // flex align the footer to the bottom
     display: flex;
     flex-flow: column nowrap;
@@ -162,6 +160,35 @@ footer {
             &.normal, &.narrow {
                 width: getVar($sizing, content, wide);
             }
+        }
+    }
+}
+
+main > {
+    // if the block has a bg
+    .site__block.block__has-bg {
+        margin: 0;
+        padding: getVar($sizing, gutter, px, large) 0;
+        &.block__light-text {
+            & {
+                color: rgba(getVar($colors, white, full), 1);
+            }
+            a.button {
+                border-color: rgba(getVar($material, brand, accent), 1);
+                color: rgba(getVar($colors, white, full), 1);
+            }
+        }
+
+        &:nth-last-of-type(2) {
+            + .prefooter {
+                margin: 0;
+            }
+        }
+    }
+    // if a block w/o a background has a block with a bg after it; restore the margin
+    .site__block:not(.block__has-bg) {
+        + .site__block.block__has-bg {
+            margin: getVar($sizing, gutter, vw, xlarge) 0 0 0;
         }
     }
 }

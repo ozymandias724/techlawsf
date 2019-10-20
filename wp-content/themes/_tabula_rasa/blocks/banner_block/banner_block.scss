@@ -5,14 +5,14 @@
 @import  '../../__pre/_sass/site/mixins';
 section.site__block.block__banner {
     
-    background-color: rgba(getVar($material, brand, accent), (1 / 3));
+    // background-color: rgba(getVar($material, brand, accent), (1 / 3));
     
 
     $g : getVar($sizing, gutter, px, normal);
 
     > .container {
 
-        padding: getVar($sizing, gutter, vw, large) 0;
+        // padding: getVar($sizing, gutter, vw, large) 0;
 
         > .flexgrid {
             margin-bottom: 0;
