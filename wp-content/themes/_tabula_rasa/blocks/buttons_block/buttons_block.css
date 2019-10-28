@@ -10,7 +10,7 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li:last-of-ty
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li i {
   font-size: 8rem;
-  color: #55b9be;
+  color: #21f3c3;
   margin: 15px 0;
   transition: color 0.25s ease;
 }
@@ -34,7 +34,7 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li p > span:b
   width: 0;
   height: 0;
   transition: width 0.25s ease;
-  border-bottom: 2px solid #FD5E0F;
+  border-bottom: 2px solid #F37022;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button) {
   color: #191919;
@@ -43,7 +43,7 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.b
   text-align: center;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):hover i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):focus i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):active i {
-  color: #fd5e0f;
+  color: #f37022;
 }
 section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):hover p > span:before, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):focus p > span:before, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):active p > span:before {
   width: 100%;

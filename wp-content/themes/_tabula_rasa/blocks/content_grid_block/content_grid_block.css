@@ -15,24 +15,24 @@
   border-radius: 0 12px;
 }
 .block__content_grid div.filters > a.button.ghost {
-  border: 2px solid #55b9be;
-  background-color: rgba(85, 185, 190, 0);
-  color: #55b9be;
+  border: 2px solid #21f3c3;
+  background-color: rgba(33, 243, 195, 0);
+  color: #21f3c3;
 }
 .block__content_grid div.filters > a.button.ghost:hover, .block__content_grid div.filters > a.button.ghost:active, .block__content_grid div.filters > a.button.ghost:focus {
-  border: 2px solid #55b9be;
-  background-color: #55b9be;
+  border: 2px solid #21f3c3;
+  background-color: #21f3c3;
   color: white;
 }
 .block__content_grid div.filters > a.button.ghost.active {
-  border: 2px solid #55b9be;
-  background-color: #55b9be;
+  border: 2px solid #21f3c3;
+  background-color: #21f3c3;
   color: white;
 }
 .block__content_grid div.filters > a.button.ghost.active:hover:not(.ghost), .block__content_grid div.filters > a.button.ghost.active:active:not(.ghost), .block__content_grid div.filters > a.button.ghost.active:focus:not(.ghost) {
-  border: 2px solid #55b9be;
-  background-color: rgba(85, 185, 190, 0);
-  color: #55b9be;
+  border: 2px solid #21f3c3;
+  background-color: rgba(33, 243, 195, 0);
+  color: #21f3c3;
 }
 .block__content_grid div.filters > a.button[data-term=all] {
   position: absolute;
@@ -62,7 +62,7 @@ section.block__content_grid .flexgrid .testimonial > div:first-child > h3 {
   padding: 30px 0 0 0;
 }
 section.block__content_grid .flexgrid .testimonial > div:first-child > div {
-  border-top: 2px solid rgba(85, 185, 190, 0.5);
+  border-top: 2px solid rgba(33, 243, 195, 0.5);
   padding-top: 30px;
 }
 section.block__content_grid .flexgrid .testimonial > div:last-child {

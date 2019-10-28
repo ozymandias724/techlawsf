@@ -27,8 +27,56 @@
 }
 
 @font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-BoldItalic.woff2") format("woff2"), url("../../library/fonts/JosefinSans-BoldItalic.woff") format("woff");
+  font-family: "Cormorant Garamond";
+  src: url("../../library/fonts/CormorantGaramond-Medium.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../../library/fonts/CormorantGaramond-MediumItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../library/fonts/Lato-Light.woff2") format("woff2"), url("../../library/fonts/Lato-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../library/fonts/Lato-LightItalic.woff2") format("woff2"), url("../../library/fonts/Lato-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../../library/fonts/CormorantGaramond-LightItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../../library/fonts/CormorantGaramond-Italic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../../library/fonts/CormorantGaramond-Light.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../library/fonts/Lato-Bold.woff2") format("woff2"), url("../../library/fonts/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../../library/fonts/CormorantGaramond-BoldItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-BoldItalic.woff") format("woff");
   font-weight: bold;
   font-style: italic;
 }
@@ -39,76 +87,10 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../../library/fonts/Montserrat-ExtraBold.woff") format("woff");
-  font-weight: 800;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-Italic.woff2") format("woff2"), url("../../library/fonts/JosefinSans-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../../library/fonts/Lato-Bold.woff2") format("woff2"), url("../../library/fonts/Lato-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-Thin.woff2") format("woff2"), url("../../library/fonts/Montserrat-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-Regular.woff2") format("woff2"), url("../../library/fonts/JosefinSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../../library/fonts/Lato-Regular.woff2") format("woff2"), url("../../library/fonts/Lato-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-BlackItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-BlackItalic.woff") format("woff");
-  font-weight: 900;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-Bold.woff2") format("woff2"), url("../../library/fonts/Montserrat-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
   font-family: "Cormorant Garamond";
   src: url("../../library/fonts/CormorantGaramond-SemiBoldItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-SemiBoldItalic.woff") format("woff");
   font-weight: 600;
   font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../../library/fonts/Montserrat-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-MediumItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-Regular.woff2") format("woff2"), url("../../library/fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: "Lato Hairline";
@@ -118,39 +100,9 @@
 }
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-MediumItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-MediumItalic.woff") format("woff");
-  font-weight: 500;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../../library/fonts/Lato-LightItalic.woff2") format("woff2"), url("../../library/fonts/Lato-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-BoldItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-Light.woff2") format("woff2"), url("../../library/fonts/Montserrat-Light.woff") format("woff");
-  font-weight: 300;
+  src: url("../../library/fonts/CormorantGaramond-SemiBold.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../../library/fonts/Lato-Black.woff2") format("woff2"), url("../../library/fonts/Lato-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-Italic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
 }
 @font-face {
   font-family: "Lato";
@@ -160,15 +112,9 @@
 }
 @font-face {
   font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-SemiBold.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../../library/fonts/CormorantGaramond-Bold.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-SemiBoldItalic.woff2") format("woff2"), url("../../library/fonts/JosefinSans-SemiBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
 }
 @font-face {
   font-family: "Lato";
@@ -177,88 +123,10 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-Light.woff2") format("woff2"), url("../../library/fonts/JosefinSans-Light.woff") format("woff");
+  font-family: "Lato Hairline";
+  src: url("../../library/fonts/Lato-Hairline.woff2") format("woff2"), url("../../library/fonts/Lato-Hairline.woff") format("woff");
   font-weight: 300;
   font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-Italic.woff2") format("woff2"), url("../../library/fonts/Montserrat-Italic.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("../../library/fonts/Lato-Light.woff2") format("woff2"), url("../../library/fonts/Lato-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-Medium.woff2") format("woff2"), url("../../library/fonts/Montserrat-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../../library/fonts/Montserrat-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-ExtraBoldItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-ExtraBoldItalic.woff") format("woff");
-  font-weight: 800;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-LightItalic.woff2") format("woff2"), url("../../library/fonts/JosefinSans-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-Bold.woff2") format("woff2"), url("../../library/fonts/JosefinSans-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-Medium.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-SemiBoldItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-SemiBoldItalic.woff") format("woff");
-  font-weight: 600;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-Light.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-ThinItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-ThinItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-LightItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-ExtraLightItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-ExtraLightItalic.woff") format("woff");
-  font-weight: 200;
-  font-style: italic;
 }
 @font-face {
   font-family: "Lato";
@@ -267,51 +135,15 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-Bold.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: "Lato";
+  src: url("../../library/fonts/Lato-Regular.woff2") format("woff2"), url("../../library/fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-Black.woff2") format("woff2"), url("../../library/fonts/Montserrat-Black.woff") format("woff");
+  font-family: "Lato";
+  src: url("../../library/fonts/Lato-Black.woff2") format("woff2"), url("../../library/fonts/Lato-Black.woff") format("woff");
   font-weight: 900;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-Thin.woff2") format("woff2"), url("../../library/fonts/JosefinSans-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-ThinItalic.woff2") format("woff2"), url("../../library/fonts/JosefinSans-ThinItalic.woff") format("woff");
-  font-weight: 100;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("../../library/fonts/CormorantGaramond-BoldItalic.woff2") format("woff2"), url("../../library/fonts/CormorantGaramond-BoldItalic.woff") format("woff");
-  font-weight: bold;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../library/fonts/Montserrat-LightItalic.woff2") format("woff2"), url("../../library/fonts/Montserrat-LightItalic.woff") format("woff");
-  font-weight: 300;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Josefin Sans";
-  src: url("../../library/fonts/JosefinSans-SemiBold.woff2") format("woff2"), url("../../library/fonts/JosefinSans-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Lato Hairline";
-  src: url("../../library/fonts/Lato-Hairline.woff2") format("woff2"), url("../../library/fonts/Lato-Hairline.woff") format("woff");
-  font-weight: 300;
   font-style: normal;
 }
 @media only screen {
@@ -401,7 +233,7 @@ body {
 }
 .logo.logo--text:hover, .logo.logo--text:focus, .logo.logo--text:active {
   border-bottom: 2px solid #C5707A;
-  border-bottom: 2px solid #FD5E0F;
+  border-bottom: 2px solid #F37022;
 }
 
 .site__social-media {
@@ -446,59 +278,59 @@ a.button {
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost),
 a.button:not(.ghost) {
-  border: 2px solid #fd5e0f;
-  background-color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: #f37022;
   color: white;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost):hover:not(.ghost), .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost):active:not(.ghost), .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost):focus:not(.ghost),
 a.button:not(.ghost):hover:not(.ghost),
 a.button:not(.ghost):active:not(.ghost),
 a.button:not(.ghost):focus:not(.ghost) {
-  border: 2px solid #fd5e0f;
-  background-color: rgba(253, 94, 15, 0);
-  color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: rgba(243, 112, 34, 0);
+  color: #f37022;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost).active,
 a.button:not(.ghost).active {
-  border: 2px solid #fd5e0f;
-  background-color: rgba(253, 94, 15, 0);
-  color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: rgba(243, 112, 34, 0);
+  color: #f37022;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost).active:hover, .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost).active:active, .wpforms-submit-container > button.wpforms-submit[type=submit]:not(.ghost).active:focus,
 a.button:not(.ghost).active:hover,
 a.button:not(.ghost).active:active,
 a.button:not(.ghost).active:focus {
-  border: 2px solid #fd5e0f;
-  background-color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: #f37022;
   color: white;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit].ghost,
 a.button.ghost {
-  border: 2px solid #fd5e0f;
-  background-color: rgba(253, 94, 15, 0);
-  color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: rgba(243, 112, 34, 0);
+  color: #f37022;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit].ghost:hover, .wpforms-submit-container > button.wpforms-submit[type=submit].ghost:active, .wpforms-submit-container > button.wpforms-submit[type=submit].ghost:focus,
 a.button.ghost:hover,
 a.button.ghost:active,
 a.button.ghost:focus {
-  border: 2px solid #fd5e0f;
-  background-color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: #f37022;
   color: white;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit].ghost.active,
 a.button.ghost.active {
-  border: 2px solid #fd5e0f;
-  background-color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: #f37022;
   color: white;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit].ghost.active:hover:not(.ghost), .wpforms-submit-container > button.wpforms-submit[type=submit].ghost.active:active:not(.ghost), .wpforms-submit-container > button.wpforms-submit[type=submit].ghost.active:focus:not(.ghost),
 a.button.ghost.active:hover:not(.ghost),
 a.button.ghost.active:active:not(.ghost),
 a.button.ghost.active:focus:not(.ghost) {
-  border: 2px solid #fd5e0f;
-  background-color: rgba(253, 94, 15, 0);
-  color: #fd5e0f;
+  border: 2px solid #f37022;
+  background-color: rgba(243, 112, 34, 0);
+  color: #f37022;
 }
 .wpforms-submit-container > button.wpforms-submit[type=submit]:last-of-type,
 a.button:last-of-type {
@@ -530,14 +362,14 @@ img {
 blockquote {
   padding: 0 0 0 15px;
   border: none 0;
-  border-left: 4px solid #55b9be;
+  border-left: 4px solid #21f3c3;
 }
 @media screen and (max-width: 640px) {
   blockquote {
     padding: 0 0 15px 0;
     margin: 0 0 0 0;
     border: none 0;
-    border-bottom: 4px solid #55b9be;
+    border-bottom: 4px solid #21f3c3;
   }
 }
 
@@ -697,7 +529,7 @@ main > .site__block.block__has-bg.block__light-text {
   color: white;
 }
 main > .site__block.block__has-bg.block__light-text a.button {
-  border-color: #55b9be;
+  border-color: #21f3c3;
   color: white;
 }
 main > .site__block.block__has-bg:nth-last-of-type(2) + .prefooter {
@@ -1495,7 +1327,7 @@ section.prefooter > .container {
   margin: 10vw auto 0 auto;
 }
 section.prefooter > .container > h4 {
-  color: #55b9be;
+  color: #21f3c3;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
@@ -1542,7 +1374,7 @@ footer .container > section a > span:before {
   width: 0;
   height: 0;
   transition: width 0.25s ease;
-  border-bottom: 2px solid #FD5E0F;
+  border-bottom: 2px solid #F37022;
 }
 footer .container > section a:hover > span:before, footer .container > section a:focus > span:before, footer .container > section a:active > span:before {
   width: 100%;
@@ -1580,7 +1412,7 @@ footer .iconlinks > li > a {
   color: #ECEBEA;
 }
 footer .iconlinks > li > a:hover, footer .iconlinks > li > a:focus, footer .iconlinks > li > a:active {
-  color: #FD5E0F;
+  color: #F37022;
 }
 footer .iconlinks > li > a .fab {
   font-size: 2.4rem;
@@ -1615,7 +1447,7 @@ header .navlinks > ul li a > span {
   display: inline-block;
   padding: 0 5px 2px 5px;
   font-size: 1.6rem;
-  line-height: 2.8rem;
+  line-height: 1;
   position: relative;
   padding-bottom: 2px;
 }
@@ -1629,7 +1461,7 @@ header .navlinks > ul li a > span:before {
   width: 0;
   height: 0;
   transition: width 0.25s ease;
-  border-bottom: 2px solid #FD5E0F;
+  border-bottom: 2px solid #F37022;
 }
 header .navlinks > ul li a:hover > span:before, header .navlinks > ul li a:focus > span:before, header .navlinks > ul li a:active > span:before {
   width: 100%;
@@ -1658,7 +1490,7 @@ header .navlinks > ul li.parent > a > span:after {
 }
 header .navlinks > ul li.parent:hover > a > span:after, header .navlinks > ul li.parent:focus > a > span:after, header .navlinks > ul li.parent:active > a > span:after {
   transform: translate(0, -50%) rotate(180deg);
-  color: #FD5E0F;
+  color: #F37022;
 }
 header .navlinks > ul li.parent:hover > .sub-menu, header .navlinks > ul li.parent:focus > .sub-menu, header .navlinks > ul li.parent:active > .sub-menu {
   display: flex;
@@ -1739,7 +1571,7 @@ header.static .header .navlinks > ul .sub-menu > li > a > span {
     display: block;
   }
   header > .container.mobilenav-opened .navicons > i.fas {
-    color: #FD5E0F;
+    color: #F37022;
   }
   header > .container.mobilenav-opened .navicons > i.fas.fa-times {
     display: block;
@@ -1971,7 +1803,7 @@ body.page-clients section.block__content_grid .container > div > ul > li > .cate
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #55b9be;
+  background-color: #21f3c3;
   color: white;
   padding: 10px 30px;
   font-weight: 400;
@@ -2026,7 +1858,7 @@ body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p
   width: 0;
   height: 0;
   transition: width 0.25s ease;
-  border-bottom: 2px solid #FD5E0F;
+  border-bottom: 2px solid #F37022;
 }
 body.page-our-team div.flexgrid > ul.team_members > li > a > div:not(.bgimage) p:first-of-type:before {
   width: 30px;
@@ -2042,7 +1874,7 @@ body.page-our-team div.flexgrid > ul.team_members > li > a:hover > div:not(.bgim
   width: 100%;
 }
 body.page-our-team div.flexgrid > ul.team_members > li > a:hover p:last-of-type {
-  color: #FD5E0F;
+  color: #F37022;
 }
 
 body.home main > .block__columns .block__card .block__image .container {

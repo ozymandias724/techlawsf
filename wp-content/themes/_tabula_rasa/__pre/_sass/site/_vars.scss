@@ -1,3 +1,5 @@
+
+// 
 // gets nested variables
 // i.e., getVar($type, nested key, nested value);
 @function getVar($v, $ks...) {
@@ -8,6 +10,8 @@
     @return $v;
 }
 
+
+// 
 $sizing : (
     content : (
         full : 100%
@@ -31,6 +35,23 @@ $sizing : (
         )
     )
 );
+
+
+
+// map of all theme base colors
+$sitecolors : (
+
+    brand : (
+        main : #F37022
+        ,accent : #21f3c3
+    )
+
+);
+
+
+// 
+// 
+// depricate all these colors
 
 $colors : (
     white : (
@@ -65,8 +86,10 @@ $material : (
         ,dark : #46779D
     )
     ,brand : (
-        main : #FD5E0F
-        ,accent : #55b9be
+        // main : #FD5E0F
+        main : #F37022
+        // ,accent : #55b9be
+        ,accent : #21f3c3
     )
     ,ui : (
         primary : #798793

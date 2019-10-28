@@ -68,10 +68,11 @@ foreach ($cB['buttons'] as $i => $button) {
     // if no image or icon, then its a normal button
     else {
 
+
         $return['buttons'] .= '
             <li class="anim__fade anim__fade-up">
                 <a class="button ghost" href="'.( !empty($button['link']['url']) ? ''.$button['link']['url'].'' : '' ).'" title="View">
-                    '.( !empty($button['text']) ? $button['text'] : '' ).'
+                    '.( !empty($button['text']) ? $button['text'] : $button['link']['title'] ).'
                 </a>
             </li>
         ';
