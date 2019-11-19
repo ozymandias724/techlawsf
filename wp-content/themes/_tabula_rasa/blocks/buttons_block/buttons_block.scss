@@ -28,10 +28,10 @@ section.site__block.block__buttons {
 
                     // 
                     i {
-                        font-size: 8rem;
-                        color: rgba(getVar($material, brand, accent), 1);
+                        font-size: 4.8rem;
+                        color: rgba(getVar($pallete, brand, daccent), 1);
                         margin: $g 0;
-                        transition: color 0.25s ease;
+                        transition: all 0.4s ease;
                     }
 
                     p {
@@ -50,7 +50,7 @@ section.site__block.block__buttons {
 
                     // the whole block is the button (icon + title)
                     >a:not(.button) {
-                        color: rgba(getVar($material, shades, dark), 1);
+                        color: rgba(getVar($pallete, basic, black), 1);
                         display: block;
                         margin: 0;
                         // padding: $g 0;
@@ -59,11 +59,13 @@ section.site__block.block__buttons {
                         &:focus,
                         &:active {
                             i {
-                                color: rgba(getVar($material, brand, main), 1);
+                                transform: translateY(-10%);
+                                color: rgba(getVar($pallete, brand, daccent), 1);
                             }
                             p > span {
+                                color: rgba(getVar($pallete, brand, daccent), 1);
                                 &:before {
-                                    width: 100%;
+                                    // width: 100%;
                                 }
                             }
                         }

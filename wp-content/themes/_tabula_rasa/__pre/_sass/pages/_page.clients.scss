@@ -32,14 +32,15 @@ body.page-clients {
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: center;
-                    transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1), opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+                    // transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1), opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
                     padding: $g;
                     text-align: left;
-
-
+                    
+                    
                     // Card Styles:
-                    // background-color:rgba(getVar($colors, white, full), 1);
+                    // background-color:rgba(getVar($pallete, basic, white), 1);
                     @include boxshadow(1);
+                    transition: all 1s ease-in-out;
 
                     // 
                     >.info {
@@ -104,7 +105,7 @@ body.page-clients {
                         position: absolute;
                         top: 0;
                         right: 0;
-                        background-color: rgba(getVar($material, brand, accent), 1);
+                        background-color: rgba(getVar($pallete, brand, main), 1);
                         color: white;
                         padding: 10px 30px;
                         font-weight: 400;

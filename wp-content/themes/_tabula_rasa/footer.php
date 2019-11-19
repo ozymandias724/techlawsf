@@ -8,14 +8,14 @@
     
     // get the address
     // (acf extension)
-    $return['address'] = ( !empty($tS['address']) ? get_the_address($tS['address']) : '' );
+    $return['address'] = ( !empty($tS['address']) ? '<a href="#" title="">'.get_the_address($tS['address']).'</a>' : '' );
 
     // get the site custom logo or site name
     $return['logo'] = '';
     if( has_custom_logo() ){
         $return['logo'] = get_custom_logo();
     } else {
-        $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><div class="logo logo--text">'.get_bloginfo('name').'</div></a>';
+        $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><h4><span>'.get_bloginfo('name').'</span></h4></a>';
     }
 
     // 
@@ -23,7 +23,7 @@
     // 
     if (has_nav_menu('footer_1')) {
         
-        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4>'.get_nav_menu_name('footer_1').'</h4>';
+        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4><span>'.get_nav_menu_name('footer_1').'</span></h4>';
         
         $args = array(
             'theme_location' => 'footer_1'
@@ -40,7 +40,7 @@
     }
     
     if (has_nav_menu('footer_2')) {
-        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4>'.get_nav_menu_name('footer_2').'</h4>';
+        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4><span>'.get_nav_menu_name('footer_2').'</span></h4>';
         $args = array(
             'theme_location' => 'footer_2'
             ,'walker' => new Tabula_Rasa_Nav_Menu
@@ -64,7 +64,7 @@
                     %s
                 </section>                
                 <section class="anim__fade anim__fade-up footer-contactus">
-                    <h4>Contact Us</h4>
+                    <h4><span>Contact Us</span></h4>
                     %s
                     %s
                     %s

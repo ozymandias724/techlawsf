@@ -14,7 +14,7 @@
     $guide['signup'] = '
         <section class="prefooter">
             <div class="container narrow">
-                <h4 class="anim__fade anim__fade-up">Get in touch</h4>
+                <h2 class="anim__fade anim__fade-up">Get in touch</h2>
                 <div class="anim__fade anim__fade-up">
                     %s
                 </div>

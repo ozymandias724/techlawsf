@@ -5,18 +5,19 @@
 // 
 
 section.prefooter {
-    border-top: 1px solid rgba(getVar($material, shades, light), 1);
+    border-top: 2px solid rgba(getVar($pallete, basic, gray), 1);
     > .container {
         margin: getVar($sizing, gutter, vw, xlarge) auto 0 auto;
-        > h4 {
-            color: rgba(getVar($material, brand, accent), 1);
-            text-transform: uppercase;
-            font-weight: bold;
+        > h2 {
+            // color: rgba(getVar($pallete, brand, main), 1);
+            // text-transform: uppercase;
+            // font-weight: bold;
             text-align: center;
             
         }
 
         > div {
+            margin: getVar($sizing, gutter, vw, large) 0 0 0;
 
             >.wpforms-container {
                 margin: 0;

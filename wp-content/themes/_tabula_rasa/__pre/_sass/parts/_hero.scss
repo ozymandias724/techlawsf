@@ -22,23 +22,26 @@ section.hero {
         justify-content: center;
         text-align: left;
         // 
-        color: rgba(getVar($colors, white, full), 1);
+        color: rgba(getVar($pallete, basic, white), 1);
 
         &.hero__dark-text {
-            color: rgba(getVar($colors, black, full), 1);
+            color: rgba(getVar($pallete, basic, black), 1);
         }
 
         >h1 {
-            letter-spacing: 5px;
             margin: 0 0 0 0;
-            font-size: 12.4rem;
-            line-height: 1.3;
+            font-size: 12rem;
+            font-weight: 100;
+            letter-spacing: -1px;
+            line-height: 1;
+            padding: 5px 0;
         }
 
         >div {
+            margin: getVar($sizing, gutter, px, large) 0 0 0;
             padding: 0 0 0 1rem;
             >p {
-                font-size: 3.4rem;
+                font-size: 2.4rem;
                 line-height: 1.3;
             }
         }

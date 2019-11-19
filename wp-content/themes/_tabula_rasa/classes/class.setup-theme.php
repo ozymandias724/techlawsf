@@ -4,6 +4,12 @@
  */
 class SetupTheme
 {
+
+    /**
+     * Initialize this Class (called like a constructor I guess)
+     *
+     * @return void
+     */
 	public static function _init(){
 
         // 
@@ -16,7 +22,13 @@ class SetupTheme
 		add_action( 'wp_enqueue_scripts', 'SetupTheme::wp_enqueue_scripts');
         // 
     }
-	// 
+
+
+	/**
+     * Hooks into WordPress after_setup_theme action
+     *
+     * @return void
+     */
 	public static function after_setup_theme(){
 		add_theme_support( 'html5' );
 		add_theme_support( 'post-thumbnails' );
@@ -27,49 +39,73 @@ class SetupTheme
             ,'footer_1' => 'Footer (1st column)'
             ,'footer_2' => 'Footer (2nd column)'
         ));
-	}
-	// 
+    }
+    
+	/**
+     * Hook into WordPress Init action
+     *
+     * @return void
+     */ 
 	public static function init(){
         add_post_type_support( 'page', 'excerpt' );
 	}
 
 
-	// Enqueue Scripts (hook)
-	public static function wp_enqueue_scripts(){
-	    SetupTheme::register_javascript();
-	    SetupTheme::enqueue_javascript();
-	    SetupTheme::register_styles();
-	    SetupTheme::enqueue_styles();
-	}
-
     /**
-     * register javascript
+     * Hook into WordPress wp_enqueue_scripts action
      *
      * @return void
      */
-	public static function register_javascript(){
+	public static function wp_enqueue_scripts(){
+        // register styles
+        SetupTheme::register_styles();
+        // register scripts
+        SetupTheme::register_scripts();
+        // enqueue styles
+	    SetupTheme::enqueue_styles();
+        // enqueue scripts
+	    SetupTheme::enqueue_scripts();
+	}
+
+    /**
+     * Register Scripts
+     *
+     * @return void
+     */
+	public static function register_scripts(){
 
         // wp_deregister_script('jquery');
         
-	    wp_register_script( 'main'
+        // main theme scripts
+	    wp_register_script( 
+            'main'
 	    	, get_template_directory_uri() . '/__build/_js/main.js'
 	    	, array()
-            , filemtime(get_template_directory('jquery') . '/__build/_js/main.js')
+            , filemtime(get_template_directory() . '/__build/_js/main.js')
             , true
     	);
     }
 
+    /**
+     * Register Stylesheets
+     *
+     * @return void
+     */
 	public static function register_styles(){
-	    wp_register_style( 'main'
+
+        // main theme styles
+	    wp_register_style( 
+            'main'
 	    	, get_template_directory_uri() . '/__build/_css/main.css'
-            , false
-	    	, filemtime(get_template_directory() . '/__build/_css/main.css')
+            , array()
+            , filemtime(get_template_directory() . '/__build/_css/main.css')
+            ,'all'
         );   
     }
     
 	// 
-	public static function enqueue_javascript(){
-	    wp_enqueue_script( 'main' );
+	public static function enqueue_scripts(){
+        wp_enqueue_script( 'main' );
 	}
 	public static function enqueue_styles(){
         wp_enqueue_style( 'main' );
@@ -90,7 +126,7 @@ class SetupTheme
         remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
         remove_action('wp_head', 'print_emoji_detection_script', 7);
         remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0); // Remove shortlink
-        remove_action( 'wp_head', 'wp_resource_hints', 2 );
+        remove_action('wp_head', 'wp_resource_hints', 2 );
         remove_action('wp_print_styles', 'print_emoji_styles');
 
         // 

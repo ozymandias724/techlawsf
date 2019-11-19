@@ -31,10 +31,10 @@
             }
 
             &.ghost {
-                @include ghostStyle($bgC:getVar($material, brand, accent));
+                @include ghostStyle($bgC:getVar($pallete, brand, daccent));
 
                 &.active {
-                    @include solidStyle($bgC:getVar($material, brand, accent));
+                    @include solidStyle($bgC:getVar($pallete, brand, main));
                 }
             }
 

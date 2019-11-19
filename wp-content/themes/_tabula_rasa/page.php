@@ -14,6 +14,15 @@ get_header();
 
     // get hero
     include(get_template_directory() . '/parts/part.hero.php');
+    
+    
+    // if this is the front page...
+    if( is_front_page() && !empty($fields['client_spotlight']['status']) ){
+        
+        include(get_template_directory() . '/parts/part.client-spotlight.php');
+
+    }
+    
 
     /**
      *  Loop thru the 'content blocks' flexible content field
@@ -26,7 +35,7 @@ get_header();
             // include the block
             if (file_exists($path)) {
                 include($path);
-            }            
+            }
         }
     }
     include( get_template_directory().'/parts/part.signup-form.php');

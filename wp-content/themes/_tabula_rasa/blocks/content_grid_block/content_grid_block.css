@@ -15,24 +15,24 @@
   border-radius: 0 12px;
 }
 .block__content_grid div.filters > a.button.ghost {
-  border: 2px solid #21f3c3;
-  background-color: rgba(33, 243, 195, 0);
-  color: #21f3c3;
+  border: 2px solid #ef610d;
+  background-color: rgba(239, 97, 13, 0);
+  color: #ef610d;
 }
 .block__content_grid div.filters > a.button.ghost:hover, .block__content_grid div.filters > a.button.ghost:active, .block__content_grid div.filters > a.button.ghost:focus {
-  border: 2px solid #21f3c3;
-  background-color: #21f3c3;
+  border: 2px solid #ef610d;
+  background-color: #ef610d;
   color: white;
 }
 .block__content_grid div.filters > a.button.ghost.active {
-  border: 2px solid #21f3c3;
-  background-color: #21f3c3;
+  border: 2px solid #9f5b77;
+  background-color: #9f5b77;
   color: white;
 }
 .block__content_grid div.filters > a.button.ghost.active:hover:not(.ghost), .block__content_grid div.filters > a.button.ghost.active:active:not(.ghost), .block__content_grid div.filters > a.button.ghost.active:focus:not(.ghost) {
-  border: 2px solid #21f3c3;
-  background-color: rgba(33, 243, 195, 0);
-  color: #21f3c3;
+  border: 2px solid #9f5b77;
+  background-color: rgba(159, 91, 119, 0);
+  color: #9f5b77;
 }
 .block__content_grid div.filters > a.button[data-term=all] {
   position: absolute;
@@ -62,7 +62,7 @@ section.block__content_grid .flexgrid .testimonial > div:first-child > h3 {
   padding: 30px 0 0 0;
 }
 section.block__content_grid .flexgrid .testimonial > div:first-child > div {
-  border-top: 2px solid rgba(33, 243, 195, 0.5);
+  border-top: 2px solid rgba(159, 91, 119, 0.5);
   padding-top: 30px;
 }
 section.block__content_grid .flexgrid .testimonial > div:last-child {

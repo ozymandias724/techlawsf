@@ -17,7 +17,7 @@
 
         $('.block__banner .flexgrid > ul').slick({
             autoplay: true
-            // ,autoplaySpeed: 5000
+            ,autoplaySpeed: 4000
             ,slidesToShow: 5
             ,centerMode: true
             ,centerPadding: 0

@@ -4,7 +4,7 @@
 .popup {
 
     $g : getVar($sizing, gutter, px, normal);
-    background-color: rgba(getVar($material, shades, light), 1);
+    background-color: rgba(getVar($pallete, basic, white), 1);
     padding: ($g * 2);
     margin: 5vh auto;
     width: getVar($sizing, content, normal);

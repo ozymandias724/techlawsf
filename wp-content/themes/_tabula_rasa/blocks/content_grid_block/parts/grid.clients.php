@@ -9,7 +9,7 @@ $the_fields = get_fields($post->ID);
 
 $return['client_list'] = '';
 $guide['client_list'] = '
-    <li class="%s anim__fade anim__fade-up">
+    <li %s class="anim__fade anim__fade-up">
         %s
         <div class="info">
             <div>

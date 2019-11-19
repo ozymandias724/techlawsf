@@ -29,12 +29,12 @@ header
                 a {
                     display: block; // using flexbox
 
-                    // color: getVar($material, shades, dark); // dark on light
+                    // color: getVar($pallete, basic, black); // dark on light
 
                     // 
                     // link text (and chevron if a parent) accent underline effect
                     >span {
-                        color: getVar($material, shades, light); // light on dark
+                        // color: getVar($pallete, basic, white); // light on dark
                         white-space: nowrap; // no line wrapping allowed
                         letter-spacing: 1px;
                         display: inline-block;
@@ -86,7 +86,7 @@ header
                             // rotate chevron
                             &:after {
                                 transform: translate(0, -50%) rotate(180deg);
-                                color: getVar($material, brand, main);
+                                color: getVar($pallete, brand, main);
                             }
                         }
     
@@ -131,21 +131,18 @@ header
                     position: absolute;
                     top: 100%;
                     right: 0;
-                    z-index: 9;
+                    // z-index: 9;
                     // 
-                    border: 1px solid rgba(getVar($material, shades, dark), 0.5);
                     
-                    // 
-                    // background-color: rgba(getVar($material, shades, light), 0.95);
-                    background-color: rgba(getVar($material, shades, dark), 1);
-                    border: 1px solid rgba(getVar($material, shades, light), 0.5);
-    
-                    
-                    @include boxshadow(2);
+                    background-color: rgba(getVar($pallete, basic, white), 1);
+                    @include boxshadow(1);
                     >li {
                         padding: 7.5px 0;
                         >a {
-                            padding: 0 15px;
+                            padding: 0px 15px;
+                            > span {
+                                padding: 2px 0;
+                            }
                         }
                         &:hover, &:focus, &:active {
                             > a >span:before {
@@ -173,18 +170,18 @@ header
 // overrides!
 header.fixed.fadein {
     .navlinks > ul > li >a>span {
-        color: getVar($colors, white, full);
+        color: getVar($pallete, basic, white);
     }
 }
 header.static {
     .logo.logo--text,
     .navlinks>ul>li>a>span{
-        color: getVar($material, shades, dark);
+        color: getVar($pallete, basic, black);
     }
     .header .navlinks>ul .sub-menu{
-        background-color: rgba(getVar($material, shades, light), 1);
+        background-color: rgba(getVar($pallete, basic, white), 1);
         > li > a > span {
-            color: getVar($material, shades, dark);
+            color: getVar($pallete, basic, black);
         }
     }
 }
@@ -199,7 +196,7 @@ header.static {
             .navicons {
                 display: block;
                 padding: 5px;
-                color: getVar($material, shades, light);
+                color: getVar($pallete, basic, white);
 
                 >i.fas {
                     &.fa-times {
@@ -215,7 +212,7 @@ header.static {
             &.mobilenav-opened {
                 .navicons {
                     >i.fas {
-                        color: getVar($material, brand, main);
+                        color: getVar($pallete, brand, main);
 
                         &.fa-times {
                             display: block;
@@ -235,11 +232,11 @@ header.static {
                     left: 0;
                     width: 100%;
                     height: calc(100% - 72px);
-                    background-color: rgba(getVar($material, shades, dark), 0.5);   // tinted clickgaurd
+                    background-color: rgba(getVar($pallete, basic, black), 0.5);   // tinted clickgaurd
 
                     >ul.menu {
-                        border: 1px solid rgba(getVar($material, shades, light), 0.5);
-                        background-color: rgba(getVar($material, shades, dark), 1);
+                        border: 1px solid rgba(getVar($pallete, basic, white), 0.5);
+                        background-color: rgba(getVar($pallete, basic, black), 1);
                         display: flex;
                         flex-flow: column nowrap;
                         width: 80%;

@@ -8,9 +8,9 @@
 footer {
     // standard gutter
     $g: getVar($sizing, gutter, px, normal);
-    background-color: getVar($material, shades, dark);
-    color: getVar($material, shades, light);
-    padding: $g 0;
+    background-color: getVar($pallete, brand, dshade);
+    color: getVar($pallete, basic, white);
+    padding: getVar($sizing, gutter, vw, large) 0;
     
     .container {
         display: flex;
@@ -23,7 +23,7 @@ footer {
             a {
                 display: block; // using flexbox
                 white-space: nowrap; // no line wrapping allowed
-                color: getVar($material, shades, light); // dark on light
+                color: getVar($pallete, basic, white); // dark on light
 
                 // link text (and chevron if a parent) accent underline effect
                 >span {
@@ -53,10 +53,15 @@ footer {
             // footer section headings
             .logo.logo--text,
             h4 {
-                color: getVar($material, shades, light);
-                border-bottom: 1px solid getVar($material, shades, light);
                 margin: 0 auto getVar($sizing, gutter, px, small) auto;
-                padding: 0 0 2px 0;
+                // 
+                // underline only under the text
+                > span {
+                    font-size: 3rem;
+                    letter-spacing: 1px;
+                    color: getVar($pallete, basic, white);
+                    border-bottom: 1px solid getVar($pallete, basic, white);
+                }
             }
 
 
@@ -65,8 +70,12 @@ footer {
     }
     
     .address {
-        >div {
+        >div.address-columns {
             margin: 5px 0;
+        }
+        .region,
+        .postal-code {
+            margin-left: 5px;
         }
     }
 
@@ -90,9 +99,9 @@ footer {
         padding: ($g / 2) 0;
         > li {
             > a {
-                color: getVar($material, shades, light);
+                color: getVar($pallete, basic, white);
                 &:hover, &:focus, &:active {
-                    color: getVar($material, brand, main);
+                    color: getVar($pallete, brand, daccent);
                 }
                 
                 .fab {

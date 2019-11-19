@@ -5,6 +5,7 @@
 */
 import $ from 'jquery'; // get jquery from npm see package.json for version
 import Magnific from 'magnific-popup'; // remove this and integrate into the relevant block
+import Slick from 'slick-carousel-browserify';
 
 // fire immediately when the script is loaded... see $.ready below
 
@@ -84,6 +85,18 @@ $(function() {
 
 
 
+    if ( $('.client_spotlight-banner > ul').length ) {``
+        $('.client_spotlight-banner > ul').slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 5,
+            centerMode: true,
+            centerPadding: 0,
+            arrows: false
+        });   
+    }
+
+    
 
     // if there are clients on the page
     if ($('.block__content_grid ul.clients').length) {
