@@ -19,6 +19,13 @@ body.page-practice-areas {
 
         .flexgrid.cols-1 {
 
+            .card {
+
+                .content {
+                    align-items: flex-start;
+                }
+                
+            }
 
             @media screen and (max-width: 720px){
                 .card .content {

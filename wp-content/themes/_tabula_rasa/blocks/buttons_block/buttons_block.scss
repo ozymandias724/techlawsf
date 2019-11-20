@@ -28,7 +28,7 @@ section.site__block.block__buttons {
 
                     // 
                     i {
-                        font-size: 4.8rem;
+                        font-size: 6rem;
                         color: rgba(getVar($pallete, brand, daccent), 1);
                         margin: $g 0;
                         transition: all 0.4s ease;
@@ -40,14 +40,15 @@ section.site__block.block__buttons {
                             display: inline-block;
                             text-transform: uppercase;
                             font-weight: normal;
+                            font-size: 2rem;
                             @include accentUnderline();
                         }
                     }
-
+                    
                     > a.button {
                         
                     }
-
+                    
                     // the whole block is the button (icon + title)
                     >a:not(.button) {
                         color: rgba(getVar($pallete, basic, black), 1);
@@ -65,7 +66,7 @@ section.site__block.block__buttons {
                             p > span {
                                 color: rgba(getVar($pallete, brand, daccent), 1);
                                 &:before {
-                                    // width: 100%;
+                                    width: 100%;
                                 }
                             }
                         }

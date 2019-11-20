@@ -38,7 +38,11 @@ get_header();
             }
         }
     }
-    include( get_template_directory().'/parts/part.signup-form.php');
+
+    if( !is_page( 'contact' ) ){
+        include( get_template_directory().'/parts/part.signup-form.php');
+    }
+    
 
 
     ?>

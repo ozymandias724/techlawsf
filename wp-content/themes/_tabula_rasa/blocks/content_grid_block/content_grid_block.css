@@ -51,7 +51,7 @@ section.block__content_grid .flexgrid hr {
   margin: 60px 0;
 }
 section.block__content_grid .flexgrid .testimonial .name {
-  display: none;
+  display: block;
 }
 section.block__content_grid .flexgrid .testimonial > div:first-child {
   display: flex;

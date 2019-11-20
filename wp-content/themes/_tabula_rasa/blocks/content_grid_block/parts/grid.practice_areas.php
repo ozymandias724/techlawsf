@@ -30,7 +30,7 @@ $return['practice_area'] = sprintf(
     ,get_permalink($post->ID)
     ,$post->post_title
     ,'<h3><span>'.$post->post_title . '</span></h3>'
-    ,( !empty( $the_fields['index_view']['excerpt'] ) ? ''.$the_fields['index_view']['excerpt'].'' : '' )
+    ,( !empty( $the_fields['index_view']['excerpt'] ) ? '<p>'.$the_fields['index_view']['excerpt'].'</p>' : '' )
     ,( !empty( $the_fields['index_view']['image']['url'] ) ? ''.$the_fields['index_view']['image']['url'].'' : '' )
 );
 

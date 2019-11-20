@@ -1,0 +1,18 @@
+// 
+@import '../../__pre/_sass/site/vars';
+@import '../../__pre/_sass/site/mixins';
+
+// 
+.site__block.block__form {
+
+
+    >.container {
+        $g: getVar($sizing, gutter, px, normal);
+
+        > div {
+            margin: $g 0 0 0;
+        }
+    }
+
+
+}

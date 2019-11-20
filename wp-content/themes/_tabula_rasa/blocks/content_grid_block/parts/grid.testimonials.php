@@ -7,8 +7,6 @@
 
 $the_fields = get_fields($post->ID);
 
-// if( is_page( 'testimonials' ) ){
-
     $return['long_testimonial'] = '';
     // get the fields for the testimonial
 
@@ -38,29 +36,6 @@ $the_fields = get_fields($post->ID);
 
     echo $return['long_testimonial'];
 
-// }
-// else {
-
-    // $return['short_testimonial'] = '';
-
-    // $guide['short_testimonial'] = '
-    //     <li class="anim__fade anim__fade-up ">
-    //         <div>
-    //             <div>
-    //                 %s
-    //             </div>
-    //         </div>
-    //     </li>
-    // ';
-    
-    // $return['short_testimonial'] .= sprintf(
-    //     $guide['short_testimonial']
-    //     ,( !empty($the_fields['testimonial']['key_phrase']) ? '<p class="keyphrase">'.$the_fields['testimonial']['key_phrase'].'</p>' : '' )
-    // );
-    
-    // echo $return['short_testimonial'];
-    
-// }
 
 
 ?>

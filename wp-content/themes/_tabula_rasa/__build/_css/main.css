@@ -1800,6 +1800,9 @@ header.static .header .navlinks > ul .sub-menu > li > a > span {
 body.page-practice-areas ul.practice_areas > li > a {
   color: black;
 }
+body.page-practice-areas .site__block.block__content_grid > .container .flexgrid.cols-1 .card .content {
+  align-items: flex-start;
+}
 @media screen and (max-width: 720px) {
   body.page-practice-areas .site__block.block__content_grid > .container .flexgrid.cols-1 .card .content {
     order: 2;
