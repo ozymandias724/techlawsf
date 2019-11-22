@@ -9,6 +9,10 @@ footer {
     // standard gutter
     $g: getVar($sizing, gutter, px, normal);
     background-color: getVar($pallete, brand, dshade);
+    background: rgb(38, 30, 53);
+    background: linear-gradient(120deg, rgba(38, 30, 53, 1) 0%, rgba(38, 30, 53, 1) 33%, rgba(159, 91, 119, 1) 100%);
+
+
     color: getVar($pallete, basic, white);
     padding: getVar($sizing, gutter, vw, large) 0;
     

@@ -10,15 +10,56 @@ body.home {
     main {
 
 
-        .client_spotlight {
+        .site__block.block__buttons {
 
+            .flexgrid {
+                $g : getVar($sizing, gutter, px, normal);
+                > ul {
+                    > li {
+                        margin: 0 0 getVar($sizing, gutter, vw, large) 0;
+                        &:last-child{
+                            margin: 0;
+                        }
+                        > a {
+                            display: inline-block;
+                            i {
+
+                                margin: 0 $g 0 0;
+                            }
+                            i,p {
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+
+                        }
+                    }
+                }
+            }
+            
+        }
+        
+        
+        
+        
+
+        .client_spotlight {
+            
             //
             //
             //
             //
             .client_spotlight-banner {
-                margin: getVar($sizing, gutter, vw, large) 0 0 0;
+                
                 overflow: hidden;
+                padding: getVar($sizing,gutter,vw,normal) 0;
+                margin: getVar($sizing, gutter, vw, large) 0 0 0;                
+                // 
+                border-top: 2px solid rgba(getVar($pallete,brand,dshade), 0.66);
+                border-bottom: 2px solid rgba(getVar($pallete,brand,dshade), 0.66);
+                // 
+                // 
+                // 
+                
                 >ul,
                 .slick-track {
                     flex-flow: row nowrap;
@@ -66,6 +107,7 @@ body.home {
             // 
             // 
             li.featured_client {
+                
                 // 
                 display: flex;
                 flex-flow: column nowrap;

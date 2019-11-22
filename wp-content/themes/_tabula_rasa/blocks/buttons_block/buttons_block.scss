@@ -44,13 +44,8 @@ section.site__block.block__buttons {
                             @include accentUnderline();
                         }
                     }
-                    
-                    > a.button {
-                        
-                    }
-                    
                     // the whole block is the button (icon + title)
-                    >a:not(.button) {
+                    >a {
                         color: rgba(getVar($pallete, basic, black), 1);
                         display: block;
                         margin: 0;

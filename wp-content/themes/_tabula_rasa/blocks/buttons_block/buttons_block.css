@@ -37,20 +37,20 @@ section.site__block.block__buttons > .container > .flexgrid > ul > li p > span:b
   transition: width 0.25s ease;
   border-bottom: 2px solid #ef610d;
 }
-section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button) {
+section.site__block.block__buttons > .container > .flexgrid > ul > li > a {
   color: black;
   display: block;
   margin: 0;
   text-align: center;
 }
-section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):hover i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):focus i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):active i {
+section.site__block.block__buttons > .container > .flexgrid > ul > li > a:hover i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:focus i, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:active i {
   transform: translateY(-10%);
   color: #ef610d;
 }
-section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):hover p > span, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):focus p > span, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):active p > span {
+section.site__block.block__buttons > .container > .flexgrid > ul > li > a:hover p > span, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:focus p > span, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:active p > span {
   color: #ef610d;
 }
-section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):hover p > span:before, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):focus p > span:before, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:not(.button):active p > span:before {
+section.site__block.block__buttons > .container > .flexgrid > ul > li > a:hover p > span:before, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:focus p > span:before, section.site__block.block__buttons > .container > .flexgrid > ul > li > a:active p > span:before {
   width: 100%;
 }
 section.site__block.block__buttons > .container > .flexgrid .button:last-of-type:first-of-type {

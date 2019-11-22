@@ -103,7 +103,7 @@
                   %s
                </ul>
             </div>
-            <div class="client_spotlight-banner">
+            <div class="client_spotlight-banner anim__fade anim__fade-up">
                <ul>
                   %s
                </ul>
@@ -116,7 +116,7 @@
         $guide['client_spotlight']
         ,'<h2 class="anim__fade anim__fade-up">'.$cB['heading'].'</h2>'
         ,'<p class="anim__fade anim__fade-up">'.$cB['sub_heading'].'</p>'
-        ,'<p><a class="button ghost" href="'.( !empty($cB['button']['url']) ? ''.$cB['button']['url'].'' : '' ).'" title="View">'.( !empty($cB['button']['text']) ? $cB['button']['text'] : $cB['button']['title'] ).'</a></p>'
+        ,'<p><a class="button ghost anim__fade anim__fade-up" href="'.( !empty($cB['button']['url']) ? ''.$cB['button']['url'].'' : '' ).'" title="View">'.( !empty($cB['button']['text']) ? $cB['button']['text'] : $cB['button']['title'] ).'</a></p>'
         ,$return['client_list']
         ,$return['clients_banner']
     );

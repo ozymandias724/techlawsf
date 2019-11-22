@@ -49,3 +49,35 @@
 //         }
 //     }
 // }
+
+
+// lets try just some alternating grays
+// main > section.site__block {
+//     position: relative;
+//     overflow: hidden;
+//     margin: 0;
+//     padding: getVar($sizing, gutter, vw, large) 0;
+//     &:after {
+//         content: '';
+//         z-index: -1;
+//         display: block;
+//         position: absolute;
+//         bottom: 0;
+//         left: 50%;
+//         width: 150%;
+//         height: 25vw;
+//         min-height: 300px;
+//     }
+//     &:nth-of-type(odd){
+//         &:after{
+//             background-color: rgba(getVar($pallete, brand, lshade), 0.8);
+//             transform: translate(-50%, 0%) rotate(15deg);
+//         }
+//     }
+//     &:nth-of-type(even){
+//         &:after{
+//             transform: translate(-50%, 0%) rotate(-15deg);
+//             background-color: rgba(getVar($pallete, brand, laccent), 0.1);
+//         }
+//     }
+// }

@@ -15,7 +15,7 @@ section.hero {
         position: relative;
         z-index: 1;
         // 
-        height: calc(50vh - 72px);
+        height: calc(80vh - 72px);
         // 
         display: flex;
         flex-flow: column nowrap;
@@ -64,5 +64,5 @@ section.hero {
 }
 
 body.home section.hero>.container {
-    height: calc(66vh - 72px);
+    height: calc(80vh - 72px);
 }
