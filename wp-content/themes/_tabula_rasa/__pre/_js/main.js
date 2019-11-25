@@ -10,6 +10,7 @@ import Slick from 'slick-carousel-browserify';
 // fire immediately when the script is loaded... see $.ready below
 
 $(window).on('load resize scroll', function (e) {
+    
 
     //  window scroll or load,
     //  i.e., fade in animations
