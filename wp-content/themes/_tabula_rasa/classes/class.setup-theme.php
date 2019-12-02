@@ -83,7 +83,7 @@ class SetupTheme
 	    	, array()
             , filemtime(get_template_directory() . '/__build/_js/main.js')
             , true
-    	);
+        );
     }
 
     /**
@@ -100,7 +100,7 @@ class SetupTheme
             , array()
             , filemtime(get_template_directory() . '/__build/_css/main.css')
             ,'all'
-        );   
+        );
     }
     
 	// 

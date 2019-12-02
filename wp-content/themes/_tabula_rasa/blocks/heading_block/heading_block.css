@@ -1,6 +1,0 @@
-.site__block.block__heading > .container > h1, .site__block.block__heading > .container h2, .site__block.block__heading > .container h3, .site__block.block__heading > .container h4, .site__block.block__heading > .container h5, .site__block.block__heading > .container h6 {
-  margin: 0;
-}
-.site__block.block__heading > .container > p {
-  margin: 30px 0 0 0;
-}

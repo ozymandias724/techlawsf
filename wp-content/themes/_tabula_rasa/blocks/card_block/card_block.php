@@ -6,7 +6,7 @@
 *
 */
 
- wp_enqueue_style('cardblock', get_template_directory_uri().'/blocks/card_block/card_block.css', 'main');
+//  wp_enqueue_style('cardblock', get_template_directory_uri().'/blocks/card_block/card_block.css', 'main');
 
 // return string
 $return['card_block'] = '';

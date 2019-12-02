@@ -5,10 +5,10 @@
 */
 import $ from 'jquery'; // get jquery from npm see package.json for version
 import Magnific from 'magnific-popup'; // remove this and integrate into the relevant block
-import Slick from 'slick-carousel-browserify';
+// import Slick from 'slick-carousel-browserify';
+import Swiper from 'swiper';
 
 // fire immediately when the script is loaded... see $.ready below
-
 $(window).on('load resize scroll', function (e) {
     
 
@@ -57,6 +57,28 @@ $(function() {
 
 
 
+    var mySwiper = new Swiper('.swiper-container', {
+        loop : true,
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 30,
+            stretch: 0,
+            depth: 60,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        keyboard : true,
+        scrollbar : false,
+        navigation : false,
+    });
+
+
 
     // offset <main> by <header> height
     // if( $('body:not(.header-fadein)').length ){
@@ -97,45 +119,45 @@ $(function() {
         });   
     }
 
-    
-
     // if there are clients on the page
     if ($('.block__content_grid ul.clients').length) {
 
 
-        var allClients;
-        $('div.filters').on('click', '.js__clients-filter-item', function (e) {
+        
 
-            e.preventDefault();
+        // var allClients;
+        // $('div.filters').on('click', '.js__clients-filter-item', function (e) {
 
-            // get the ul wrapper element for our clients grid
-            var clientsEl = $('.block__content_grid ul.clients');
+        //     e.preventDefault();
 
-            // if we have cached clients
-            if( allClients ){
-                clientsEl.children('li').remove()
-            }
-            // no clients cached
-            else {
-                // cache all clients
-                allClients = clientsEl.children('li').detach();
-            }
+        //     // get the ul wrapper element for our clients grid
+        //     var clientsEl = $('.block__content_grid ul.clients');
+
+        //     // if we have cached clients
+        //     if( allClients ){
+        //         clientsEl.children('li').remove()
+        //     }
+        //     // no clients cached
+        //     else {
+        //         // cache all clients
+        //         allClients = clientsEl.children('li').detach();
+        //     }
             
-            // filter down to clients with chosen term 
-            var termClients = allClients.filter('[data-term="' + $(this).attr('data-term') + '"]')
+        //     // filter down to clients with chosen term 
+        //     var termClients = allClients.filter('[data-term="' + $(this).attr('data-term') + '"]')
 
-            if( $(this).attr('data-term') == 'all' ){
-                allClients.appendTo(clientsEl);
-            } else {
-                // append the filtered object to the ul
-                termClients.appendTo(clientsEl);
-            }
+        //     if( $(this).attr('data-term') == 'all' ){
+        //         allClients.appendTo(clientsEl);
+        //     } else {
+        //         // append the filtered object to the ul
+        //         termClients.appendTo(clientsEl);
+        //     }
 
-            $(this).siblings('.active').removeClass('active');
-            $(this).addClass('active');
+        //     $(this).siblings('.active').removeClass('active');
+        //     $(this).addClass('active');
             
-            return;
-        });
+        //     return;
+        // });
 
     }
 

@@ -4,7 +4,7 @@
 * 
 * 
 */
-    wp_enqueue_style('imageblock', get_template_directory_uri().'/blocks/image_block/image_block.css', 'main');
+    // wp_enqueue_style('imageblock', get_template_directory_uri().'/blocks/image_block/image_block.css', 'main');
 
     // set return and guide string arrays
     $return['image_block'] = '';

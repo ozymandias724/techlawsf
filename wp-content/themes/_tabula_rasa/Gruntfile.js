@@ -27,21 +27,21 @@ grunt.initConfig({
 				'__build/_css/main.css': '__pre/_sass/main.scss',
 			},
 		},
-		blocks: {
-			options: {
-				sourceMap: false,
-			},
-			files: [{
-				expand: true,
-				cwd: "blocks",
-				src: ["**/*.scss"],
-				dest: "blocks/",
-				ext: ".css",
-				rename: function (dest, src) {
-					return dest + src.replace('scss', 'css'); // The target file is written to folder "css" instead of "scss" by renaming the folder
-				}
-			}]
-		}
+		// blocks: {
+		// 	options: {
+		// 		sourceMap: false,
+		// 	},
+		// 	files: [{
+		// 		expand: true,
+		// 		cwd: "blocks",
+		// 		src: ["**/*.scss"],
+		// 		dest: "blocks/",
+		// 		ext: ".css",
+		// 		rename: function (dest, src) {
+		// 			return dest + src.replace('scss', 'css'); // The target file is written to folder "css" instead of "scss" by renaming the folder
+		// 		}
+		// 	}]
+		// }
 	},
 	watch: {
 		sass: {

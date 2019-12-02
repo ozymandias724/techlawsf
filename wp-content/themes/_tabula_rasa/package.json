@@ -23,7 +23,8 @@
     "magnific-popup": "^1.1.0",
     "node-sass": "^4.12.0",
     "sass": "^1.22.7",
-    "slick-carousel-browserify": "^1.6.12"
+    "slick-carousel-browserify": "^1.6.12",
+    "swiper": "^5.2.1"
   },
   "dependencies": {}
 }

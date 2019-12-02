@@ -5,6 +5,7 @@
 @import 'site/animations';
 // @import '../../node_modules/slick-carousel-browserify/slick/slick.css';
 // @import '../../node_modules/slick-carousel-browserify/slick/slick-theme.css';
+@import '../../node_modules/swiper/css/swiper.min.css';
 
 // 
 // Site Libs
@@ -31,6 +32,9 @@
 @import "parts/nav";
 @import "parts/cards";
 
+
+// modular content
+@import 'modules';
 
 
 // pages

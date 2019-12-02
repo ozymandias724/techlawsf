@@ -20,7 +20,7 @@
     // end extras experimental ***
 
 
- wp_enqueue_style('columnsblock', get_template_directory_uri().'/blocks/columns_block/columns_block.css', 'main');
+//  wp_enqueue_style('columnsblock', get_template_directory_uri().'/blocks/columns_block/columns_block.css', 'main');
 
 // return string
 $return['columns_block'] = '';

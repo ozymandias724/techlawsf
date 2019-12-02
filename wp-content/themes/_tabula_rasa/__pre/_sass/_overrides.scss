@@ -25,6 +25,24 @@
     }
 }
 
+.swiper-container {
+    width: 80vw;
+    background-color: rgba(getVar($pallete, brand, laccent), 1);
+    .swiper-wrapper{
+        padding: 60px 0;
+        align-items: center;
+        .swiper-slide {
+            background-color: rgba(getVar($pallete, basic, white), 1);
+            width: (100% / 3);
+            &.swiper-slide-active {
+                width: (100% / 2);
+                margin: 0 -30px;
+            }
+        }
+    }
+}
+
+
 // main > .site__block {
 //     position: relative;
 //     overflow: hidden;

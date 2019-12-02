@@ -22,7 +22,7 @@ wp_enqueue_style('slick', get_template_directory_uri().'/blocks/__lib/slick/slic
 wp_enqueue_style('slick-theme', get_template_directory_uri().'/blocks/__lib/slick/slick-theme.css', 'main');
 wp_enqueue_script( 'slick', get_template_directory_uri().'/blocks/__lib/slick/slick.min.js', 'main', '1.8.1', true);
 // 
-wp_enqueue_style('bannerblock', get_template_directory_uri().'/blocks/banner_block/banner_block.css', 'main');
+// wp_enqueue_style('bannerblock', get_template_directory_uri().'/blocks/banner_block/banner_block.css', 'main');
 wp_enqueue_script( 'bannerblock', get_template_directory_uri().'/blocks/banner_block/banner_block.js', 'main', '1.0.0', true );
 
 // return string

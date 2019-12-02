@@ -16,7 +16,7 @@
     
     //  
     // end extras experimental ***
- wp_enqueue_style('buttonblock', get_template_directory_uri().'/blocks/buttons_block/buttons_block.css', 'main');
+//  wp_enqueue_style('buttonblock', get_template_directory_uri().'/blocks/buttons_block/buttons_block.css', 'main');
 
 // return string
 $return['buttons_block'] = '';

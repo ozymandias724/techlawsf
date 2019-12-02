@@ -4,7 +4,7 @@
  * 
  */
 
-     wp_enqueue_style('formblock', get_template_directory_uri().'/blocks/form_block/form_block.css', 'main');
+    //  wp_enqueue_style('formblock', get_template_directory_uri().'/blocks/form_block/form_block.css', 'main');
 
  
     // empty return string
