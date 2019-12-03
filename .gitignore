@@ -26,6 +26,11 @@ wp-content/themes/*
 # Ignore node_modules and sass-cache in 'themes'
 wp-content/themes/*/node_modules/*
 wp-content/themes/*/.sass-cache/*
+# Don't ignore certain node_modules and sass-cache in themes
+!wp-content/themes/*/node_modules/@fortawesome/
+!wp-content/themes/*/node_modules/swiper/
+!wp-content/themes/*/node_modules/magnific/
+!wp-content/themes/*/node_modules/slick/
 
 # Don't ignore certain NPM libraries we are including
 !wp-content/themes/*/node_modules/@fortawesome/
