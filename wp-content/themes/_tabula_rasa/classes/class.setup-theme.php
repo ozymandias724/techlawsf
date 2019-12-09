@@ -75,12 +75,16 @@ class SetupTheme
 	public static function register_scripts(){
 
         // wp_deregister_script('jquery');
+
+        wp_register_script( 'swiper-js', get_template_directory_uri().'/__build/_lib/swiper/js/swiper.min.js', array('jquery'), null, true );
+        wp_register_script( 'slick-js', get_template_directory_uri().'/__build/_lib/slick/slick.min.js', array('jquery'), null, true );
+        wp_register_script( 'magnific-js', get_template_directory_uri().'/__build/_lib/magnific/jquery.magnific-popup.min.js', array('jquery'), null, true );
         
         // main theme scripts
 	    wp_register_script( 
             'main'
 	    	, get_template_directory_uri() . '/__build/_js/main.js'
-	    	, array()
+	    	, array('jquery')
             , filemtime(get_template_directory() . '/__build/_js/main.js')
             , true
         );
@@ -106,6 +110,9 @@ class SetupTheme
 	// 
 	public static function enqueue_scripts(){
         wp_enqueue_script( 'main' );
+        wp_enqueue_script( 'swiper-js' );
+        wp_enqueue_script( 'slick-js' );
+        wp_enqueue_script( 'magnific-js' );
 	}
 	public static function enqueue_styles(){
         wp_enqueue_style( 'main' );

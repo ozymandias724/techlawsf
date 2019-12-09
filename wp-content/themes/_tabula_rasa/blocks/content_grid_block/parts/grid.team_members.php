@@ -13,7 +13,7 @@ $guide['team_member'] = '
     <li class="anim__fade anim__fade-up">
         <a href="'.get_permalink($post->ID).'bio/" class="js__popup_bio" title="Read about '.$post->post_title.'">
             <div>
-                <div class="bgimage"><div class="bgimage-img" style="background-image: url(%s)"></div></div>
+                <div class="bgimage headshot"><div class="bgimage-img" style="background-image: url(%s)"></div></div>
                 <div>
                     <h4>%s</h4>
                     <h5>%s</h5>

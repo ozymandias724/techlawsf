@@ -1,59 +1,89 @@
 // 
+// 
+// 
 body.page-our-team {
+    // 
     $g: getVar($sizing, gutter, px, normal);
+    // 
 
 
+    // 
+    //  section container for the grid of team members
+    // 
     section.site__block.block__content_grid {
+        
+        // 
+        //  background accent
+        // 
         position: relative;
+        overflow: hidden;
         &:before {
-            content: '';
-            background-color: rgba(getVar($pallete, brand, dshade), 1);
-            width: 100%;
-            height: 50%;
             position: absolute;
             top: 50%;
             left: 0;
-            z-index: -1;
             transform: translateY(-50%);
+            content: '';
+            background-color: rgba(getVar($pallete, brand, dshade), 1);
+            background: linear-gradient(-15deg, rgba(38, 30, 53, 1) 0%, rgba(38, 30, 53, 1) 15%, rgba(159, 91, 119, 1) 100%);
+            height: 33%;
+            width: 100%;
+            z-index: -1;
         }
     }
     
-    
-    
-    div.flexgrid {
 
+    ul.team_members {
+        // make adjustments to basic flexbox grid
+        // align-items: stretch;
+        align-items: center;
+        justify-content: center;
+        padding: $g 0;
+        > li {
+            flex-grow: 0;
+        }
         
-        
-        >ul.team_members {
-            align-items: stretch;
-            align-items: center;
-            justify-content: center;
-            
-            >li {
-                flex-grow: 0;
-                padding: $g;
-                @include boxshadow(4);
+        > li {
+            // all line items are anchored to magnific popup
+            > a {
+                $g : getVar($sizing, gutter, px, small);
+                // style as cards
                 background-color: rgba(getVar($pallete, basic, white), 1);
-                >a {
-
-                    >div {
-                        display: flex;
-                        flex-flow: row nowrap;
-                    }
-
-                    >article {
-                        display: block;
-                        margin: $g 0 0 0;
-                    }
-
-                    .bgimage {
-                        flex: 0 1 (100% / 3);
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                padding: (2 * $g);
+                @include boxshadow(2);
+                transition: box-shadow 0.3s ease-in-out;
+                
+                
+                // the headshot, name and title
+                > div {
+                    display: flex;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    > .headshot {
+                        min-width: 120px;
+                        border-radius: 100%;
                         margin: 0 $g 0 0;
-                        border-radius: 50%;
                         @include aspectRatio();
-                        @include bgGradient($h:66%);
+                        @include bgGradient($h:66%, $p:'bottom', $sC:rgba(getVar($pallete, basic, black), 0.0), $eC:rgba(getVar($pallete, basic, black), 0.66));
+                        .bgimage-img {
+                        }
+                    }
+                    > div:not(.headshot){
+                        padding: $g 0;
                     }
                 }
+                > article {
+                    margin: $g 0 0 0;
+                }
+                &:hover, &:focus, &:active {
+                    @include boxshadow(4);
+                }
+
             }
         }
     }
