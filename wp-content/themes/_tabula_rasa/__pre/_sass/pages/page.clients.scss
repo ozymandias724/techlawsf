@@ -1,65 +1,176 @@
+// 
+// 
+// scope to client page
 body.page-clients {
 
 
 
+    // scope to *clients* content grid
     section.block__content_grid {
 
+
+        // scope to *clients* content grid
         ul.clients.slick-slider {
 
-            $g : getVar($sizing, gutter, px, normal);
-
-            // border: 1px solid black;
+            // set a reusable gutter value
+            $g : getVar($sizing, gutter, px, small);
+            
+            margin: 0 -30px 0 0;
 
             .slick-track {
                 display: flex;
-                align-items: center;
-                // padding: ($g * 2);
+                // align-items: center;
             }
 
+
             .slick-slide {
-                transition: all 0.4s ease-in-out;
-                border: 1px solid rgba(getVar($pallete, basic, black), 0.33);
+                // 
+                // 
+                // 
+                position: relative;
+                
+                // 
+                // 
+                // do card stuff 
+                border: 1px solid rgba(getVar($pallete, basic, gray), 0.5);
                 @include boxshadow(2);
                 &.slick-current {
                     @include boxshadow(4);
                 }
-                padding: $g;
-                margin: 0 $g 0 0;
-                margin: $g $g $g 0;
-                .info {
-                    margin: $g 0 0 0;
-                    .name {
-                        font-weight: bold;
-                        font-size: 2rem;
+                transition: all 0.4s ease-in-out;
+                
+                // 
+                // 
+                // layout for the slide
+                margin: (2 * $g);
+                // 
+                // 
+                // 'label' for cat at top
+                .category {
+                    padding: $g;
+                    text-align: center;
+                    background-color: rgba(getVar($pallete, brand, laccent), 1);
+                    text-transform: uppercase;
+                    color: rgba(getVar($pallete, basic, white), 1);
+                    font-weight: bold;
+                    font-size: 2rem;
+                    // white-space: nowrap;
+                    letter-spacing: 2px;
+                }
+                
+                // everything below the label is padded (card style)
+                .client {
+                    border-top: none 0;
+                    padding: ($g * 2);
+                    text-align: center;
+                    // 
+                    // 
+                    // 
+                    .name,
+                    .bgimage,
+                    .details,
+                    .funding {
+                        margin: (2 * $g) auto 0 auto;
                     }
+
+                    // 
+                    // 
                     .details {
-                        margin: $g 0 0 0;
+                        text-align: left;
+                    }
+                    
+                    // 
+                    .name {
+                    }
+                    .funding {
+                        font-style: italic;
+                        font-size: 1.8rem;
+                    }
+                    
+                    // 
+                    // 
+                    // client logos
+                    .bgimage {
+                        @include aspectRatio(16, 9);
+                        max-width: 200px;
+                        .bgimage-img {
+                            background-color: transparent;
+                            background-size: contain;
+                        }
                     }
                 }
                 
-                .bgimage {
-                    @include aspectRatio(16, 9);
-                    margin: 0 auto;
-                    max-width: 200px;
-                    .bgimage-img {
-                        background-color: transparent;
-                        background-size: contain;
-                    }
+            }
+        }
+        
+
+        $g : getVar($sizing, gutter, px, normal);
+
+        > .container {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+        }
+        > div.flexgrid, div.filters {
+            flex: 1 0 auto;
+            margin: 0 auto;
+        }
+        
+        div.flexgrid {
+            // border-left: 2px solid rgba(getVar($pallete, brand, laccent), 0.5);
+            width: calc(80% - #{$g});
+            margin: 0 0 0 $g;
+        }
+        
+        div.filters {
+            width: 20%;
+            display: flex;
+            flex-flow: column nowrap;
+            padding: $g 0;
+            >a.button {
+                
+                $g : getVar($sizing, gutter, px, small);
+                margin: $g 0 0 0;
+                &:first-child {
+                    margin: 0;
+                }
+                &:hover, &:focus, &:active, &.active {
+                    background-color: rgba(getVar($pallete, brand, laccent), 1);
+                    border-color: rgba(getVar($pallete, brand, laccent), 1);
                 }
             }
         }
 
-        div.filters {
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+        // 
+        @media screen and (max-width: 960px){
+            > .container {
+                flex-flow: column nowrap;
+                div.flexgrid,
+                div.filters {
+                    width: 100%;
+                    margin: 0;
+                }
+                div.filters {
+                    flex-flow: row wrap;
+                    > a {
+                        width: calc(50% - 15px);
+                        margin: 0 15px 15px 0;
+                        &:first-child {
+                            margin: 0 15px 15px 0;
+                        }
+                    }
+                }
+                ul.clients.slick-slider {
+                    margin: 0;
 
-            >a.button {
-                flex: 1 0 auto;
+                    .slick-slide {
+                    }
+                }
             }
+    
+            
         }
     }
-
 
 
 

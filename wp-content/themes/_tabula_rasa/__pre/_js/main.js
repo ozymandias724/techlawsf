@@ -1,13 +1,13 @@
 /**
  * Main JS
  * 
-*/
+ */
 
-(function ($, window, document){
+(function ($, window, document) {
 
-/**
-*   Fire Immediately 
-*/
+    /**
+     *   Fire Immediately 
+     */
     $(window).on('load resize scroll', function (e) {
 
 
@@ -42,11 +42,11 @@
         if (e.type == 'scroll') {}
     });
 
-    
-/**
-*   jQuery Document Ready
-*/
-    $(function(){
+
+    /**
+     *   jQuery Document Ready
+     */
+    $(function () {
 
         // remove the no-js class from <html>
         $('html').removeClass('no-js');
@@ -84,7 +84,7 @@
         /**
          * Client Spotlight Banner (Home Page)
          */
-        if( $('.client_spotlight-banner > ul').length) {
+        if ($('.client_spotlight-banner > ul').length) {
             $('.client_spotlight-banner > ul').slick({
                 autoplay: true,
                 autoplaySpeed: 4000,
@@ -97,22 +97,39 @@
 
         // if there are clients on the page
         if ($('.block__content_grid ul.clients').length) {
-            $('.page-clients .block__content_grid .filters').on('click', 'a', function(e){
+            $('.page-clients .block__content_grid .filters').on('click', 'a', function (e) {
                 var filterClass = $(this).attr('data-term');
-                var isReset = ( $(this).attr('data-term') ==  'all');
+                var isReset = ($(this).attr('data-term') == 'all');
                 $('.block__content_grid ul.clients').slick('slickUnfilter');
-                $('.block__content_grid ul.clients').slick('slickFilter', function(i, e){
+                $('.block__content_grid ul.clients').slick('slickFilter', function (i, e) {
                     return !isReset ? $(this).hasClass(filterClass) : 'slick-slide';
-                    
                 });
             });
 
             $('.block__content_grid ul.clients').slick({
-                slidesToShow : 5
-                ,centerMode : true
-                ,centerPadding : 0
-                ,autoplay : true
-                ,autoplaySpeed : 4000
+                slidesToShow: 3,
+                arrows: false,
+                // centerMode: true,
+                // centerPadding: 0,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                responsive: [{
+
+                        breakpoint: 1280,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+
+                    },
+                    {
+
+                        breakpoint: 960,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+
+                    }
+                ]
             });
         }
 

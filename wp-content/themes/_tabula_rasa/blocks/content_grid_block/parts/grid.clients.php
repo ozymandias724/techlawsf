@@ -11,12 +11,15 @@ $return['client_list'] = '';
 
 
 $guide['client_list'] = '
-    <li class="anim__fade anim__fade-up %s">
-        %s
-        <div class="info">
-            %s
-            %s
-            %s
+    <li class="anim__fade anim__fade-up %1$s">
+        <div class="category">
+            <p>%1$s</p>
+        </div>
+        <div class="client">
+            %3$s
+            %2$s
+            %4$s
+            %5$s
         </div>
     </li>
 ';
@@ -32,7 +35,7 @@ $return['client_list'] .= sprintf(
         : url('.$the_fields['image']['url'].')"></div></div>' 
         : '' )                                  // bg image
     ,( !empty($post->post_title) 
-        ? '<p class="name">'.$post->post_title.'</p>' 
+        ? '<h4 class="name">'.$post->post_title.'</h4>' 
         : '' )                                  // name
     ,( !empty($the_fields['funding']) 
         ? '<p class="funding">'.$the_fields['funding'].'</p>' 

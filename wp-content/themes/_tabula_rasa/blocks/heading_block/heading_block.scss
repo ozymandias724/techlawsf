@@ -5,6 +5,9 @@
 // 
 .site__block.block__heading {
 
+    + .site__block {
+        margin-top: 5vw;
+    }
 
     >.container {
         $g: getVar($sizing, gutter, px, normal);
