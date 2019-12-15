@@ -20,7 +20,7 @@
 
         // vars
         var args = {
-            zoom: 15,
+            zoom: 12,
             center: new google.maps.LatLng(0, 0),
             mapTypeId: google.maps.MapTypeId.ROADMAP
             ,mapTypeControl : false

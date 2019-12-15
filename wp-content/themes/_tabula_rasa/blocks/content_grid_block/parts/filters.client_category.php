@@ -5,7 +5,7 @@
 
     
 $return['filters'] = '';
-$return['filters'] = '<a class="button ghost active js__clients-filter-item" data-term="all" href="" title="View all our clients">All</a>';
+$return['filters'] = '<a class="button ghost active js__clients-filter-item" data-term="all" href="javascript:void(0);" title="View all our clients">All</a>';
 
     // 
     $allTerms = get_terms('client_category');

@@ -1,6 +1,7 @@
 <?php 
 /**
- * 
+ *    This is a partial to include on the home page
+ *    It does the first section ( more tbd )
  */
 
    wp_enqueue_style('slick', get_template_directory_uri().'/blocks/__lib/slick/slick.css', 'main');

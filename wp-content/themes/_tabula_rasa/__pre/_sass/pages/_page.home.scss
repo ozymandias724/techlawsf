@@ -22,13 +22,11 @@ body.home {
                         }
                         > a {
                             display: inline-block;
-                            i {
-
-                                margin: 0 $g 0 0;
-                            }
                             i,p {
-                                display: inline-block;
-                                vertical-align: middle;
+                                display: block;
+                            }
+                            p {
+                                margin: $g 0 0 0;
                             }
 
                         }

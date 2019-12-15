@@ -109,10 +109,10 @@ class SetupTheme
     
 	// 
 	public static function enqueue_scripts(){
-        wp_enqueue_script( 'main' );
-        wp_enqueue_script( 'swiper-js' );
+        // wp_enqueue_script( 'swiper-js' );
         wp_enqueue_script( 'slick-js' );
         wp_enqueue_script( 'magnific-js' );
+        wp_enqueue_script( 'main' );
 	}
 	public static function enqueue_styles(){
         wp_enqueue_style( 'main' );

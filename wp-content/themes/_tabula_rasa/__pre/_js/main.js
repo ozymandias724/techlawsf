@@ -1,12 +1,13 @@
 /**
- * 
- * 
+ * Main JS
  * 
 */
-(function ($, window, document) {
-    // The $ is now locally scoped
 
-    // fire immediately when the script is loaded... see $.ready below
+(function ($, window, document){
+
+/**
+*   Fire Immediately 
+*/
     $(window).on('load resize scroll', function (e) {
 
 
@@ -40,40 +41,15 @@
         // handle 
         if (e.type == 'scroll') {}
     });
-    // 
-    // 
-    // when the document is ready...
-    $(function () {
-        // 
-        // 
-        //  run these scripts when the DOM is fully loaded
 
+    
+/**
+*   jQuery Document Ready
+*/
+    $(function(){
 
         // remove the no-js class from <html>
         $('html').removeClass('no-js');
-
-
-
-        var mySwiper = new Swiper('.swiper-container', {
-            loop: true,
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            coverflowEffect: {
-                rotate: 30,
-                stretch: 0,
-                depth: 60,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            keyboard: true,
-            scrollbar: false,
-            navigation: false,
-        });
 
 
 
@@ -105,8 +81,10 @@
 
 
 
-        if ($('.client_spotlight-banner > ul').length) {
-            ``
+        /**
+         * Client Spotlight Banner (Home Page)
+         */
+        if( $('.client_spotlight-banner > ul').length) {
             $('.client_spotlight-banner > ul').slick({
                 autoplay: true,
                 autoplaySpeed: 4000,
@@ -119,51 +97,27 @@
 
         // if there are clients on the page
         if ($('.block__content_grid ul.clients').length) {
+            $('.page-clients .block__content_grid .filters').on('click', 'a', function(e){
+                var filterClass = $(this).attr('data-term');
+                var isReset = ( $(this).attr('data-term') ==  'all');
+                $('.block__content_grid ul.clients').slick('slickUnfilter');
+                $('.block__content_grid ul.clients').slick('slickFilter', function(i, e){
+                    return !isReset ? $(this).hasClass(filterClass) : 'slick-slide';
+                    
+                });
+            });
 
-
-
-
-            // var allClients;
-            // $('div.filters').on('click', '.js__clients-filter-item', function (e) {
-
-            //     e.preventDefault();
-
-            //     // get the ul wrapper element for our clients grid
-            //     var clientsEl = $('.block__content_grid ul.clients');
-
-            //     // if we have cached clients
-            //     if( allClients ){
-            //         clientsEl.children('li').remove()
-            //     }
-            //     // no clients cached
-            //     else {
-            //         // cache all clients
-            //         allClients = clientsEl.children('li').detach();
-            //     }
-
-            //     // filter down to clients with chosen term 
-            //     var termClients = allClients.filter('[data-term="' + $(this).attr('data-term') + '"]')
-
-            //     if( $(this).attr('data-term') == 'all' ){
-            //         allClients.appendTo(clientsEl);
-            //     } else {
-            //         // append the filtered object to the ul
-            //         termClients.appendTo(clientsEl);
-            //     }
-
-            //     $(this).siblings('.active').removeClass('active');
-            //     $(this).addClass('active');
-
-            //     return;
-            // });
-
+            $('.block__content_grid ul.clients').slick({
+                slidesToShow : 5
+                ,centerMode : true
+                ,centerPadding : 0
+                ,autoplay : true
+                ,autoplaySpeed : 4000
+            });
         }
-
-
 
         // if there are bio popups on the page
         if ($('.js__popup_bio').length) {
-
             // open the bio popup on click
             $('.js__popup_bio').magnificPopup({
                 type: "ajax",
@@ -176,8 +130,6 @@
 
 
 
-    }); // end $.ready
-
-    // The rest of your code goes here!
+    });
 
 }(window.jQuery, window, document));
