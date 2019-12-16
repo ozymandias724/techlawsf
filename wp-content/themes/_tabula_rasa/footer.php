@@ -15,7 +15,7 @@
     if( has_custom_logo() ){
         $return['logo'] = get_custom_logo();
     } else {
-        $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><h4><span>'.get_bloginfo('name').'</span></h4></a>';
+        $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><h3><span>'.get_bloginfo('name').'</span></h3></a>';
     }
 
     // 
@@ -23,7 +23,7 @@
     // 
     if (has_nav_menu('footer_1')) {
         
-        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4><span>'.get_nav_menu_name('footer_1').'</span></h4>';
+        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h3><span>'.get_nav_menu_name('footer_1').'</span></h3>';
         
         $args = array(
             'theme_location' => 'footer_1'
@@ -40,7 +40,7 @@
     }
     
     if (has_nav_menu('footer_2')) {
-        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h4><span>'.get_nav_menu_name('footer_2').'</span></h4>';
+        $return['footer_nav'] .= '<section class="anim__fade anim__fade-up"><h3><span>'.get_nav_menu_name('footer_2').'</span></h3>';
         $args = array(
             'theme_location' => 'footer_2'
             ,'walker' => new Tabula_Rasa_Nav_Menu
@@ -64,7 +64,7 @@
                     %s
                 </section>                
                 <section class="anim__fade anim__fade-up footer-contactus">
-                    <h4><span>Contact Us</span></h4>
+                    <h3><span>Contact Us</span></h3>
                     %s
                     %s
                     %s

@@ -57,13 +57,17 @@ body.home {
                 // 
                 // 
                 // 
+
+                .slick-slider {
+                    margin: 0 0 0 0;
+                }
                 
                 >ul,
                 .slick-track {
                     flex-flow: row nowrap;
                     align-items: center;
                     overflow: hidden;
-
+                    margin: 0;
                     >li,
                     >.slick-slide {
                         img {

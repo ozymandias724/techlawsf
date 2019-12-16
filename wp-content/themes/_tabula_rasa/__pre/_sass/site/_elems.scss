@@ -131,9 +131,10 @@ a.button {
     $g: getVar($sizing, gutter, px, normal);
     // 
     display: inline-block;
-    padding: 7.5px 30px;
+    padding: 7.5px 15px;
     margin: 0 $g $g 0;
     // 
+    overflow: hidden;
     text-align: center;
     white-space: nowrap;
     letter-spacing: 1px;

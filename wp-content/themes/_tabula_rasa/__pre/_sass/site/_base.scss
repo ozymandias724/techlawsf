@@ -68,15 +68,18 @@ h1 {
 }
 
 h2 {
-    font-size: 5.4rem;
+    // font-size: 5.4rem;
+    @include fontS-50;
 }
 
 h3 {
-    font-size: 4.2rem;
+    // font-size: 4.2rem;
+    @include fontS-40;
 }
 
 h4 {
-    font-size: 3rem;
+    // font-size: 3rem;
+    @include fontS-24;
 }
 
 h5 {
@@ -137,11 +140,6 @@ body {
 .prefooter,
 main > .site__block {
     margin: getVar($sizing, gutter, vw, xlarge) 0 0 0;
-
-    > div > h2 {
-        font-size: 6.8rem;
-        
-    }
 }
 
 // horizontal layout

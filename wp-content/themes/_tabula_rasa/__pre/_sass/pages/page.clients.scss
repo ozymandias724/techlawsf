@@ -110,10 +110,11 @@ body.page-clients {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-        }
-        > div.flexgrid, div.filters {
-            flex: 1 0 auto;
-            margin: 0 auto;
+
+            > div.flexgrid, div.filters {
+                flex: 1 1 auto;
+                margin: 0 auto;
+            }
         }
         
         div.flexgrid {
@@ -123,7 +124,7 @@ body.page-clients {
         }
         
         div.filters {
-            width: 20%;
+            width: 240px;
             display: flex;
             flex-flow: column nowrap;
             padding: $g 0;
@@ -134,7 +135,12 @@ body.page-clients {
                 &:first-child {
                     margin: 0;
                 }
+                border-color: rgba(getVar($pallete, brand, laccent), 1);
+                color: rgba(getVar($pallete, brand, laccent), 1);
+                font-weight: bold;
+                
                 &:hover, &:focus, &:active, &.active {
+                    color: rgba(getVar($pallete, basic, white), 1);
                     background-color: rgba(getVar($pallete, brand, laccent), 1);
                     border-color: rgba(getVar($pallete, brand, laccent), 1);
                 }

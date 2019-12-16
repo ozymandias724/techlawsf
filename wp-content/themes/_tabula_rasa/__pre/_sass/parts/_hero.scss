@@ -15,7 +15,9 @@ section.hero {
         position: relative;
         z-index: 1;
         // 
+        min-height: 320px;
         height: calc(80vh - 72px);
+        max-height: 66vw;
         // 
         display: flex;
         flex-flow: column nowrap;
@@ -30,10 +32,10 @@ section.hero {
 
         >h1 {
             margin: 0 0 0 0;
-            font-size: 12rem;
+            // font-size: 12rem;
+            @include fontS-124;
             font-weight: 100;
             letter-spacing: -1px;
-            line-height: 1;
             padding: 5px 0;
         }
 
@@ -42,7 +44,6 @@ section.hero {
             padding: 0 0 0 1rem;
             >p {
                 font-size: 2.4rem;
-                line-height: 1.3;
             }
         }
         

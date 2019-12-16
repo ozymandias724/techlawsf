@@ -56,12 +56,11 @@ footer {
 
             // footer section headings
             .logo.logo--text,
-            h4 {
+            h3 {
                 margin: 0 auto getVar($sizing, gutter, px, small) auto;
                 // 
                 // underline only under the text
                 > span {
-                    font-size: 3rem;
                     letter-spacing: 1px;
                     color: getVar($pallete, basic, white);
                     border-bottom: 1px solid getVar($pallete, basic, white);

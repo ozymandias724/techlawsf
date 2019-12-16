@@ -98,6 +98,10 @@
         // if there are clients on the page
         if ($('.block__content_grid ul.clients').length) {
             $('.page-clients .block__content_grid .filters').on('click', 'a', function (e) {
+
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+                
                 var filterClass = $(this).attr('data-term');
                 var isReset = ($(this).attr('data-term') == 'all');
                 $('.block__content_grid ul.clients').slick('slickUnfilter');
@@ -109,8 +113,8 @@
             $('.block__content_grid ul.clients').slick({
                 slidesToShow: 3,
                 arrows: false,
-                // centerMode: true,
-                // centerPadding: 0,
+                centerMode: true,
+                centerPadding: 0,
                 autoplay: true,
                 autoplaySpeed: 4000,
                 responsive: [{
