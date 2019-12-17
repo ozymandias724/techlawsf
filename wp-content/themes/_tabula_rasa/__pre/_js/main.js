@@ -97,6 +97,8 @@
 
         // if there are clients on the page
         if ($('.block__content_grid ul.clients').length) {
+
+
             $('.page-clients .block__content_grid .filters').on('click', 'a', function (e) {
 
                 $(this).siblings().removeClass('active');
@@ -118,24 +120,36 @@
                 autoplay: true,
                 autoplaySpeed: 4000,
                 responsive: [{
-
-                        breakpoint: 1280,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-
-                    },
-                    {
-
-                        breakpoint: 960,
-                        settings: {
-                            slidesToShow: 1,
-                        }
-
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 2,
                     }
-                ]
+                },{
+                    breakpoint: 960,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: false
+                    }
+                }],
             });
+            
+            
+            if(window.location.hash){
+                
+                
+                setTimeout(() => {
+                    $('.page-clients .block__content_grid .filters').removeClass('active');
+                    $('.page-clients .block__content_grid .filters > a[data-term="'+window.location.href.split('#')[1]+'"]').addClass('active');
+                    $('.block__content_grid ul.clients').slick('slickUnfilter');
+                    $('.block__content_grid ul.clients').slick('slickFilter', function (i, e) {
+                        if ($(this).hasClass(window.location.href.split('#')[1])){
+                            return true;
+                        }
+                    });
+                }, 250);
+            }
         }
+        
 
         // if there are bio popups on the page
         if ($('.js__popup_bio').length) {

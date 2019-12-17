@@ -2047,24 +2047,61 @@ body.page-practice-areas .site__block.block__content_grid > .container .flexgrid
   }
 }
 
-body.page-clients section.block__content_grid ul.clients.slick-slider {
-  margin: 0 -30px 0 0;
-}
-body.page-clients section.block__content_grid ul.clients.slick-slider .slick-track {
+body.page-clients section.block__content_grid > .container {
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+body.page-clients section.block__content_grid > .container > div.flexgrid,
+body.page-clients section.block__content_grid > .container div.filters {
+  flex: 1 1 auto;
+  margin: 0 auto;
+}
+body.page-clients section.block__content_grid div.flexgrid {
+  width: calc(80% - 30px);
+  margin: 0 0 0 30px;
+}
+body.page-clients section.block__content_grid div.filters {
+  width: 200px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+body.page-clients section.block__content_grid div.filters > a.button {
+  margin: 15px 0 0 0;
+  border-color: #83cdf8;
+  color: #83cdf8;
+  font-weight: bold;
+}
+body.page-clients section.block__content_grid div.filters > a.button:first-child {
+  margin: 0;
+}
+body.page-clients section.block__content_grid div.filters > a.button:hover, body.page-clients section.block__content_grid div.filters > a.button:focus, body.page-clients section.block__content_grid div.filters > a.button:active, body.page-clients section.block__content_grid div.filters > a.button.active {
+  color: white;
+  background-color: #83cdf8;
+  border-color: #83cdf8;
+}
+body.page-clients section.block__content_grid ul.clients.slick-slider {
+  margin: -30px 0 0 0;
+  overflow: hidden;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide {
   position: relative;
+  margin: 30px;
+  height: auto;
   border: 1px solid rgba(94, 91, 91, 0.5);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  opacity: 0.33;
   transition: all 0.4s ease-in-out;
-  margin: 30px;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide.slick-current {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  opacity: 1;
+}
+body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide:hover, body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide:focus, body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide:active {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .category {
-  padding: 15px;
+  padding: 30px;
   text-align: center;
   background-color: #83cdf8;
   text-transform: uppercase;
@@ -2075,14 +2112,14 @@ body.page-clients section.block__content_grid ul.clients.slick-slider .slick-sli
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client {
   border-top: none 0;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .name,
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .bgimage,
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .details,
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .funding {
-  margin: 30px auto 0 auto;
+  margin: 60px auto 0 auto;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .details {
   text-align: left;
@@ -2104,39 +2141,6 @@ body.page-clients section.block__content_grid ul.clients.slick-slider .slick-sli
   background-color: transparent;
   background-size: contain;
 }
-body.page-clients section.block__content_grid > .container {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-body.page-clients section.block__content_grid > .container > div.flexgrid, body.page-clients section.block__content_grid > .container div.filters {
-  flex: 1 1 auto;
-  margin: 0 auto;
-}
-body.page-clients section.block__content_grid div.flexgrid {
-  width: calc(80% - 30px);
-  margin: 0 0 0 30px;
-}
-body.page-clients section.block__content_grid div.filters {
-  width: 240px;
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 30px 0;
-}
-body.page-clients section.block__content_grid div.filters > a.button {
-  margin: 15px 0 0 0;
-  border-color: #83cdf8;
-  color: #83cdf8;
-  font-weight: bold;
-}
-body.page-clients section.block__content_grid div.filters > a.button:first-child {
-  margin: 0;
-}
-body.page-clients section.block__content_grid div.filters > a.button:hover, body.page-clients section.block__content_grid div.filters > a.button:focus, body.page-clients section.block__content_grid div.filters > a.button:active, body.page-clients section.block__content_grid div.filters > a.button.active {
-  color: white;
-  background-color: #83cdf8;
-  border-color: #83cdf8;
-}
 @media screen and (max-width: 960px) {
   body.page-clients section.block__content_grid > .container {
     flex-flow: column nowrap;
@@ -2146,18 +2150,22 @@ body.page-clients section.block__content_grid > .container div.filters {
     width: 100%;
     margin: 0;
   }
+  body.page-clients section.block__content_grid > .container div.flexgrid .slick-slide,
+body.page-clients section.block__content_grid > .container div.filters .slick-slide {
+    margin: 0;
+  }
   body.page-clients section.block__content_grid > .container div.filters {
     flex-flow: row wrap;
   }
   body.page-clients section.block__content_grid > .container div.filters > a {
-    width: calc(50% - 15px);
-    margin: 0 15px 15px 0;
+    width: 100%;
+    margin: 5px 0 0 0;
   }
   body.page-clients section.block__content_grid > .container div.filters > a:first-child {
-    margin: 0 15px 15px 0;
+    margin: 0;
   }
   body.page-clients section.block__content_grid > .container ul.clients.slick-slider {
-    margin: 0;
+    margin: 30px 0 0 0;
   }
 }
 

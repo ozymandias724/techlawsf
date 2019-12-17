@@ -8,41 +8,81 @@ body.page-clients {
     // scope to *clients* content grid
     section.block__content_grid {
 
+        $g : getVar($sizing, gutter, px, normal);
 
-        // scope to *clients* content grid
-        ul.clients.slick-slider {
 
-            // set a reusable gutter value
-            $g : getVar($sizing, gutter, px, small);
-            
-            margin: 0 -30px 0 0;
+        >.container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
 
-            .slick-track {
-                display: flex;
-                // align-items: center;
+            >div.flexgrid,
+            div.filters {
+                flex: 1 1 auto;
+                margin: 0 auto;
             }
+        }
+
+        div.flexgrid {
+            // border-left: 2px solid rgba(getVar($pallete, brand, laccent), 0.5);
+            width: calc(80% - #{$g});
+            margin: 0 0 0 $g;
+        }
+
+        div.filters {
+            width: 200px;
+            display: flex;
+            flex-flow: column nowrap;
+            >a.button {
+
+                margin: ($g / 2) 0 0 0;
+
+                &:first-child {
+                    margin: 0;
+                }
+
+                border-color: rgba(getVar($pallete, brand, laccent), 1);
+                color: rgba(getVar($pallete, brand, laccent), 1);
+                font-weight: bold;
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: rgba(getVar($pallete, basic, white), 1);
+                    background-color: rgba(getVar($pallete, brand, laccent), 1);
+                    border-color: rgba(getVar($pallete, brand, laccent), 1);
+                }
+            }
+        }
 
 
+        //  the clients slider
+        // 
+        ul.clients.slick-slider {
+            margin: -$g 0 0 0;
+            overflow: hidden;
             .slick-slide {
                 // 
                 // 
-                // 
                 position: relative;
-                
-                // 
-                // 
+                margin: $g;
+                height: auto;
+
                 // do card stuff 
+                // 
                 border: 1px solid rgba(getVar($pallete, basic, gray), 0.5);
                 @include boxshadow(2);
+                opacity: 0.33;
+                transition: all 0.4s ease-in-out;
                 &.slick-current {
                     @include boxshadow(4);
+                    opacity: 1;
                 }
-                transition: all 0.4s ease-in-out;
-                
-                // 
-                // 
-                // layout for the slide
-                margin: (2 * $g);
+                // hover
+                &:hover, &:focus, &:active {
+                    @include boxshadow(4);
+                }
                 // 
                 // 
                 // 'label' for cat at top
@@ -61,7 +101,7 @@ body.page-clients {
                 // everything below the label is padded (card style)
                 .client {
                     border-top: none 0;
-                    padding: ($g * 2);
+                    padding: getVar($sizing, gutter, px, small);
                     text-align: center;
                     // 
                     // 
@@ -102,51 +142,9 @@ body.page-clients {
                 
             }
         }
-        
 
-        $g : getVar($sizing, gutter, px, normal);
-
-        > .container {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-
-            > div.flexgrid, div.filters {
-                flex: 1 1 auto;
-                margin: 0 auto;
-            }
-        }
-        
-        div.flexgrid {
-            // border-left: 2px solid rgba(getVar($pallete, brand, laccent), 0.5);
-            width: calc(80% - #{$g});
-            margin: 0 0 0 $g;
-        }
-        
-        div.filters {
-            width: 240px;
-            display: flex;
-            flex-flow: column nowrap;
-            padding: $g 0;
-            >a.button {
-                
-                $g : getVar($sizing, gutter, px, small);
-                margin: $g 0 0 0;
-                &:first-child {
-                    margin: 0;
-                }
-                border-color: rgba(getVar($pallete, brand, laccent), 1);
-                color: rgba(getVar($pallete, brand, laccent), 1);
-                font-weight: bold;
-                
-                &:hover, &:focus, &:active, &.active {
-                    color: rgba(getVar($pallete, basic, white), 1);
-                    background-color: rgba(getVar($pallete, brand, laccent), 1);
-                    border-color: rgba(getVar($pallete, brand, laccent), 1);
-                }
-            }
-        }
-
+        //  * all media queries are contained within the block for simplicity *
+        // 
         // 
         @media screen and (max-width: 960px){
             > .container {
@@ -155,110 +153,27 @@ body.page-clients {
                 div.filters {
                     width: 100%;
                     margin: 0;
+                    .slick-slide {
+                        margin: 0;
+                    }
                 }
                 div.filters {
                     flex-flow: row wrap;
                     > a {
-                        width: calc(50% - 15px);
-                        margin: 0 15px 15px 0;
+                        // width: calc(50% - 15px);
+                        // margin: 0 15px 15px 0;
+                        width: 100%;
+                        margin: 5px 0 0 0;
                         &:first-child {
-                            margin: 0 15px 15px 0;
+                            // margin: 0 15px 15px 0;
+                            margin: 0;
                         }
                     }
                 }
                 ul.clients.slick-slider {
-                    margin: 0;
-
-                    .slick-slide {
-                    }
+                    margin: $g 0 0 0;
                 }
             }
-    
-            
         }
     }
-
-
-
-
-
-
-
-
-    // div.filters {
-    //     $g: getVar($sizing, gutter, px, small);
-    //     display: flex;
-    //     flex-flow: row wrap;
-    //     justify-content: space-evenly;
-    //     position: relative;
-    //     padding: $g 0 0 0;
-
-    //     >a.button {
-    //         flex: 0 1 26%;
-    //         margin: 0 0 $g 0;
-    //         border-radius: 12px 0;
-    //         transition: border-radius 0.3s ease;
-
-    //         &:hover,
-    //         &:focus,
-    //         &:active,
-    //         &.active {
-    //             border-radius: 0 12px;
-    //         }
-
-    //         &.ghost {
-    //             @include ghostStyle($bgC:getVar($pallete, brand, daccent));
-
-    //             &.active {
-    //                 @include solidStyle($bgC:getVar($pallete, brand, main));
-    //             }
-    //         }
-
-    //         &[data-term="all"] {
-    //             position: absolute;
-    //             top: 0;
-    //             left: 50%;
-    //             transform: translate(-50%, -100%);
-    //         }
-    //     }
-    // }
-
-
-
-    // section.block__content_grid {
-
-
-
-    //     .slick-slider.clients {
-    //         background-color: rgba(getVar($pallete, brand, laccent), 1);
-    //         .slick-track {
-    //             margin: 60px 0;
-    //             display: flex;
-    //             align-items: center;
-    //         }
-    //         .slick-slide {
-    //             background-color: rgba(getVar($pallete, basic, white), 1);
-    //             @include boxshadow(2);
-    //             width: (80vw / 3); // 'normal' width
-    //             margin: 0;
-    //             position: relative;
-    //             height: auto;
-    //             .bgimage {
-    //                 width: 100%;
-    //                 @include aspectRatio(16,9);
-    //             }
-    //             .info {
-    //                 padding: 15px;
-    //             }
-    //             &.slick-current {
-    //                 width: (150vw / 3);
-    //                 z-index: 9;
-    //                 @include boxshadow(4);
-    //             }
-    //         }
-    //     }
-
-
-
-    // }
 }
