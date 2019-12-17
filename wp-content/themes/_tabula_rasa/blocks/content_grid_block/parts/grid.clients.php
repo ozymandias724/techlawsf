@@ -16,8 +16,8 @@ $guide['client_list'] = '
             <p>%1$s</p>
         </div>
         <div class="client">
-            %3$s
             %2$s
+            %3$s
             %4$s
             %5$s
         </div>

@@ -2081,8 +2081,13 @@ body.page-clients section.block__content_grid div.filters > a.button:hover, body
   border-color: #83cdf8;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider {
+  display: block;
   margin: -30px 0 0 0;
-  overflow: hidden;
+}
+body.page-clients section.block__content_grid ul.clients.slick-slider .slick-track {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide {
   position: relative;
@@ -2101,7 +2106,7 @@ body.page-clients section.block__content_grid ul.clients.slick-slider .slick-sli
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .category {
-  padding: 30px;
+  padding: 7.5px 15px;
   text-align: center;
   background-color: #83cdf8;
   text-transform: uppercase;
@@ -2112,21 +2117,15 @@ body.page-clients section.block__content_grid ul.clients.slick-slider .slick-sli
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client {
   border-top: none 0;
-  padding: 15px;
-  text-align: center;
+  padding: 30px;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .name,
-body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .bgimage,
-body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .details,
-body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .funding {
-  margin: 60px auto 0 auto;
-}
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .details {
-  text-align: left;
+  margin: 15px auto 0 auto;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .funding {
   font-style: italic;
-  font-size: 1.8rem;
+  margin: 0;
 }
 body.page-clients section.block__content_grid ul.clients.slick-slider .slick-slide .client .bgimage {
   position: relative;

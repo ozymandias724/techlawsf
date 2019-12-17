@@ -60,8 +60,13 @@ body.page-clients {
         //  the clients slider
         // 
         ul.clients.slick-slider {
+            display: block;
             margin: -$g 0 0 0;
-            overflow: hidden;
+            .slick-track {
+                margin: 0 auto;
+                display: flex;
+                flex-flow: row nowrap;
+            }
             .slick-slide {
                 // 
                 // 
@@ -87,7 +92,7 @@ body.page-clients {
                 // 
                 // 'label' for cat at top
                 .category {
-                    padding: $g;
+                    padding: 7.5px 15px;
                     text-align: center;
                     background-color: rgba(getVar($pallete, brand, laccent), 1);
                     text-transform: uppercase;
@@ -101,33 +106,19 @@ body.page-clients {
                 // everything below the label is padded (card style)
                 .client {
                     border-top: none 0;
-                    padding: getVar($sizing, gutter, px, small);
-                    text-align: center;
+                    // text-align: center;
+                    padding: $g;
                     // 
                     // 
                     // 
                     .name,
-                    .bgimage,
-                    .details,
-                    .funding {
-                        margin: (2 * $g) auto 0 auto;
-                    }
-
-                    // 
-                    // 
                     .details {
-                        text-align: left;
-                    }
-                    
-                    // 
-                    .name {
+                        margin: ($g / 2) auto 0 auto;
                     }
                     .funding {
                         font-style: italic;
-                        font-size: 1.8rem;
+                        margin: 0;
                     }
-                    
-                    // 
                     // 
                     // client logos
                     .bgimage {
