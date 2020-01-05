@@ -6,21 +6,20 @@ class SetupTheme
 {
 
     /**
-     * Initialize this Class (called like a constructor I guess)
+     * Initialize Setup Theme
      *
      * @return void
      */
 	public static function _init(){
-
         // 
-        SetupTheme::clean_head();
+		add_action( 'wp_enqueue_scripts', 'SetupTheme::enqueue_scripts');
+        add_action( 'admin_enqueue_scripts', 'SetupTheme::admin_enqueue_scripts');
         // 
         add_action( "after_setup_theme", "SetupTheme::after_setup_theme");
-        // 
         add_action(" init", "SetupTheme::init" );
-        // 
-		add_action( 'wp_enqueue_scripts', 'SetupTheme::wp_enqueue_scripts');
-        // 
+        
+        // clean up the head
+        SetupTheme::clean_head();
     }
 
 
@@ -52,30 +51,20 @@ class SetupTheme
 
 
     /**
-     * Hook into WordPress wp_enqueue_scripts action
+     * Register && Enqueue Theme Scripts
      *
      * @return void
      */
-	public static function wp_enqueue_scripts(){
-        // register styles
-        SetupTheme::register_styles();
-        // register scripts
-        SetupTheme::register_scripts();
-        // enqueue styles
-	    SetupTheme::enqueue_styles();
-        // enqueue scripts
-	    SetupTheme::enqueue_scripts();
-	}
-
-    /**
-     * Register Scripts
-     *
-     * @return void
-     */
-	public static function register_scripts(){
-
-        // wp_deregister_script('jquery');
-
+	public static function enqueue_scripts(){
+        wp_register_style( 
+            'main'
+	    	, get_template_directory_uri() . '/__build/_css/main.css'
+            , array()
+            , filemtime(get_template_directory() . '/__build/_css/main.css')
+            ,'all'
+        );
+        wp_enqueue_style( 'main' );
+       
         wp_register_script( 'swiper-js', get_template_directory_uri().'/__build/_lib/swiper/js/swiper.min.js', array('jquery'), null, true );
         wp_register_script( 'slick-js', get_template_directory_uri().'/__build/_lib/slick/slick.min.js', array('jquery'), null, true );
         wp_register_script( 'magnific-js', get_template_directory_uri().'/__build/_lib/magnific/jquery.magnific-popup.min.js', array('jquery'), null, true );
@@ -88,39 +77,38 @@ class SetupTheme
             , filemtime(get_template_directory() . '/__build/_js/main.js')
             , true
         );
-    }
-
-    /**
-     * Register Stylesheets
-     *
-     * @return void
-     */
-	public static function register_styles(){
-
-        // main theme styles
-	    wp_register_style( 
-            'main'
-	    	, get_template_directory_uri() . '/__build/_css/main.css'
-            , array()
-            , filemtime(get_template_directory() . '/__build/_css/main.css')
-            ,'all'
-        );
-    }
-    
-	// 
-	public static function enqueue_scripts(){
-        // wp_enqueue_script( 'swiper-js' );
+        // 
         wp_enqueue_script( 'slick-js' );
         wp_enqueue_script( 'magnific-js' );
         wp_enqueue_script( 'main' );
-	}
-	public static function enqueue_styles(){
-        wp_enqueue_style( 'main' );
-	}
-
-	// remove junk from the header
+    }
+ 
+    /**
+     * Register && Enqueue Admin Styles
+     *
+     * @return void
+     */
+    public static function admin_enqueue_scripts(){
+        // 
+        wp_register_style( 
+            'admin'
+	    	, get_template_directory_uri() . '/__build/_css/admin.css'
+            , array()
+            , filemtime(get_template_directory() . '/__build/_css/admin.css')
+            ,'all'
+        );
+        // 
+        wp_enqueue_style( 'admin' );
+        // 
+        wp_enqueue_script( 'admin' );
+    }
+    
+    /**
+     * Clean WP_Head() call
+     *
+     * @return void
+     */
 	public static function clean_head(){
-
         remove_action('wp_head', 'rsd_link'); // remove really simple discovery link
         remove_action('wp_head', 'wp_generator'); // remove wordpress version
         remove_action('wp_head', 'feed_links', 2); // remove rss feed links (make sure you add them in yourself if youre using feedblitz or an rss service)
@@ -135,14 +123,13 @@ class SetupTheme
         remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0); // Remove shortlink
         remove_action('wp_head', 'wp_resource_hints', 2 );
         remove_action('wp_print_styles', 'print_emoji_styles');
-
         // 
         add_filter( 'show_admin_bar', '__return_false' );
 	    add_filter( 'emoji_svg_url', '__return_false' );
         // 
 	    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 	    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-	    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-	}
+        remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+    }
 }
 SetupTheme::_init();

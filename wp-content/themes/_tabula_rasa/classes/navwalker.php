@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Create HTML list of nav menu items.
  *
@@ -26,9 +25,20 @@ class Tabula_Rasa_Nav_Menu extends Walker_Nav_Menu
 		$indent = ($depth) ? str_repeat("\t", $depth) : '';
 
 		$classes = empty($item->classes) ? array() : (array) $item->classes;
+
 		$classes[] = 'menu-item-' . $item->ID;
 
-		// Cleaner class array to replace default
+		if( !defined('JUST_TESTING') ){
+
+			error_log(print_r($classes, true));
+
+			define('JUST_TESTING', TRUE);
+		}
+
+		/**
+		 * 	Clean up the nav menu classes
+		 */
+		
 		$new_classes = array();
 		if (in_array('menu-item-has-children', $classes))
 			$new_classes[] = 'parent';
@@ -38,7 +48,6 @@ class Tabula_Rasa_Nav_Menu extends Walker_Nav_Menu
 			$new_classes[] = 'active-ancestor';
 		if (in_array('current-menu-parent', $classes))
 			$new_classes[] = 'active-parent';
-		// (kyle, you forgot to note in the nav front end what custom post type (and maybe other stuff) the nav is a thing of)
 		$classes = $new_classes;
 		
 
@@ -115,6 +124,5 @@ class Tabula_Rasa_Nav_Menu extends Walker_Nav_Menu
 		 */
 		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
 	}
-} // Tabula_Rasa_Nav_Menu
-
+}
 ?>

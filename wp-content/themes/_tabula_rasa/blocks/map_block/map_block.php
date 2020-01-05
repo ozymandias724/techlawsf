@@ -18,8 +18,6 @@
     $guide['maps_block'] = '
         <section class="site__block block__map">
             <div class="container %s">
-                %s
-                %s
                 <div class="acf-map">
                     <div class="marker" data-lat="%s" data-lng="%s"></div>
                 </div>
@@ -30,8 +28,6 @@
     $return['maps_block'] .= sprintf(
         $guide['maps_block']
         ,$cB['width']
-        ,( (!empty( $cB['heading'] )) ? '<h3>'.$cB['heading'].'</h3>' : '' )
-        ,( (!empty( $cB['sub_heading'] )) ? '<p>'.$cB['sub_heading'].'</p>' : '' )
         ,$cB['map']['lat']
         ,$cB['map']['lng']
     );

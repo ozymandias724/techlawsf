@@ -1,21 +1,9 @@
-// get the grunt class
+/**
+ * 
+ */
 const grunt = require('grunt');
-const sass = require("sass");
-const Fiber = require("fibers");
-sass.render({
-	file: "__pre/_sass/main.scss",
-	importer: function (url, prev, done) {
-		// ...
-	},
-	fiber: Fiber
-}, function (err, result) {
-	// ...
-});
-
-// auto-load all the grunt tasks passed into the initConfig func
+const sass = require("node-sass");
 require('load-grunt-tasks')(grunt);
-
-// pass settings into grunt
 grunt.initConfig({
 	sass: {
 		options: {
@@ -25,23 +13,9 @@ grunt.initConfig({
 		main: {
 			files: {
 				'__build/_css/main.css': '__pre/_sass/main.scss',
+				'__build/_css/admin.css': '__pre/_sass/admin.scss',
 			},
-		},
-		// blocks: {
-		// 	options: {
-		// 		sourceMap: false,
-		// 	},
-		// 	files: [{
-		// 		expand: true,
-		// 		cwd: "blocks",
-		// 		src: ["**/*.scss"],
-		// 		dest: "blocks/",
-		// 		ext: ".css",
-		// 		rename: function (dest, src) {
-		// 			return dest + src.replace('scss', 'css'); // The target file is written to folder "css" instead of "scss" by renaming the folder
-		// 		}
-		// 	}]
-		// }
+		}
 	},
 	watch: {
 		sass: {

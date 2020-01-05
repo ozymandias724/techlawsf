@@ -31,8 +31,6 @@ $return['columns'] = '';
 $return['columns_block'] .= '
     <section class="site__block block__columns '.$lightText.' '.$hasBg.'" '.$bgColor.'>
         <div class="container ' . $cB['width'] . '">
-        '. (!empty($cB['heading']) ? '<h2 class="block-heading anim__fade anim__fade-up">' . $cB['heading'] . '</h2>' : '') . '
-        '. (!empty($cB['sub_heading']) ? '<p class="block-subheading anim__fade anim__fade-up">' . $cB['sub_heading'] . '</p>' : '') . '
 ';
 // open columns <ul>
 $return['columns'] .= '<div class="flexgrid cols-'. count($cB['columns']) .'"><ul>';

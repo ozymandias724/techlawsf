@@ -34,8 +34,6 @@ $return['banner'] = '';
 $return['banner_block'] .= '
     <section class="site__block block__banner '.$lightText.' '.$hasBg.'" '.$bgColor.'>
         <div class="container ' . $cB['width'] . '">
-        '. (!empty($cB['heading']) ? '<h2 class="block-heading anim__fade anim__fade-up">' . $cB['heading'] . '</h2>' : '') . '
-        '. (!empty($cB['sub_heading']) ? '<p class="block-subheading anim__fade anim__fade-up">' . $cB['sub_heading'] . '</p>' : '') . '
 ';
 
 // determine if we are supposed to use a set # of cols or a fluid #
