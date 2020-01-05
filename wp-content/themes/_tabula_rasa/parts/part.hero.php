@@ -10,7 +10,7 @@
     if( is_singular( ['practice_areas'] ) ){
 
         // open hero section
-        $return['hero'] = '<section class="hero" style="background-image: url('.( !empty($fields['index_view']['image']['url']) ? $fields['index_view']['image']['url'] : '' ). ')"><div class="container wide">';
+        $return['hero'] = '<section class="hero hero__hasimage" style="background-image: url('.( !empty($fields['index_view']['image']['url']) ? $fields['index_view']['image']['url'] : '' ). ')"><div class="container wide">';
          $guide['hero'] = '
             %s
             %s

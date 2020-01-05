@@ -9,22 +9,19 @@
     $return['header'] = '<header class="header '.( !empty($hS['fade_in']) ? 'fadein' : '' ).' '.$hS['type'].'"><div class="container wide">';
 
 
-    //      !!! TBD, replace this with a SVG inline code solution
-    // 
-    // if there is a custom logo, use that
+    // if there is a custom site logo
     if( has_custom_logo( ) ){
         $return['header'] .= 'Header Image Plz';
     }
-    // if there is no custom logo, use the site title
+    // if there is not a custom site logo
     else {
         $return['header'] .= '<a href="'.site_url().'"><div class="logo logo--text">TLSF</div></a>';
     }
     
-
-    // if we have a nav
+    // if the header location has a nav menu
+    // show the nav menu
     if (has_nav_menu('header')) {
-        
-        // get nav
+
         $args = array(
             'theme_location' => 'header'
             ,'walker' => new Tabula_Rasa_Nav_Menu
@@ -34,8 +31,7 @@
             ,'link_before' => '<span>'
             ,'link_after' => '</span>'
         );
-        // write nav
-        $return['header'] .= '<div class="navicons"><i class="fas fa-bars"></i><i class="fas fa-times"></i></div>';
+        $return['header'] .= '<div class="navicons"><i class="fas fa-bars"></i><i class="fas fa-times"></i></div>'; // write in the mobile nav icons
         $return['header'] .= wp_nav_menu($args);
     }
 

@@ -41,27 +41,18 @@ body.home {
         
 
         .client_spotlight {
-            
-            //
-            //
-            //
-            //
+            >div>.flexgrid {
+                margin-top: getVar($sizing, gutter, vw, large);
+            }
             .client_spotlight-banner {
-                
                 overflow: hidden;
                 padding: getVar($sizing,gutter,vw,normal) 0;
                 margin: getVar($sizing, gutter, vw, large) 0 0 0;                
-                // 
                 border-top: 2px solid rgba(getVar($pallete,brand,dshade), 0.66);
                 border-bottom: 2px solid rgba(getVar($pallete,brand,dshade), 0.66);
-                // 
-                // 
-                // 
-
                 .slick-slider {
                     margin: 0 0 0 0;
-                }
-                
+                }                
                 >ul,
                 .slick-track {
                     flex-flow: row nowrap;
@@ -99,15 +90,6 @@ body.home {
                     }
                 }
             }
-
-            > div > .flexgrid {
-                margin-top: getVar($sizing, gutter, vw, large);
-            }
-
-            // 
-            // 
-            // 
-            // 
             li.featured_client {
                 
                 // 
@@ -225,4 +207,21 @@ body.home {
             }
         }
     }
+}
+@media screen and (max-width: 960px){
+
+    body.home {
+
+        main {
+            .client_spotlight {
+
+                .client_spotlight-banner {
+                    // margin: getVar($sizing, gutter, px, normal) 0 0 0;
+                }
+            } 
+        } 
+            
+    } 
+
+
 }
