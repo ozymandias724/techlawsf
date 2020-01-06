@@ -1,23 +1,15 @@
-// 
-// 
-// 
-// 
-// 
+/* 
+*   Hero Space
+*/
 section.hero {
-    $g: getVar($sizing, gutter, px, normal);
-
-
-
-    // 
-    // 
     >.container {
         // 
         position: relative;
         z-index: 1;
         // 
-        min-height: 320px;
-        height: calc(80vh - 72px);
-        max-height: 66vw;
+        height: calc((200vh / 3) - 72px);
+        max-height: 50vw;
+        min-height: 300px;
         // 
         display: flex;
         flex-flow: column nowrap;
@@ -30,20 +22,8 @@ section.hero {
             color: rgba(getVar($pallete, basic, black), 1);
         }
 
-        >h1 {
-            margin: 0 0 0 0;
-            // font-size: 12rem;
-            font-weight: 100;
-            letter-spacing: -1px;
-            padding: 5px 0;
-        }
-
         >div {
-            margin: getVar($sizing, gutter, px, large) 0 0 0;
             padding: 0 0 0 1rem;
-            >p {
-                font-size: 2.4rem;
-            }
         }
         
         
@@ -62,7 +42,9 @@ section.hero {
     }
 
 }
-
-body.home section.hero>.container {
-    height: calc(80vh - 72px);
+/* 
+*   Practice Areas
+*/
+body.single section.hero>.container {
+    height: (100vw / 3);
 }

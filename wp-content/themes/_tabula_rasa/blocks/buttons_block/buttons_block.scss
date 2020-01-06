@@ -38,9 +38,9 @@ section.site__block.block__buttons {
                         margin: 0;
                         > span {
                             display: inline-block;
-                            text-transform: uppercase;
-                            font-weight: normal;
-                            font-size: 2rem;
+                            // text-transform: uppercase;
+                            // font-weight: normal;
+                            // font-size: 2rem;
                             @include accentUnderline();
                         }
                     }

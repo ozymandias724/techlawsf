@@ -1,10 +1,17 @@
 // 
-// NPM Libs
+// Libs
 @import '../../__build/_lib/fontawesome/css/all.min.css'; // font awesome
 @import '../../__build/_lib/magnific/magnific-popup.css'; // font awesome
 @import '../../__build/_lib/slick/slick.css'; // font awesome
 @import '../../__build/_lib/slick/slick-theme.css'; // font awesome
 @import '../../__build/_lib/swiper/css/swiper.min.css'; // font awesome
+
+// 
+$rfs-base-value: 1.6rem !default; // the smallest font size
+$rfs-factor: 10 !default;
+$rfs-rem-value: 10 !default;
+@import '../../__build/_lib/rfs/scss.scss';
+// 
 
 @import 'site/animations';  // animation classes
 // 
@@ -17,8 +24,8 @@
 
 // Site Styles 
 @import "site/reset";   // reset/normalize
-@import 'site/elems';   // soft-restyle for specific elements to match brand (text-dectoration, object fit, etc)
 @import 'site/base';    // soft-restyle for larger features and components to match brand (general layout, grid styles, etc)
+@import 'site/elems';   // soft-restyle for specific elements to match brand (text-dectoration, object fit, etc)
 @import 'site/grid';
 
 

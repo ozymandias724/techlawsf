@@ -1,27 +1,79 @@
+/* 
+*   Basic Styles
+*/
+body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    @include font-size(1.6rem);
+}
 
-// reset anchor tags
+/*
+*   Basic Sizing
+*/
+p {
+    margin: getVar($sizing, gutter, px, normal) 0 0 0;
+
+    &:first-child {
+        margin: 0;
+    }
+}
+/* 
+*   Heading Styles
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 1.5rem 0 0 0;
+    &:first-child { margin: 0; }
+}
+/* 
+*
+*   Heading Sizing
+*
+*/
+h1 { 
+    @include font-size(9.6rem); 
+}
+h2 { 
+    @include font-size(4.8rem); 
+}
+h3 { 
+    @include font-size(3.6rem); 
+}
+h4 { 
+    @include font-size(2.4rem); 
+}
+h5 { 
+    @include font-size(2rem); 
+}
+h6 { 
+    @include font-size(1.6rem); 
+}
+
 a {
     text-decoration: none;
     color: rgba(getVar($pallete, basic, black), 1);
     border: none 0;
 }
-
 figure {
     position: relative;
     overflow: hidden;
 }
-
 img {
     object-fit: cover;
     height: auto;
-    max-width: 100%;
-    margin: 0 auto;
+    // max-width: 100%;
+    // margin: 0 auto;
 }
 blockquote {
-    $g : getVar($sizing, gutter, px, small);
+    $g: getVar($sizing, gutter, px, small);
     padding: 0 0 0 $g;
     border: none 0;
     border-left: 4px solid rgba(getVar($pallete, brand, main), 1);
+
     @media screen and (max-width:640px) {
         padding: 0 0 $g 0;
         margin: 0 0 0 0;
@@ -29,83 +81,58 @@ blockquote {
         border-bottom: 4px solid rgba(getVar($pallete, brand, main), 1);
     }
 }
-
-hr,
-br {
-    width: 100%;
-    line-height: 0;
-    font-size: 0;
-    margin: 0 0 getVar($sizing, gutter, px, normal) 0;
-}
-
 hr {
     border: none;
     border-bottom: 2px solid rgba(getVar($pallete, basic, black), 0.1);
 }
-
-ul {
+ul, ol {
     list-style-type: none;
 
 }
 
-// heading fonts
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Cormorant Garamond', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    margin: 1.5rem 0 0 0;
-    &:first-child { margin: 0; }
-}
 
-// size headings
-h1 {
-    // font-size: 7.2rem;
-}
 
-h2 {
-    // font-size: 5.4rem;
-}
 
-h3 {
-    // font-size: 4.2rem;
-}
 
-h4 {
-    // font-size: 3rem;
-}
 
-h5 {
-    // font-size: 1.6rem;
-}
 
-h6 {
-    // font-size: 1.4rem;
-}
 
-p {
-    margin: getVar($sizing, gutter, px, normal) 0 0 0;
-    &:first-child {
-        margin: 0;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // 
 // 
 // 
 body {
-    // basic styling for fonts
-    font-family: "Lato", sans-serif;
-    
-    // font-family: "Josefin Sans", sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.33;
-    font-weight: 300;
-    letter-spacing: 0.5px;
     // flex align the footer to the bottom
     display: flex;
     flex-flow: column nowrap;

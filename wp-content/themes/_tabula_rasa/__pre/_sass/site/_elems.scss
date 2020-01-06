@@ -45,40 +45,37 @@
 
 
 
+   // logo
+   // either as an image or as text
+   // denoted by class modifier .logo.logo--modifier
+   .logo {
+       display: block;
+       max-width: 140px;
+       img {
+           width: 100%;
+           max-height: 100%;
+           object-fit: contain;
+       }
 
+       &.logo--image {}
 
+       &.logo--text {
+           color: getVar($pallete, basic, black);
+           letter-spacing: 1px;
+           border-bottom: 2px solid transparent;
+           font-weight: 300;
+           font-size: 2.4rem;
+           font-family: "Cormorant Garamond", serif;
+           // padding: 5px 0;
+           line-height: 1;
 
-// logo
-// either as an image or as text
-// denoted by class modifier .logo.logo--modifier
-.logo {
-    $g: getVar($sizing, gutter, px, normal);
-
-    &.logo--image {
-        height: 100%;
-        padding: ($g / 2);
-
-        img {
-            height: 100%;
-        }
-    }
-
-    &.logo--text {
-        color: getVar($pallete, basic, black);
-        letter-spacing: 1px;
-        border-bottom: 2px solid transparent;
-        font-weight: 300;
-        font-size: 2.4rem;
-        font-family: "Cormorant Garamond", serif;
-        padding: 5px 0;
-        line-height: 1;
-        &:hover,
-        &:focus,
-        &:active {
-            border-bottom: 2px solid getVar($pallete, brand, daccent);
-        }
-    }
-}
+           &:hover,
+           &:focus,
+           &:active {
+               border-bottom: 2px solid getVar($pallete, brand, daccent);
+           }
+       }
+   }
 
 .site__social-media {
     $g: getVar($sizing, gutter, px, normal);

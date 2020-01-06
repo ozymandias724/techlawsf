@@ -11,12 +11,15 @@
     $return['address'] = ( !empty($tS['address']) ? '<a href="#" title="">'.get_the_address($tS['address']).'</a>' : '' );
 
     // get the site custom logo or site name
-    $return['logo'] = '';
-    if( has_custom_logo() ){
-        $return['logo'] = get_custom_logo();
-    } else {
-        $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><h3><span>'.get_bloginfo('name').'</span></h3></a>';
-    }
+    // $return['logo'] = '';
+    // if( has_custom_logo( ) ){
+    //     $logo_src = wp_get_attachment_image_src(  get_theme_mod( 'custom_logo' ) , 'full' )[0];
+    //     $return['logo'] .= '<a href="'.site_url().'" title="'.get_bloginfo('name').'" class="logo logo--image"><img src="'.$logo_src.'"></a>';
+    // }
+    // else {
+    //     $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><h3><span>'.get_bloginfo('name').'</span></h3></a>';
+    // }
+    $return['logo'] = '<a href="'.site_url().'" title="Visit '.get_bloginfo( 'name' ).' home page"><h3><span>'.get_bloginfo('name').'</span></h3></a>';
 
     // 
     $return['footer_nav'] = '';

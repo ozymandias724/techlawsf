@@ -1,27 +1,9 @@
 // 
-// 
-// 
-// 
-// 
-
-// set vars
-// $use-fade : true;
-// $use-slide : true;
-// $use-zoom : true;
-// 
-// $base-duration : 2s;
-
-// get the styles that we want
-// @import  '../../../node_modules/animate-sass/animate';
-
-
-// lets do this ourselves
 .anim__fade {
     opacity: 1;
     transition: opacity 1s ease-in-out, transform 0.8s ease-in-out;
     transform: translateY(0);
 }
-
 .anim__fade-in,
 .anim__fade-up,
 .anim__fade-left,

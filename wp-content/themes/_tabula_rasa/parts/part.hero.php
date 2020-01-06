@@ -39,7 +39,7 @@
             ,( !empty($fields['hero']['fill']) ? 'background-color:'.$fields['hero']['fill'].';' : '' )
             ,( !empty($fields['hero']['text_color']) ? '' : 'hero__dark-text' )
             ,( !empty($fields['hero']['heading']) ? '<h1 class="anim__fade anim__fade-left">'.$fields['hero']['heading'].'</h1>' : '' )
-            ,( !empty($fields['hero']['sub_heading']) ? '<div class="anim__fade anim__fade-right">'.$fields['hero']['sub_heading'].'</div>' : '' )
+            ,( !empty($fields['hero']['sub_heading']) ? '<div class="anim__fade anim__fade-right"><h4>'.$fields['hero']['sub_heading'].'</h4></div>' : '' )
         );
     }
 
