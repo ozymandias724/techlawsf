@@ -1,0 +1,201 @@
+// 
+// 
+
+
+// * the client card may be loaded on other pages *
+.clientcard {
+    @include boxshadow(2);
+    border: 1px solid rgba(getVar($pallete, basic, gray), 0.5);
+    // opacity: 0.33;
+    transition: all 0.4s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+
+    // * client-category label
+    .category {
+        padding: 7.5px 15px;
+        text-align: center;
+        background-color: rgba(getVar($pallete, brand, laccent), 1);
+        text-transform: uppercase;
+        color: rgba(getVar($pallete, basic, white), 1);
+        font-weight: bold;
+        @include font-size(2rem);
+        letter-spacing: 2px;
+        flex: none 0;
+    }
+
+    // * content
+    .content {
+        flex: 1 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        padding: getVar($sizing, gutter, px, normal);
+        // client logos
+        .client-logo {
+            border-bottom: 1px solid rgba(getVar($pallete, basic, gray), 0.5);
+            padding: 0 0 getVar($sizing, gutter, px, small) 0;
+            .bgimage {
+                height: 72px;
+                .bgimage-img {
+                    background-size: contain;
+                }
+            }
+        }
+
+        .details {
+            margin: getVar($sizing, gutter, px, small) 0 0 0;
+        }
+    }
+
+    // hover
+    &:hover,
+    &:focus,
+    &:active,
+    &.slick-current {
+        // @include boxshadow(4);
+        // opacity: 1;
+    }
+}
+
+
+
+// scope to client page
+body.page-clients {
+
+
+
+    // scope to *clients* content grid
+    section.block__content_grid {
+
+        >.container {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+
+            >div.flexgrid,
+            div.filters {
+                flex: 1 1 auto;
+                margin: 0 auto;
+            }
+        }
+
+        div.flexgrid {
+            // border-left: 2px solid rgba(getVar($pallete, brand, laccent), 0.5);
+            width: calc(80% - #{getVar($sizing, gutter, px, normal)});
+            margin: 0 0 0 getVar($sizing, gutter, px, normal);
+        }
+
+        div.filters {
+            width: 200px;
+            display: flex;
+            flex-flow: column nowrap;
+
+            >a.button {
+
+                margin: (getVar($sizing, gutter, px, normal) / 2) 0 0 0;
+
+                &:first-child {
+                    margin: 0;
+                }
+
+                border-color: rgba(getVar($pallete, brand, laccent), 1);
+                color: rgba(getVar($pallete, brand, laccent), 1);
+                font-weight: bold;
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    color: rgba(getVar($pallete, basic, white), 1);
+                    background-color: rgba(getVar($pallete, brand, laccent), 1);
+                    border-color: rgba(getVar($pallete, brand, laccent), 1);
+                }
+            }
+        }
+
+
+        //  the clients slider
+        // 
+        ul.clients {
+            opacity: 0;
+            transition: opacity 0.2s ease-in;
+
+            &.slick-initialized {
+                opacity: 1;
+            }
+
+            .slick-track {
+                padding: 0 0 getVar($sizing, gutter, px, normal) 0;
+                // * vertically center the slides
+                display: flex;
+                flex-flow: row nowrap;
+                // * turn on align items for uneven heights
+                // align-items: center;
+            }
+
+            .slick-slide {
+                margin: 0 getVar($sizing, gutter, px, small);
+                height: auto;
+
+                // * client card fills slide
+                .clientcard {
+
+                    opacity: 0.33;
+    
+                    // hover
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        @include boxshadow(4);
+                        opacity: 1;
+                    }
+                }
+                &.slick-center {
+                    .clientcard {
+                        @include boxshadow(4);
+                        opacity: 1;
+                    }
+                }
+            }
+
+        }
+
+        //  * all media queries are contained within the block for simplicity *
+        // 
+        // 
+        @media screen and (max-width: 960px) {
+            >.container {
+                flex-flow: column nowrap;
+
+                div.flexgrid,
+                div.filters {
+                    width: 100%;
+                    margin: 0;
+
+                    .slick-slide {
+                        margin: 0;
+                    }
+                }
+
+                div.filters {
+                    flex-flow: row wrap;
+
+                    >a {
+                        width: 100%;
+                        margin: 5px 0 0 0;
+
+                        &:first-child {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                ul.clients.slick-slider {
+                    margin: getVar($sizing, gutter, px, normal) 0 0 0;
+                }
+            }
+        }
+    }
+}

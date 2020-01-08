@@ -56,6 +56,12 @@ class SetupTheme
      * @return void
      */
 	public static function enqueue_scripts(){
+
+        wp_deregister_script('jquery');
+        wp_enqueue_script('jquery', get_template_directory_uri().'/__build/_lib/jquery/jquery.min.js', array(), null, true); // * update jquery (big time)
+
+        
+        
         wp_register_style( 
             'main'
 	    	, get_template_directory_uri() . '/__build/_css/main.css'
@@ -65,8 +71,6 @@ class SetupTheme
         );
         wp_enqueue_style( 'main' );
        
-        wp_register_script( 'swiper-js', get_template_directory_uri().'/__build/_lib/swiper/js/swiper.min.js', array('jquery'), null, true );
-        wp_register_script( 'slick-js', get_template_directory_uri().'/__build/_lib/slick/slick.min.js', array('jquery'), null, true );
         wp_register_script( 'magnific-js', get_template_directory_uri().'/__build/_lib/magnific/jquery.magnific-popup.min.js', array('jquery'), null, true );
         
         // main theme scripts

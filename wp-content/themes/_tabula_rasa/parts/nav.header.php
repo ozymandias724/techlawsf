@@ -12,11 +12,11 @@
     // if there is a custom site logo
     if( has_custom_logo( ) ){
         $logo_src = wp_get_attachment_image_src(  get_theme_mod( 'custom_logo' ) , 'full' )[0];
-        $return['header'] .= '<a href="'.site_url().'" title="'.get_bloginfo('name').'" class="logo logo--image"><img src="'.$logo_src.'"></a>';
+        $return['header'] .= '<a href="'.site_url().'" title="Visit '.get_bloginfo('name').'" class="logo logo--image"><img src="'.$logo_src.'"></a>';
     }
     // if there is not a custom site logo
     else {
-        $return['header'] .= '<a href="'.site_url().'" title=""><div class="logo logo--text">TLSF</div></a>';
+        $return['header'] .= '<a href="'.site_url().'" title="Visit '.get_bloginfo('name').'"><div class="logo logo--text">'.get_bloginfo('name').'</div></a>';
     }
     
     // if the header location has a nav menu

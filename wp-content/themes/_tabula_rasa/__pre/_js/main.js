@@ -91,13 +91,14 @@
             /**
              * Client Spotlight Banner (Home Page)
              */
-            if ($('.client_spotlight-banner > ul').length) {
-                $('.client_spotlight-banner > ul').slick({
+            if ($('.client_spotlight-banner').length) {
+                $('.client_spotlight-banner').slick({
                     autoplay: true,
                     autoplaySpeed: 4000,
                     slidesToShow: 5,
                     centerMode: true,
                     centerPadding: 0,
+                    rows: 0, // * this is super important!!! * without this there are BUGS ***
                     arrows: false,
                     responsive: [{
                         breakpoint: 1280,
@@ -147,7 +148,7 @@
                     arrows: false,
                     centerMode: true,
                     centerPadding: 0,
-                    autoplay: true,
+                    // autoplay: true,
                     autoplaySpeed: 4000,
                     responsive: [{
                         breakpoint: 1280,
